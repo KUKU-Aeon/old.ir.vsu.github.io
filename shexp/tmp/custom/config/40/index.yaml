@@ -1,0 +1,103 @@
+name: 40
+timestamp: 1474297176
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/page_services.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  jf_p_cta:
+    jf_p_cta-3975: 'JF Particle - CTA'
+    jf_p_cta-8873: 'JF Particle - CTA'
+  position:
+    position-position-2064: Breadcrumbs
+    position-position-7311: 'Module Position'
+    position-position-5029: Footer
+  jf_p_ft_intro:
+    jf_p_ft_intro-6366: 'JF Particle - Features Intro - Style 2'
+    jf_p_ft_intro-2304: 'JF Particle - Features Intro - Style 3 (Process Steps)'
+  jf_p_carousel:
+    jf_p_carousel-2003: 'JF Particle - Carousels: Style 1'
+  jf_p_stat:
+    jf_p_stat-8499: 'JF Particle - Statistics - Style 2 (Progress Bar)'
+    jf_p_stat-8920: 'JF Particle - Statistics - Style 1 (Counter)'
+  jf_p_clients:
+    jf_p_clients-9011: 'JF Particle - Clients - Style 3 (Background Hover)'
+  messages:
+    system-messages-4299: 'System Messages'
+  custom:
+    custom-8170: 'Custom HTML'
+    custom-6039: 'Custom HTML'
+    custom-3101: 'Custom HTML'
+    custom-2927: 'Custom HTML'
+  logo:
+    logo-6686: Logo
+    logo-3872: Logo
+    logo-8260: Logo
+  menu:
+    menu-2207: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-8309: 'JF Panel Buttons'
+  module:
+    position-module-2795: 'Module Instance'
+    position-module-2967: 'Module Instance'
+    position-module-2412: 'Module Instance'
+    position-module-2015: 'Module Instance'
+    position-module-5804: 'Module Instance'
+    position-module-9777: 'Module Instance'
+    position-module-4426: 'Module Instance'
+    position-module-2248: 'Module Instance'
+  jf_switcher:
+    jf_switcher-3297: 'JF Style Switcher'
+  copyright:
+    copyright-8097: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    system-messages-4299: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-8170: custom-3485
+    custom-6039: custom-1392
+    logo-6686: logo-5705
+    menu-2207: menu-2947
+    jf_panel_buttons-8309: jf_panel_buttons-3313
+    position-module-2795: position-module-1605
+    position-module-2967: position-module-6496
+    position-module-2412: position-module-1290
+    position-module-2015: position-module-3392
+    position-module-5804: position-module-7385
+    position-module-9777: position-module-2571
+    position-position-7311: position-position-5361
+    jf_switcher-3297: jf_switcher-6426
+    position-position-5029: position-position-9915
+    logo-3872: logo-2653
+    custom-3101: custom-5362
+    position-module-4426: position-module-3742
+    custom-2927: custom-4368
+    copyright-8097: copyright-3966
+    logo-8260: logo-9507
+    position-module-2248: position-module-4901

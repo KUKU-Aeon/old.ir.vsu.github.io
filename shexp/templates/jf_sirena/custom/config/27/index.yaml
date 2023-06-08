@@ -1,0 +1,99 @@
+name: 27
+timestamp: 1474297178
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/p_portfolio.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  jf_p_portfolio:
+    jf_p_portfolio-9425: 'JF Particle - Portfolio - Style 1'
+    jf_p_portfolio-6910: 'JF Particle - Portfolio - Style 2'
+    jf_p_portfolio-7593: 'JF Particle - Portfolio - Style 3'
+    jf_p_portfolio-3260: 'JF Particle - Portfolio - Style 4/5'
+    jf_p_portfolio-5791: 'JF Particle - Portfolio - Style 6'
+    jf_p_portfolio-9679: 'JF Particle - Portfolio - Style 7'
+    jf_p_portfolio-3775: 'JF Particle - Portfolio - Style 8'
+  position:
+    position-position-8623: Breadcrumbs
+    position-position-4757: 'Module Position'
+    position-position-1074: Footer
+  messages:
+    system-messages-3266: 'System Messages'
+  custom:
+    custom-3353: 'Custom HTML'
+    custom-3050: 'Custom HTML'
+    custom-8961: 'Custom HTML'
+    custom-3257: 'Custom HTML'
+  logo:
+    logo-1528: Logo
+    logo-8255: Logo
+    logo-2931: Logo
+  menu:
+    menu-2928: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-2380: 'JF Panel Buttons'
+  module:
+    position-module-3495: 'Module Instance'
+    position-module-4436: 'Module Instance'
+    position-module-8957: 'Module Instance'
+    position-module-6059: 'Module Instance'
+    position-module-7900: 'Module Instance'
+    position-module-5498: 'Module Instance'
+    position-module-4288: 'Module Instance'
+    position-module-3523: 'Module Instance'
+  jf_switcher:
+    jf_switcher-2745: 'JF Style Switcher'
+  copyright:
+    copyright-5040: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-8623: position-position-2694
+    system-messages-3266: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-3353: custom-3485
+    custom-3050: custom-1392
+    logo-1528: logo-5705
+    menu-2928: menu-2947
+    jf_panel_buttons-2380: jf_panel_buttons-3313
+    position-module-3495: position-module-1605
+    position-module-4436: position-module-6496
+    position-module-8957: position-module-1290
+    position-module-6059: position-module-3392
+    position-module-7900: position-module-7385
+    position-module-5498: position-module-2571
+    position-position-4757: position-position-5361
+    jf_switcher-2745: jf_switcher-6426
+    position-position-1074: position-position-9915
+    logo-8255: logo-2653
+    custom-8961: custom-5362
+    position-module-4288: position-module-3742
+    custom-3257: custom-4368
+    copyright-5040: copyright-3966
+    logo-2931: logo-9507
+    position-module-3523: position-module-4901

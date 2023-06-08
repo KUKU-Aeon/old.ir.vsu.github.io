@@ -1,0 +1,853 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/page_services.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_p_cta-3975
+    -
+      - position-position-2064
+    -
+      - jf_p_ft_intro-6366
+    -
+      - jf_p_ft_intro-2304
+    -
+      - jf_p_carousel-2003
+    -
+      - jf_p_stat-8499
+    -
+      - jf_p_stat-8920
+    -
+      - jf_p_clients-9011
+    -
+      - jf_p_cta-8873
+  /main/:
+    -
+      - system-messages-4299
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_p_cta-3975:
+    title: 'JF Particle - CTA'
+    attributes:
+      padding: '280px 0px 220px 0'
+      bg_options:
+        -
+          bg_type: parallax_vid
+          lazyload: '1'
+          bgColor: '#eeeeee'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '0'
+          scrolling: '1'
+          type: cover
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: services
+          controls: '0'
+          loop: '1'
+          muted: '0'
+          name: Options
+      style_1:
+        -
+          grid: '1'
+          contentTextAl: center
+          contentTheme: light
+          html: '<h1 style="font-size:64px;margin:0;font-weight:700">Our Services</h1><h5 style="margin:0;font-weight:700">Our Passion For What We Do Transfers Into Our Services</h5>'
+          name: Item
+  position-position-2064:
+    title: Breadcrumbs
+    attributes:
+      key: breadcrumbs
+    block:
+      class: jf_breadcrumbs
+  jf_p_ft_intro-6366:
+    title: 'JF Particle - Features Intro - Style 2'
+    attributes:
+      padding: '100px 0 80px'
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">pages</i>'
+          html_header: 'Web Developement'
+          html_descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.'
+          html_bottom: ''
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">share</i>'
+          html_header: 'Social Marketing'
+          html_descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.'
+          html_bottom: ''
+          css3_anim_name: fadeInUpDown
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          grid: '4'
+          grid_last: '1'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">devices</i>'
+          html_header: 'Responsive Design'
+          html_descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.'
+          html_bottom: ''
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">cloud_queue</i>'
+          html_header: 'Cloud Hosting'
+          html_descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.'
+          html_bottom: ''
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 4'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">filter_hdr</i>'
+          html_header: 'Modern Design'
+          html_descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.'
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 5'
+        -
+          grid: '4'
+          grid_last: '1'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">settings</i>'
+          html_header: 'Server Optimization'
+          html_descr: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.'
+          html_bottom: ''
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 6'
+  jf_p_ft_intro-2304:
+    title: 'JF Particle - Features Intro - Style 3 (Process Steps)'
+    attributes:
+      padding: '100px 0'
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#f6f6f6'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_3
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Process Steps</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Sed purus augue porta nisi, Ac mid eu enim egestas platea.</h5>"
+      style_3:
+        -
+          grid: '3'
+          grid_last: '0'
+          step_id: unique_id_1
+          html_icon: '<i class="material-icons" style="font-size:36px">perm_phone_msg</i>'
+          step_num: '1'
+          step_name: Discuss
+          html_descr: "<div class=\"jf_col grid_3\">\n\t<h5 class=\"weight_500\">Etiam sit amet libero consequat</h5>\n</div>\n<div class=\"jf_col grid_9 last-column\">\n\tAc, ac urna nec magnis, proin nunc! Vel nunc ut? Ac et? Et rhoncus ridiculus scelerisque a nisi odio pid elit. Rhoncus hac habitasse. Massa mattis in purus, habitasse a, mid turpis rhoncus cras arcu facilisis, et aliquet porta, eu?\n</div>"
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          grid: '3'
+          grid_last: '0'
+          step_id: unique_id_2
+          html_icon: '<i class="material-icons" style="font-size:36px">landscape</i>'
+          step_num: '2'
+          step_name: 'Creative Concept'
+          html_descr: "<div class=\"jf_col grid_3\">\n\t<h5 class=\"weight_500\">Massa nec, amet pulvinar?</h5>\n</div>\n<div class=\"jf_col grid_9 last-column\">\n\tMid sed, vut, magna, sed a elit ac dapibus porttitor natoque phasellus sed purus, risus? Penatibus, placerat, ut nec, velit placerat nisi vel arcu pid mauris duis nec porta. Phasellus urna vel\n</div>"
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          grid: '3'
+          grid_last: '0'
+          step_id: unique_id_3
+          html_icon: '<i class="material-icons" style="font-size:36px">settings</i>'
+          step_num: '3'
+          step_name: Production
+          html_descr: "<div class=\"jf_col grid_3\">\n\t<h5 class=\"weight_500\">Diam lorem tincidunt augue.</h5>\n</div>\n<div class=\"jf_col grid_9 last-column\">\n\tTurpis rhoncus ac risus tincidunt in amet cum, ac nunc purus arcu? Lacus dignissim purus pellentesque ultricies odio adipiscing tortor cum cum ultricies scelerisque. In, auctor? Ac elit. A, sociis, urna ultricies.\n</div>"
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          grid: '3'
+          grid_last: '1'
+          step_id: unique_id_4
+          html_icon: '<i class="material-icons" style="font-size:36px">insert_emoticon</i>'
+          step_num: '4'
+          step_name: 'Happy Clients'
+          html_descr: "<div class=\"jf_col grid_3\">\n\t<h5 class=\"weight_500\">Turpis rhoncus ac risus tincidun</h5>\n</div>\n<div class=\"jf_col grid_9 last-column\">\n\tIn, auctor? Ac elit. A, sociis, urna ultricies, risus hac ac nunc ac turpis egestas porta porta, et urna? Sociis, in cursus proin cras velit porttitor dolor quis? Elementum sagittis etiam lundium.\n</div>"
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+  jf_p_carousel-2003:
+    title: 'JF Particle - Carousels: Style 1'
+    attributes:
+      contentW: full
+      padding: '0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      pagination: '0'
+      style: style_1
+      style_1:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/pages/services/1.jpg'
+          photoswipe_image_width: '600'
+          photoswipe_image_height: '600'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Constant Testing'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/services/1.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Constant <span>Testing</span>'
+          c_caption_descr: 'We ensure a constant testing.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/pages/services/2.jpg'
+          photoswipe_image_width: '600'
+          photoswipe_image_height: '600'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: Research
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/services/2.jpg'
+          c_image_alt: ''
+          c_caption_title: '<span>Research</span>'
+          c_caption_descr: 'We always put it on top priority.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/pages/services/3.jpg'
+          photoswipe_image_width: '600'
+          photoswipe_image_height: '600'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Different Scenarios'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/services/3.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Different <span>Scenarios</span>'
+          c_caption_descr: 'There is always a better way to do it.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/pages/services/4.jpg'
+          photoswipe_image_width: '600'
+          photoswipe_image_height: '600'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Hand Crafted'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/services/4.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Hand <span>Crafted</span>'
+          c_caption_descr: 'You will be amazed by the quality.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+  jf_p_stat-8499:
+    title: 'JF Particle - Statistics - Style 2 (Progress Bar)'
+    attributes:
+      padding: '50px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      html_before: "<div style=\"width:50%;float:left;padding:60px\"><h2 class=\"weight_500\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">OUR CORE VALUES</h2>\n<p style=\"margin:40px 0 45px 0\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis eros lobortis, vestibulum turpis ac, pulvinar odio. Praesent vulputate a elit ac mollis. In sit amet ipsum turpis. Pellentesque venenatis, libero vel euismod lobortis, mi metus luctus augue, eget dapibus elit nisi eu massa. Phasellus sollicitudin nisl posuere nibh ultricies, et fringilla dui gravida. Donec iaculis adipiscing neque, non congue massa euismod quis.</p>\n<button class=\"jf_btn jf_waves_light_40 l raised deep-purple\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">See Our Works</button></div>"
+      style_2:
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          css_style: 'padding:80px 30px 0 30px'
+          html_title: Photoshop
+          html_color: '#666666'
+          bar_size: x8
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '85'
+          bar_loadspeed: '1100'
+          name: Photoshop
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          css_style: 'padding:0 30px'
+          html_title: Illustrator
+          html_color: '#666666'
+          bar_size: x8
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '64'
+          bar_loadspeed: '900'
+          name: Illustrator
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          css_style: 'padding:0 30px'
+          html_title: HTML
+          html_color: '#666666'
+          bar_size: x8
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '50'
+          bar_loadspeed: '1700'
+          name: HTML
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          css_style: 'padding:0 30px'
+          html_title: JavaScript
+          html_color: '#666666'
+          bar_size: x8
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '70'
+          bar_loadspeed: '1500'
+          name: JavaScript
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          css_style: 'padding:0 30px'
+          html_title: AfterEffects
+          html_color: '#666666'
+          bar_size: x8
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '90'
+          bar_loadspeed: '1200'
+          name: AfterEffects
+  jf_p_stat-8920:
+    title: 'JF Particle - Statistics - Style 1 (Counter)'
+    attributes:
+      padding: '120px 0'
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#f6f6f6'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '50'
+          scrolling: '0'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style_1:
+        -
+          grid: '3'
+          grid_last: '0'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#d92cda'
+          counter_fontsize: 54px
+          counter_num: '1273'
+          counter_sep: '1'
+          counter_sep_color: '#d92cda'
+          html_descr: '<h5 class="weight_500">CLIENTS SERVED</h5>'
+          html_color: '#666666'
+          name: 'Item 1'
+        -
+          grid: '3'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          grid_last: '0'
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#f34235'
+          counter_fontsize: 54px
+          counter_num: '4373'
+          counter_sep: '1'
+          counter_sep_color: '#f34235'
+          html_descr: '<h5 class="weight_500">LINES OF CODE</h5>'
+          name: 'Item 2'
+        -
+          grid: '3'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          grid_last: '0'
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#2095f2'
+          counter_fontsize: 54px
+          counter_num: '9595'
+          counter_sep: '1'
+          counter_sep_color: '#2095f2'
+          html_descr: '<h5 class="weight_500">TOTAL DOWNLOADS</h5>'
+          name: 'Item 3'
+        -
+          grid: '3'
+          grid_last: '1'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#91ff91'
+          counter_fontsize: 54px
+          counter_num: '7690'
+          counter_sep: '1'
+          counter_sep_color: '#91ff91'
+          html_descr: '<h5 class="weight_500">CUPS OF COFFEE</h5>'
+          html_color: '#666666'
+          name: 'Item 4'
+  jf_p_clients-9011:
+    title: 'JF Particle - Clients - Style 3 (Background Hover)'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Our Partners</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Companies we work with</h5>"
+      clients:
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/1.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/1_x150_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/2.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/2_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/3.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/3_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/4.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/4_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/5.png'
+          border: '1'
+          border_width: '0 0 1px 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/5_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1'
+          name: 'Item 5'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/6.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/6_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.2'
+          name: 'Item 6'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/7.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/7_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.4'
+          name: 'Item 7'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/8.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/8_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.6'
+          name: 'Item 8'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/9.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/9_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.8'
+          name: 'Item 9'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_dark_10
+          image_def: 'gantry-media://jf/particles/clients/10.png'
+          border: '1'
+          border_width: '0 0 0 0'
+          border_color: '#e3e3e3'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/10_hover.png'
+          image_hovOpacity: '100'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '2'
+          name: 'Item 10'
+  jf_p_cta-8873:
+    title: 'JF Particle - CTA'
+    attributes:
+      contentW: default
+      padding: '80px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#FFEB3B'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      css: 'margin:0 0.625rem;padding:0 0.938rem'
+      style_1:
+        -
+          grid: '1'
+          contentTextAl: center
+          contentTheme: light
+          html: '<h3 class="weight_500" style="display:inline;vertical-align:-4px" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.2">WANT TO WORK WITH US?</h3><button class="jf_btn jf_waves_light_40 l raised deep-purple" style="text-transform:capitalize;letter-spacing:1px;margin:0 0 0 20px" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.4">GET IN TOUCH</button>'
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: Item
+  system-messages-4299:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - block
+        - attributes

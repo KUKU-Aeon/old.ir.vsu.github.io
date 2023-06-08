@@ -1,0 +1,99 @@
+name: 34
+timestamp: 1474297175
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/home_business.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  module:
+    position-module-8010: 'Module Instance'
+    position-module-8581: 'Module Instance'
+    position-module-2451: 'Module Instance'
+    position-module-3504: 'Module Instance'
+    position-module-2922: 'Module Instance'
+    position-module-9094: 'Module Instance'
+    position-module-7187: 'Module Instance'
+    position-module-7508: 'Module Instance'
+    position-module-4431: 'Module Instance'
+  position:
+    position-position-6593: Breadcrumbs
+    position-position-7313: 'Module Position'
+    position-position-3472: Footer
+  messages:
+    system-messages-9055: 'System Messages'
+  jf_p_cta:
+    jf_p_cta-8290: 'JF Particle - CTA: Style 1 (Background Color)'
+    jf_p_cta-9620: "JF Particle - CTA:\_Style 2 (Left-Side Content With Right-Side Image)"
+    jf_p_cta-8787: "JF Particle - CTA:\_Style 2 (Left-Side Image With Right-Side\_Content)"
+    jf_p_cta-4538: "JF Particle - CTA:\_Style 2 (Left-Side Content With Right-Side Image)"
+    jf_p_cta-8682: "JF Particle - CTA:\_Style 2 (Left-Side Image With Right-Side\_Content)"
+    jf_p_cta-2985: "JF Particle - CTA:\_Style 2 (Left-Side Content With Right-Side Image)"
+  custom:
+    custom-8391: 'Custom HTML'
+    custom-1089: 'Custom HTML'
+    custom-5972: 'Custom HTML'
+    custom-6059: 'Custom HTML'
+  logo:
+    logo-2056: Logo
+    logo-9233: Logo
+    logo-2574: Logo
+  menu:
+    menu-4951: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-9322: 'JF Panel Buttons'
+  jf_switcher:
+    jf_switcher-2412: 'JF Style Switcher'
+  copyright:
+    copyright-6060: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-6593: position-position-2694
+    system-messages-9055: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-8391: custom-3485
+    custom-1089: custom-1392
+    logo-2056: logo-5705
+    menu-4951: menu-2947
+    jf_panel_buttons-9322: jf_panel_buttons-3313
+    position-module-8581: position-module-1605
+    position-module-2451: position-module-6496
+    position-module-3504: position-module-1290
+    position-module-2922: position-module-3392
+    position-module-9094: position-module-7385
+    position-module-7187: position-module-2571
+    position-position-7313: position-position-5361
+    jf_switcher-2412: jf_switcher-6426
+    position-position-3472: position-position-9915
+    logo-9233: logo-2653
+    custom-5972: custom-5362
+    position-module-7508: position-module-3742
+    custom-6059: custom-4368
+    copyright-6060: copyright-3966
+    logo-2574: logo-9507
+    position-module-4431: position-module-4901

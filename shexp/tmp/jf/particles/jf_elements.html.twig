@@ -1,0 +1,869 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+	{% if particle.typo %}			<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/typo/jf_typo.min.css" type="text/css" />{% endif %}
+	
+	{% for item_waves in particle.waves %}
+		{% if item_waves.enable %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/waves/jf_waves.min.css" type="text/css" />{% endif %}
+	{% endfor %}
+	{% if particle.buttons %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/buttons/jf_buttons.min.css" type="text/css" />{% endif %}
+	{% if particle.tabs %}			<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/tabs/jf_tabs.min.css" type="text/css" />{% endif %}
+	{% if particle.acc_toggl %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/acc_toggl/jf_acc_toggl.min.css" type="text/css" />{% endif %}
+	{% if particle.dropdowns %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/dropdowns/jf_dropdowns.min.css" type="text/css" />{% endif %}
+	{% if particle.dialogs %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/dialogs/jf_dialogs.min.css" type="text/css" />{% endif %}
+	{% if particle.pricing %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/pricing/jf_pricing.min.css" type="text/css" />{% endif %}
+	{% if particle.cards %}			<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/cards/jf_cards.min.css" type="text/css" />{% endif %}
+	{% if particle.messages %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/messages/jf_messages.min.css" type="text/css" />{% endif %}
+	{% if particle.social_icons %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/social_icons/jf_social_icons.min.css" type="text/css" />{% endif %}
+	{% if particle.tooltips %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/tooltips/jf_tooltips.min.css" type="text/css" />{% endif %}
+	{% if particle.bs_buttons %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_buttons/bs_buttons.min.css" type="text/css" />{% endif %}
+	{% if particle.bs_modals %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_modals/bs_modals.min.css" type="text/css" />{% endif %}
+	{% if particle.bs_dropdowns %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_dropdowns/bs_dropdowns.min.css" type="text/css" />{% endif %}
+	{% if particle.bs_popovers %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_popovers/bs_popovers.min.css" type="text/css" />{% endif %}
+	{% if particle.bs_carousels %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_carousels/bs_carousels.min.css" type="text/css" />{% endif %}
+	
+	{% for item_css3 in particle.cssAnim %}
+		{% if item_css3.enable %}
+									<style type="text/css">
+										.animated{-webkit-animation-duration:0.8s;animation-duration:0.8s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+										.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
+										.animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
+										[data-animation-type="onview"]{
+											opacity:0!important;
+											filter:alpha(opacity=0)!important;
+											}
+										.jf_anim_done[data-animation-type="onview"]{opacity:1!important;filter:alpha(opacity=100)!important}
+									</style>
+			{% if item_css3.all_anim %}
+									<link rel="stylesheet" href="{{ item_css3.all_anim_sheet }}" type="text/css" />
+			{% endif %}
+			{% if item_css3.custom_anim %}
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/css3_anim/jf_css3_anim.min.css" type="text/css" />
+			{% endif %}
+		{% endif %}
+    {% endfor %}
+	
+	{% if particle.flip_boxes %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/flip_boxes/jf_flip_boxes.min.css" type="text/css" />{% endif %}
+	{% if particle.parallaxSections %}<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_parallax.min.css" type="text/css" />{% endif %}
+	
+	{% for item_lightbox in particle.lightboxes %}
+		{% if item_lightbox.enable_photoswipe %}
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/photoswipe/photoswipe.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/photoswipe/default-skin/default-skin.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/jf_lightboxes.min.css" type="text/css" />
+		{% endif %}
+		{% if item_lightbox.enable_venobox %}
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/venobox/jf/jf_venobox.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/jf_lightboxes.min.css" type="text/css" />
+		{% endif %}
+	 {% endfor %}
+	
+	
+	{% if particle.img_hovers %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/img_hovers/jf_img_hovers.min.css" type="text/css" />{% endif %}
+	{% if particle.hotspots %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/hotspots/jf_hotspots.min.css" type="text/css" />{% endif %}
+	{% if particle.carousels %}		
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/owl/owl.carousel.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/owl/owl.theme.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/jf_carousels.min.css" type="text/css" />
+	{% endif %}
+	{% if particle.testimonials %}	
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/owl/owl.carousel.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/owl/owl.theme.min.css" type="text/css" />
+									<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/testimonials/jf_testimonials.min.css" type="text/css" />
+	{% endif %}
+	
+	{% for item_icons in particle.iconLists %}
+		{% if item_icons.enable %}
+			<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/icon_lists/jf_icon_lists.min.css" type="text/css" />
+			{% if item_icons.url_1 %}<link rel="stylesheet" href="{{ item_icons.url_1 }}" type="text/css" />{% endif %}
+			{% if item_icons.url_2 %}<link rel="stylesheet" href="{{ item_icons.url_2 }}" type="text/css" />{% endif %}
+			{% if item_icons.url_3 %}<link rel="stylesheet" href="{{ item_icons.url_3 }}" type="text/css" />{% endif %}
+		{% endif %}
+    {% endfor %}
+	{% if particle.icon_boxes %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/icon_boxes/jf_icon_boxes.min.css" type="text/css" />{% endif %}
+	{% if particle.counters %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/counters/jf_counters.min.css" type="text/css" />{% endif %}
+	{% if particle.progress_bars %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/progress_bars/jf_progress_bars.min.css" type="text/css" />{% endif %}
+	{% if particle.process_steps %}	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/process_steps/jf_process_steps.min.css" type="text/css" />{% endif %}
+	{% if particle.pies_inf %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/pies_inf/jf_pies_inf.min.css" type="text/css" />{% endif %}
+	{% if particle.charts %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/jf_charts.min.css" type="text/css" />{% endif %}
+	{% if particle.graphs %}		<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/graphs/jf_graphs.min.css" type="text/css" />{% endif %}
+{% endblock %}
+
+{% block javascript %}
+	{% if particle.typo %}			<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/typo/jf_selectfx.min.js"></script>{% endif %}
+	{% for item_waves in particle.waves %}
+		{% if item_waves.enable %}			<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/waves/jf_waves.min.js" type="text/javascript"></script>
+											<script type="text/javascript">
+												(function($){$(window).load(function(){
+													var jf_waves_config = {
+														duration: {{ item_waves.duration|e }},
+														delay: {{ item_waves.delay|e }}
+													};
+													Waves.init(jf_waves_config);
+													
+													// Dark 10%
+														{% if item_waves.dark10 %}Waves.attach('.jf_waves_dark_10,{{ item_waves.dark10|raw }}', 'waves-dark-10');{% else %}Waves.attach('.jf_waves_dark_10', 'waves-dark-10');{% endif %}
+													// Dark 20% - DEFAULT
+														{# Waves.attach('.jf_waves,.g-main-nav .g-sublevel > li .g-menu-item-container,div.jf_select li', null); #}
+														{% if item_waves.dark20 %}Waves.attach('.jf_waves,.jf_waves_dark_20,{{ item_waves.dark20|raw }}', null);{% else %}Waves.attach('.jf_waves,.jf_waves_dark_20', null);{% endif %}
+													// Dark 30%
+														{% if item_waves.dark30 %}Waves.attach('.jf_waves_dark_30,{{ item_waves.dark30|raw }}', 'waves-dark-30');{% else %}Waves.attach('.jf_waves_dark_30', 'waves-dark-30');{% endif %}
+													// Dark 40%
+														{% if item_waves.dark40 %}Waves.attach('.jf_waves_dark_40,{{ item_waves.dark40|raw }}', 'waves-dark-40');{% else %}Waves.attach('.jf_waves_dark_40', 'waves-dark-40');{% endif %}
+													// Dark 50%
+														{% if item_waves.dark50 %}Waves.attach('.jf_waves_dark_50,{{ item_waves.dark50|raw }}', 'waves-dark-50');{% else %}Waves.attach('.jf_waves_dark_50', 'waves-dark-50');{% endif %}
+													// Dark 60%
+														{% if item_waves.dark60 %}Waves.attach('.jf_waves_dark_60,{{ item_waves.dark60|raw }}', 'waves-dark-60');{% else %}Waves.attach('.jf_waves_dark_60', 'waves-dark-60');{% endif %}
+													// Dark 70%
+														{% if item_waves.dark70 %}Waves.attach('.jf_waves_dark_70,{{ item_waves.dark70|raw }}', 'waves-dark-70');{% else %}Waves.attach('.jf_waves_dark_70', 'waves-dark-70');{% endif %}
+													// Dark 80%
+														{% if item_waves.dark80 %}Waves.attach('.jf_waves_dark_80,{{ item_waves.dark80|raw }}', 'waves-dark-80');{% else %}Waves.attach('.jf_waves_dark_80', 'waves-dark-80');{% endif %}
+													// Dark 90%
+														{% if item_waves.dark90 %}Waves.attach('.jf_waves_dark_90,{{ item_waves.dark90|raw }}', 'waves-dark-90');{% else %}Waves.attach('.jf_waves_dark_90', 'waves-dark-90');{% endif %}
+													// Dark 100%
+														{% if item_waves.dark100 %}Waves.attach('.jf_waves_dark_100,{{ item_waves.dark100|raw }}', 'waves-dark-100');{% else %}Waves.attach('.jf_waves_dark_100', 'waves-dark-100');{% endif %}
+													
+													// Light 10%
+														{# Waves.attach('.jf_waves_light_10,.g-main-nav .g-toplevel > li > .g-menu-item-container', 'waves-light-10'); #}
+														{% if item_waves.light10 %}Waves.attach('.jf_waves_light_10,{{ item_waves.light10|raw }}', 'waves-light-10');{% else %}Waves.attach('.jf_waves_light_10', 'waves-light-10');{% endif %}
+													// Light 20%
+														{% if item_waves.light20 %}Waves.attach('.jf_waves_light_20,{{ item_waves.light20|raw }}', 'waves-light-20');{% else %}Waves.attach('.jf_waves_light_20', 'waves-light-20');{% endif %}
+													// Light 30%
+														{% if item_waves.light30 %}Waves.attach('.jf_waves_light_30,{{ item_waves.light30|raw }}', 'waves-light-30');{% else %}Waves.attach('.jf_waves_light_30', 'waves-light-30');{% endif %}
+													// Light 40%
+														{% if item_waves.light40 %}Waves.attach('.jf_waves_light_40,{{ item_waves.light40|raw }}', 'waves-light-40');{% else %}Waves.attach('.jf_waves_light_40', 'waves-light-40');{% endif %}
+													// Light 50%
+														{% if item_waves.light50 %}Waves.attach('.jf_waves_light_50,{{ item_waves.light50|raw }}', 'waves-light-50');{% else %}Waves.attach('.jf_waves_light_50', 'waves-light-50');{% endif %}
+													// Light 60%
+														{% if item_waves.light60 %}Waves.attach('.jf_waves_light_60,{{ item_waves.light60|raw }}', 'waves-light-60');{% else %}Waves.attach('.jf_waves_light_60', 'waves-light-60');{% endif %}
+													// Light 70%
+														{% if item_waves.light70 %}Waves.attach('.jf_waves_light_70,{{ item_waves.light70|raw }}', 'waves-light-70');{% else %}Waves.attach('.jf_waves_light_70', 'waves-light-70');{% endif %}
+													// Light 80%
+														{% if item_waves.light80 %}Waves.attach('.jf_waves_light_80,{{ item_waves.light80|raw }}', 'waves-light-80');{% else %}Waves.attach('.jf_waves_light_80', 'waves-light-80');{% endif %}
+													// Light 90%
+														{% if item_waves.light90 %}Waves.attach('.jf_waves_light_90,{{ item_waves.light90|raw }}', 'waves-light-90');{% else %}Waves.attach('.jf_waves_light_90', 'waves-light-90');{% endif %}
+													// Light 100%
+														{% if item_waves.light100 %}Waves.attach('.jf_waves_light_100,{{ item_waves.light100|raw }}', 'waves-light-100');{% else %}Waves.attach('.jf_waves_light_100', 'waves-light-100');{% endif %}
+													
+													// Light 10%
+														{% if item_waves.shadowDark10 %}Waves.attach('.jf_waves_shadow_dark_10,{{ item_waves.shadowDark10|raw }}', 'waves-shadow-dark-10');{% else %}Waves.attach('.jf_waves_shadow_dark_10', 'waves-shadow-dark-10');{% endif %}
+													// Light 20%
+														{% if item_waves.shadowDark20 %}Waves.attach('.jf_waves_shadow_dark_20,{{ item_waves.shadowDark20|raw }}', 'waves-shadow-dark-20');{% else %}Waves.attach('.jf_waves_shadow_dark_20', 'waves-shadow-dark-20');{% endif %}
+													// Light 30%
+														{% if item_waves.shadowDark30 %}Waves.attach('.jf_waves_shadow_dark_30,{{ item_waves.shadowDark30|raw }}', 'waves-shadow-dark-30');{% else %}Waves.attach('.jf_waves_shadow_dark_30', 'waves-shadow-dark-30');{% endif %}
+													// Light 40%
+														{% if item_waves.shadowDark40 %}Waves.attach('.jf_waves_shadow_dark_40,{{ item_waves.shadowDark40|raw }}', 'waves-shadow-dark-40');{% else %}Waves.attach('.jf_waves_shadow_dark_40', 'waves-shadow-dark-40');{% endif %}
+													// Light 50%
+														{% if item_waves.shadowDark50 %}Waves.attach('.jf_waves_shadow_dark_50,{{ item_waves.shadowDark50|raw }}', 'waves-shadow-dark-50');{% else %}Waves.attach('.jf_waves_shadow_dark_50', 'waves-shadow-dark-50');{% endif %}
+													// Light 60%
+														{% if item_waves.shadowDark60 %}Waves.attach('.jf_waves_shadow_dark_60,{{ item_waves.shadowDark60|raw }}', 'waves-shadow-dark-60');{% else %}Waves.attach('.jf_waves_shadow_dark_60', 'waves-shadow-dark-60');{% endif %}
+													// Light 70%
+														{% if item_waves.shadowDark70 %}Waves.attach('.jf_waves_shadow_dark_70,{{ item_waves.shadowDark70|raw }}', 'waves-shadow-dark-70');{% else %}Waves.attach('.jf_waves_shadow_dark_70', 'waves-shadow-dark-70');{% endif %}
+													// Light 80%
+														{% if item_waves.shadowDark80 %}Waves.attach('.jf_waves_shadow_dark_80,{{ item_waves.shadowDark80|raw }}', 'waves-shadow-dark-80');{% else %}Waves.attach('.jf_waves_shadow_dark_80', 'waves-shadow-dark-80');{% endif %}
+													// Light 90%
+														{% if item_waves.shadowDark90 %}Waves.attach('.jf_waves_shadow_dark_90,{{ item_waves.shadowDark90|raw }}', 'waves-shadow-dark-90');{% else %}Waves.attach('.jf_waves_shadow_dark_90', 'waves-shadow-dark-90');{% endif %}
+													// Light 100%
+														{% if item_waves.shadowDark100 %}Waves.attach('.jf_waves_shadow_dark_100,{{ item_waves.shadowDark100|raw }}', 'waves-shadow-dark-100');{% else %}Waves.attach('.jf_waves_shadow_dark_100', 'waves-shadow-dark-100');{% endif %}
+													
+													// Light 10%
+														{% if item_waves.shadowLight10 %}Waves.attach('.jf_waves_shadow_light_10,{{ item_waves.shadowLight10|raw }}', 'waves-shadow-light-10');{% else %}Waves.attach('.jf_waves_shadow_light_10', 'waves-shadow-light-10');{% endif %}
+													// Light 20%
+														{% if item_waves.shadowLight20 %}Waves.attach('.jf_waves_shadow_light_20,{{ item_waves.shadowLight20|raw }}', 'waves-shadow-light-20');{% else %}Waves.attach('.jf_waves_shadow_light_20', 'waves-shadow-light-20');{% endif %}
+													// Light 30%
+														{% if item_waves.shadowLight30 %}Waves.attach('.jf_waves_shadow_light_30,{{ item_waves.shadowLight30|raw }}', 'waves-shadow-light-30');{% else %}Waves.attach('.jf_waves_shadow_light_30', 'waves-shadow-light-30');{% endif %}
+													// Light 40%
+														{% if item_waves.shadowLight40 %}Waves.attach('.jf_waves_shadow_light_40,{{ item_waves.shadowLight40|raw }}', 'waves-shadow-light-40');{% else %}Waves.attach('.jf_waves_shadow_light_40', 'waves-shadow-light-40');{% endif %}
+													// Light 50%
+														{% if item_waves.shadowLight50 %}Waves.attach('.jf_waves_shadow_light_50,{{ item_waves.shadowLight50|raw }}', 'waves-shadow-light-50');{% else %}Waves.attach('.jf_waves_shadow_light_50', 'waves-shadow-light-50');{% endif %}
+													// Light 60%
+														{% if item_waves.shadowLight60 %}Waves.attach('.jf_waves_shadow_light_60,{{ item_waves.shadowLight60|raw }}', 'waves-shadow-light-60');{% else %}Waves.attach('.jf_waves_shadow_light_60', 'waves-shadow-light-60');{% endif %}
+													// Light 70%
+														{% if item_waves.shadowLight70 %}Waves.attach('.jf_waves_shadow_light_70,{{ item_waves.shadowLight70|raw }}', 'waves-shadow-light-70');{% else %}Waves.attach('.jf_waves_shadow_light_70', 'waves-shadow-light-70');{% endif %}
+													// Light 80%
+														{% if item_waves.shadowLight80 %}Waves.attach('.jf_waves_shadow_light_80,{{ item_waves.shadowLight80|raw }}', 'waves-shadow-light-80');{% else %}Waves.attach('.jf_waves_shadow_light_80', 'waves-shadow-light-80');{% endif %}
+													// Light 90%
+														{% if item_waves.shadowLight90 %}Waves.attach('.jf_waves_shadow_light_90,{{ item_waves.shadowLight90|raw }}', 'waves-shadow-light-90');{% else %}Waves.attach('.jf_waves_shadow_light_90', 'waves-shadow-light-90');{% endif %}
+													// Light 100%
+														{% if item_waves.shadowLight100 %}Waves.attach('.jf_waves_shadow_light_100,{{ item_waves.shadowLight100|raw }}', 'waves-shadow-light-100');{% else %}Waves.attach('.jf_waves_shadow_light_100', 'waves-shadow-light-100');{% endif %}
+												})})(jQuery);
+											</script>
+		{% endif %}
+	{% endfor %}
+	{% if particle.tabs %}			<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/tabs/jf_tabs.min.js"></script>{% endif %}
+	{% if particle.acc_toggl %}		<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/acc_toggl/jf_acc_toggl.min.js"></script>{% endif %}
+	{% if particle.dropdowns %}		
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/dropdowns/mdlComponentHandler.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/dropdowns/menu.min.js"></script>
+	{% endif %}
+	{% if particle.dialogs %}		
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/dialogs/cta.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/dialogs/jf_dialogs.min.js"></script>
+	{% endif %}
+	{% if particle.tooltips %}		
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/tooltips/jquery.powertip.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/tooltips/jf_tips.min.js"></script>
+	{% endif %}
+	{# START BOOTSTRAP ---------------------------------- #}
+	{% if particle.bs_modals or particle.bs_dropdowns or particle.bs_popovers or particle.bs_carousels%}		
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_modals/bs_transition_v3.min.js"></script>
+	{% endif %}
+	{% if particle.bs_modals %}		
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_modals/bs_modal_v3.min.js"></script>
+									<script type="text/javascript">jQuery(document).ready(function(o){o("body").append(o(".modal")),o(document).on("click",".bs_modal_no_bg",function(){o(".modal-backdrop").addClass("no_backdrop")})});</script>
+	{% endif %}
+	{% if particle.bs_dropdowns %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_dropdowns/bs_dropdowns_v3.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_dropdowns/bs_collapse_v3.min.js"></script>
+	{% endif %}
+	{% if particle.bs_popovers %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_popovers/bs_popovers_v3.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){	
+											$(".popover-test").popover();
+											// popover demo
+											$("[data-toggle=popover]").popover().click(function(e){
+												e.preventDefault();
+											});
+											// Conflicting to Joomla 3 Bootstrap Tooltips, so we will turn off on that elements (exactly for "Joomla Search Component", or maybe on others)
+											$(".hasTooltip").off(".tooltip");
+										});
+									</script>
+	{% endif %}
+	{% if particle.bs_carousels %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/bs_carousels/bs_carousels_v3.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$("#bs_carousel_1,#bs_carousel_2,#bs_carousel_3,#bs_carousel_4,#bs_carousel_5").carousel();
+										});
+										// Mootools Conflict Fix
+										if(window.MooTools){
+											window.addEvent("domready", function(){
+												if (typeof jQuery != "undefined" && typeof MooTools != "undefined" ) {
+													Element.implement({
+														slide: function(how, mode){
+															return this;
+														}
+													}); 
+												}
+											});
+										}
+									</script>
+	{% endif %}
+	{# END BOOTSTRAP ---------------------------------- #}
+	
+	{% for item_css3 in particle.cssAnim %}
+		{% if item_css3.enable %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/jquery.appear.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											{% if item_css3.css3_animate_1_tags %}
+												$("{{ item_css3.css3_animate_1_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_1_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_1_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_1_delay|raw }}");
+											{% endif %}
+											{% if item_css3.css3_animate_2_tags %}
+												$("{{ item_css3.css3_animate_2_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_2_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_2_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_2_delay|raw }}");
+											{% endif %}
+											{% if item_css3.css3_animate_3_tags %}
+												$("{{ item_css3.css3_animate_3_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_3_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_3_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_3_delay|raw }}");
+											{% endif %}
+											{% if item_css3.css3_animate_4_tags %}
+												$("{{ item_css3.css3_animate_4_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_4_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_4_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_4_delay|raw }}");
+											{% endif %}
+											{% if item_css3.css3_animate_5_tags %}
+												$("{{ item_css3.css3_animate_5_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_5_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_5_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_5_delay|raw }}");
+											{% endif %}
+											{% if item_css3.css3_animate_6_tags %}
+												$("{{ item_css3.css3_animate_6_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_6_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_6_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_6_delay|raw }}");
+											{% endif %}
+											{% if item_css3.css3_animate_7_tags %}
+												$("{{ item_css3.css3_animate_7_tags|raw }}").attr("data-animation","{{ item_css3.css3_animate_7_name|raw }}").attr("data-animation-type","{{ item_css3.css3_animate_7_type|raw }}").attr("data-animation-delay","{{ item_css3.css3_animate_7_delay|raw }}");
+											{% endif %}
+											// CSS3 ANIM MAIN FUNC
+											$("[data-animation]").each(function() {
+												var self 		= $(this);
+												
+												var animation 	= self.data("animation");
+												var delay 		= (self.data("animation-delay") ? self.data("animation-delay") : 0);
+												var type 		= self.attr('data-animation-type');
+												
+												var action		= (self.data("animation-action") ? self.data("animation-action") : "self");
+												var actionElem 	= self;
+												if (action == "parent-1x"){
+													var actionElem 		= self.parent();
+												} else if (action == "parent-2x") {
+													var actionElem 		= self.parent().parent();
+												} else if (action == "parent-3x") {
+													var actionElem 		= self.parent().parent().parent();
+												} else if (action == "parent-4x") {
+													var actionElem 		= self.parent().parent().parent().parent();
+												} else if (action == "parent-5x") {
+													var actionElem 		= self.parent().parent().parent().parent().parent();
+												} else {
+													var actionElem 		= self;
+												}
+													
+												function call_anim() {
+													self.css("animation-delay", delay + "s").css("-webkit-animation-delay", delay + "s");
+													self.addClass(animation);
+													self.addClass("animated");
+													self.one("webkitAnimationStart mozAnimationStart MSAnimationStart animationstart", function(){
+														self.addClass("jf_anim_done");
+													});
+													self.one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){
+														$(this).removeClass("animated").removeClass(animation);
+														
+													});
+												};
+												if (typeof type !== typeof undefined && type !== false) {
+													if (type == "onview"){
+														self.appear(function(){
+															setTimeout(function(){
+																call_anim();
+															}, delay);
+														}, {accX: 0, accY: -50});
+													}
+													if (type == "onclick"){
+														actionElem.click(function(e){
+															e.preventDefault();
+															call_anim();
+														});
+													}
+													if (type == "onhover"){
+														actionElem.mouseenter(function(){
+															call_anim();
+														});
+													}
+												}
+											});
+											
+											
+										});
+									</script>
+		{% endif %}
+    {% endfor %}
+	
+	{% for item_lightbox in particle.lightboxes %}
+		{% if item_lightbox.enable_photoswipe %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/photoswipe/photoswipe.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/photoswipe/photoswipe-ui-default.min.js"></script>
+									<script type="text/javascript">
+										var jf_ps_caption		= {{ item_lightbox.ps_caption|raw }},
+											jf_ps_fullscreenn	= {{ item_lightbox.ps_fullscreen|raw }},
+											jf_ps_zoom			= {{ item_lightbox.ps_zoom|raw }},
+											jf_ps_share			= {{ item_lightbox.ps_share|raw }},
+											jf_ps_counter		= {{ item_lightbox.ps_counter|raw }},
+											jf_ps_arrow			= {{ item_lightbox.ps_arrow|raw }},
+											jf_ps_preloader		= {{ item_lightbox.ps_preloader|raw }};
+									</script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/photoswipe/jf_ps.min.js"></script>
+		{% endif %}
+		{% if item_lightbox.enable_venobox %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/lightboxes/venobox/jf/jf_venobox.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$('.jf_venobox').venobox({
+												numeratio: {% if item_lightbox.vb_numeration == 1 %}true{% else %}false{% endif %},
+												infinigall: {% if item_lightbox.vb_infinite == 1 %}true{% else %}false{% endif %}
+											});
+										});
+									</script>
+		{% endif %}
+	{% endfor %}
+	
+	{% if particle.carousels %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/owl/jf_owl.carousel.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$(".jf_carousel").each(function(){
+												var jf_carousel 		= $(this);
+												var jf_items 			= jf_carousel.data('items');
+												if (!jf_carousel.data("autoplay") === undefined) {
+													var jf_autoplay		= jf_carousel.data('autoplay');
+												} else {
+													var jf_autoplay		= false;
+												}
+												if (!jf_carousel.data("stopOnHover") === undefined) {
+													var jf_stopOnHover	= jf_carousel.data('stopOnHover');
+												} else {
+													var jf_stopOnHover	= false;
+												}
+												var jf_speed			= jf_carousel.data('speed');
+												if (!jf_carousel.data("navigation") === undefined || !jf_carousel.data("navigation") === false) {
+													var jf_navigation	= jf_carousel.data('navigation');
+												} else {
+													var jf_navigation	= false;
+												}
+												if (!jf_carousel.data("pagination") === undefined || !jf_carousel.data("pagination") === false) {
+													var jf_pagination	= jf_carousel.data('pagination');
+												} else {
+													var jf_pagination	= false;
+												}
+												if (!jf_carousel.data("lazyload") === undefined) {
+													var jf_lazyLoad	= jf_carousel.data('lazyload');
+												} else {
+													var jf_lazyLoad	= true;
+												}
+												if (!jf_carousel.data("autoHeight") === undefined) {
+													var jf_autoHeight	= jf_carousel.data('autoHeight');
+												} else {
+													var jf_autoHeight	= false;
+												}
+												if (!jf_carousel.data("mouseDrag") === undefined) {
+													var jf_mouseDrag	= jf_carousel.data('mouseDrag');
+												} else {
+													var jf_mouseDrag	= true;
+												}
+												if (!jf_carousel.data("touchDrag") === undefined) {
+													var jf_touchDrag	= jf_carousel.data('touchDrag');
+												} else {
+													var jf_touchDrag	= true;
+												}
+												if(jf_items == '1'){
+													jf_carousel.jf_owlCarousel({
+														items: jf_items,
+														singleItem: true,
+														autoPlay: jf_autoplay,
+														stopOnHover: jf_stopOnHover,
+														slideSpeed:	jf_speed,
+														paginationSpeed: jf_speed,
+														rewindSpeed: jf_speed,
+														navigation: jf_navigation,
+														navigationText : ['{{ '<i class="material-icons">arrow_back</i>'|e('js') }}','{{ '<i class="material-icons">arrow_forward</i>'|e('js') }}'],
+														pagination: jf_pagination,
+														lazyLoad: jf_lazyLoad,
+														autoHeight: jf_autoHeight,
+														mouseDrag: jf_mouseDrag,
+														touchDrag: jf_touchDrag
+													});
+												} else {
+													jf_carousel.jf_owlCarousel({
+														items: jf_items,
+														autoPlay: jf_autoplay,
+														stopOnHover: jf_stopOnHover,
+														slideSpeed:	jf_speed,
+														paginationSpeed: jf_speed,
+														rewindSpeed: jf_speed,
+														navigation: jf_navigation,
+														navigationText : ['{{ '<i class="material-icons">arrow_back</i>'|e('js') }}','{{ '<i class="material-icons">arrow_forward</i>'|e('js') }}'],
+														pagination: jf_pagination,
+														lazyLoad: jf_lazyLoad,
+														autoHeight: jf_autoHeight,
+														mouseDrag: jf_mouseDrag,
+														touchDrag: jf_touchDrag
+													});
+												}
+											});
+										});
+									</script>
+	{% endif %}
+	{% if particle.testimonials %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/carousels/owl/jf_owl.carousel.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$(".jf_testimonials").each(function(){
+												var jf_carousel 		= $(this);
+												var jf_items 			= jf_carousel.data('items');
+												if (!jf_carousel.data("autoplay") === undefined) {
+													var jf_autoplay		= jf_carousel.data('autoplay');
+												} else {
+													var jf_autoplay		= false;
+												}
+												if (!jf_carousel.data("stopOnHover") === undefined) {
+													var jf_stopOnHover	= jf_carousel.data('stopOnHover');
+												} else {
+													var jf_stopOnHover	= false;
+												}
+												var jf_speed			= jf_carousel.data('speed');
+												if (!jf_carousel.data("navigation") === undefined) {
+													var jf_navigation	= jf_carousel.data('navigation');
+												} else {
+													var jf_navigation	= false;
+												}
+												if (!jf_carousel.data("lazyload") === undefined) {
+													var jf_lazyLoad	= jf_carousel.data('lazyload');
+												} else {
+													var jf_lazyLoad	= true;
+												}
+												if (!jf_carousel.data("autoHeight") === undefined) {
+													var jf_autoHeight	= jf_carousel.data('autoHeight');
+												} else {
+													var jf_autoHeight	= false;
+												}
+												if (!jf_carousel.data("mouseDrag") === undefined) {
+													var jf_mouseDrag	= jf_carousel.data('mouseDrag');
+												} else {
+													var jf_mouseDrag	= true;
+												}
+												if (!jf_carousel.data("touchDrag") === undefined) {
+													var jf_touchDrag	= jf_carousel.data('touchDrag');
+												} else {
+													var jf_touchDrag	= true;
+												}
+												if(jf_items == '1'){
+													jf_carousel.jf_owlCarousel({
+														items: jf_items,
+														singleItem: true,
+														autoPlay: jf_autoplay,
+														stopOnHover: jf_stopOnHover,
+														slideSpeed:	jf_speed,
+														paginationSpeed: jf_speed,
+														rewindSpeed: jf_speed,
+														navigation: jf_navigation,
+														lazyLoad: jf_lazyLoad,
+														autoHeight: jf_autoHeight,
+														mouseDrag: jf_mouseDrag,
+														touchDrag: jf_touchDrag,
+														responsiveBaseWidth: ".jf_p_testimonials"
+													});
+												} else {
+													jf_carousel.jf_owlCarousel({
+														items: jf_items,
+														autoPlay: jf_autoplay,
+														stopOnHover: jf_stopOnHover,
+														slideSpeed:	jf_speed,
+														paginationSpeed: jf_speed,
+														rewindSpeed: jf_speed,
+														navigation: jf_navigation,
+														lazyLoad: jf_lazyLoad,
+														autoHeight: jf_autoHeight,
+														mouseDrag: jf_mouseDrag,
+														touchDrag: jf_touchDrag
+													});
+												}
+											});
+										});
+									</script>
+	{% endif %}
+	
+	{% if particle.counters %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/jquery.appear.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/counters/jf_counters.min.js"></script>
+	{% endif %}
+	
+	{% if particle.progress_bars %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/jquery.appear.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/progress_bars/jquery.countTo.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$('.jf_progress').length > 0 && $('.jf_progress').each(function() {
+												var jf_progress 	= $(this),
+													jf_percent 		= jf_progress.attr("data-percent"),
+													jf_progress_H	= jf_progress.height(),
+													jf_percent_H	= jf_progress.find('.percent').height(),
+													jf_percent_ma	= (jf_percent_H-jf_progress_H)/2;
+												jf_progress.find(".percent").css({'margin-top': -jf_percent_ma + "px"});
+												jf_progress.appear(function() {
+													jf_progress.find(".counter span").countTo(), 
+													jf_progress.find(".fill").css({width: jf_percent + "%"})
+												}, "easeInCubic");
+											});
+										});
+									</script>
+	{% endif %}
+	
+	{% if particle.process_steps %}
+									<script type="text/javascript">
+										(function($){
+											$.fn.jf_process  = function(options){
+												var $t = $(this),
+												tc = $t.find(".content");
+												tc.hide(); //Hide all content
+												$t.find("ul.bars li:first").addClass("active filled").show(); //Activate first tab
+												$t.find(".content:first").show(); //Show first tab content
+												  
+												//On Click Event
+												$t.find("ul.bars li .bar").click(function(e) {
+													e.preventDefault();
+													$t.find("ul.bars li").removeClass("active"); //Remove any "active" class
+													$(this).parent().addClass("active"); //Add "active" class to selected tab
+													var activeBar = $(this).attr("data-bar"); //Find the rel attribute value to identify the active tab + content
+													
+													tc.animate({opacity:0}, function(){
+														tc.hide();
+														$t.find("[data-content="+activeBar+"]").animate({opacity:1}).show(); //Fade in the active content
+													}); //Hide all tab content
+													
+												});
+												
+												$t.find("ul.bars li").each(function() {
+													$(this).on({
+														click: function() {
+															$(this).addClass("filled");
+															$(this).removeClass("lined");
+															$(this).prevAll().each(function() {
+																$(this).addClass("lined filled");
+															});
+															$(this).nextAll().each(function() {
+																$(this).removeClass("lined filled");
+															});
+														}
+													})
+												});
+											};
+											$(window).load(function(){
+												$('.jf_process').jf_process();
+											});
+										})(jQuery);
+									</script>
+	{% endif %}
+	
+	{% if particle.pies_inf %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/jquery.appear.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/pies_inf/jquery.easypiechart.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/progress_bars/jquery.countTo.min.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$('.jf_inf_pie').length > 0 && $('.jf_inf_pie').each(function() {
+												var jf_inf_pie 				= $(this),
+													jf_roundSkillSize		= jf_inf_pie.attr("data-size"),
+													jf_roundSkillAnimate	= jf_inf_pie.attr("data-animate"),
+													jf_roundSkillTrackColor	= jf_inf_pie.attr("data-trackcolor"),
+													jf_roundSkillWidth		= jf_inf_pie.attr("data-width"),
+													jf_roundSkillColor		= jf_inf_pie.attr("data-color");
+												jf_inf_pie.css({'width':jf_roundSkillSize,'height':jf_roundSkillSize,'line-height':jf_roundSkillSize+'px'});
+												jf_inf_pie.find('.fa,.material-icons').css({'line-height':jf_roundSkillSize+'px'});
+												jf_inf_pie.appear(function() {
+													jf_inf_pie.easyPieChart({
+														size: Number(jf_roundSkillSize),
+														animate:{
+															duration:jf_roundSkillAnimate,
+															enabled:true
+														},
+														scaleColor: !1,
+														trackColor: jf_roundSkillTrackColor,
+														lineWidth: Number(jf_roundSkillWidth),
+														lineCap: "square",
+														barColor: jf_roundSkillColor
+													});
+													jf_inf_pie.find(".counter span").length > 0 && jf_inf_pie.find(".counter span").each(function() {
+														$(this).countTo();
+													});
+												}, "easeInCubic");
+											});
+										});
+									</script>
+	{% endif %}
+	
+	{% if particle.charts or particle.graphs %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/flot/jquery.flot.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/jf_jquery.ba-resize.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/flot/jf_jquery.flot.resize.min.js"></script>
+	{% endif %}
+	{% if particle.charts %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/flot/jquery.flot.orderBars.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/flot/jquery.flot.pie.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/flot/jquery.flot.tooltip.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/charts/flot/jf_charts.min.js"></script>
+	{% endif %}
+	{% if particle.graphs %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/graphs/flot/curvedLines.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/graphs/flot/jf_graphs.min.js"></script>
+	{% endif %}
+	
+	{% for item_parallax in particle.parallaxSections %}
+		{% if item_parallax.enable %}
+									{# parallax BG needs resize event #}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/jf_jquery.ba-resize.min.js"></script>
+		{% endif %}
+    {% endfor %}
+{% endblock %}
+
+
+{% block javascript_footer %}
+	{% for item_parallax in particle.parallaxSections %}
+		{% if item_parallax.enable %}
+									{% if item_parallax.custom_par_1_id or item_parallax.custom_par_2_id or item_parallax.custom_par_3_id or item_parallax.custom_par_4_id or item_parallax.custom_par_5_id or item_parallax.custom_par_6_id or item_parallax.custom_par_7_id or item_parallax.custom_par_8_id or item_parallax.custom_par_9_id %}
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											{% if item_parallax.custom_par_1_id %}
+												{% if item_parallax.custom_par_1_wrap %}
+													$("{{ item_parallax.custom_par_1_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_1_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_1_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_1_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_1_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_1_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_1_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_1_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_1_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_1_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_1_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_1_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_1_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_1_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_2_id %}
+												{% if item_parallax.custom_par_2_wrap %}
+													$("{{ item_parallax.custom_par_2_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_2_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_2_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_2_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_2_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_2_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_2_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_2_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_2_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_2_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_2_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_2_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_2_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_2_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_3_id %}
+												{% if item_parallax.custom_par_3_wrap %}
+													$("{{ item_parallax.custom_par_3_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_3_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_3_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_3_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_3_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_3_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_3_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_3_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_3_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_3_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_3_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_3_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_3_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_3_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_4_id %}
+												{% if item_parallax.custom_par_4_wrap %}
+													$("{{ item_parallax.custom_par_4_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_4_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_4_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_4_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_4_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_4_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_4_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_4_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_4_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_4_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_4_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_4_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_4_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_4_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_5_id %}
+												{% if item_parallax.custom_par_5_wrap %}
+													$("{{ item_parallax.custom_par_5_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_5_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_5_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_5_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_5_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_5_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_5_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_5_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_5_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_5_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_5_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_5_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_5_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_5_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_6_id %}
+												{% if item_parallax.custom_par_6_wrap %}
+													$("{{ item_parallax.custom_par_6_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_6_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_6_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_6_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_6_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_6_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_6_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_6_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_6_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_6_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_6_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_6_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_6_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_6_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_7_id %}
+												{% if item_parallax.custom_par_7_wrap %}
+													$("{{ item_parallax.custom_par_7_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_7_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_7_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_7_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_7_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_7_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_7_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_7_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_7_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_7_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_7_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_7_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_7_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_7_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_8_id %}
+												{% if item_parallax.custom_par_8_wrap %}
+													$("{{ item_parallax.custom_par_8_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_8_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_8_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_8_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_8_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_8_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_8_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_8_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_8_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_8_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_8_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_8_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_8_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_8_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+											{% if item_parallax.custom_par_9_id %}
+												{% if item_parallax.custom_par_9_wrap %}
+													$("{{ item_parallax.custom_par_9_id|e }}").wrapAll('{{ '<div class="jf_parallax"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_9_id|e }}").parent().prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_9_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_9_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_9_id|e }}").parent().prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_9_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_9_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% else %}
+													$("{{ item_parallax.custom_par_9_id|e }}").addClass("jf_parallax");
+													$("{{ item_parallax.custom_par_9_id|e }}").prepend('{{ '<div class="mask" data-parallax-opacity="'|e('js') }}{{ item_parallax.custom_par_9_maskOpacity|e }}{{ '" style="background:'|e('js') }}{{ item_parallax.custom_par_9_maskColor|e }}{{ '"></div>'|e('js') }}');
+													$("{{ item_parallax.custom_par_9_id|e }}").prepend('{{ '<div class="bg no-repeat '|e('js') }}{{ item_parallax.custom_par_9_type }}{{ '" style="background-image: url('|e('js') }}{{ url(item_parallax.custom_par_9_image)|e }}{{ ');"></div>'|e('js') }}');
+												{% endif %}
+											{% endif %}
+										});
+									</script>
+									{% endif %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_parallax.min.js"></script>
+									<script type="text/javascript">
+										(function($){$(window).load(function(){
+											$(".jf_parallax").jf_Parallax({
+												jf_speedDivider	: 6,
+												jf_position		: "relative",
+												jf_scrollDirec	: "down"
+											});
+										})})(jQuery);
+									</script>
+				{% if item_parallax.videobg_self %}
+									<script type="text/javascript">
+										jQuery(document).ready(function($){
+											$("[data-video-bg]").each(function() {
+												var def_vide_value 	= $(this).attr("data-video-bg"),
+													$this			= $(this);
+												if($this.is(':not([data-video-bg^="http"])')){
+													$this.attr("data-video-bg", "{{ gantry.jf_g5_theme.joomla_root() }}" + def_vide_value);
+												}
+											});
+										});
+									</script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/jquery.jf_vide.min.js"></script>
+				{% endif %}
+				{% if item_parallax.videobg_vimeo %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/jquery.vimeo.api.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/jquery.jf_vimelar.min.js"></script>
+				{% endif %}
+				{% if item_parallax.videobg_youtube %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/jquery.ytbg.min.js"></script>
+				{% endif %}
+				{% if item_parallax.videobg_self or item_parallax.videobg_youtube or item_parallax.videobg_vimeo %}
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/jquery.fullscreen-min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/isInViewport.min.js"></script>
+									<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/elements/others/parallax/jf_videobg/jf_videobg.min.js"></script>
+				{% endif %}
+		{% endif %}
+    {% endfor %}
+	
+	{# ECHOS ##############################################
+	
+	{% if particle.typo %}			<script type="text/javascript">console.log("jf_elements_1 - particle.typo");</script>{% endif %}
+	{% if particle.waves %}			<script type="text/javascript">console.log("jf_elements_2 - particle.waves");</script>{% endif %}
+	{% if particle.buttons %}		<script type="text/javascript">console.log("jf_elements_2 - particle.buttons");</script>{% endif %}
+	{% if particle.tabs %}			<script type="text/javascript">console.log("jf_elements_2 - particle.tabs");</script>{% endif %}
+	{% if particle.acc_toggl %}		<script type="text/javascript">console.log("jf_elements_2 - particle.acc_toggl");</script>{% endif %}
+	{% if particle.dropdowns %}		<script type="text/javascript">console.log("jf_elements_2 - particle.dropdowns");</script>{% endif %}
+	{% if particle.dialogs %}		<script type="text/javascript">console.log("jf_elements_2 - particle.dialogs");</script>{% endif %}
+	{% if particle.pricing %}		<script type="text/javascript">console.log("jf_elements_2 - particle.pricing");</script>{% endif %}
+	{% if particle.cards %}			<script type="text/javascript">console.log("jf_elements_2 - particle.cards");</script>{% endif %}
+	{% if particle.messages %}		<script type="text/javascript">console.log("jf_elements_2 - particle.messages");</script>{% endif %}
+	{% if particle.social_icons %}	<script type="text/javascript">console.log("jf_elements_2 - particle.social_icons");</script>{% endif %}
+	{% if particle.tooltips %}		<script type="text/javascript">console.log("jf_elements_2 - particle.tooltips");</script>{% endif %}
+	{% if particle.bs_buttons %}	<script type="text/javascript">console.log("jf_elements_2 - particle.bs_buttons");</script>{% endif %}
+	{% if particle.bs_modals %}		<script type="text/javascript">console.log("jf_elements_2 - particle.bs_modals");</script>{% endif %}
+	{% if particle.bs_dropdowns %}	<script type="text/javascript">console.log("jf_elements_2 - particle.bs_dropdowns");</script>{% endif %}
+	{% if particle.bs_popovers %}	<script type="text/javascript">console.log("jf_elements_2 - particle.bs_popovers");</script>{% endif %}
+	{% if particle.bs_carousels %}	<script type="text/javascript">console.log("jf_elements_2 - particle.bs_carousels");</script>{% endif %}
+	
+	{% for item_css3 in particle.cssAnim %}
+		{% if item_css3.enable %}		
+									<script type="text/javascript">console.log("jf_elements_3 - particle.cssAnim");</script>
+		{% endif %}
+	{% endfor %}
+	{% if particle.flip_boxes %}	<script type="text/javascript">console.log("jf_elements_3 - particle.flip_boxes");</script>{% endif %}
+	{% for item_parallax in particle.parallaxSections %}
+		{% if item_parallax.enable %}
+									<script type="text/javascript">console.log("jf_elements_3 - particle.parallaxSections");</script>
+		{% endif %}
+	{% endfor %}
+	{% for item_lightbox in particle.lightboxes %}
+		{% if item_lightbox.enable_photoswipe or item_lightbox.enable_venobox %}
+									<script type="text/javascript">console.log("jf_elements_3 - particle.lightboxes");</script>
+		{% endif %}
+	{% endfor %}
+	{% if particle.img_hovers %}	<script type="text/javascript">console.log("jf_elements_3 - particle.img_hovers");</script>{% endif %}
+	{% if particle.hotspots %}	<script type="text/javascript">console.log("jf_elements_3 - particle.hotspots");</script>{% endif %}
+	{% if particle.carousels %}		<script type="text/javascript">console.log("jf_elements_3 - particle.carousels");</script>{% endif %}
+	{% if particle.testimonials %}	<script type="text/javascript">console.log("jf_elements_3 - particle.testimonials");</script>{% endif %}
+	
+	{% for item_icons in particle.iconLists %}{% if item_icons.enable %}		<script type="text/javascript">console.log("jf_elements_4 - particle.iconLists");</script>{% endif %}{% endfor %}
+	{% if particle.icon_boxes %}	<script type="text/javascript">console.log("jf_elements_4 - particle.icon_boxes");</script>{% endif %}
+	{% if particle.icon_boxes %}	<script type="text/javascript">console.log("jf_elements_4 - particle.icon_boxes");</script>{% endif %}
+	{% if particle.counters %}		<script type="text/javascript">console.log("jf_elements_4 - particle.counters");</script>{% endif %}
+	{% if particle.progress_bars %}	<script type="text/javascript">console.log("jf_elements_4 - particle.progress_bars");</script>{% endif %}
+	{% if particle.process_steps %}	<script type="text/javascript">console.log("jf_elements_4 - particle.process_steps");</script>{% endif %}
+	{% if particle.pies_inf %}		<script type="text/javascript">console.log("jf_elements_4 - particle.pies_inf");</script>{% endif %}
+	{% if particle.charts %}		<script type="text/javascript">console.log("jf_elements_4 - particle.charts");</script>{% endif %}
+	{% if particle.graphs %}		<script type="text/javascript">console.log("jf_elements_4 - particle.graphs");</script>{% endif %}#}
+{% endblock %}

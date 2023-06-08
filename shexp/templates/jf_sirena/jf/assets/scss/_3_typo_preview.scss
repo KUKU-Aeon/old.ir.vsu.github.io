@@ -1,0 +1,323 @@
+/**
+* @version    JF_PDT_090
+* @author   JoomForest http://www.joomforest.com
+* @copyright  Copyright (C) 2011-2016 JoomForest.com
+* @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
+
+/* ===========_______________________________ START - TYPO PREVIEW ________________________________________=========== */
+  .jf_typo_preview {
+    position: relative;
+    margin: 0 0 50px 0;
+    background: #FFF;
+    z-index: 0;
+    @include box-shadow(0 1px 5px rgba(0, 0, 0, 0.2));
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* start - TOOLS ----------------------------------------------------------------- */
+      .tools {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 9;
+        direction: ltr;
+        div {
+          display: inline-block;
+          cursor: pointer
+        }
+        .showcode {
+          margin: 0 10px 0 0;
+          font-size: 20px;
+          vertical-align: -1px;
+        }
+        .foreground_btn {
+          i {
+            @include transition(all 0.3s ease);
+          }
+          .fa-circle {
+            color: rgba(255, 255, 255, 0.9);
+          }
+        }
+      }
+    /* end   - TOOLS ----------------------------------------------------------------- */
+
+    /* start - TITLE ----------------------------------------------------------------- */
+      .title {
+        text-align: center;
+        font-size: 24px;
+        text-transform: uppercase;
+        line-height: 0;
+        margin: 0;
+        border-bottom: 1px solid #EEE;
+        padding: 20px 0;
+        position: relative;
+        @include transition(all 1.5s ease);
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 10px 10px 0 10px;
+          border-color: #F3F3F3 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+          bottom: -11px;
+          left: 50%;
+          margin: 0 0 0 -10px;
+          @include transition(all 0.3s);
+        }
+        span {
+          display: inline-block;
+          overflow: hidden;
+          @include transition(color 0.3s);
+          position: relative;
+          z-index: 1;
+          -webkit-backface-visibility: hidden;
+          -moz-osx-font-smoothing: grayscale;
+          padding: 2px 15px;
+          &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            bottom: 100%;
+            left: 0;
+            z-index: -1;
+            @include transition(transform 0.3s);
+            -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            -moz-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            -ms-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            -o-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            background: #f3f3f3;
+           }
+        }
+      }
+      &:hover {
+        .title {
+          &::before {
+            bottom: 10px;
+          }
+          span {
+            &::after {
+              @include transform(translate3d(0, 100%, 0));
+            }
+          }
+        }
+      }
+      .html {
+        .title {
+          margin: 0 0 50px 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+          &::before {
+            bottom: 10px;
+          }
+          span {
+            font-size: 22px;
+            &::after {
+              @include transform(translate3d(0, 100%, 0));
+            }
+          }
+        }
+      }
+    /* end   - TITLE ----------------------------------------------------------------- */
+
+    /* start - HTML ----------------------------------------------------------------- */
+      .html {
+        padding: 35px 20px;
+        min-height: 350px;
+        @include transition(all 0.8s ease);
+        -webkit-animation-name: codeground_html_delay;
+        animation-name: codeground_html_delay;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        &:before,
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        *:not(.waves-ripple), 
+        *:not(.jf_tab_wrap *), 
+        *:not(.jf_tab_wrap) *, 
+        *:after, 
+        *:before {
+          @include transition(all 1s cubic-bezier(0.19, 1, 0.22, 1));
+        }
+      }
+    /* end   - HTML ----------------------------------------------------------------- */
+
+    /* start - FOREGROUND ----------------------------------------------------------------- */
+      .foreground {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        overflow: hidden;
+        .bg {
+          position: absolute;
+          width: 0px;
+          height: 0px;
+          margin: 0;
+          top: 40px;
+          right: 28px;
+          z-index: -1;
+          overflow: hidden;
+          background-color: #2E2E2E;
+          @include border-radius(100%);
+          @include transition(all 0.5s ease);
+        }
+      }
+      &[data-foreground="dark"]{
+        .foreground {
+          .bg {
+            width: 9000px;
+            height: 9000px;
+            margin: -3000px -3000px 0 0;
+          }
+        }
+        .title {
+          border-color: rgba(255, 255, 255, 0.1);
+          @include transition(all 0.3s ease);
+          &::before {
+            border-color: rgba(255, 255, 255, 0.15) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+          }
+          span {
+            color: #FFF;
+            &::after {
+              background: rgba(255, 255, 255, 0.15);
+            }
+          }
+        }
+        .html {
+          color: #eee;
+        }
+      }
+    /* end   - FOREGROUND ----------------------------------------------------------------- */
+
+    /* start - SOURCE CODE ----------------------------------------------------------------- */
+      .source {
+        position: relative;
+        pre {
+          visibility: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include border-radius(0);
+          padding-top: 35px;
+          @include transition(all 0.1s ease);
+          background: transparent;
+        }
+        .codeground {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          top: 0;
+          right: 0;
+          z-index: -1;
+          overflow: hidden;
+          .bg {
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            margin: 0;
+            top: -45px;
+            right: 45px;
+            z-index: -1;
+            overflow: hidden;
+            background-color: #2E2E2E;
+            @include border-radius(100%);
+            @include transition(all 0.5s ease);
+          }
+        }
+      }
+      &[data-codeground="active"]{
+        .codeground {
+          .bg {
+            width: 9000px;
+            height: 9000px;
+            margin: -3000px -3000px 0 0;
+            @include transition(all 0.8s ease);
+          }
+        }
+        .html,
+        .jf_typo_colors_switcher {
+          @include opacity(0);
+          @include transition(all 0.5s ease);
+          -webkit-animation-name: non_existing;
+          animation-name: non_existing;
+        }
+        .source pre {
+          visibility: visible;
+          opacity: 1;
+          @include transition(all 0.5s ease);
+        }
+      }
+    /* end   - SOURCE CODE ----------------------------------------------------------------- */
+
+    /* start - TYPO COLORS SWITCHER ----------------------------------------------------------------- */
+      .jf_typo_colors_switcher {
+        text-align: center;
+        margin: 30px 0 0 0;
+        @include transition(all 0.8s ease);
+        -webkit-animation-name: codeground_html_delay;
+        animation-name: codeground_html_delay;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        div {
+          cursor: pointer;
+          display:inline-block;
+          height: 20px;
+          width: 20px;
+          @include border-radius(100%);
+          @include opacity(0.3);
+          &.active,
+          &:hover {
+            @include opacity(1);
+          }
+
+          &.def         {border: 1px solid #ddd;}
+          &.red         {background-color: #f34235;}
+          &.pink        {background-color: #e81d62;}
+          &.purple      {background-color: #9b26af;}
+          &.deep-purple {background-color: #6639b6;}
+          &.indigo      {background-color: #3e50b4;}
+          &.blue        {background-color: #2095f2;}
+          &.light-blue  {background-color: #02a8f3;}
+          &.cyan        {background-color: #00bbd3;}
+          &.teal        {background-color: #009587;}
+          &.green       {background-color: #4bae4f;}
+          &.light-green {background-color: #8ac249;}
+          &.lime        {background-color: #ccdb38;}
+          &.yellow      {background-color: #feea3a;}
+          &.amber       {background-color: #fec006;}
+          &.orange      {background-color: #f39c12;}
+          &.deep-orange {background-color: #fe5621;}
+          &.brown       {background-color: #785447;}
+          &.grey        {background-color: #9d9d9d;}
+          &.blue-grey   {background-color: #5f7c8a;}
+          &.white       {background-color: #ffffff;border: 1px solid #000;}
+        }
+      }
+    /* end   - TYPO COLORS SWITCHER ----------------------------------------------------------------- */
+  }
+  @-webkit-keyframes codeground_html_delay {
+      0% {opacity: 0;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+  } 
+  @keyframes codeground_html_delay {
+      0% {opacity: 0;}
+      50% {opacity: 0;}
+      100% {opacity: 1;}
+  }
+/* ===========_______________________________ END   - TYPO PREVIEW ________________________________________=========== */

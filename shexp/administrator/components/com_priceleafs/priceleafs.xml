@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?><!-- версия xml и кодировка в которой устанавливаем-->
+<!--
+Priceleaf pro компонент онлайн калькулятор.
+Версия 3.3 2012.01.12
+Автор Ваня
+Copyright (C) 2012 joomla-umnik
+Лицензия GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+Официальный сайт http://joomla-umnik.ru
+-->
+<!--Для какой версии joomla устанавливаем-->
+<extension type="component" version="3.0" method="upgrade">
+<!-- Название компонента -->
+<name>Priceleafs</name> 
+<!-- Элементы ниже необязательны и их значения могут быть введены в произвольном формате -->
+<creationDate>2012.01.12</creationDate> <!-- Дата создания -->
+<author>Ваня</author> <!-- Автор -->
+<authorEmail>joomla.umnik@gmail.com</authorEmail> <!-- Почта -->
+<authorUrl>http://joomla-umnik.ru</authorUrl> <!-- Сайт разработчика -->
+<copyright>Copyright (C) 2012 priceleaf</copyright> <!-- Копирайт -->
+<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license> <!-- Лицензия -->
+<!-- Строка версии записывается в таблицу компонентов -->
+<version>priceleaf pro 3.3</version>
+<!-- Поле description необязательно и по умолчанию равно значению поля name -->
+<description>
+Priceleaf pro универсальный онлайн калькулятор для joomla.
+</description>
+
+<!-- Установка таблиц компонента -->
+<install> 
+<sql>
+<file driver="mysql" charset="utf8">sql/install.sql</file>
+</sql>
+</install>
+
+<uninstall>
+<sql>
+<file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+</sql>
+</uninstall>
+
+<!-- Файлы сайта -->
+<files folder="site">
+<filename>index.html</filename>
+<filename>priceleafs.php</filename>
+<filename>controller.php</filename>
+<filename>jquery.js</filename>
+<folder>images</folder>
+<folder>js</folder>
+<folder>views</folder>
+<folder>helpers</folder>
+<folder>models</folder>
+<folder>css</folder>
+<folder>controllers</folder>
+</files>
+
+<!-- Языковой файл сайта -->	
+<languages folder="site">
+<language tag="ru-RU">language/ru-RU/ru-RU.com_priceleafs.ini</language>
+<language tag="ru-RU">language/ru-RU/ru-RU.com_priceleafs.sys.ini</language>
+<language tag="en-GB">language/en-GB/en-GB.com_priceleafs.ini</language>
+<language tag="en-GB">language/en-GB/en-GB.com_priceleafs.sys.ini</language>
+<language tag="fr-FR">language/fr-FR/fr-FR.com_priceleafs.ini</language>
+<language tag="fr-FR">language/fr-FR/fr-FR.com_priceleafs.sys.ini</language>
+<language tag="es-ES">language/es-ES/es-ES.com_priceleafs.ini</language>
+<language tag="es-ES">language/es-ES/es-ES.com_priceleafs.sys.ini</language>
+</languages>
+
+<!-- Медиа файл логотип -->	
+<media destination="com_priceleafs" folder="media">
+<filename>index.html</filename>
+<folder>images</folder>
+</media>
+
+<!-- Файлы административной части -->	
+<administration>
+<menu img="../media/com_priceleafs/images/mini-logo.png">COM_PRICELEAF_RAZDEL</menu>
+<submenu>
+<!--Это наше меню его мы увидим во вкладке компоненты-->
+<menu view="priceleafs">COM_PRICELEAF_RAZ</menu>
+<menu view="cats">COM_PRICELEAF_CATS</menu>
+<menu view="menus">COM_PRICELEAF_MENUS</menu>
+<menu view="zakazs">COM_PRICELEAF_ZAKAZ</menu>
+<menu view="csvs">COM_PRICELEAF_IMPORT</menu>
+</submenu>
+
+<files folder="admin">
+<filename>index.html</filename>
+<filename>priceleafs.php</filename>
+<filename>controller.php</filename>
+<!-- У нас в административной части есть папка sql 
+что бы установить всё её содержимое мы заключаем её в тег <folder>sql</folder> 
+так же устанавливаются и другие любые папки скажем images css 
+это применяется как и для части сайта так и для админки-->
+<folder>sql</folder>
+<folder>tables</folder>
+<folder>models</folder>
+<folder>views</folder>
+<folder>controllers</folder>
+<folder>helpers</folder>
+</files>
+
+<!-- Языковой файл админки -->	
+<languages folder="admin">
+<language tag="ru-RU">language/ru-RU/ru-RU.com_priceleafs.ini</language>
+<language tag="ru-RU">language/ru-RU/ru-RU.com_priceleafs.sys.ini</language>
+<language tag="en-GB">language/en-GB/en-GB.com_priceleafs.ini</language>
+<language tag="en-GB">language/en-GB/en-GB.com_priceleafs.sys.ini</language>
+<language tag="fr-FR">language/fr-FR/fr-FR.com_priceleafs.ini</language>
+<language tag="fr-FR">language/fr-FR/fr-FR.com_priceleafs.sys.ini</language>
+<language tag="es-ES">language/es-ES/es-ES.com_priceleafs.ini</language>
+<language tag="es-ES">language/es-ES/es-ES.com_priceleafs.sys.ini</language>
+</languages>
+
+</administration>
+<!-- extension теперь он используется вместо instal -->
+</extension>

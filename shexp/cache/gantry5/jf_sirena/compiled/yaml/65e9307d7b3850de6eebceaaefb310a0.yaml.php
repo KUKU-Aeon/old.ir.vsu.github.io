@@ -1,0 +1,92 @@
+<?php
+return [
+    '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
+    'filename' => '/var/www/ir.vsu.ru/shexp/templates/jf_sirena/custom/config/15/index.yaml',
+    'modified' => 1492373071,
+    'data' => [
+        'name' => '15',
+        'timestamp' => 1492373071,
+        'version' => 7,
+        'preset' => [
+            'image' => 'gantry-admin://images/layouts/3-col-left.png',
+            'timestamp' => 1490205216,
+            'name' => '3_column_-_left'
+        ],
+        'positions' => [
+            'right-panel' => 'Module Position',
+            'sidebar' => 'Sidebar',
+            'aside' => 'Aside',
+            'breadcrumbs' => 'Breadcrumbs',
+            'footer' => 'Footer'
+        ],
+        'sections' => [
+            'top-panel' => 'Top Panel',
+            'search-panel' => 'Search Panel',
+            'left-panel' => 'Left Panel',
+            'right-panel' => 'Right Panel',
+            'overlay-panel' => 'Overlay Panel',
+            'full-width-section-1' => 'Full Width Section 1',
+            'sidebar' => 'Sidebar',
+            'full-width-section-2' => 'Full Width Section 2',
+            'top-footer' => 'Top Footer',
+            'bottom-footer' => 'Bottom Footer',
+            'full-width-section-3' => 'Full Width Section 3',
+            'header' => 'Header',
+            'aside' => 'Aside',
+            'main' => 'Main',
+            'footer' => 'Footer'
+        ],
+        'particles' => [
+            'custom' => [
+                'custom-3485' => 'Custom HTML',
+                'custom-1392' => 'Custom HTML',
+                'custom-5362' => 'Custom HTML',
+                'custom-4368' => 'Custom HTML'
+            ],
+            'logo' => [
+                'logo-5705' => 'Logo',
+                'logo-2653' => 'Logo',
+                'logo-9507' => 'Logo'
+            ],
+            'menu' => [
+                'menu-2947' => 'Menu'
+            ],
+            'jf_panel_buttons' => [
+                'jf_panel_buttons-3313' => 'JF Panel Buttons'
+            ],
+            'module' => [
+                'position-module-1605' => 'Module Instance',
+                'position-module-6496' => 'Module Instance',
+                'position-module-1290' => 'Module Instance',
+                'position-module-3392' => 'Module Instance',
+                'position-module-7385' => 'Module Instance',
+                'position-module-2571' => 'Module Instance',
+                'position-module-4792' => 'Module Instance',
+                'position-module-3742' => 'Module Instance',
+                'position-module-4901' => 'Module Instance'
+            ],
+            'position' => [
+                'position-position-5361' => 'Module Position',
+                'position-sidebar' => 'Sidebar',
+                'position-aside' => 'Aside',
+                'position-breadcrumbs' => 'Breadcrumbs',
+                'position-position-9915' => 'Footer'
+            ],
+            'jf_switcher' => [
+                'jf_switcher-6426' => 'JF Style Switcher'
+            ],
+            'messages' => [
+                'system-messages-8838' => 'System Messages'
+            ],
+            'content' => [
+                'system-content-2800' => 'Page Content'
+            ],
+            'copyright' => [
+                'copyright-3966' => 'Copyright'
+            ]
+        ],
+        'inherit' => [
+            
+        ]
+    ]
+];

@@ -1,0 +1,97 @@
+name: 24
+timestamp: 1474297177
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/p_clients.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  jf_p_clients:
+    jf_p_clients-5537: 'JF Particle - Clients - Style 4 (Hover Slide)'
+    jf_p_clients-8082: 'JF Particle - Clients - Style 3 (Background Hover)'
+    jf_p_clients-8930: 'JF Particle - Clients - Style 2 (Dark, Bordered)'
+    jf_p_clients-9676: 'JF Particle - Clients - Style 1 (Default)'
+    jf_p_clients-6553: 'JF Particle - Clients - Style 2 (Bordered)'
+  position:
+    position-position-6396: Breadcrumbs
+    position-position-3040: 'Module Position'
+    position-position-7965: Footer
+  messages:
+    system-messages-8567: 'System Messages'
+  custom:
+    custom-7839: 'Custom HTML'
+    custom-5320: 'Custom HTML'
+    custom-9048: 'Custom HTML'
+    custom-3200: 'Custom HTML'
+  logo:
+    logo-9691: Logo
+    logo-1876: Logo
+    logo-3136: Logo
+  menu:
+    menu-9331: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-7067: 'JF Panel Buttons'
+  module:
+    position-module-5978: 'Module Instance'
+    position-module-8337: 'Module Instance'
+    position-module-3769: 'Module Instance'
+    position-module-5234: 'Module Instance'
+    position-module-6920: 'Module Instance'
+    position-module-4430: 'Module Instance'
+    position-module-4296: 'Module Instance'
+    position-module-6229: 'Module Instance'
+  jf_switcher:
+    jf_switcher-7760: 'JF Style Switcher'
+  copyright:
+    copyright-1321: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-6396: position-position-2694
+    system-messages-8567: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-7839: custom-3485
+    custom-5320: custom-1392
+    logo-9691: logo-5705
+    menu-9331: menu-2947
+    jf_panel_buttons-7067: jf_panel_buttons-3313
+    position-module-5978: position-module-1605
+    position-module-8337: position-module-6496
+    position-module-3769: position-module-1290
+    position-module-5234: position-module-3392
+    position-module-6920: position-module-7385
+    position-module-4430: position-module-2571
+    position-position-3040: position-position-5361
+    jf_switcher-7760: jf_switcher-6426
+    position-position-7965: position-position-9915
+    logo-1876: logo-2653
+    custom-9048: custom-5362
+    position-module-4296: position-module-3742
+    custom-3200: custom-4368
+    copyright-1321: copyright-3966
+    logo-3136: logo-9507
+    position-module-6229: position-module-4901

@@ -1,0 +1,101 @@
+name: 39
+timestamp: 1473798919
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/home_fashion.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  module:
+    position-module-9855: 'Module Instance'
+    position-module-4976: 'Module Instance'
+    position-module-7098: 'Module Instance'
+    position-module-8190: 'Module Instance'
+    position-module-5612: 'Module Instance'
+    position-module-1758: 'Module Instance'
+    position-module-3436: 'Module Instance'
+    position-module-3373: 'Module Instance'
+    position-module-1580: 'Module Instance'
+    position-module-8145: 'Module Instance'
+  position:
+    position-position-8591: Breadcrumbs
+    position-position-7567: 'Module Position'
+    position-position-5593: Footer
+  messages:
+    system-messages-7392: 'System Messages'
+  jf_p_carousel:
+    jf_p_carousel-5551: 'JF Particle - Carousels: Style 2'
+  jf_p_gallery:
+    jf_p_gallery-5506: 'JF Particle - Gallery - Style 2 (Dark)'
+  jf_p_ft_intro:
+    jf_p_ft_intro-3209: 'JF Particle - Features Intro - Style 2'
+  jf_p_clients:
+    jf_p_clients-8589: 'JF Particle - Clients - Style 4 (Hover Slide)'
+  custom:
+    custom-8054: 'Custom HTML'
+    custom-4484: 'Custom HTML'
+    custom-8449: 'Custom HTML'
+    custom-3162: 'Custom HTML'
+  logo:
+    logo-3990: Logo
+    logo-2756: Logo
+    logo-4602: Logo
+  menu:
+    menu-1742: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-9063: 'JF Panel Buttons'
+  jf_switcher:
+    jf_switcher-1608: 'JF Style Switcher'
+  copyright:
+    copyright-6060: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-8591: position-position-2694
+    system-messages-7392: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-8054: custom-3485
+    custom-4484: custom-1392
+    logo-3990: logo-5705
+    menu-1742: menu-2947
+    jf_panel_buttons-9063: jf_panel_buttons-3313
+    position-module-7098: position-module-1605
+    position-module-8190: position-module-6496
+    position-module-5612: position-module-1290
+    position-module-1758: position-module-3392
+    position-module-3436: position-module-7385
+    position-module-3373: position-module-2571
+    position-position-7567: position-position-5361
+    jf_switcher-1608: jf_switcher-6426
+    position-position-5593: position-position-9915
+    logo-2756: logo-2653
+    custom-8449: custom-5362
+    position-module-1580: position-module-3742
+    custom-3162: custom-4368
+    copyright-6060: copyright-3966
+    logo-4602: logo-9507
+    position-module-8145: position-module-4901

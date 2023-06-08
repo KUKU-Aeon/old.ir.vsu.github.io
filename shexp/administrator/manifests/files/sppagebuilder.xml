@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="file" method="upgrade">
+	<name>SP Page Builder</name>
+	<author>LoraDi</author>
+    <creationDate>November 2014</creationDate>
+	<authorEmail>lora@loradi.ru</authorEmail>
+	<authorUrl>https://www.loradi.ru</authorUrl>
+	<copyright>Copyright @ 2010 - 2016 JoomShaper. All rights reserved.</copyright>
+	<version>2.0</version>
+    <description>Перевод компонента SP Page Builder Pro 2.0.</description>
+<fileset>
+<files folder="admin" target="administrator/language/ru-RU">
+		  <filename>ru-RU.com_sppagebuilder.ini</filename>
+		  <filename>ru-RU.com_sppagebuilder.sys.ini</filename>
+		  <filename>ru-RU.mod_sppagebuilder_icons.sys.ini</filename>
+		  <filename>ru-RU.mod_sppagebuilder_admin_menu.ini</filename>
+		  <filename>ru-RU.mod_sppagebuilder_admin_menu.sys.ini</filename>
+		  <filename>ru-RU.mod_sppagebuilder_icons.ini</filename>
+</files>
+<files folder="site" target="language/ru-RU">
+		  <filename>ru-RU.com_sppagebuilder.ini</filename>		  
+</files>
+</fileset>
+</extension>

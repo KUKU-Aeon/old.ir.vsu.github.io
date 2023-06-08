@@ -1,0 +1,171 @@
+<?php
+return [
+    '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
+    'timestamp' => 1492371147,
+    'checksum' => 'ddd112c98d8ab3e16116fe33dad1a3aa',
+    'files' => [
+        'templates/g5_hydrogen/custom/config/12' => [
+            'index' => [
+                'file' => 'templates/g5_hydrogen/custom/config/12/index.yaml',
+                'modified' => 1490367209
+            ],
+            'layout' => [
+                'file' => 'templates/g5_hydrogen/custom/config/12/layout.yaml',
+                'modified' => 1490367209
+            ]
+        ]
+    ],
+    'data' => [
+        'index' => [
+            'name' => 12,
+            'timestamp' => 1490367209,
+            'version' => 7,
+            'preset' => [
+                'image' => 'gantry-admin://images/layouts/default.png',
+                'name' => 'default',
+                'timestamp' => 1490269327
+            ],
+            'positions' => [
+                'header' => 'Header',
+                'breadcrumbs' => 'Breadcrumbs',
+                'footer' => 'Footer'
+            ],
+            'sections' => [
+                'header' => 'Header',
+                'navigation' => 'Navigation',
+                'main' => 'Main',
+                'footer' => 'Footer',
+                'offcanvas' => 'Offcanvas'
+            ],
+            'particles' => [
+                'logo' => [
+                    'logo-7076' => 'Logo'
+                ],
+                'position' => [
+                    'position-header' => 'Header',
+                    'position-breadcrumbs' => 'Breadcrumbs',
+                    'position-footer' => 'Footer'
+                ],
+                'menu' => [
+                    'menu-1191' => 'Menu'
+                ],
+                'messages' => [
+                    'system-messages-9129' => 'System Messages'
+                ],
+                'content' => [
+                    'system-content-3974' => 'Page Content'
+                ],
+                'copyright' => [
+                    'copyright-1678' => 'Copyright'
+                ],
+                'spacer' => [
+                    'spacer-3551' => 'Spacer'
+                ],
+                'branding' => [
+                    'branding-2716' => 'Branding'
+                ],
+                'mobile-menu' => [
+                    'mobile-menu-4560' => 'Mobile-menu'
+                ]
+            ],
+            'inherit' => [
+                'default' => [
+                    'header' => 'header',
+                    'navigation' => 'navigation',
+                    'main' => 'main',
+                    'footer' => 'footer',
+                    'offcanvas' => 'offcanvas',
+                    'logo-7076' => 'logo-7076',
+                    'position-header' => 'position-header',
+                    'menu-1191' => 'menu-1191',
+                    'position-breadcrumbs' => 'position-breadcrumbs',
+                    'system-messages-9129' => 'system-messages-9129',
+                    'system-content-3974' => 'system-content-3974',
+                    'position-footer' => 'position-footer',
+                    'copyright-1678' => 'copyright-1678',
+                    'spacer-3551' => 'spacer-3551',
+                    'branding-2716' => 'branding-2716',
+                    'mobile-menu-4560' => 'mobile-menu-4560'
+                ]
+            ]
+        ],
+        'layout' => [
+            'version' => 2,
+            'preset' => [
+                'image' => 'gantry-admin://images/layouts/default.png',
+                'name' => 'default',
+                'timestamp' => 1490269327
+            ],
+            'layout' => [
+                'header' => [
+                    
+                ],
+                'navigation' => [
+                    
+                ],
+                'main' => [
+                    
+                ],
+                'footer' => [
+                    
+                ],
+                'offcanvas' => [
+                    
+                ]
+            ],
+            'structure' => [
+                'header' => [
+                    'inherit' => [
+                        'outline' => 'default',
+                        'include' => [
+                            0 => 'attributes',
+                            1 => 'block',
+                            2 => 'children'
+                        ]
+                    ]
+                ],
+                'navigation' => [
+                    'type' => 'section',
+                    'inherit' => [
+                        'outline' => 'default',
+                        'include' => [
+                            0 => 'attributes',
+                            1 => 'block',
+                            2 => 'children'
+                        ]
+                    ]
+                ],
+                'main' => [
+                    'inherit' => [
+                        'outline' => 'default',
+                        'include' => [
+                            0 => 'attributes',
+                            1 => 'block',
+                            2 => 'children'
+                        ]
+                    ]
+                ],
+                'footer' => [
+                    'inherit' => [
+                        'outline' => 'default',
+                        'include' => [
+                            0 => 'attributes',
+                            1 => 'block',
+                            2 => 'children'
+                        ]
+                    ]
+                ],
+                'offcanvas' => [
+                    'inherit' => [
+                        'outline' => 'default',
+                        'include' => [
+                            0 => 'attributes',
+                            1 => 'block',
+                            2 => 'children'
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
+];

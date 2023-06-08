@@ -1,0 +1,145 @@
+.su-instagram-items {
+    list-style-type: none;
+    position: relative; 
+    margin: 0;
+    padding: 0;
+}
+
+.su-instagram-items li {
+    width: 16.665%;
+    background-color: #FFF;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.su-instagram:not(.su-link-type-no) .su-instagram-items li {
+    cursor: pointer;
+}
+
+.su-instagram-items li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Instamax CSS*/
+
+.instamax {
+    width:100%;
+    margin:0px auto;
+    text-align: center;
+}
+
+#instamax-iframe-holder {
+    width:100%; 
+    position:absolute; 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 480px;
+}
+
+.instamax-loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 120px;
+    height: 30px;
+    color: white;
+    font-size: 30px;
+}
+
+#instamax-tabs {
+    text-align: left;
+    background-color: #e6e6e6;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 22px;
+}
+
+.instamax-tab:hover {
+    background-color: #f7f7f7;
+}
+
+.instamax-tab-hover {
+	color:white;
+	background-color: #e16363 !important;
+	text-shadow:none;
+}
+
+
+/* Added for video*/
+video.mfp-video {
+  padding: 40px 0 40px;
+}
+
+.instamax-play-icon {
+    display: inline-block;
+    color: white;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    left: 10px;
+    bottom: 0px;
+    right: 0px;
+    width: 80px;
+    height: 80px;
+    font-size: 8px;
+    padding: 18px 24px 10px;
+    border: 4px solid white;
+    border-radius: 80px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.su-instagram.su-link-type-no .su-instagram-items li .instamax-play-icon {
+    display: none;
+}
+
+#instamax-tabs {
+    display:none;
+}
+.su-instagram.su-has-gap .su-instagram-items {
+    margin-left: -10px !important;
+}
+.su-instagram.su-has-gap .su-instagram-items li {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.su-instagram.su-link-type-popup .su-instagram-items li img {
+    z-index: 1;
+    position: relative;
+}   
+.su-instagram.su-link-type-popup .su-instagram-items li .instamax-hover {
+    -webkit-transition: background-color 0.5s cubic-bezier(0.04, 0.72, 0.58, 1);
+    transition: background-color 0.5s cubic-bezier(0.04, 0.72, 0.58, 1);
+    position: absolute;
+    background-color: rgba(255,255,255,0);
+    z-index: 2;
+    top: 0;
+    left: 10px;
+    bottom: 10px;
+    right: 0;
+}
+.su-instagram.su-link-type-popup .su-instagram-items li:hover .instamax-hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .su-instagram-items li {
+        width: 33.332%;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .su-instagram-items li {
+        width: 50%;
+    }
+}

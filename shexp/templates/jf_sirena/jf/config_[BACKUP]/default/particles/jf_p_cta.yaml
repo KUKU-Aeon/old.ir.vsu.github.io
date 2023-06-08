@@ -1,0 +1,32 @@
+enabled: '1'
+contentW: full
+padding: '150px 0'
+textAl: left
+bg_options:
+  -
+    bg_type: color
+    lazyload: '1'
+    maskColor: '#000000'
+    maskOpacity: '10'
+    scrolling: '1'
+    type: default
+    bgColor: '#eeeeee'
+    cover_src: ''
+    parallax_src: ''
+    controls: '1'
+    loop: '1'
+    muted: '1'
+    video_type: vimeo
+    vimeo_id: ''
+    youtube_id: ''
+    url: images/jf/videos/
+    vidname: dreamscapes
+    name: Options
+html_before: ''
+css: ''
+image_lazyload: '1'
+image_lazyload_src: 'gantry-media://jf/blank.gif'
+style: style_1
+style_1: {  }
+style_2: {  }
+html_after: ''

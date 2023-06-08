@@ -1,0 +1,25 @@
+enabled: '1'
+contentW: default
+padding: '150px 0'
+textAl: center
+bg_options:
+  -
+    bg_type: color
+    lazyload: '1'
+    bgColor: '#eeeeee'
+    cover_src: ''
+    maskColor: '#000000'
+    maskOpacity: '10'
+    scrolling: '1'
+    parallax_src: ''
+    type: default
+    url: images/jf/videos/
+    vidname: dreamscapes
+    controls: '1'
+    loop: '1'
+    muted: '1'
+    name: Options
+html_before: ''
+colorclass: deep-purple
+items: {  }
+html_after: ''

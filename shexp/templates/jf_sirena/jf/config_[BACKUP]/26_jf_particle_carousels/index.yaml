@@ -1,0 +1,99 @@
+name: '26'
+timestamp: 1473807113
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/p_carousels.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  custom:
+    custom-6658: 'Custom HTML'
+    custom-3261: 'Custom HTML'
+    custom-3981: 'Custom HTML'
+    custom-1783: 'Custom HTML'
+  logo:
+    logo-8465: Logo
+    logo-7295: Logo
+    logo-7510: Logo
+  menu:
+    menu-2925: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-4722: 'JF Panel Buttons'
+  module:
+    position-module-7583: 'Module Instance'
+    position-module-8467: 'Module Instance'
+    position-module-9011: 'Module Instance'
+    position-module-6864: 'Module Instance'
+    position-module-4276: 'Module Instance'
+    position-module-7113: 'Module Instance'
+    position-module-8769: 'Module Instance'
+    position-module-3145: 'Module Instance'
+  position:
+    position-position-2324: 'Module Position'
+    position-position-5883: 'Module Position'
+    position-position-2360: Footer
+  jf_switcher:
+    jf_switcher-3425: 'JF Style Switcher'
+  jf_p_carousel:
+    jf_p_carousel-1750: 'JF Particle - Carousels: Style 1'
+    jf_p_carousel-1244: 'JF Particle - Carousels: Style 2'
+    jf_p_carousel-9004: 'JF Particle - Carousels: Style 3'
+    jf_p_carousel-6356: 'JF Particle - Carousels: Style 4'
+    jf_p_carousel-2103: 'JF Particle - Carousels: Style 5'
+    jf_p_carousel-9951: 'JF Particle - Carousels: Style 6'
+    jf_p_carousel-4285: 'JF Particle - Carousels: Style 7'
+    jf_p_carousel-6159: 'JF Particle - Carousels: Style 8'
+  messages:
+    system-messages-9077: 'System Messages'
+  copyright:
+    copyright-6279: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    custom-6658: custom-3485
+    custom-3261: custom-1392
+    header: header
+    logo-8465: logo-5705
+    menu-2925: menu-2947
+    jf_panel_buttons-4722: jf_panel_buttons-3313
+    search-panel: search-panel
+    position-module-7583: position-module-1605
+    position-module-8467: position-module-6496
+    position-module-9011: position-module-1290
+    position-module-6864: position-module-3392
+    left-panel: left-panel
+    position-module-4276: position-module-7385
+    position-module-7113: position-module-2571
+    right-panel: right-panel
+    position-position-2324: position-position-5361
+    overlay-panel: overlay-panel
+    jf_switcher-3425: jf_switcher-6426
+    position-position-5883: position-position-2694
+    system-messages-9077: system-messages-1489
+    footer: footer
+    position-position-2360: position-position-9915
+    logo-7295: logo-2653
+    custom-3981: custom-5362
+    position-module-8769: position-module-3742
+    custom-1783: custom-4368
+    bottom-footer: bottom-footer
+    copyright-6279: copyright-3966
+    logo-7510: logo-9507
+    position-module-3145: position-module-4901

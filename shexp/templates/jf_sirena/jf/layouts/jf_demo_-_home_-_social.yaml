@@ -1,0 +1,120 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home_social.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  /right-panel/:
+    -
+      - custom-9886
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - position-module-7420
+  main: {  }
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    attributes:
+      boxed: ''
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: '2'
+      class: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  custom-9886:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h6>Recent Work</h6>\n<ul class=\"jf_footer_recent_work\" style=\"margin:0\">\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/1_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/2_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/3_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/4_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/5_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/6_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/7_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/8_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" data-gall=\"gallery_1_panel\"  href=\"#\">\n\t\t\t<img src=\"images/jf/particles/recent_work/9_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n</ul>\n<div class=\"clear\"></div>\n<p style=\"padding:0 5px;font-size:13px;margin:20px 0\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>\n<button class=\"jf_cb_btn raised accent jf_waves_light_40\" style=\"width:100%\">Learn More</button>"
+  position-module-7420:
+    title: 'Module Instance'
+    attributes:
+      module_id: '122'
+      key: module-instance

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config
+    addrulepath="/administrator/components/com_droptables/models/rules"
+    addfieldpath="/administrator/components/com_droptables/models/fields"
+>
+        <fieldset
+		name="main"
+		label="COM_DROPTABLES_CONFIG_MAIN_LABEL"
+		description="COM_DROPTABLES_CONFIG_MAIN_DESC"
+		>
+                
+                <field
+			name="catcollapsed"
+			type="radio"
+                        label="COM_DROPTABLES_CONFIG_CATCOLLAPSE_LABEL"
+                        description="COM_DROPTABLES_CONFIG_CATCOLLAPSE_DESC"
+                        class="btn-group"
+                        default="0">
+                            <option value="1">JYES</option>
+                            <option value="0">JNO</option>
+                </field>
+                <field
+			name="hideupdate"
+			type="radio"
+                        label="COM_DROPTABLES_CONFIG_HIDEUPDATE_LABEL"
+                        description="COM_DROPTABLES_CONFIG_HIDEUPDATE_DESC"
+                        class="btn-group"
+                        default="0">
+                            <option value="1">JYES</option>
+                            <option value="0">JNO</option>
+                </field>
+                <field
+                    name="enable_import_exel"
+                    type="radio"
+                    label="COM_DROPTABLES_CONFIG_ENABLE_IMPORT_EXCEL_LABEL"
+                    description="COM_DROPTABLES_CONFIG_ENABLE_IMPORT_EXCEL_DESCRIPTION"
+                    class="btn-group"
+                    default="1">
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+				<field
+                    name="export_excel_format"
+                    type="list"
+                    label="COM_DROPTABLES_CONFIG_EXPORT_EXCEL_FORMAT"
+                    description="COM_DROPTABLES_CONFIG_EXPORT_EXCEL_FORMAT_DESCRIPTION"
+                    default="xlsx">
+                        <option value="xlsx">COM_DROPTABLES_CONFIG_EXPORT_EXCEL_FORMAT_XLSX</option>
+                        <option value="xls">COM_DROPTABLES_CONFIG_EXPORT_EXCEL_FORMAT_XLS</option>
+                </field>
+                <field
+                    name="enable_tooltip"
+                    type="radio"
+                    label="COM_DROPTABLES_CONFIG_ENABLE_TOOLTIP_LABEL"
+                    description="COM_DROPTABLES_CONFIG_ENABLE_TOOLTIP_DESCRIPTION"
+                    class="btn-group"
+                    default="0">
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                <field
+                    name="enable_autosave"
+                    type="radio"
+                    label="COM_DROPTABLES_CONFIG_ENABLE_AUTO_SAVE_LABEL"
+                    description="COM_DROPTABLES_CONFIG_ENABLE_AUTO_SAVE_DESCRIPTION"
+                    class="btn-group"
+                    default="1">
+                        <option value="1">JYES</option>
+                        <option value="0">JNO</option>
+                </field>
+                 <field
+                    name="sync_periodicity"
+                    type="list"
+                    label="COM_DROPTABLES_CONFIG_SYNC_PERIODICITY_LABEL"
+                    description="COM_DROPTABLES_CONFIG_SYNC_PERIODICITY_DESCRIPTION"
+                    class="btn-group"
+                    default="0">
+                        <option value="0">No</option>
+                        <option value="5">5 mins</option>             
+                        <option value="60">1 hour</option>        
+                        <option value="720">12 hours</option>        
+                        <option value="1440">24 hours</option>       
+                </field>
+                <input name="last_sync" value="" type="text" hidden="true" />
+                <field name="editor_buttons" multiple="true" label="Editor buttons" type="editorbuttons" />
+        </fieldset>
+		
+		 <fieldset 
+                name="liveupdate"
+				label="Live update"
+				description="Live update" 
+                addfieldpath="administrator/components/com_droptables/models/fields"> 
+                <field name="liveupdate" label="Live update status" type="updaterstatus" /> 
+        </fieldset>
+		
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			filter="rules"
+			validate="rules"
+			component="com_droptables"
+			section="component" />
+	</fieldset>        
+</config>

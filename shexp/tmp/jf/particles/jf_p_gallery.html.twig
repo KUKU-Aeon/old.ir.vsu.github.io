@@ -1,0 +1,461 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/particles/jf_p_gallery/jf_p_gallery.min.css" type="text/css" />
+{% endblock %}
+
+{% block javascript %}
+	{#<script src="{{ url('gantry-theme://custom/css-compiled/sssssss.js') }}" type="text/javascript"></script>#}
+    {#<script type="text/javascript">alert("BOOM");</script>#}
+	{% if particle.style == "style_1" %}
+		<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/particles/jf_p_gallery/jquery.stapel.min.js"></script>
+		<script type="text/javascript">
+			{% set html_loader = '<div class="loader"><i></i><i></i><i></i><i></i><i></i><i></i><span>Loading...</span></div>'|e('js') %}
+			{# UNCOMPRESSED
+				(function($){	   
+					jQuery.fn.extend({
+						jf_p_gallery_{{ particle.style_1_id|e }}: function(options) {
+							return this.each(function() {
+								var jf_p_gallery	= $(this),
+									$name 			= jf_p_gallery.prev().find('.cat_name'),
+									$close 			= jf_p_gallery.prev().find('.back'),
+									$loader			= $('{{ html_loader }}').insertBefore(jf_p_gallery),
+									stapel 			= jf_p_gallery.stapel({
+										delay : 50,
+										gutter : 20,
+										onLoad : function() {
+											$loader.remove();
+											setTimeout(function(){
+												if (jf_p_gallery.find('.jf_p_gall_venobox').length){
+													$('.jf_p_gall_venobox').venobox({
+														numeratio: true,
+														infinigall: true
+													});
+												}
+											}, 2000);
+										},
+										onBeforeOpen : function(pileName){
+											$name.html(pileName);
+										},
+										onAfterOpen : function(pileName){
+											$close.animate({'opacity':'1'});
+										}
+									});
+								$close.on('click', function(){
+									$close.animate({'opacity':'0'});
+									$name.empty();
+									stapel.closePile();
+								});
+							});
+						}
+					});
+				})(jQuery);
+			UNCOMPRESSED #}
+			!function(n){jQuery.fn.extend({jf_p_gallery_{{ particle.style_1_id|e }}:function(i){return this.each(function(){var i=n(this),e=i.prev().find(".cat_name"),o=i.prev().find(".back"),t=n('{{ html_loader }}').insertBefore(i),a=i.stapel({delay:50,gutter:20,onLoad:function(){t.remove(),setTimeout(function(){i.find(".jf_p_gall_venobox").length&&n(".jf_p_gall_venobox").venobox({numeratio:!0,infinigall:!0})},2e3)},onBeforeOpen:function(n){e.html(n)},onAfterOpen:function(n){o.animate({opacity:"1"})}});o.on("click",function(){o.animate({opacity:"0"}),e.empty(),a.closePile()})})}})}(jQuery);
+			jQuery(document).ready(function($){
+				$('#{{ particle.style_1_id|e }}').jf_p_gallery_{{ particle.style_1_id|e }}();
+			});
+		</script>
+	{% else %}
+		<script type="text/javascript">
+			(function($){$(window).load(function(){
+				function jf_p_gallery_album() {
+					$('.jf_p_gallery_album_thumbs').each(function() {
+						var jf_height	= $(this).find('img:nth-child(1)').outerHeight();
+						$(this).css({'height':jf_height});
+					});
+				};
+				jf_p_gallery_album();
+				$(window).resize(function(){
+					jf_p_gallery_album();
+				});
+			})})(jQuery);
+		</script>
+	{% endif %}
+{% endblock %}
+
+{% block particle %}
+	{% for bg_options in particle.bg_options|slice(0, 1) %}
+		{% if bg_options.bg_type == "color" %}<div style="background:{{ bg_options.bgColor|e }};{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">{% endif %}
+		{% if bg_options.bg_type == "image" %}
+			{% if bg_options.lazyload %}
+			<div class="lazyload" data-bg="images/{{ bg_options.cover_src[15:] }}" style="background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">
+			{% else %}
+			<div style="background-image:url({{ url(bg_options.cover_src)|e }});background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">
+			{% endif %}
+		{% endif %}
+		{% if bg_options.bg_type == "parallax_img" %}
+			<div class="jf_parallax {{ bg_options.type }}" style="text-align:{{ particle.textAl|e }}">
+				{% if bg_options.lazyload %}
+				<div class="bg no-repeat cover lazyload" data-bg="images/{{ bg_options.parallax_src[15:] }}"></div>
+				{% else %}
+				<div class="bg no-repeat cover" style="background-image:url({{ url(bg_options.parallax_src)|e }});"></div>
+				{% endif %}
+				<div class="mask" data-parallax-opacity="{{ bg_options.maskOpacity|e }}" style="background:{{ bg_options.maskColor|e }}"></div>
+				<div class="content {% if bg_options.scrolling %}scrolling{% else %}noscrolling{% endif %}" style="{% if particle.padding %}padding:{{ particle.padding|e }}{% endif %}">
+		{% endif %}
+		{% if bg_options.bg_type == "parallax_vid" %}
+			{% if bg_options.video_type == "vimeo" %}
+			<div class="jf_parallax vimeo {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}" style="text-align:{{ particle.textAl|e }}" data-vimeoid="{{ bg_options.vimeo_id|e }}" data-playerid="vimpl_{{ bg_options.vimeo_id|e }}" data-volume="{% if bg_options.muted %}0{% else %}1{% endif %}">
+				<div class="bg"></div>
+			{% elseif bg_options.video_type == "youtube" %}
+			<div class="jf_parallax youtube {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}">
+				<div class="bg" data-youtube-bg="{{ bg_options.youtube_id|e }}" data-volume="{% if bg_options.muted %}0{% else %}1{% endif %}"></div>
+			{% else %}
+			<div class="jf_parallax {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}" style="text-align:{{ particle.textAl|e }}">
+				<div class="bg" data-video-bg="{{ bg_options.url|e }}{{ bg_options.vidname|e }}" data-video-options="posterType:jpg,loop:{% if bg_options.loop %}true{% else %}false{% endif %},muted:{% if bg_options.muted %}true{% else %}false{% endif %},position:0% 50%"></div>
+			{% endif %}
+				<div class="mask" data-parallax-opacity="{{ bg_options.maskOpacity|e }}" style="background:{{ bg_options.maskColor|e }}"></div>
+				<div class="content{% if bg_options.scrolling %} scrolling{% else %} noscrolling{% endif %}" style="{% if particle.padding %}padding:{{ particle.padding|e }}{% endif %}">
+		{% endif %}
+	{% endfor %}
+			{% if particle.contentW == "default" %}<div class="jf_g_container">{% endif %}
+				<div class="clear"></div>
+				{{ particle.html_before|html|raw }}
+				
+				{% if particle.image_lazyload %}
+					{% if particle.style == "style_1" %}
+						<div class="topbar">
+							<div class="gall_title">
+								<div class="name">{{ particle.gall_title|e }}</div>
+								<div class="descr">{{ particle.gall_descr|e }}</div>
+							</div>
+							<div class="cat_name"></div>
+							<button id="close" class="back jf_btn fab {{ particle.style_1_back_btn|e }}"><i class="material-icons" style="font-size:30px">arrow_back</i></button>
+						</div>
+						<ul id="{{ particle.style_1_id|e }}" class="jf_p_gallery">
+							{% for item in particle.style_1 %}
+								<li data-pile="{{ item.gallery_group|e }}" class="jf_waves_light_40">
+									{% if item.linktype == "nolink" %}
+										<div>
+									{% elseif item.linktype == "simple_link" %}
+										<a href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+									{% elseif item.linktype == "venobox" %}
+										<a class="jf_p_gall_venobox" href="{{ url(item.venobox_image)|e }}" data-gall="{{ item.gallery_group|e }}" title="{{ item.venobox_author|e }}">
+									{% endif %}
+									
+										{% if item.image_name %}<span class="tp-info"><span>{{ item.image_name|e }}</span></span>{% endif %}
+										<img class="lazyload" src="{{ url(particle.style_1_image_lazyload_src)|e }}" data-src="images/{{ item.image[15:] }}"{% if item.image_width %} width="{{ item.image_width|e }}"{% endif %}{% if item.image_height %} height="{{ item.image_height|e }}"{% endif %} alt="{{ item.image_name|e }}" />
+									
+									{% if item.linktype == "nolink" %}
+										</div>
+									{% elseif item.linktype == "simple_link" %}
+										</a>
+									{% elseif item.linktype == "venobox" %}
+										</a>
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					{% elseif particle.style == "style_2" %}
+						{% for item in particle.style_2 %}
+							<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %} {{ item.theme }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+								<div class="jf_p_gallery_album_thumbs {{ item.type }} ">
+									{% if item.type == "anim_1" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_6[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_7[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_2" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_3" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_6[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_7[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_8[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_9[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_4" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_6[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_7[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_8[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_9[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_5" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_6" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_6[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_7[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_8[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_9[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_7" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_8" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_6[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_7[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_8[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_9[15:] }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_9" %}
+										{% if item.thumb_1 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_2[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_3[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_4[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_5[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_6[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_7[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_8[15:] }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_9[15:] }}" alt="" />{% endif %}
+									{% endif %}
+								
+									{% if item.linktype == "photoswipe" %}
+										<div class="jf_photoswipe">
+											{% if item.image_1_url %}<a href="{{ url(item.image_1_url)|e }}" data-size="{{ item.image_1_photoswipe_image_width|e }}x{{ item.image_1_photoswipe_image_height|e }}" data-author="{{ item.image_1_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_1_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_1_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_2_url %}<a href="{{ url(item.image_2_url)|e }}" data-size="{{ item.image_2_photoswipe_image_width|e }}x{{ item.image_2_photoswipe_image_height|e }}" data-author="{{ item.image_2_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_2_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_2_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_3_url %}<a href="{{ url(item.image_3_url)|e }}" data-size="{{ item.image_3_photoswipe_image_width|e }}x{{ item.image_3_photoswipe_image_height|e }}" data-author="{{ item.image_3_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_3_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_3_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_4_url %}<a href="{{ url(item.image_4_url)|e }}" data-size="{{ item.image_4_photoswipe_image_width|e }}x{{ item.image_4_photoswipe_image_height|e }}" data-author="{{ item.image_4_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_4_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_4_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_5_url %}<a href="{{ url(item.image_5_url)|e }}" data-size="{{ item.image_5_photoswipe_image_width|e }}x{{ item.image_5_photoswipe_image_height|e }}" data-author="{{ item.image_5_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_5_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_5_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_6_url %}<a href="{{ url(item.image_6_url)|e }}" data-size="{{ item.image_6_photoswipe_image_width|e }}x{{ item.image_6_photoswipe_image_height|e }}" data-author="{{ item.image_6_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_6_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_6_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_7_url %}<a href="{{ url(item.image_7_url)|e }}" data-size="{{ item.image_7_photoswipe_image_width|e }}x{{ item.image_7_photoswipe_image_height|e }}" data-author="{{ item.image_7_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_7_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_7_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_8_url %}<a href="{{ url(item.image_8_url)|e }}" data-size="{{ item.image_8_photoswipe_image_width|e }}x{{ item.image_8_photoswipe_image_height|e }}" data-author="{{ item.image_8_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_8_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_8_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_9_url %}<a href="{{ url(item.image_9_url)|e }}" data-size="{{ item.image_9_photoswipe_image_width|e }}x{{ item.image_9_photoswipe_image_height|e }}" data-author="{{ item.image_9_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_9_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_9_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_10_url %}<a href="{{ url(item.image_10_url)|e }}" data-size="{{ item.image_10_photoswipe_image_width|e }}x{{ item.image_10_photoswipe_image_height|e }}" data-author="{{ item.image_10_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_10_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_10_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_11_url %}<a href="{{ url(item.image_11_url)|e }}" data-size="{{ item.image_11_photoswipe_image_width|e }}x{{ item.image_11_photoswipe_image_height|e }}" data-author="{{ item.image_11_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_11_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_11_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_12_url %}<a href="{{ url(item.image_12_url)|e }}" data-size="{{ item.image_12_photoswipe_image_width|e }}x{{ item.image_12_photoswipe_image_height|e }}" data-author="{{ item.image_12_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_12_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_12_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_13_url %}<a href="{{ url(item.image_13_url)|e }}" data-size="{{ item.image_13_photoswipe_image_width|e }}x{{ item.image_13_photoswipe_image_height|e }}" data-author="{{ item.image_13_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_13_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_13_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_14_url %}<a href="{{ url(item.image_14_url)|e }}" data-size="{{ item.image_14_photoswipe_image_width|e }}x{{ item.image_14_photoswipe_image_height|e }}" data-author="{{ item.image_14_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_14_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_14_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_15_url %}<a href="{{ url(item.image_15_url)|e }}" data-size="{{ item.image_15_photoswipe_image_width|e }}x{{ item.image_15_photoswipe_image_height|e }}" data-author="{{ item.image_15_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_15_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_15_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_16_url %}<a href="{{ url(item.image_16_url)|e }}" data-size="{{ item.image_16_photoswipe_image_width|e }}x{{ item.image_16_photoswipe_image_height|e }}" data-author="{{ item.image_16_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_16_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_16_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_17_url %}<a href="{{ url(item.image_17_url)|e }}" data-size="{{ item.image_17_photoswipe_image_width|e }}x{{ item.image_17_photoswipe_image_height|e }}" data-author="{{ item.image_17_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_17_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_17_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_18_url %}<a href="{{ url(item.image_18_url)|e }}" data-size="{{ item.image_18_photoswipe_image_width|e }}x{{ item.image_18_photoswipe_image_height|e }}" data-author="{{ item.image_18_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_18_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_18_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_19_url %}<a href="{{ url(item.image_19_url)|e }}" data-size="{{ item.image_19_photoswipe_image_width|e }}x{{ item.image_19_photoswipe_image_height|e }}" data-author="{{ item.image_19_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_19_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_19_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_20_url %}<a href="{{ url(item.image_20_url)|e }}" data-size="{{ item.image_20_photoswipe_image_width|e }}x{{ item.image_20_photoswipe_image_height|e }}" data-author="{{ item.image_20_photoswipe_author|e }}"><img class="lazyload" src="{{ url(particle.style_2_image_lazyload_src)|e }}" data-src="images/{{ item.thumb_1[15:] }}" alt=""/>{% if item.image_20_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_20_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+										</div>
+									{% elseif item.linktype == "venobox" %}
+										<div class="jf_p_gall_veno">
+											{% if item.image_1_url %}<a class="jf_venobox" href="{{ url(item.image_1_url)|e }}" {% if item.image_1_venobox_gallery %}data-gall="{{ item.image_1_venobox_gallery|e }}"{% endif %} title="{{ item.image_1_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_2_url %}<a class="jf_venobox" href="{{ url(item.image_2_url)|e }}" {% if item.image_2_venobox_gallery %}data-gall="{{ item.image_2_venobox_gallery|e }}"{% endif %} title="{{ item.image_2_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_3_url %}<a class="jf_venobox" href="{{ url(item.image_3_url)|e }}" {% if item.image_3_venobox_gallery %}data-gall="{{ item.image_3_venobox_gallery|e }}"{% endif %} title="{{ item.image_3_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_4_url %}<a class="jf_venobox" href="{{ url(item.image_4_url)|e }}" {% if item.image_4_venobox_gallery %}data-gall="{{ item.image_4_venobox_gallery|e }}"{% endif %} title="{{ item.image_4_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_5_url %}<a class="jf_venobox" href="{{ url(item.image_5_url)|e }}" {% if item.image_5_venobox_gallery %}data-gall="{{ item.image_5_venobox_gallery|e }}"{% endif %} title="{{ item.image_5_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_6_url %}<a class="jf_venobox" href="{{ url(item.image_6_url)|e }}" {% if item.image_6_venobox_gallery %}data-gall="{{ item.image_6_venobox_gallery|e }}"{% endif %} title="{{ item.image_6_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_7_url %}<a class="jf_venobox" href="{{ url(item.image_7_url)|e }}" {% if item.image_7_venobox_gallery %}data-gall="{{ item.image_7_venobox_gallery|e }}"{% endif %} title="{{ item.image_7_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_8_url %}<a class="jf_venobox" href="{{ url(item.image_8_url)|e }}" {% if item.image_8_venobox_gallery %}data-gall="{{ item.image_8_venobox_gallery|e }}"{% endif %} title="{{ item.image_8_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_9_url %}<a class="jf_venobox" href="{{ url(item.image_9_url)|e }}" {% if item.image_9_venobox_gallery %}data-gall="{{ item.image_9_venobox_gallery|e }}"{% endif %} title="{{ item.image_9_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_10_url %}<a class="jf_venobox" href="{{ url(item.image_10_url)|e }}" {% if item.image_10_venobox_gallery %}data-gall="{{ item.image_10_venobox_gallery|e }}"{% endif %} title="{{ item.image_10_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_11_url %}<a class="jf_venobox" href="{{ url(item.image_11_url)|e }}" {% if item.image_11_venobox_gallery %}data-gall="{{ item.image_11_venobox_gallery|e }}"{% endif %} title="{{ item.image_11_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_12_url %}<a class="jf_venobox" href="{{ url(item.image_12_url)|e }}" {% if item.image_12_venobox_gallery %}data-gall="{{ item.image_12_venobox_gallery|e }}"{% endif %} title="{{ item.image_12_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_13_url %}<a class="jf_venobox" href="{{ url(item.image_13_url)|e }}" {% if item.image_13_venobox_gallery %}data-gall="{{ item.image_13_venobox_gallery|e }}"{% endif %} title="{{ item.image_13_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_14_url %}<a class="jf_venobox" href="{{ url(item.image_14_url)|e }}" {% if item.image_14_venobox_gallery %}data-gall="{{ item.image_14_venobox_gallery|e }}"{% endif %} title="{{ item.image_14_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_15_url %}<a class="jf_venobox" href="{{ url(item.image_15_url)|e }}" {% if item.image_15_venobox_gallery %}data-gall="{{ item.image_15_venobox_gallery|e }}"{% endif %} title="{{ item.image_15_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_16_url %}<a class="jf_venobox" href="{{ url(item.image_16_url)|e }}" {% if item.image_16_venobox_gallery %}data-gall="{{ item.image_16_venobox_gallery|e }}"{% endif %} title="{{ item.image_16_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_17_url %}<a class="jf_venobox" href="{{ url(item.image_17_url)|e }}" {% if item.image_17_venobox_gallery %}data-gall="{{ item.image_17_venobox_gallery|e }}"{% endif %} title="{{ item.image_17_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_18_url %}<a class="jf_venobox" href="{{ url(item.image_18_url)|e }}" {% if item.image_18_venobox_gallery %}data-gall="{{ item.image_18_venobox_gallery|e }}"{% endif %} title="{{ item.image_18_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_19_url %}<a class="jf_venobox" href="{{ url(item.image_19_url)|e }}" {% if item.image_19_venobox_gallery %}data-gall="{{ item.image_19_venobox_gallery|e }}"{% endif %} title="{{ item.image_19_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_20_url %}<a class="jf_venobox" href="{{ url(item.image_20_url)|e }}" {% if item.image_20_venobox_gallery %}data-gall="{{ item.image_20_venobox_gallery|e }}"{% endif %} title="{{ item.image_20_venobox_author|e }}"></a>{% endif %}
+										</div>
+									{% endif %}
+								</div>
+								{% if item.title %}<div class="jf_p_gallery_album_title">{{ item.title|e }}</div>{% endif %}
+							</div>
+						{% endfor %}
+					{% endif %}
+				{% else %}
+					{% if particle.style == "style_1" %}
+						<div class="topbar">
+							<div class="gall_title">
+								<div class="name">{{ particle.gall_title|e }}</div>
+								<div class="descr">{{ particle.gall_descr|e }}</div>
+							</div>
+							<div class="cat_name"></div>
+							<button id="close" class="back jf_btn fab {{ particle.style_1_back_btn|e }}"><i class="material-icons" style="font-size:30px">arrow_back</i></button>
+						</div>
+						<ul id="{{ particle.style_1_id|e }}" class="jf_p_gallery">
+							{% for item in particle.style_1 %}
+								<li data-pile="{{ item.gallery_group|e }}" class="jf_waves_light_40">
+									{% if item.linktype == "nolink" %}
+										<div>
+									{% elseif item.linktype == "simple_link" %}
+										<a href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+									{% elseif item.linktype == "venobox" %}
+										<a class="jf_p_gall_venobox" href="{{ url(item.venobox_image)|e }}" data-gall="{{ item.gallery_group|e }}" title="{{ item.venobox_author|e }}">
+									{% endif %}
+									
+										{% if item.image_name %}<span class="tp-info"><span>{{ item.image_name|e }}</span></span>{% endif %}
+										<img src="{{ url(item.image)|e }}"{% if item.image_width %} width="{{ item.image_width|e }}"{% endif %}{% if item.image_height %} height="{{ item.image_height|e }}"{% endif %} alt="{{ item.image_name|e }}" />
+									
+									{% if item.linktype == "nolink" %}
+										</div>
+									{% elseif item.linktype == "simple_link" %}
+										</a>
+									{% elseif item.linktype == "venobox" %}
+										</a>
+									{% endif %}
+								</li>
+							{% endfor %}
+						</ul>
+					{% elseif particle.style == "style_2" %}
+						{% for item in particle.style_2 %}
+							<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %} {{ item.theme }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+								<div class="jf_p_gallery_album_thumbs {{ item.type }} ">
+									{% if item.type == "anim_1" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img src="{{ url(item.thumb_6)|e }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img src="{{ url(item.thumb_7)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_2" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_3" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img src="{{ url(item.thumb_6)|e }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img src="{{ url(item.thumb_7)|e }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img src="{{ url(item.thumb_8)|e }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img src="{{ url(item.thumb_9)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_4" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img src="{{ url(item.thumb_6)|e }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img src="{{ url(item.thumb_7)|e }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img src="{{ url(item.thumb_8)|e }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img src="{{ url(item.thumb_9)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_5" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_6" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img src="{{ url(item.thumb_6)|e }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img src="{{ url(item.thumb_7)|e }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img src="{{ url(item.thumb_8)|e }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img src="{{ url(item.thumb_9)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_7" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_8" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img src="{{ url(item.thumb_6)|e }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img src="{{ url(item.thumb_7)|e }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img src="{{ url(item.thumb_8)|e }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img src="{{ url(item.thumb_9)|e }}" alt="" />{% endif %}
+									{% elseif item.type == "anim_9" %}
+										{% if item.thumb_1 %}<img src="{{ url(item.thumb_1)|e }}" alt="" />{% endif %}
+										{% if item.thumb_2 %}<img src="{{ url(item.thumb_2)|e }}" alt="" />{% endif %}
+										{% if item.thumb_3 %}<img src="{{ url(item.thumb_3)|e }}" alt="" />{% endif %}
+										{% if item.thumb_4 %}<img src="{{ url(item.thumb_4)|e }}" alt="" />{% endif %}
+										{% if item.thumb_5 %}<img src="{{ url(item.thumb_5)|e }}" alt="" />{% endif %}
+										{% if item.thumb_6 %}<img src="{{ url(item.thumb_6)|e }}" alt="" />{% endif %}
+										{% if item.thumb_7 %}<img src="{{ url(item.thumb_7)|e }}" alt="" />{% endif %}
+										{% if item.thumb_8 %}<img src="{{ url(item.thumb_8)|e }}" alt="" />{% endif %}
+										{% if item.thumb_9 %}<img src="{{ url(item.thumb_9)|e }}" alt="" />{% endif %}
+									{% endif %}
+								
+									{% if item.linktype == "photoswipe" %}
+										<div class="jf_photoswipe">
+											{% if item.image_1_url %}<a href="{{ url(item.image_1_url)|e }}" data-size="{{ item.image_1_photoswipe_image_width|e }}x{{ item.image_1_photoswipe_image_height|e }}" data-author="{{ item.image_1_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_1_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_1_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_2_url %}<a href="{{ url(item.image_2_url)|e }}" data-size="{{ item.image_2_photoswipe_image_width|e }}x{{ item.image_2_photoswipe_image_height|e }}" data-author="{{ item.image_2_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_2_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_2_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_3_url %}<a href="{{ url(item.image_3_url)|e }}" data-size="{{ item.image_3_photoswipe_image_width|e }}x{{ item.image_3_photoswipe_image_height|e }}" data-author="{{ item.image_3_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_3_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_3_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_4_url %}<a href="{{ url(item.image_4_url)|e }}" data-size="{{ item.image_4_photoswipe_image_width|e }}x{{ item.image_4_photoswipe_image_height|e }}" data-author="{{ item.image_4_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_4_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_4_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_5_url %}<a href="{{ url(item.image_5_url)|e }}" data-size="{{ item.image_5_photoswipe_image_width|e }}x{{ item.image_5_photoswipe_image_height|e }}" data-author="{{ item.image_5_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_5_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_5_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_6_url %}<a href="{{ url(item.image_6_url)|e }}" data-size="{{ item.image_6_photoswipe_image_width|e }}x{{ item.image_6_photoswipe_image_height|e }}" data-author="{{ item.image_6_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_6_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_6_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_7_url %}<a href="{{ url(item.image_7_url)|e }}" data-size="{{ item.image_7_photoswipe_image_width|e }}x{{ item.image_7_photoswipe_image_height|e }}" data-author="{{ item.image_7_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_7_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_7_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_8_url %}<a href="{{ url(item.image_8_url)|e }}" data-size="{{ item.image_8_photoswipe_image_width|e }}x{{ item.image_8_photoswipe_image_height|e }}" data-author="{{ item.image_8_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_8_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_8_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_9_url %}<a href="{{ url(item.image_9_url)|e }}" data-size="{{ item.image_9_photoswipe_image_width|e }}x{{ item.image_9_photoswipe_image_height|e }}" data-author="{{ item.image_9_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_9_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_9_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_10_url %}<a href="{{ url(item.image_10_url)|e }}" data-size="{{ item.image_10_photoswipe_image_width|e }}x{{ item.image_10_photoswipe_image_height|e }}" data-author="{{ item.image_10_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_10_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_10_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_11_url %}<a href="{{ url(item.image_11_url)|e }}" data-size="{{ item.image_11_photoswipe_image_width|e }}x{{ item.image_11_photoswipe_image_height|e }}" data-author="{{ item.image_11_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_11_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_11_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_12_url %}<a href="{{ url(item.image_12_url)|e }}" data-size="{{ item.image_12_photoswipe_image_width|e }}x{{ item.image_12_photoswipe_image_height|e }}" data-author="{{ item.image_12_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_12_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_12_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_13_url %}<a href="{{ url(item.image_13_url)|e }}" data-size="{{ item.image_13_photoswipe_image_width|e }}x{{ item.image_13_photoswipe_image_height|e }}" data-author="{{ item.image_13_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_13_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_13_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_14_url %}<a href="{{ url(item.image_14_url)|e }}" data-size="{{ item.image_14_photoswipe_image_width|e }}x{{ item.image_14_photoswipe_image_height|e }}" data-author="{{ item.image_14_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_14_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_14_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_15_url %}<a href="{{ url(item.image_15_url)|e }}" data-size="{{ item.image_15_photoswipe_image_width|e }}x{{ item.image_15_photoswipe_image_height|e }}" data-author="{{ item.image_15_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_15_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_15_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_16_url %}<a href="{{ url(item.image_16_url)|e }}" data-size="{{ item.image_16_photoswipe_image_width|e }}x{{ item.image_16_photoswipe_image_height|e }}" data-author="{{ item.image_16_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_16_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_16_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_17_url %}<a href="{{ url(item.image_17_url)|e }}" data-size="{{ item.image_17_photoswipe_image_width|e }}x{{ item.image_17_photoswipe_image_height|e }}" data-author="{{ item.image_17_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_17_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_17_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_18_url %}<a href="{{ url(item.image_18_url)|e }}" data-size="{{ item.image_18_photoswipe_image_width|e }}x{{ item.image_18_photoswipe_image_height|e }}" data-author="{{ item.image_18_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_18_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_18_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_19_url %}<a href="{{ url(item.image_19_url)|e }}" data-size="{{ item.image_19_photoswipe_image_width|e }}x{{ item.image_19_photoswipe_image_height|e }}" data-author="{{ item.image_19_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_19_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_19_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+											{% if item.image_20_url %}<a href="{{ url(item.image_20_url)|e }}" data-size="{{ item.image_20_photoswipe_image_width|e }}x{{ item.image_20_photoswipe_image_height|e }}" data-author="{{ item.image_20_photoswipe_author|e }}"><img src="{{ url(item.thumb_1)|e }}" alt=""/>{% if item.image_20_photoswipe_caption %}<div class="photoswipe_caption">{{ item.image_20_photoswipe_caption|e }}</div>{% endif %}</a>{% endif %}
+										</div>
+									{% elseif item.linktype == "venobox" %}
+										<div class="jf_p_gall_veno">
+											{% if item.image_1_url %}<a class="jf_venobox" href="{{ url(item.image_1_url)|e }}" {% if item.image_1_venobox_gallery %}data-gall="{{ item.image_1_venobox_gallery|e }}"{% endif %} title="{{ item.image_1_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_2_url %}<a class="jf_venobox" href="{{ url(item.image_2_url)|e }}" {% if item.image_2_venobox_gallery %}data-gall="{{ item.image_2_venobox_gallery|e }}"{% endif %} title="{{ item.image_2_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_3_url %}<a class="jf_venobox" href="{{ url(item.image_3_url)|e }}" {% if item.image_3_venobox_gallery %}data-gall="{{ item.image_3_venobox_gallery|e }}"{% endif %} title="{{ item.image_3_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_4_url %}<a class="jf_venobox" href="{{ url(item.image_4_url)|e }}" {% if item.image_4_venobox_gallery %}data-gall="{{ item.image_4_venobox_gallery|e }}"{% endif %} title="{{ item.image_4_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_5_url %}<a class="jf_venobox" href="{{ url(item.image_5_url)|e }}" {% if item.image_5_venobox_gallery %}data-gall="{{ item.image_5_venobox_gallery|e }}"{% endif %} title="{{ item.image_5_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_6_url %}<a class="jf_venobox" href="{{ url(item.image_6_url)|e }}" {% if item.image_6_venobox_gallery %}data-gall="{{ item.image_6_venobox_gallery|e }}"{% endif %} title="{{ item.image_6_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_7_url %}<a class="jf_venobox" href="{{ url(item.image_7_url)|e }}" {% if item.image_7_venobox_gallery %}data-gall="{{ item.image_7_venobox_gallery|e }}"{% endif %} title="{{ item.image_7_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_8_url %}<a class="jf_venobox" href="{{ url(item.image_8_url)|e }}" {% if item.image_8_venobox_gallery %}data-gall="{{ item.image_8_venobox_gallery|e }}"{% endif %} title="{{ item.image_8_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_9_url %}<a class="jf_venobox" href="{{ url(item.image_9_url)|e }}" {% if item.image_9_venobox_gallery %}data-gall="{{ item.image_9_venobox_gallery|e }}"{% endif %} title="{{ item.image_9_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_10_url %}<a class="jf_venobox" href="{{ url(item.image_10_url)|e }}" {% if item.image_10_venobox_gallery %}data-gall="{{ item.image_10_venobox_gallery|e }}"{% endif %} title="{{ item.image_10_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_11_url %}<a class="jf_venobox" href="{{ url(item.image_11_url)|e }}" {% if item.image_11_venobox_gallery %}data-gall="{{ item.image_11_venobox_gallery|e }}"{% endif %} title="{{ item.image_11_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_12_url %}<a class="jf_venobox" href="{{ url(item.image_12_url)|e }}" {% if item.image_12_venobox_gallery %}data-gall="{{ item.image_12_venobox_gallery|e }}"{% endif %} title="{{ item.image_12_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_13_url %}<a class="jf_venobox" href="{{ url(item.image_13_url)|e }}" {% if item.image_13_venobox_gallery %}data-gall="{{ item.image_13_venobox_gallery|e }}"{% endif %} title="{{ item.image_13_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_14_url %}<a class="jf_venobox" href="{{ url(item.image_14_url)|e }}" {% if item.image_14_venobox_gallery %}data-gall="{{ item.image_14_venobox_gallery|e }}"{% endif %} title="{{ item.image_14_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_15_url %}<a class="jf_venobox" href="{{ url(item.image_15_url)|e }}" {% if item.image_15_venobox_gallery %}data-gall="{{ item.image_15_venobox_gallery|e }}"{% endif %} title="{{ item.image_15_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_16_url %}<a class="jf_venobox" href="{{ url(item.image_16_url)|e }}" {% if item.image_16_venobox_gallery %}data-gall="{{ item.image_16_venobox_gallery|e }}"{% endif %} title="{{ item.image_16_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_17_url %}<a class="jf_venobox" href="{{ url(item.image_17_url)|e }}" {% if item.image_17_venobox_gallery %}data-gall="{{ item.image_17_venobox_gallery|e }}"{% endif %} title="{{ item.image_17_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_18_url %}<a class="jf_venobox" href="{{ url(item.image_18_url)|e }}" {% if item.image_18_venobox_gallery %}data-gall="{{ item.image_18_venobox_gallery|e }}"{% endif %} title="{{ item.image_18_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_19_url %}<a class="jf_venobox" href="{{ url(item.image_19_url)|e }}" {% if item.image_19_venobox_gallery %}data-gall="{{ item.image_19_venobox_gallery|e }}"{% endif %} title="{{ item.image_19_venobox_author|e }}"></a>{% endif %}
+											{% if item.image_20_url %}<a class="jf_venobox" href="{{ url(item.image_20_url)|e }}" {% if item.image_20_venobox_gallery %}data-gall="{{ item.image_20_venobox_gallery|e }}"{% endif %} title="{{ item.image_20_venobox_author|e }}"></a>{% endif %}
+										</div>
+									{% endif %}
+								</div>
+								{% if item.title %}<div class="jf_p_gallery_album_title">{{ item.title|e }}</div>{% endif %}
+							</div>
+						{% endfor %}
+					{% endif %}
+				{% endif %}	
+
+				<div class="clear"></div>
+				{{ particle.html_after|html|raw }}
+			{% if particle.contentW == "default" %}</div>{% endif %}
+	{% for bg_options in particle.bg_options|slice(0, 1) %}
+		{% if bg_options.bg_type == "parallax_vid" %}</div></div>{% endif %}
+		{% if bg_options.bg_type == "parallax_img" %}</div></div>{% endif %}
+		{% if bg_options.bg_type == "image" %}</div>{% endif %}
+		{% if bg_options.bg_type == "color" %}</div>{% endif %}
+	{% endfor %}
+{% endblock %}

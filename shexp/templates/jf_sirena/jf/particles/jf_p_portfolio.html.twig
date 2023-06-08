@@ -1,0 +1,541 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+	{#<link rel="stylesheet" href="{{ url('gantry-theme://custom/css-compiled/bbbbbbbbbbbb.css') }}" type="text/css" />#}
+	<style>
+		.jf_p_portfolio .jf_portfolio_filterbtns {
+			margin: 20px 0;
+			text-align: left;
+			float: left;
+		}
+		.jf_p_portfolio .active {
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+		.jf_p_portfolio div.jf_portfolio_selects_wrap {
+			float: right;
+			margin: 20px 0;
+		}
+		.jf_p_portfolio div.jf_portfolio_selects_wrap .jf_placeholder {
+			border-bottom: 0;
+		}
+		.jf_p_portfolio .jf_portfolio_search {
+			margin: 20px;
+			float: right;
+		}
+		.jf_p_portfolio .jf_portfolio_toolbar {
+			margin: 0 0 30px 0;
+		}
+		.jf_p_portfolio .jf_col_fluid.paddings [class*='col-']{
+			padding: 10px;
+		}
+		[data-foreground="dark"].jf_p_portfolio .active {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		.dir-rtl .jf_p_portfolio .jf_portfolio_filterbtns {
+			text-align: right;
+			float: right;
+		}
+		.dir-rtl .jf_p_portfolio div.jf_portfolio_selects_wrap {
+			float: left;
+		}
+		.dir-rtl .jf_p_portfolio .jf_portfolio_search {
+			float: left;
+		}
+	</style>
+{% endblock %}
+
+{% block javascript %}
+	{#<script src="{{ url('gantry-theme://custom/css-compiled/sssssss.js') }}" type="text/javascript"></script>#}
+    {#<script type="text/javascript">alert("BOOM");</script>#}
+	<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/particles/jf_p_portfolio/jquery.shuffle.min.js"></script>
+	<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/particles/jf_p_portfolio/jf_p_portfolio.min.js"></script>
+{% endblock %}
+
+{% block particle %}
+	{% for bg_options in particle.bg_options|slice(0, 1) %}
+		{% if bg_options.bg_type == "color" %}<div style="background:{{ bg_options.bgColor|e }};{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">{% endif %}
+		{% if bg_options.bg_type == "image" %}
+			{% if bg_options.lazyload %}
+			<div class="lazyload" data-bg="images/{{ bg_options.cover_src[15:] }}" style="background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">
+			{% else %}
+			<div style="background-image:url({{ url(bg_options.cover_src)|e }});background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">
+			{% endif %}
+		{% endif %}
+		{% if bg_options.bg_type == "parallax_img" %}
+			<div class="jf_parallax {{ bg_options.type }}" style="text-align:{{ particle.textAl|e }}">
+				{% if bg_options.lazyload %}
+				<div class="bg no-repeat cover lazyload" data-bg="images/{{ bg_options.parallax_src[15:] }}"></div>
+				{% else %}
+				<div class="bg no-repeat cover" style="background-image:url({{ url(bg_options.parallax_src)|e }});"></div>
+				{% endif %}
+				<div class="mask" data-parallax-opacity="{{ bg_options.maskOpacity|e }}" style="background:{{ bg_options.maskColor|e }}"></div>
+				<div class="content {% if bg_options.scrolling %}scrolling{% else %}noscrolling{% endif %}" style="{% if particle.padding %}padding:{{ particle.padding|e }}{% endif %}">
+		{% endif %}
+		{% if bg_options.bg_type == "parallax_vid" %}
+			{% if bg_options.video_type == "vimeo" %}
+			<div class="jf_parallax vimeo {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}" style="text-align:{{ particle.textAl|e }}" data-vimeoid="{{ bg_options.vimeo_id|e }}" data-playerid="vimpl_{{ bg_options.vimeo_id|e }}" data-volume="{% if bg_options.muted %}0{% else %}1{% endif %}">
+				<div class="bg"></div>
+			{% elseif bg_options.video_type == "youtube" %}
+			<div class="jf_parallax youtube {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}">
+				<div class="bg" data-youtube-bg="{{ bg_options.youtube_id|e }}" data-volume="{% if bg_options.muted %}0{% else %}1{% endif %}"></div>
+			{% else %}
+			<div class="jf_parallax {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}" style="text-align:{{ particle.textAl|e }}">
+				<div class="bg" data-video-bg="{{ bg_options.url|e }}{{ bg_options.vidname|e }}" data-video-options="posterType:jpg,loop:{% if bg_options.loop %}true{% else %}false{% endif %},muted:{% if bg_options.muted %}true{% else %}false{% endif %},position:0% 50%"></div>
+			{% endif %}
+				<div class="mask" data-parallax-opacity="{{ bg_options.maskOpacity|e }}" style="background:{{ bg_options.maskColor|e }}"></div>
+				<div class="content{% if bg_options.scrolling %} scrolling{% else %} noscrolling{% endif %}" style="{% if particle.padding %}padding:{{ particle.padding|e }}{% endif %}">
+		{% endif %}
+	{% endfor %}
+			{% if particle.contentW == "default" %}<div class="jf_g_container">{% endif %}
+				<div class="clear"></div>
+				{{ particle.html_before|html|raw }}
+				
+
+			<div class="jf_p_portfolio" data-foreground="{{ particle.foreground|e }}"{% if particle.css3_anim_name %} data-animation="{{ particle.css3_anim_name|e }}" data-animation-type="{{ particle.css3_anim_type|e }}" data-animation-delay="{{ particle.css3_anim_delay|e }}"{% endif %}>
+				<div class="jf_portfolio_toolbar">
+					<div class="jf_portfolio_filterbtns">
+						{% for item in particle.filterbuttons %}
+							<button class="jf_btn {{ item.classes|e }}" style="{{ item.customcss|e }}" data-group="{{ item.catid|e }}">{{ item.cattext|e }}</button>
+						{% endfor %}
+					</div>
+					{% for item in particle.sort %}
+						{% if item.enable %}
+							<div class="jf_portfolio_selects_wrap">
+								<select class="jf_portfolio_selects jf_select" data-icon="fa fa-caret-down">
+									<option value="default" selected="">{{ item.txt_default|e }}</option>
+									<option value="title">{{ item.txt_title|e }}</option>
+									<option value="date-created">{{ item.txt_date|e }}</option>
+								</select>
+							</div>
+						{% endif %}
+					{% endfor %}
+					{% if particle.search %}
+						<input class="jf_portfolio_search" type="search" placeholder="Search..." />
+					{% endif %}
+					<div class="clear"></div>
+				</div>
+
+				<div class="jf_portfolio_container jf_col_fluid {{ particle.gridstyle|e }}">
+				
+				{% for item in particle.items %}
+					{% if item.style == "custom" %}
+						<div class="item">
+							{{ item.html|html|raw }}
+						</div>
+					{% elseif item.style == "hovers_1" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hovers style_1 {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hovers style_1 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hovers style_1 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hovers style_1 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hovers style_1 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hovers style_1 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								{% if particle.image_lazyload %}
+									<img class="lazyload" src="{{ url(particle.image_lazyload_src)|e }}" data-src="images/{{ item.hovers_1_image[15:] }}" alt="{% if item.c_image_alt %}{{ item.hovers_1_image_alt|e }}{% endif %}">
+								{% else %}
+									<img src="{{ url(item.hovers_1_image)|e }}" alt="{% if item.c_image_alt %}{{ item.hovers_1_image_alt|e }}{% endif %}">
+								{% endif %}
+								
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								{% if item.hovers_1_caption %}
+									<div class="jf_caption">
+										<div>{{ item.hovers_1_caption|html|raw }}</div>
+									</div>
+								{% endif %}
+							
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hovers_2" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hovers style_2 {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hovers style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hovers style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hovers style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hovers style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hovers style_2 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								{% if particle.image_lazyload %}
+									<img class="lazyload" src="{{ url(particle.image_lazyload_src)|e }}" data-src="images/{{ item.hovers_2_image[15:] }}" alt="{% if item.c_image_alt %}{{ item.hovers_2_image_alt|e }}{% endif %}">
+								{% else %}
+									<img src="{{ url(item.hovers_2_image)|e }}" alt="{% if item.c_image_alt %}{{ item.hovers_2_image_alt|e }}{% endif %}">
+								{% endif %}
+								
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								<div class="jf_caption">
+									{% if item.hovers_2_caption_title %}<div>{{ item.hovers_2_caption_title|html|raw }}</div>{% endif %}
+									{% if item.hovers_2_caption_descr %}<p>{{ item.hovers_2_caption_descr|html|raw }}</p>{% endif %}
+								</div>
+							
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hovers_3" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hovers style_3 {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hovers style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hovers style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hovers style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hovers style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hovers style_3 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								{% if particle.image_lazyload %}
+									<img class="lazyload" src="{{ url(particle.image_lazyload_src)|e }}" data-src="images/{{ item.hovers_3_image[15:] }}" alt="{% if item.c_image_alt %}{{ item.hovers_3_image_alt|e }}{% endif %}">
+								{% else %}
+									<img src="{{ url(item.hovers_3_image)|e }}" alt="{% if item.c_image_alt %}{{ item.hovers_3_image_alt|e }}{% endif %}">
+								{% endif %}
+								
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								<div class="jf_caption">
+									{{ item.hovers_3_caption_icon|html|raw }}
+									{% if item.hovers_3_caption_title %}<div>{{ item.hovers_3_caption_title|html|raw }}</div>{% endif %}
+								</div>
+							
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hovers_4" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hovers style_4 {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hovers style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hovers style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hovers style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hovers style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hovers style_4 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								{% if particle.image_lazyload %}
+									<img class="lazyload" src="{{ url(particle.image_lazyload_src)|e }}" data-src="images/{{ item.hovers_4_image[15:] }}" alt="{% if item.c_image_alt %}{{ item.hovers_4_image_alt|e }}{% endif %}">
+								{% else %}
+									<img src="{{ url(item.hovers_4_image)|e }}" alt="{% if item.c_image_alt %}{{ item.hovers_4_image_alt|e }}{% endif %}">
+								{% endif %}
+								
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								<div class="jf_caption">
+									<div class="meta">
+										{% if item.hovers_4_caption_title %}<div>{{ item.hovers_4_caption_title|html|raw }}</div>{% endif %}
+										{% if item.hovers_4_caption_descr %}<div class="descr">{{ item.hovers_4_caption_descr|html|raw }}</div>{% endif %}
+									</div>
+									<div class="author">{{ item.hovers_4_caption_author|html|raw }}</div>
+								</div>
+							
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hovers_5" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hovers style_5 {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hovers style_5 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hovers style_5 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hovers style_5 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hovers style_5 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hovers style_5 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								{% if particle.image_lazyload %}
+									<img class="lazyload" src="{{ url(particle.image_lazyload_src)|e }}" data-src="images/{{ item.hovers_5_image[15:] }}" alt="{% if item.c_image_alt %}{{ item.hovers_5_image_alt|e }}{% endif %}">
+								{% else %}
+									<img src="{{ url(item.hovers_5_image)|e }}" alt="{% if item.c_image_alt %}{{ item.hovers_5_image_alt|e }}{% endif %}">
+								{% endif %}
+								
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								<div class="jf_caption">
+									<div class="cat">{{ item.hovers_5_caption_title|html|raw }}</div>
+									{% if item.hovers_5_caption_descr %}<div>{{ item.hovers_5_caption_descr|html|raw }}</div>{% endif %}
+								</div>
+							
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hotspot_1" %}
+						<div class="item {{ item.col|e }}" style="{{ url(item.hotspot_1_padding)|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hotspots style_1 {{ item.hotspot_1_direc|e }} {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hotspots style_1 {{ item.hotspot_1_direc|e }} {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hotspots style_1 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hotspots style_1 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hotspots style_1 {{ item.hotspot_1_direc|e }} {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hotspots style_1 {{ item.hotspot_1_direc|e }} {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								<div class="content">
+									<div class="text">
+										<div>{{ item.hotspot_1_caption_title|html|raw }}</div>
+										<p>{{ item.hotspot_1_caption_descr|html|raw }}</p>
+										<div class="category">{{ item.hotspot_1_caption_cat|html|raw }}</div>
+									</div>
+									<div class="mask"></div>
+									{% if particle.image_lazyload %}
+										<div class="bg lazyload" data-bg="images/{{ item.hotspot_1_image[15:] }}"></div>
+									{% else %}
+										<div class="bg" style="background-image: url('{{ url(item.hotspot_1_image)|e }}')"></div>
+									{% endif %}
+									
+								</div>
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hotspot_2" %}
+						<div class="item {{ item.col|e }}" style="{{ url(item.hotspot_2_padding)|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hotspots style_2 {{ item.customclass|e }} {{ item.shadow|e }} ">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hotspots style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hotspots style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hotspots style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hotspots style_2 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hotspots style_2 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}">
+							{% endif %}
+							
+								<div class="content">
+									<div class="cover">
+										{% if particle.image_lazyload %}
+											<div class="bg lazyload" data-bg="images/{{ item.hotspot_2_image[15:] }}"></div>
+										{% else %}
+											<div class="bg" style="background-image:url('{{ url(item.hotspot_2_image)|e }}')"></div>
+										{% endif %}
+									</div>
+									<div class="descr">
+										<div class="date">{{ item.hotspot_2_caption_date|html|raw }}</div>
+										{% if item.hotspot_2_caption_title %}<div class="header">{{ item.hotspot_2_caption_title|html|raw }}</div>{% endif %}
+										<ul class="category">{{ item.hotspot_2_caption_cat|html|raw }}</ul>
+									</div>
+								</div>
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hotspot_3" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+						{% if particle.image_lazyload %}
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" {% if item.hotspot_3_image %}data-bg="images/{{ item.hotspot_3_image[15:] }}"{% endif %} style="{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}" {% if item.hotspot_3_image %}data-bg="images/{{ item.hotspot_3_image[15:] }}"{% endif %} style="{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}" {% if item.hotspot_3_image %}data-bg="images/{{ item.hotspot_3_image[15:] }}"{% endif %} style="{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}" {% if item.hotspot_3_image %}data-bg="images/{{ item.hotspot_3_image[15:] }}"{% endif %} style="{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% endif %}
+						{% else %}
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " style="{% if item.hotspot_3_image %}background-image:url('{{ url(item.hotspot_3_image)|e }}');{% endif %}{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}" style="{% if item.hotspot_3_image %}background-image:url('{{ url(item.hotspot_3_image)|e }}');{% endif %}{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}" style="{% if item.hotspot_3_image %}background-image:url('{{ url(item.hotspot_3_image)|e }}');{% endif %}{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hotspots style_3 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}" style="{% if item.hotspot_3_image %}background-image:url('{{ url(item.hotspot_3_image)|e }}');{% endif %}{% if item.hotspot_3_bgcolor %}background-color:{{ item.hotspot_3_bgcolor|e }}{% endif %}">
+							{% endif %}
+						{% endif %}
+						
+								<span class="logo">
+									{% if particle.image_lazyload %}
+										<img class="lazyload" src="{{ url(particle.image_lazyload_src)|e }}" data-src="images/{{ item.hotspot_3_logoimage[15:] }}" width="{{ item.hotspot_3_logowidth|e }}" alt="">
+									{% else %}
+										<img src="{{ url(item.hotspot_3_logoimage)|e }}" width="{{ item.hotspot_3_logowidth|e }}" alt="">
+									{% endif %}
+								</span>
+								<div class="arrow"><i class="material-icons">keyboard_arrow_down</i></div>
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% elseif item.style == "hotspot_4" %}
+						<div class="item {{ item.col|e }}" data-groups='[{{ item.group|e }}]'{% if item.date %} data-date-created="{{ item.date|e }}"{% endif %} data-title="{{ item.itemname|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+						{% if particle.image_lazyload %}
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" data-bg="images/{{ item.hotspot_4_image[15:] }}">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}" data-bg="images/{{ item.hotspot_4_image[15:] }}">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}" data-bg="images/{{ item.hotspot_4_image[15:] }}">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} lazyload" data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}" data-bg="images/{{ item.hotspot_4_image[15:] }}">
+							{% endif %}
+						{% else %}
+							{% if item.linktype == "nolink" %}
+								<div class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " style="background-image:url('{{ url(item.hotspot_4_image)|e }}')">
+							{% elseif item.linktype == "simple_link" %}
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ item.simple_link_url|e }}" target="_{{ item.simple_link_target|e }}" style="background-image:url('{{ url(item.hotspot_4_image)|e }}')">
+							{% elseif item.linktype == "current" %}
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.joomla_current() }}{{ item.current_url|e }}">
+							{% elseif item.linktype == "menuid" %}
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ gantry.jf_g5_theme.menu_item_url(item.menu_id|e) }}">
+							{% elseif item.linktype == "photoswipe" %}
+								<div class="jf_photoswipe">
+								<a class="jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " href="{{ url(item.photoswipe_image)|e }}" data-size="{{ item.photoswipe_image_width|e }}x{{ item.photoswipe_image_height|e }}" data-author="{{ item.photoswipe_author|e }}" style="background-image:url('{{ url(item.hotspot_4_image)|e }}')">
+							{% elseif item.linktype == "venobox" %}
+								<a class="jf_venobox jf_hotspots style_4 {{ item.customclass|e }} {{ item.shadow|e }} " data-type="{{ item.venotype|e }}" {% if item.venotype != "image" %}href="{{ url(item.venobox_video_url)|e }}"{% else %}href="{{ url(item.venobox_image)|e }}"{% endif %} {% if item.venobox_gallery %}data-gall="{{ item.venobox_gallery|e }}"{% endif %} title="{{ item.venobox_author|e }}" style="background-image:url('{{ url(item.hotspot_4_image)|e }}')">
+							{% endif %}
+						{% endif %}
+						
+								<div class="meta">
+									<span class="category">{{ item.hotspot_4_cat|e }}</span>
+									<span>/</span>
+									<span class="date">{{ item.hotspot_4_date|e }}</span>
+								</div>
+								{% if item.hotspot_4_title %}<div class="header">{{ item.hotspot_4_title|e }}</div>{% endif %}
+								<cite>{{ item.hotspot_4_author|e }}</cite>
+								{% if item.linktype == "photoswipe" %}{% if item.photoswipe_caption %}<div class="photoswipe_caption">{{ item.photoswipe_caption|e }}</div>{% endif %}{% endif %}
+								
+							{% if item.linktype == "nolink" %}
+								</div>
+							{% elseif (item.linktype == "simple_link" or item.linktype == "current" or item.linktype == "menuid") %}
+								</a>
+							{% elseif item.linktype == "photoswipe" %}
+								</a>
+								</div>
+							{% elseif item.linktype == "venobox" %}
+								</a>
+							{% endif %}
+						</div>
+					{% endif %}
+				{% endfor %}
+
+				</div>
+			</div>
+					
+				<div class="clear"></div>
+				{{ particle.html_after|html|raw }}
+			{% if particle.contentW == "default" %}</div>{% endif %}
+	{% for bg_options in particle.bg_options|slice(0, 1) %}
+		{% if bg_options.bg_type == "parallax_vid" %}</div></div>{% endif %}
+		{% if bg_options.bg_type == "parallax_img" %}</div></div>{% endif %}
+		{% if bg_options.bg_type == "image" %}</div>{% endif %}
+		{% if bg_options.bg_type == "color" %}</div>{% endif %}
+	{% endfor %}
+{% endblock %}

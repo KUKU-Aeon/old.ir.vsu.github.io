@@ -1,0 +1,11 @@
+article:
+  filter:
+    categories: ''
+    featured: include
+  limit:
+    total: '2'
+    columns: '2'
+    start: '0'
+  sort:
+    orderby: publish_up
+    ordering: ASC

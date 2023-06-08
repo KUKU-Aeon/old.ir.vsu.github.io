@@ -1,0 +1,67 @@
+.su-contact-form .su-input-box input, .su-contact-form .su-input-box textarea {
+	width: 100%;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	padding: 5px 10px;
+}
+
+.su-input-box input {
+	height: 40px !important;
+}
+
+
+.su-form-wrapper .submit-button {
+	margin-top: 10px;
+}
+.su-form-wrapper .submit-button input {
+	margin-right: 10px;
+	padding: 8px 16px;
+	outline: none;
+}
+
+.su-contact-form .su-form-fields {
+	position: relative;
+	display: flex;
+	margin: 0 0 10px -2%;
+}
+
+.su-contact-form .su-cf-group {
+	margin: 0 0 0 2%;
+	width: 100%;
+}
+
+.su-contact-form.name-email-subject .su-form-fields .su-cf-group {
+	width: 33.33%;
+	float: left;
+}
+.su-contact-form.email-subject .su-form-fields .su-cf-group {
+	width: 50%;
+	float: left;
+}
+.su-contact-form.email .su-form-fields .su-cf-group {
+	width: 100%;
+}
+.su-cf-message-content {
+	margin-bottom: 20px;
+}
+
+.su-contact-form form {
+	margin: 0 !important;
+}
+
+.su-contact-form .su-note {
+	display: none;
+}
+
+
+/*Mobile Modes*/
+@media (max-width: 767px) {
+	.su-contact-form .su-form-fields {display: block;}
+	.su-contact-form.name-email-subject .su-form-fields .su-cf-group ,
+	.su-contact-form.email-subject .su-form-fields .su-cf-group,
+	.su-contact-form.name-email .su-form-fields .su-cf-group {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}

@@ -1,0 +1,294 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+	{#<link rel="stylesheet" href="{{ url('gantry-theme://custom/css-compiled/bbbbbbbbbbbb.css') }}" type="text/css" />#}
+	{#<style>html{display:none}</style>#}
+{% endblock %}
+
+{% block javascript %}
+	{#<script src="{{ url('gantry-theme://custom/css-compiled/sssssss.js') }}" type="text/javascript"></script>#}
+    {#<script type="text/javascript">alert("BOOM");</script>#}
+{% endblock %}
+
+{% block particle %}
+	{% for bg_options in particle.bg_options|slice(0, 1) %}
+		{% if bg_options.bg_type == "color" %}<div style="background:{{ bg_options.bgColor|e }};{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">{% endif %}
+		{% if bg_options.bg_type == "image" %}
+			{% if bg_options.lazyload %}
+			<div class="lazyload" data-bg="images/{{ bg_options.cover_src[15:] }}" style="background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">
+			{% else %}
+			<div style="background-image:url({{ url(bg_options.cover_src)|e }});background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;{% if particle.padding %}padding:{{ particle.padding|e }};{% endif %}text-align:{{ particle.textAl|e }}">
+			{% endif %}
+		{% endif %}
+		{% if bg_options.bg_type == "parallax_img" %}
+			<div class="jf_parallax {{ bg_options.type }}" style="text-align:{{ particle.textAl|e }}">
+				{% if bg_options.lazyload %}
+				<div class="bg no-repeat cover lazyload" data-bg="images/{{ bg_options.parallax_src[15:] }}"></div>
+				{% else %}
+				<div class="bg no-repeat cover" style="background-image:url({{ url(bg_options.parallax_src)|e }});"></div>
+				{% endif %}
+				<div class="mask" data-parallax-opacity="{{ bg_options.maskOpacity|e }}" style="background:{{ bg_options.maskColor|e }}"></div>
+				<div class="content {% if bg_options.scrolling %}scrolling{% else %}noscrolling{% endif %}" style="{% if particle.padding %}padding:{{ particle.padding|e }}{% endif %}">
+		{% endif %}
+		{% if bg_options.bg_type == "parallax_vid" %}
+			{% if bg_options.video_type == "vimeo" %}
+			<div class="jf_parallax vimeo {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}" style="text-align:{{ particle.textAl|e }}" data-vimeoid="{{ bg_options.vimeo_id|e }}" data-playerid="vimpl_{{ bg_options.vimeo_id|e }}" data-volume="{% if bg_options.muted %}0{% else %}1{% endif %}">
+				<div class="bg"></div>
+			{% elseif bg_options.video_type == "youtube" %}
+			<div class="jf_parallax youtube {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}">
+				<div class="bg" data-youtube-bg="{{ bg_options.youtube_id|e }}" data-volume="{% if bg_options.muted %}0{% else %}1{% endif %}"></div>
+			{% else %}
+			<div class="jf_parallax {{ bg_options.type }}{% if bg_options.controls %} controls{% endif %}" style="text-align:{{ particle.textAl|e }}">
+				<div class="bg" data-video-bg="{{ bg_options.url|e }}{{ bg_options.vidname|e }}" data-video-options="posterType:jpg,loop:{% if bg_options.loop %}true{% else %}false{% endif %},muted:{% if bg_options.muted %}true{% else %}false{% endif %},position:0% 50%"></div>
+			{% endif %}
+				<div class="mask" data-parallax-opacity="{{ bg_options.maskOpacity|e }}" style="background:{{ bg_options.maskColor|e }}"></div>
+				<div class="content{% if bg_options.scrolling %} scrolling{% else %} noscrolling{% endif %}" style="{% if particle.padding %}padding:{{ particle.padding|e }}{% endif %}">
+		{% endif %}
+	{% endfor %}
+			{% if particle.contentW == "default" %}<div class="jf_g_container">{% endif %}
+				<div class="clear"></div>
+				{{ particle.html_before|html|raw }}
+	
+				{% if particle.style == "style_1" %}
+					{% for item in particle.style_1 %}
+						<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %}">
+							{% if item.icon_type == "html" %}
+								<div class="icon" style="font-size:44px;color:{{ item.html_color|e }}">
+									{{ item.html_icon|html|raw }}
+								</div>
+							{% elseif item.icon_type == "image" %}
+								<div class="icon">
+									<img src="{{ url(item.image_icon)|e }}" alt="">
+								</div>
+							{% else %}
+							{% endif %}
+							<div class="jf_counter weight_{{ item.counter_weight|e }} {{ item.counter_type|e }}" style="font-size:{{ item.counter_fontsize|e }};color:{{ item.counter_color|e }}">{{ item.counter_num|e }}</div>
+							{% if item.counter_sep %}<div class="separator" style="background-color:{{ item.counter_sep_color|e }}"></div>{% endif %}
+							<div style="color:{{ item.html_color|e }}">{{ item.html_descr|html|raw }}</div>
+						</div>
+					{% endfor %}
+				{% elseif particle.style == "style_2" %}
+					{% for item in particle.style_2 %}
+						<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %}" style="text-align:{{ item.textAl|e }};{% if item.css_style %}{{ item.css_style|e }}{% endif %}">
+							<div style="color:{{ item.html_color|e }}">{{ item.html_title|html|raw }}</div>
+							<div class="jf_progress {{ item.bar_size|e }}" data-percent="{{ item.bar_load_to|e }}">
+								<div class="fill" style="background:{{ item.bar_color|e }}">
+									<div class="percent">
+										<div class="counter"><span data-from="{{ item.bar_load_from|e }}" data-to="{{ item.bar_load_to|e }}" data-speed="{{ item.bar_loadspeed|e }}">{{ item.bar_load_from|e }}</span>%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				{% elseif particle.style == "style_3" %}
+					{% for item in particle.style_3 %}
+						<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %}" style="text-align:{{ item.textAl|e }}">
+							<div class="jf_inf_pie" 
+								data-color="{{ item.bar_color|e }}" 
+								data-size="{{ item.circle_size|e }}" 
+								data-percent="{{ item.circle_percent|e }}" 
+								data-width="{{ item.circle_bar_width|e }}" 
+								data-animate="{{ item.bar_fillspeed|e }}">
+								{% if item.content_type == "html" %}
+									{{ item.html_content|html|raw }}
+								{% else %}
+									<div class="counter" style="font-size:{{ item.counter_fontsize|e }}">
+										<span data-from="1" data-to="{{ item.circle_percent|e }}" data-refresh-interval="50" data-speed="{{ item.bar_fillspeed|e }}"></span>%
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				{% elseif particle.style == "style_4" %}
+					{% for item in particle.style_4 %}
+						<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %}" style="text-align:{{ item.textAl|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							{% if item.chart_type == "piedonut" %}
+								<div id="{{ item.chart_id|e }}" class="{% if item.piedonut_type == 'pie' %}jf_chart_pie {% else %}jf_chart_donut{% endif %} flot-chart-pie" 
+									style="height:{{ item.chart_height|e }};{{ item.chart_css|e }}" 
+									data-legend="{% if item.chart_legend %}true{% else %}false{% endif %}" 
+									data-stroke-width="{{ item.chart_strokewidth|e }}" 
+									
+									{% if item.piedonut_set_1_value %}
+									data-set1-value="{{ item.piedonut_set_1_value|e }}" 
+									data-set1-label="{{ item.piedonut_set_1_label|e }}" 
+									data-set1-color="{{ item.piedonut_set_1_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_2_value %}
+									data-set2-value="{{ item.piedonut_set_2_value|e }}" 
+									data-set2-label="{{ item.piedonut_set_2_label|e }}" 
+									data-set2-color="{{ item.piedonut_set_2_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_3_value %}
+									data-set3-value="{{ item.piedonut_set_3_value|e }}" 
+									data-set3-label="{{ item.piedonut_set_3_label|e }}" 
+									data-set3-color="{{ item.piedonut_set_3_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_4_value %}
+									data-set4-value="{{ item.piedonut_set_4_value|e }}" 
+									data-set4-label="{{ item.piedonut_set_4_label|e }}" 
+									data-set4-color="{{ item.piedonut_set_4_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_5_value %}
+									data-set5-value="{{ item.piedonut_set_5_value|e }}" 
+									data-set5-label="{{ item.piedonut_set_5_label|e }}" 
+									data-set5-color="{{ item.piedonut_set_5_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_6_value %}
+									data-set6-value="{{ item.piedonut_set_6_value|e }}" 
+									data-set6-label="{{ item.piedonut_set_6_label|e }}" 
+									data-set6-color="{{ item.piedonut_set_6_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_7_value %}
+									data-set7-value="{{ item.piedonut_set_7_value|e }}" 
+									data-set7-label="{{ item.piedonut_set_7_label|e }}" 
+									data-set7-color="{{ item.piedonut_set_7_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_8_value %}
+									data-set8-value="{{ item.piedonut_set_8_value|e }}" 
+									data-set8-label="{{ item.piedonut_set_8_label|e }}" 
+									data-set8-color="{{ item.piedonut_set_8_color|e }}" 
+									{% endif %}
+									{% if item.piedonut_set_9_value %}
+									data-set9-value="{{ item.piedonut_set_9_value|e }}" 
+									data-set9-label="{{ item.piedonut_set_9_label|e }}" 
+									data-set9-color="{{ item.piedonut_set_9_color|e }}" 
+									{% endif %}
+								></div>
+							{% else %}
+								<div id="{{ item.chart_id|e }}" class="jf_chart_bar flot-chart" 
+									style="height:{{ item.chart_height|e }};{{ item.chart_css|e }}" 
+									data-legend="{% if item.chart_legend %}true{% else %}false{% endif %}" 
+									data-stroke-width="{{ item.chart_strokewidth|e }}" 
+									
+									data-grid="{% if item.bar_grid %}true{% else %}false{% endif %}" 
+									data-grid-color="#eeeeee" 
+									data-xaxis="{% if item.bar_xaxis %}true{% else %}false{% endif %}" 
+									data-xaxis-tickcolor="{{ item.bar_xaxis_tickcolor|e }}" 
+									data-xaxis-fontcolor="{{ item.bar_xaxis_fontcolor|e }}" 
+									data-yaxis="{% if item.bar_yaxis %}true{% else %}false{% endif %}" 
+									data-yaxis-tickcolor="{{ item.bar_yaxis_tickcolor|e }}" 
+									data-yaxis-fontcolor="{{ item.bar_yaxis_fontcolor|e }}" 
+									
+									{% if item.bar_set_1_value %}
+									data-set1-xy="[{{ item.bar_set_1_value|e }}]" 
+									data-set1-label="{{ item.bar_set_1_label|e }}" 
+									data-set1-width="{{ item.bar_set_1_width|e }}" 
+									data-set1-color="{{ item.bar_set_1_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_2_value %}
+									data-set2-xy="[{{ item.bar_set_2_value|e }}]" 
+									data-set2-label="{{ item.bar_set_2_label|e }}" 
+									data-set2-width="{{ item.bar_set_2_width|e }}" 
+									data-set2-color="{{ item.bar_set_2_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_3_value %}
+									data-set3-xy="[{{ item.bar_set_3_value|e }}]" 
+									data-set3-label="{{ item.bar_set_3_label|e }}" 
+									data-set3-width="{{ item.bar_set_3_width|e }}" 
+									data-set3-color="{{ item.bar_set_3_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_4_value %}
+									data-set4-xy="[{{ item.bar_set_4_value|e }}]" 
+									data-set4-label="{{ item.bar_set_4_label|e }}" 
+									data-set4-width="{{ item.bar_set_4_width|e }}" 
+									data-set4-color="{{ item.bar_set_4_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_5_value %}
+									data-set5-xy="[{{ item.bar_set_5_value|e }}]" 
+									data-set5-label="{{ item.bar_set_5_label|e }}" 
+									data-set5-width="{{ item.bar_set_5_width|e }}" 
+									data-set5-color="{{ item.bar_set_5_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_6_value %}
+									data-set6-xy="[{{ item.bar_set_6_value|e }}]" 
+									data-set6-label="{{ item.bar_set_6_label|e }}" 
+									data-set6-width="{{ item.bar_set_6_width|e }}" 
+									data-set6-color="{{ item.bar_set_6_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_7_value %}
+									data-set7-xy="[{{ item.bar_set_7_value|e }}]" 
+									data-set7-label="{{ item.bar_set_7_label|e }}" 
+									data-set7-width="{{ item.bar_set_7_width|e }}" 
+									data-set7-color="{{ item.bar_set_7_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_8_value %}
+									data-set8-xy="[{{ item.bar_set_8_value|e }}]" 
+									data-set8-label="{{ item.bar_set_8_label|e }}" 
+									data-set8-width="{{ item.bar_set_8_width|e }}" 
+									data-set8-color="{{ item.bar_set_8_color|e }}" 
+									{% endif %}
+									{% if item.bar_set_9_value %}
+									data-set9-xy="[{{ item.bar_set_9_value|e }}]" 
+									data-set9-label="{{ item.bar_set_9_label|e }}" 
+									data-set9-width="{{ item.bar_set_9_width|e }}" 
+									data-set9-color="{{ item.bar_set_9_color|e }}" 
+									{% endif %}
+								></div>
+							{% endif %}
+						</div>
+					{% endfor %}
+				{% elseif particle.style == "style_5" %}
+					{% for item in particle.style_5 %}
+						<div class="jf_col grid_{{ item.grid }} {% if item.grid_last %}last-column{% endif %}" style="text-align:{{ item.textAl|e }}"{% if item.css3_anim_name %} data-animation="{{ item.css3_anim_name|e }}" data-animation-type="{{ item.css3_anim_type|e }}" data-animation-delay="{{ item.css3_anim_delay|e }}"{% endif %}>
+							<div id="{{ item.graph_id|e }}" class="jf_graph_lines flot-chart" 
+								style="height:{{ item.graph_height|e }};{{ item.graph_css|e }}" 
+								data-legend="{% if item.graph_legend %}true{% else %}false{% endif %}" 
+								data-curved="{% if item.graph_curved %}true{% else %}false{% endif %}" 
+								data-grid="{% if item.graph_grid %}true{% else %}false{% endif %}" 
+								data-grid-color="{{ item.graph_grid_color|e }}" 
+								data-xaxis="{% if item.graph_xaxis %}true{% else %}false{% endif %}" 
+								data-xaxis-max="{{ item.graph_xaxis_max|e }}" 
+								data-xaxis-tickcolor="{{ item.graph_xaxis_tickcolor|e }}" 
+								data-xaxis-fontcolor="{{ item.graph_xaxis_fontcolor|e }}" 
+								data-yaxis="{% if item.graph_yaxis %}true{% else %}false{% endif %}" 
+								data-yaxis-max="{{ item.graph_yaxis_max|e }}" 
+								data-yaxis-tickcolor="{{ item.graph_yaxis_tickcolor|e }}" 
+								data-yaxis-fontcolor="{{ item.graph_yaxis_fontcolor|e }}" 
+								
+								{% if item.graph_set_1_value %}
+								data-set1-xy="[{{ item.graph_set_1_value|e }}]" 
+								data-set1-label="{{ item.graph_set_1_label|e }}" 
+								data-set1-opacity="{{ item.graph_set_1_opacity|e }}" 
+								data-set1-color="{{ item.graph_set_1_color|e }}" 
+								{% endif %}
+								{% if item.graph_set_2_value %}
+								data-set2-xy="[{{ item.graph_set_2_value|e }}]" 
+								data-set2-label="{{ item.graph_set_2_label|e }}" 
+								data-set2-opacity="{{ item.graph_set_2_opacity|e }}" 
+								data-set2-color="{{ item.graph_set_2_color|e }}" 
+								{% endif %}
+								{% if item.graph_set_3_value %}
+								data-set3-xy="[{{ item.graph_set_3_value|e }}]" 
+								data-set3-label="{{ item.graph_set_3_label|e }}" 
+								data-set3-opacity="{{ item.graph_set_3_opacity|e }}" 
+								data-set3-color="{{ item.graph_set_3_color|e }}" 
+								{% endif %}
+								{% if item.graph_set_4_value %}
+								data-set4-xy="[{{ item.graph_set_4_value|e }}]" 
+								data-set4-label="{{ item.graph_set_4_label|e }}" 
+								data-set4-opacity="{{ item.graph_set_4_opacity|e }}" 
+								data-set4-color="{{ item.graph_set_4_color|e }}" 
+								{% endif %}
+								{% if item.graph_set_5_value %}
+								data-set5-xy="[{{ item.graph_set_5_value|e }}]" 
+								data-set5-label="{{ item.graph_set_5_label|e }}" 
+								data-set5-opacity="{{ item.graph_set_5_opacity|e }}" 
+								data-set5-color="{{ item.graph_set_5_color|e }}" 
+								{% endif %}
+							></div>
+						</div>
+					{% endfor %}
+				{% else %}
+					nothing
+				{% endif %}
+				<div class="clear"></div>
+				
+				{{ particle.html_after|html|raw }}
+			{% if particle.contentW == "default" %}</div>{% endif %}
+	{% for bg_options in particle.bg_options|slice(0, 1) %}
+		{% if bg_options.bg_type == "parallax_vid" %}</div></div>{% endif %}
+		{% if bg_options.bg_type == "parallax_img" %}</div></div>{% endif %}
+		{% if bg_options.bg_type == "image" %}</div>{% endif %}
+		{% if bg_options.bg_type == "color" %}</div>{% endif %}
+	{% endfor %}
+{% endblock %}

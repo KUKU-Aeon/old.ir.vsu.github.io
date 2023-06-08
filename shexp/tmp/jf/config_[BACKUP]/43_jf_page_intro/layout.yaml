@@ -1,0 +1,171 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/page_intro.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_bubbles_slider-9584
+    -
+      - jf_p_cta-2469
+    -
+      - jf_p_cta-1803
+  /main/:
+    -
+      - system-messages-8912
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_bubbles_slider-9584:
+    title: 'JF - Bubbles Slider'
+  jf_p_cta-2469:
+    title: 'JF Particle - CTA (Parallax Youtube Video)'
+    attributes:
+      bg_options:
+        -
+          bg_type: parallax_vid
+          lazyload: '1'
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          bgColor: '#eeeeee'
+          cover_src: ''
+          parallax_src: ''
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          video_type: youtube
+          vimeo_id: ''
+          youtube_id: rrT6v5sOwJg
+          url: images/jf/videos/
+          vidname: dreamscapes
+          name: Options
+      html_before: "<h2 style=\"font-size:48px\"><b>Parallax Youtube Video</b></h2>\n<a href=\"http://www.sirenatheme.com/elements/interactive-elements#parallax\" class=\"jf_btn raised l deep-purple jf_waves_light_30 style=\"padding:10px 26px\">Learn More</a>"
+  jf_p_cta-1803:
+    title: "JF Particle - CTA\_(Parallax Vimeo Video)"
+    attributes:
+      bg_options:
+        -
+          bg_type: parallax_vid
+          lazyload: '1'
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          bgColor: '#eeeeee'
+          cover_src: ''
+          parallax_src: ''
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          video_type: vimeo
+          vimeo_id: '62823990'
+          youtube_id: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          name: Options
+      html_before: "<h2 style=\"font-size:48px\"><b>Parallax Vimeo Video</b></h2>\n<a href=\"http://www.sirenatheme.com/elements/interactive-elements#parallax\" class=\"jf_btn raised l deep-purple jf_waves_light_30 style=\"padding:10px 26px\">Learn More</a>"
+  system-messages-8912:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - attributes
+        - block

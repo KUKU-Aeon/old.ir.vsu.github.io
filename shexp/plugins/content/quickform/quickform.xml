@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" client="site" method="upgrade">
+	<name>QuickForm</name>
+	<creationdate>29-05-2012</creationdate>
+	<author>Stylish</author>
+	<copyright>(c) bigemot.ru</copyright>
+	<authoremail>cccr-777@yandex.ru</authoremail>
+	<authorurl>http://bigemot.ru/</authorurl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.00.1</version>
+	<description><![CDATA[Plugin to display QuickForm in content items<br />format: {QuickForm id=xx}<br /><br /><a href='http://bigemot.ru/'>http://bigemot.ru/</a>]]></description>
+	<files>
+		<filename plugin="quickform">quickform.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field name="enabled" type="radio"
+					default="1"
+					description="PARAMENABLED"
+					label="Enable Plugin"
+				>
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

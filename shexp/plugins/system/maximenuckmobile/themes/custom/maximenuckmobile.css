@@ -1,0 +1,48 @@
+/* Maximenu CK mobile - http://www.joomlack.fr */
+/* Automatic styles generated from the plugin options */
+
+.mobilebarmaximenuck {display:none;position:relative;left:0;top:0;right:0;z-index:100;}
+.mobilebarmaximenuck .mobilebarmenutitleck {display: block;padding-left: 20px;background: #444444;background-color: #444444;font-size: 16px;color: #EEEEEE;line-height: 35px;height: 35px;font-family: ;}
+.mobilebarmaximenuck .mobilebuttonmaximenuck {cursor:pointer;box-sizing: border-box;position:absolute; top: 0; right: 0;line-height:0.8em;font-family:Segoe UI;text-align: center;margin-top: 5px;margin-right: 10px;margin-bottom: 5px;margin-left: 5px;background-image: url("../../presets/default/icon_launch.jpg");background-repeat: no-repeat;background-position: left center;font-size: 20px;height: 24px;width: 35px;font-family: ;}
+.mobilemaximenuck {box-sizing: border-box;width: 100%;background: #32373B;background-color: #32373B;font-size: 15px;color: #FFFFFF;font-family: Arial;}
+.mobilemaximenuck .mobilemaximenucktopbar {position:relative;}
+.mobilemaximenuck .mobilemaximenucktitle {display: block;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;padding-left: 10px;background-image: url("../../presets/default/fond_haut.jpg");background-repeat: repeat-x;background-position: left top;font-size: 20px;text-indent: 20px;line-height: 20px;height: 40px;font-family: ;}
+.mobilemaximenuck .mobilemaximenuckclose {cursor:pointer;box-sizing: border-box;position:absolute; top: 0; right: 0;line-height:0.8em;font-family:Segoe UI;text-align: center;margin-top: 5px;margin-right: 10px;margin-bottom: 5px;margin-left: 10px;background-image: url("../../presets/default/close.jpg");background-repeat: ;background-position: center center;height: 31px;width: 31px;font-family: ;}
+.mobilemaximenuck a {display:block;color: #FFFFFF;}
+.mobilemaximenuck a:hover {text-decoration: none;}
+.mobilemaximenuck div.maximenuck {position:relative;}
+.mobilemaximenuck div.level1.maximenuck > a {padding-left: 45px;background-image: url("../../presets/default/arrow.jpg");background-repeat: no-repeat;background-position: left  bottom;color: #FFFFFF;line-height: 35px;height: 35px;font-family: ;}.mobilemaximenuck div.level2.maximenuck > a {padding-left: 55px;background-image: url("../../presets/default/arrow2.jpg");background-repeat: no-repeat;background-position: left center;line-height: 35px;height: 35px;font-family: ;}.mobilemaximenuck div.level2.maximenuck + .mobilemaximenucksubmenu div.maximenuck > a {padding-left: 65px;background-image: url("../../presets/default/arrow3.png");background-repeat: no-repeat;background-position: 20px center;line-height: 35px;height: 35px;font-family: ;}/* for accordion */
+.mobilemaximenuck .mobilemaximenucktogglericon:after {cursor:pointer;text-align:center;background-image: url("../../presets/default/plus.jpg");background-repeat: no-repeat;background-position: center center;height: 35px;width: 35px;font-family: ;}
+.mobilemaximenuck .mobilemaximenucktogglericon:after {display:block;position: absolute;right: 0;top: 0;content:"";}
+.mobilemaximenuck .open .mobilemaximenucktogglericon:after {content:"";}
+
+
+/* Google Font stylesheets */
+
+
+
+/* Custom CSS generated from the plugin options */
+
+.mobilemaximenuck {
+    text-shadow: 1px -1px 2px #000;
+}
+
+.mobilemaximenuck div span.descck {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.mobilemaximenuck div.maximenuck {
+    cursor: pointer;
+    background: url(/joomla3_dev/../../presets/default/separateur.jpg) left bottom repeat-x;
+    min-height: 35px;
+    line-height: 35px;
+    padding: 0;
+    padding-bottom: 3px;
+	position: relative;
+}
+
+
+.open .mobilemaximenucktogglericon:after {
+	background-image: url(/joomla3_dev/../../presets/default/minus.jpg)
+}

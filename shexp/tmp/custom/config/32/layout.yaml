@@ -1,0 +1,243 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/page_faq.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_p_cta-5861
+    -
+      - position-position-4869
+  /main/:
+    -
+      - system-messages-8912
+    -
+      - 'jf_p_tabs-7420 70'
+      - 'position-position-7688 30'
+    -
+      - 'custom-8417 70'
+      - 'spacer-5611 30'
+    -
+      - 'custom-9031 70'
+      - 'spacer-3212 30'
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_p_cta-5861:
+    title: 'JF Particle - CTA'
+    attributes:
+      padding: '220px 0px 180px'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#eeeeee'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '20'
+          scrolling: '1'
+          type: cover
+          parallax_src: 'gantry-media://jf/pages/faq/faq.jpg'
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_1
+      style_1:
+        -
+          grid: '1'
+          contentTextAl: center
+          contentTheme: light
+          html: '<h1 style="font-size:50px;margin:0;font-weight:700">F. A. Q.</h1><h5 style="margin:0;font-weight:700">Here you can find any possible answers to your questions</h5>'
+          name: Item
+  position-position-4869:
+    title: Breadcrumbs
+    attributes:
+      key: breadcrumbs
+    block:
+      class: jf_breadcrumbs
+  system-messages-8912:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - block
+        - attributes
+  jf_p_tabs-7420:
+    title: 'JF Particle - Container Tabs'
+    attributes:
+      contentW: full
+      padding: ''
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: 'rgba(255, 255, 255, 0.00)'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      colorclass: yellow
+      dark: '1'
+      items:
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_1
+          tab_css: 'padding:20px 2px'
+          tab_name: ALL
+          html_content: "<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Pulvinar facilisis nunc aenean sit pid nisi in nec</div>\n\t<div class=\"container\">Integer! Integer in, amet adipiscing rhoncus sed, in augue auctor adipiscing nunc est. Placerat sed! Elementum vut phasellus adipiscing nisi aliquet, aenean ac, egestas dolor integer, ac dolor cum, diam! Adipiscing arcu, mus, diam dapibus. Amet, vel massa eu, dictumst montes nisi porttitor? Nisi magna! Augue ut porta cum elit ut? Rhoncus vel nunc et cras mid. In amet purus purus. Dis non, dictumst penatibus a? Vut! Vel ac ac mus. Velit? Tincidunt adipiscing augue amet nunc vel urna mus sagittis? Turpis in enim velit lectus placerat, mid et natoque pulvinar.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Adipiscing, pellentesque natoque In pid</div>\n\t<div class=\"container\">Augue vel, rhoncus parturient porta nec eu integer tincidunt, lorem dolor augue quis platea, ac, ultricies tincidunt magna hac et, enim in. Dapibus dictumst quis lorem, vut? Nunc est, in, massa ridiculus augue parturient augue! Enim! Adipiscing duis, aliquet sit scelerisque lacus? In pid risus, ridiculus etiam rhoncus enim a ridiculus? Ridiculus pulvinar risus, massa aliquam et et porta. Lacus placerat cum! Ultricies ac lorem elit, tincidunt phasellus nunc dis! Lacus tincidunt magna elementum! Non pellentesque! Odio a enim parturient enim platea sociis sit? Sed porta natoque aliquam, purus ac, natoque vel in pellentesque.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Platea nisi, penatibus massa adipiscing</div>\n\t<div class=\"container\">ristique aliquam urna. Dolor purus tempor a? Dapibus est duis, porttitor porttitor elit. Magnis tincidunt! Purus hac! Ac integer nunc dapibus vel, egestas nascetur ac? Dignissim nec et, aliquet, in, eros! Odio dis tincidunt, porta, augue proin pid dolor lectus elit elementum mid. Et urna, a. Cras tortor tempor, nisi lundium. Massa placerat elit cras. Ut natoque porttitor nascetur pid mauris in in enim eu, nisi ultrices? Duis augue turpis, ultricies. Aenean enim!</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Ut integer facilisis, odio dolor natoque pellentesque</div>\n\t<div class=\"container\">Habitasse non hac adipiscing mus? Elementum massa nunc adipiscing dictumst sit, parturient tristique, risus nascetur aenean dapibus? Ac dapibus sit sit sed nec pulvinar nunc. Ut facilisis vut vel vut odio pellentesque mauris est, a rhoncus amet! Pid aliquet, adipiscing porttitor? Pulvinar in augue est, in montes odio ac pulvinar! Adipiscing mauris aliquam! A aenean, cursus! Elementum a elementum nec non hac? Et sed habitasse dignissim habitasse amet risus in dolor cum phasellus. Mattis, habitasse, nunc penatibus tortor egestas cras scelerisque arcu tristique, enim placerat.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Placerat vel tempor cum ultrices in vel a porta</div>\n\t<div class=\"container\">Proin! Velit nascetur hac! Tortor urna et sed nascetur? Natoque nisi porttitor augue sociis turpis, amet velit mus habitasse rhoncus egestas tincidunt parturient. Hac a? Parturient massa. Integer est tincidunt, odio augue penatibus. Mauris scelerisque sed vel augue placerat non cursus. Amet nascetur. Ac ridiculus! Mus sed turpis cum lundium nascetur non non placerat urna. In dignissim sociis pid hac in.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Adipiscing rhoncus sed, in augue auctor adipiscing nunc est</div>\n\t<div class=\"container\">Integer! Integer in, amet adipiscing rhoncus sed, in augue auctor adipiscing nunc est. Placerat sed! Elementum vut phasellus adipiscing nisi aliquet, aenean ac, egestas dolor integer, ac dolor cum, diam! Adipiscing arcu, mus, diam dapibus. Amet, vel massa eu, dictumst montes nisi porttitor? Nisi magna! Augue ut porta cum elit ut? Rhoncus vel nunc et cras mid. In amet purus purus. Dis non, dictumst penatibus a? Vut! Vel ac ac mus. Velit? Tincidunt adipiscing augue amet nunc vel urna mus sagittis? Turpis in enim velit lectus placerat, mid et natoque pulvinar.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Dapibus est duis, porttitor porttitor elit</div>\n\t<div class=\"container\">ristique aliquam urna. Dolor purus tempor a? Dapibus est duis, porttitor porttitor elit. Magnis tincidunt! Purus hac! Ac integer nunc dapibus vel, egestas nascetur ac? Dignissim nec et, aliquet, in, eros! Odio dis tincidunt, porta, augue proin pid dolor lectus elit elementum mid. Et urna, a. Cras tortor tempor, nisi lundium. Massa placerat elit cras. Ut natoque porttitor nascetur pid mauris in in enim eu, nisi ultrices? Duis augue turpis, ultricies. Aenean enim!</div>\n</div>"
+          name: 'Tab 1'
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_2
+          tab_css: 'padding:20px 2px'
+          tab_name: CONFIGURATION
+          html_content: "<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Adipiscing, pellentesque natoque In pid</div>\n\t<div class=\"container\">Augue vel, rhoncus parturient porta nec eu integer tincidunt, lorem dolor augue quis platea, ac, ultricies tincidunt magna hac et, enim in. Dapibus dictumst quis lorem, vut? Nunc est, in, massa ridiculus augue parturient augue! Enim! Adipiscing duis, aliquet sit scelerisque lacus? In pid risus, ridiculus etiam rhoncus enim a ridiculus? Ridiculus pulvinar risus, massa aliquam et et porta. Lacus placerat cum! Ultricies ac lorem elit, tincidunt phasellus nunc dis! Lacus tincidunt magna elementum! Non pellentesque! Odio a enim parturient enim platea sociis sit? Sed porta natoque aliquam, purus ac, natoque vel in pellentesque.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Platea nisi, penatibus massa adipiscing</div>\n\t<div class=\"container\">ristique aliquam urna. Dolor purus tempor a? Dapibus est duis, porttitor porttitor elit. Magnis tincidunt! Purus hac! Ac integer nunc dapibus vel, egestas nascetur ac? Dignissim nec et, aliquet, in, eros! Odio dis tincidunt, porta, augue proin pid dolor lectus elit elementum mid. Et urna, a. Cras tortor tempor, nisi lundium. Massa placerat elit cras. Ut natoque porttitor nascetur pid mauris in in enim eu, nisi ultrices? Duis augue turpis, ultricies. Aenean enim!</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Ut integer facilisis, odio dolor natoque pellentesque</div>\n\t<div class=\"container\">Habitasse non hac adipiscing mus? Elementum massa nunc adipiscing dictumst sit, parturient tristique, risus nascetur aenean dapibus? Ac dapibus sit sit sed nec pulvinar nunc. Ut facilisis vut vel vut odio pellentesque mauris est, a rhoncus amet! Pid aliquet, adipiscing porttitor? Pulvinar in augue est, in montes odio ac pulvinar! Adipiscing mauris aliquam! A aenean, cursus! Elementum a elementum nec non hac? Et sed habitasse dignissim habitasse amet risus in dolor cum phasellus. Mattis, habitasse, nunc penatibus tortor egestas cras scelerisque arcu tristique, enim placerat.</div>\n</div>"
+          name: 'Tab 2'
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_3
+          tab_css: 'padding:20px 2px'
+          tab_name: FINANCE
+          html_content: "<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Ut integer facilisis, odio dolor natoque pellentesque</div>\n\t<div class=\"container\">Habitasse non hac adipiscing mus? Elementum massa nunc adipiscing dictumst sit, parturient tristique, risus nascetur aenean dapibus? Ac dapibus sit sit sed nec pulvinar nunc. Ut facilisis vut vel vut odio pellentesque mauris est, a rhoncus amet! Pid aliquet, adipiscing porttitor? Pulvinar in augue est, in montes odio ac pulvinar! Adipiscing mauris aliquam! A aenean, cursus! Elementum a elementum nec non hac? Et sed habitasse dignissim habitasse amet risus in dolor cum phasellus. Mattis, habitasse, nunc penatibus tortor egestas cras scelerisque arcu tristique, enim placerat.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Placerat vel tempor cum ultrices in vel a porta</div>\n\t<div class=\"container\">Proin! Velit nascetur hac! Tortor urna et sed nascetur? Natoque nisi porttitor augue sociis turpis, amet velit mus habitasse rhoncus egestas tincidunt parturient. Hac a? Parturient massa. Integer est tincidunt, odio augue penatibus. Mauris scelerisque sed vel augue placerat non cursus. Amet nascetur. Ac ridiculus! Mus sed turpis cum lundium nascetur non non placerat urna. In dignissim sociis pid hac in.</div>\n</div>"
+          name: 'Tab 3'
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_4
+          tab_css: 'padding:20px 2px'
+          tab_name: INSTALLATION
+          html_content: "<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Pulvinar facilisis nunc aenean sit pid nisi in nec</div>\n\t<div class=\"container\">Integer! Integer in, amet adipiscing rhoncus sed, in augue auctor adipiscing nunc est. Placerat sed! Elementum vut phasellus adipiscing nisi aliquet, aenean ac, egestas dolor integer, ac dolor cum, diam! Adipiscing arcu, mus, diam dapibus. Amet, vel massa eu, dictumst montes nisi porttitor? Nisi magna! Augue ut porta cum elit ut? Rhoncus vel nunc et cras mid. In amet purus purus. Dis non, dictumst penatibus a? Vut! Vel ac ac mus. Velit? Tincidunt adipiscing augue amet nunc vel urna mus sagittis? Turpis in enim velit lectus placerat, mid et natoque pulvinar.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Adipiscing, pellentesque natoque In pid</div>\n\t<div class=\"container\">Augue vel, rhoncus parturient porta nec eu integer tincidunt, lorem dolor augue quis platea, ac, ultricies tincidunt magna hac et, enim in. Dapibus dictumst quis lorem, vut? Nunc est, in, massa ridiculus augue parturient augue! Enim! Adipiscing duis, aliquet sit scelerisque lacus? In pid risus, ridiculus etiam rhoncus enim a ridiculus? Ridiculus pulvinar risus, massa aliquam et et porta. Lacus placerat cum! Ultricies ac lorem elit, tincidunt phasellus nunc dis! Lacus tincidunt magna elementum! Non pellentesque! Odio a enim parturient enim platea sociis sit? Sed porta natoque aliquam, purus ac, natoque vel in pellentesque.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Platea nisi, penatibus massa adipiscing</div>\n\t<div class=\"container\">ristique aliquam urna. Dolor purus tempor a? Dapibus est duis, porttitor porttitor elit. Magnis tincidunt! Purus hac! Ac integer nunc dapibus vel, egestas nascetur ac? Dignissim nec et, aliquet, in, eros! Odio dis tincidunt, porta, augue proin pid dolor lectus elit elementum mid. Et urna, a. Cras tortor tempor, nisi lundium. Massa placerat elit cras. Ut natoque porttitor nascetur pid mauris in in enim eu, nisi ultrices? Duis augue turpis, ultricies. Aenean enim!</div>\n</div>"
+          name: 'Tab 4'
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_5
+          tab_css: 'padding:20px 2px'
+          tab_name: POLICIES
+          html_content: "<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Platea nisi, penatibus massa adipiscing</div>\n\t<div class=\"container\">ristique aliquam urna. Dolor purus tempor a? Dapibus est duis, porttitor porttitor elit. Magnis tincidunt! Purus hac! Ac integer nunc dapibus vel, egestas nascetur ac? Dignissim nec et, aliquet, in, eros! Odio dis tincidunt, porta, augue proin pid dolor lectus elit elementum mid. Et urna, a. Cras tortor tempor, nisi lundium. Massa placerat elit cras. Ut natoque porttitor nascetur pid mauris in in enim eu, nisi ultrices? Duis augue turpis, ultricies. Aenean enim!</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Ut integer facilisis, odio dolor natoque pellentesque</div>\n\t<div class=\"container\">Habitasse non hac adipiscing mus? Elementum massa nunc adipiscing dictumst sit, parturient tristique, risus nascetur aenean dapibus? Ac dapibus sit sit sed nec pulvinar nunc. Ut facilisis vut vel vut odio pellentesque mauris est, a rhoncus amet! Pid aliquet, adipiscing porttitor? Pulvinar in augue est, in montes odio ac pulvinar! Adipiscing mauris aliquam! A aenean, cursus! Elementum a elementum nec non hac? Et sed habitasse dignissim habitasse amet risus in dolor cum phasellus. Mattis, habitasse, nunc penatibus tortor egestas cras scelerisque arcu tristique, enim placerat.</div>\n</div>\n<div class=\"jf_toggle white\">\n\t<div class=\"trigger jf_waves_dark_10\"><i class=\"fa fa-question\"></i>Placerat vel tempor cum ultrices in vel a porta</div>\n\t<div class=\"container\">Proin! Velit nascetur hac! Tortor urna et sed nascetur? Natoque nisi porttitor augue sociis turpis, amet velit mus habitasse rhoncus egestas tincidunt parturient. Hac a? Parturient massa. Integer est tincidunt, odio augue penatibus. Mauris scelerisque sed vel augue placerat non cursus. Amet nascetur. Ac ridiculus! Mus sed turpis cum lundium nascetur non non placerat urna. In dignissim sociis pid hac in.</div>\n</div>"
+          name: 'Tab 5'
+  position-position-7688:
+    title: 'Module Position'
+    inherit:
+      outline: default
+      particle: position-position-8845
+      include:
+        - block
+        - attributes
+  custom-8417:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h4 class=\"weight_500\" style=\"text-align:center;margin:0 0 40px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">No helpful answer? Here are some options</h4>\n<div class=\"jf_col grid_6\" style=\"text-align:center\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">\n\t<div class=\"jf_flip_box\">\n        <div class=\"wrapper\">\n            <div class=\"front z-depth-2 white\">\n\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t<button class=\"cover_icon jf_btn l fab deep-purple\"><i class=\"material-icons\" style=\"font-size:34px\">chat</i></button>\n\t\t\t\t\t<h4>Support Forum</h4>\n\t\t\t\t\t<p>Pulvinar sagittis montes mattis, nunc nascetur porta</p>\n\t\t\t\t</div>\n            </div>\n            <div class=\"back z-depth-2 deep-purple\">\n\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t<h4 class=\"weight_500\">Support Forum</h4>\n\t\t\t\t\t<p>Pulvinar sagittis montes mattis, nunc nascetur porta, scelerisque augue ut pellentesque vel, ut elit cum</p>\n\t\t\t\t\t<a class=\"bottom_btn jf_btn jf_waves_dark_30 raised yellow waves-effect waves-dark-30\" href=\"#\">GO TO FORUM!</a>\n\t\t\t\t</div>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"jf_col grid_6 last-column\" style=\"text-align:center\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">\n\t<div class=\"jf_flip_box\">\n        <div class=\"wrapper\">\n            <div class=\"front z-depth-2 white\">\n\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t<button class=\"cover_icon jf_btn l fab deep-purple\"><i class=\"material-icons\" style=\"font-size: 33px;\">call</i></button>\n\t\t\t\t\t<h4>Call Us</h4>\n\t\t\t\t\t<p>Habitasse non hac adipiscing mus? Elementum massa nunc</p>\n\t\t\t\t</div>\n            </div>\n            <div class=\"back z-depth-2 deep-purple\">\n\t\t\t\t<div class=\"inner\">\n\t\t\t\t\t<h4 class=\"weight_500\">Call Us</h4>\n\t\t\t\t\t<p>Pulvinar sagittis montes mattis, nunc nascetur porta, scelerisque augue ut pellentesque vel, ut elit cum</p>\n\t\t\t\t\t<a class=\"bottom_btn jf_btn jf_waves_dark_30 raised yellow waves-effect waves-dark-30\" href=\"#\">CALL NOW!</a>\n\t\t\t\t</div>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"clear\"></div>"
+    block:
+      variations: 'box-nobg box-noshadow box-no-padding'
+  custom-9031:
+    title: 'Custom HTML'
+    attributes:
+      html: "<div class=\"jf_col grid_4\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">\n\t<h5 class=\"weight_500\">Helpful links</h5>\n\t<ul class=\"jf_list disc\">\n\t  <li><a href=\"#\">Account Settings</a></li>\n\t  <li><a href=\"#\">Hot To Register</a></li>\n\t  <li><a href=\"#\">Why Sign Up?</a></li>\n\t  <li><a href=\"#\">Premium membership</a></li>\n\t  <li><a href=\"#\">Report an issue</a></li>\n\t</ul>\n</div>\n<div class=\"jf_col grid_4\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">\n\t<h5 class=\"weight_500\">Getting Started</h5>\n\t<ul class=\"jf_list disc\">\n\t  <li><a href=\"#\">Terms of use</a></li>\n\t  <li><a href=\"#\">Favorite Section</a></li>\n\t  <li><a href=\"#\">Your cart</a></li>\n\t  <li><a href=\"#\">Features</a></li> \n\t</ul>\n</div>\n<div class=\"jf_col grid_4 last-column\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.5\">\n\t<h5 class=\"weight_500\">Contact support</h5>\n\t<ul class=\"jf_list disc\">\n\t  <li><a href=\"#\">Add our newsletter</a></li>\n\t  <li><a href=\"#\">Free calls</a></li>\n\t  <li><a href=\"#\">Call from a landline</a></li>\n\t  <li><a href=\"#\">Why Sign Up?</a></li>\n\t  <li><a href=\"#\">Press Releases</a></li>\n\t  <li><a href=\"#\">Pricing and Plans</a></li>\n\t</ul>\n</div>\n<div class=\"clear\"></div>"
+    block:
+      variations: 'box-nobg box-noshadow box-no-padding'

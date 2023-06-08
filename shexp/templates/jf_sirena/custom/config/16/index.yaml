@@ -1,0 +1,108 @@
+name: 16
+timestamp: 1474297175
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/home_default.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  module:
+    position-module-1074: 'Module Instance'
+    position-module-4406: 'Module Instance'
+    position-module-7411: 'Module Instance'
+    position-module-3507: 'Module Instance'
+    position-module-7551: 'Module Instance'
+    position-module-7806: 'Module Instance'
+    position-module-9603: 'Module Instance'
+    position-module-8032: 'Module Instance'
+    position-module-5118: 'Module Instance'
+  position:
+    position-position-3825: Breadcrumbs
+    position-position-6723: 'Module Position'
+    position-position-5142: Footer
+  messages:
+    system-messages-2483: 'System Messages'
+  jf_p_cta:
+    jf_p_cta-5713: 'JF Particle - CTA - Material Separator'
+    jf_p_cta-4422: 'JF Particle - CTA - Learn More'
+    jf_p_cta-7192: 'JF Particle - CTA - Various Portfolio Styles'
+    jf_p_cta-4857: 'JF Particle - CTA - Responsive Layout'
+    jf_p_cta-3679: 'JF Particle - CTA - Download Now'
+    jf_p_cta-5909: 'JF Particle - CTA - Create Galleries'
+  jf_p_ft_intro:
+    jf_p_ft_intro-1243: 'JF Particle - Features Intro - Welcome'
+    jf_p_ft_intro-1617: 'JF Particle - Features Intro - Style 1 (Default)'
+  jf_p_portfolio:
+    jf_p_portfolio-5791: 'JF Particle - Portfolio - Demo Pages'
+  jf_p_carousel:
+    jf_p_carousel-2847: 'JF Particle - Carousels: Style 2'
+  jf_p_clients:
+    jf_p_clients-3102: 'JF Particle - Clients - Style 4 (Hover Slide)'
+  custom:
+    custom-9531: 'Custom HTML'
+    custom-1973: 'Custom HTML'
+    custom-3171: 'Custom HTML'
+    custom-2882: 'Custom HTML'
+  logo:
+    logo-2600: Logo
+    logo-7769: Logo
+    logo-6070: Logo
+  menu:
+    menu-2805: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-6968: 'JF Panel Buttons'
+  jf_switcher:
+    jf_switcher-3125: 'JF Style Switcher'
+  copyright:
+    copyright-5004: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-3825: position-position-2694
+    system-messages-2483: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-9531: custom-3485
+    custom-1973: custom-1392
+    logo-2600: logo-5705
+    menu-2805: menu-2947
+    jf_panel_buttons-6968: jf_panel_buttons-3313
+    position-module-4406: position-module-1605
+    position-module-7411: position-module-6496
+    position-module-3507: position-module-1290
+    position-module-7551: position-module-3392
+    position-module-7806: position-module-7385
+    position-module-9603: position-module-2571
+    position-position-6723: position-position-5361
+    jf_switcher-3125: jf_switcher-6426
+    position-position-5142: position-position-9915
+    logo-7769: logo-2653
+    custom-3171: custom-5362
+    position-module-8032: position-module-3742
+    custom-2882: custom-4368
+    copyright-5004: copyright-3966
+    logo-6070: logo-9507
+    position-module-5118: position-module-4901

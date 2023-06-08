@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+  <name>Droptables</name>
+  <creationDate>20-August-2014</creationDate>
+  <author>JoomUnited</author>
+  <authorEmail>contact@joomunited.com</authorEmail>
+  <authorUrl>http://www.joomunited.com</authorUrl>
+  <copyright />
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.0.0</version>
+  <description>Droptables files manager</description>
+  <scriptfile>install.php</scriptfile>
+  
+  <files folder="site">
+    <folder>assets</folder>
+    <folder>controllers</folder>
+    <folder>helpers</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <filename>controller.php</filename>
+    <filename>droptables.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <administration>
+	<menu>COM_DROPTABLES</menu>
+    <files folder="admin">
+      <folder>classes</folder>
+      <folder>controllers</folder>
+      <folder>extensions</folder>
+      <folder>helpers</folder>
+      <folder>language</folder>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>droptables.php</filename>
+      <filename>index.html</filename>
+    </files>
+  </administration>
+  <extensions>
+    <extension folder="droptables-btn" enable="true"/>
+    <extension folder="droptables-content" enable="true"/>
+	<extension folder="droptables-juupdater" enable="true"/>
+  </extensions>
+  
+   <updateservers>
+    <server type="extension" priority="2" name="Droptables Updates">https://www.joomunited.com/juupdater_files/droptables-update.xml</server>
+  </updateservers>
+</extension>
+ 
+    
+    
+         
+       

@@ -1,0 +1,76 @@
+<?php
+return [
+    '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
+    'filename' => '/var/www/ir.vsu.ru/shexp/templates/jf_sirena/custom/config/default/particles/jf_bubbles_slider.yaml',
+    'modified' => 1490205216,
+    'data' => [
+        'enabled' => '1',
+        'unique_id' => 'jf_bubbles_slider_1',
+        'box_full_height' => '1',
+        'box_custom_height' => '600px',
+        'bg_bubles' => '1',
+        'fireworks' => '1',
+        'bg_options' => [
+            0 => [
+                'bg_type' => 'parallax_img',
+                'lazyload' => '1',
+                'maskColor' => '#000000',
+                'maskOpacity' => '10',
+                'scrolling' => '1',
+                'type' => 'default',
+                'bgColor' => '#242424',
+                'cover_src' => '',
+                'parallax_src' => '',
+                'controls' => '1',
+                'loop' => '1',
+                'muted' => '1',
+                'video_type' => 'vimeo',
+                'vimeo_id' => '',
+                'youtube_id' => '',
+                'url' => 'images/jf/videos/',
+                'vidname' => 'dreamscapes',
+                'name' => 'Options'
+            ]
+        ],
+        'bgslider' => '1',
+        'image_lazyload' => '1',
+        'bgslider_speed' => '2000',
+        'bgslider_timeout' => '6000',
+        'bgslider_items' => [
+            0 => [
+                'item_img' => 'gantry-media://jf/pages/intro/1.png',
+                'name' => 'Item 1'
+            ],
+            1 => [
+                'item_img' => 'gantry-media://jf/pages/intro/1.png',
+                'name' => 'Item 2'
+            ]
+        ],
+        'html_before' => '<h1>Sirena</h1>',
+        'textslider' => '1',
+        'textslider_items' => [
+            0 => [
+                'text_html' => 'The <a href="https://www.joomforest.com/joomla/templates/jf-sirena" target="_blank" title="JF Sirena - Best Joomla! Template">Iconic</a> Premium Joomla! Template',
+                'name' => 'Item 1'
+            ],
+            1 => [
+                'text_html' => 'Based on <a href="https://www.joomforest.com/joomla/templates/jf-sirena" target="_blank" title="JF Sirena - Material Design Template">Material Design</a> Concept',
+                'name' => 'Item 2'
+            ],
+            2 => [
+                'text_html' => 'Build on Powerful <a href="http://www.gantry.org/" target="_blank" title="Gantry 5 - Template Framework">Gantry 5</a> Framework',
+                'name' => 'Item 3'
+            ],
+            3 => [
+                'text_html' => 'Amazing <a href="http://www.joomlapolis.com/" target="_blank" title="Community Builder - Social Network Extension">Community Builder</a> Template',
+                'name' => 'Item 4'
+            ],
+            4 => [
+                'text_html' => 'The Best <a href="http://www.kunena.org/" target="_blank" title="Kunena Forum Extension">Kunena</a> Forum Template Ever',
+                'name' => 'Item 5'
+            ]
+        ],
+        'html_after' => '<a href="http://www.sirenatheme.com/intro.html#jf_demos" class="jf_btn raised l deep-purple jf_waves_light_30" style="padding:10px 26px">Choose Demos</a>',
+        'html_footer' => '<a href="http://www.gantry.org/" target="_blank" title="Gantry 5 - Template Framework"><img src="images/jf/pages/intro/gantry.png" alt="Gantry 5"></a><a href="http://www.joomlapolis.com/" target="_blank" title="Community Builder - Social Network Extension"><img src="images/jf/pages/intro/cb.png" alt="Community Builder"></a><a href="http://www.kunena.org/" target="_blank" title="Kunena Forum Extension"><img src="images/jf/pages/intro/kunena.png" alt="Kunena"></a>'
+    ]
+];

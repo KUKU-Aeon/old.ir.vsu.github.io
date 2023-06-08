@@ -1,0 +1,320 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/3-col-left.png'
+  timestamp: 1490205216
+  name: 3_column_-_left
+layout:
+  /top-panel/:
+    -
+      - 'custom-3485 30'
+      - 'custom-1392 70'
+  /header/:
+    -
+      - 'logo-5705 12'
+      - 'menu-2947 58'
+      - 'jf_panel_buttons-3313 30'
+  /search-panel/:
+    -
+      - position-module-1605
+    -
+      - 'position-module-6496 33.3'
+      - 'position-module-1290 33.3'
+      - 'position-module-3392 33.3'
+  /left-panel/:
+    -
+      - position-module-7385
+    -
+      - position-module-2571
+  /right-panel/:
+    -
+      - position-position-5361
+  /overlay-panel/:
+    -
+      - jf_switcher-6426
+  /full-width-section-1/:
+    -
+      - position-module-4792
+  /container-main/:
+    -
+      -
+        'sidebar 20':
+          -
+            - position-sidebar
+      -
+        'aside 20':
+          -
+            - position-aside
+      -
+        '/main/ 60':
+          -
+            - position-breadcrumbs
+          -
+            - system-messages-8838
+          -
+            - system-content-2800
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  /footer/:
+    -
+      - position-position-9915
+    -
+      - 'logo-2653 25'
+      - 'custom-5362 25'
+      - 'position-module-3742 25'
+      - 'custom-4368 25'
+  /bottom-footer/:
+    -
+      - 'copyright-3966 39'
+      - 'logo-9507 22'
+      - 'position-module-4901 39'
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    attributes:
+      boxed: ''
+  header:
+    attributes:
+      boxed: ''
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    attributes:
+      boxed: ''
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    attributes:
+      boxed: ''
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    attributes:
+      boxed: ''
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    attributes:
+      boxed: ''
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  sidebar:
+    type: section
+  main:
+    attributes:
+      boxed: ''
+  container-main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: bg-image
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    attributes:
+      boxed: ''
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  custom-3485:
+    title: 'Custom HTML'
+    attributes:
+      html: '<h4 style="margin:40px 0 0 0;color:#aaa;text-transform:uppercase;font-weight:400">Choose your language</h4>'
+  custom-1392:
+    title: 'Custom HTML'
+    attributes:
+      html: "<div class=\"mod-languages\">\n\t<ul class=\"lang-inline\">\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Bulgarian\" src=\"media/mod_languages/images/bg_bg.gif\" title=\"Bulgarian\"> Bulgarian</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Català\" src=\"media/mod_languages/images/ca_es.gif\" title=\"Català\"> Català</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"中文 (台灣)\" src=\"media/mod_languages/images/zh_tw.gif\" title=\"中文 (台灣)\"> 中文 (台灣)</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Dansk\" src=\"media/mod_languages/images/da_dk.gif\" title=\"Dansk\"> Dansk</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Deutsch\" src=\"media/mod_languages/images/de_de.gif\" title=\"Deutsch\"> Deutsch</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Eesti\" src=\"media/mod_languages/images/et_ee.gif\" title=\"Eesti\"> Eesti</a></li>\n\t\t<li dir=\"ltr\" class=\"lang-active\"><a href=\"#\"><img alt=\"English (UK)\" src=\"media/mod_languages/images/en.gif\" title=\"English (UK)\"> English (UK)</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Espanol\" src=\"media/mod_languages/images/es_es.gif\" title=\"Espanol\"> Espanol</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"français\" src=\"media/mod_languages/images/fr_fr.gif\" title=\"français\"> français</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Italiano\" src=\"media/mod_languages/images/it_it.gif\" title=\"Italiano\"> Italiano</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Македонски\" src=\"media/mod_languages/images/mk_mk.gif\" title=\"Македонски\"> Македонски</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Nederlands\" src=\"media/mod_languages/images/nl_nl.gif\" title=\"Nederlands\"> Nederlands</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Polski\" src=\"media/mod_languages/images/pl_pl.gif\" title=\"Polski\"> Polski</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Português\" src=\"media/mod_languages/images/pt_pt.gif\" title=\"Português\"> Português</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Português do Brasil\" src=\"media/mod_languages/images/pt_br.gif\" title=\"Português do Brasil\"> Português do Brasil</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Русский\" src=\"media/mod_languages/images/ru_ru.gif\" title=\"Русский\"> Русский</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Suomi\" src=\"media/mod_languages/images/fi_fi.gif\" title=\"Suomi\"> Suomi</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Svenska\" src=\"media/mod_languages/images/sv_se.gif\" title=\"Svenska\"> Svenska</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"ภาษาไทย\" src=\"media/mod_languages/images/th_th.gif\" title=\"ภาษาไทย\"> ภาษาไทย</a></li>\n\t\t<li dir=\"ltr\"><a href=\"#\"><img alt=\"Українська\" src=\"media/mod_languages/images/uk_ua.gif\" title=\"Українська\"> Українська</a></li>\n\t</ul>\n</div>"
+  jf_panel_buttons-3313:
+    title: 'JF Panel Buttons'
+  position-module-1605:
+    title: 'Module Instance'
+    attributes:
+      module_id: '93'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: fadeIn
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.4'
+  position-module-6496:
+    title: 'Module Instance'
+    attributes:
+      module_id: '96'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: zoomIn
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.3'
+  position-module-1290:
+    title: 'Module Instance'
+    attributes:
+      module_id: '103'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: zoomIn
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.6'
+  position-module-3392:
+    title: 'Module Instance'
+    attributes:
+      module_id: '104'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: zoomIn
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.9'
+  position-module-7385:
+    title: 'Module Instance'
+    attributes:
+      module_id: '128'
+      key: module-instance
+  position-module-2571:
+    title: 'Module Instance'
+    attributes:
+      module_id: '98'
+      key: module-instance
+  position-position-5361:
+    title: 'Module Position'
+    attributes:
+      key: right-panel
+  jf_switcher-6426:
+    title: 'JF Style Switcher'
+  position-module-4792:
+    title: 'Module Instance'
+    attributes:
+      key: module-instance
+  position-sidebar:
+    attributes:
+      key: sidebar
+  position-aside:
+    attributes:
+      key: aside
+  position-breadcrumbs:
+    attributes:
+      key: breadcrumbs
+  position-position-9915:
+    title: Footer
+    attributes:
+      key: footer
+  logo-2653:
+    attributes:
+      html: "<div style=\"text-align:center;padding:0 20px\">\n\t<h3 class=\"weight_400\" style=\"letter-spacing:1px;margin:0 0 15px 0;font-weight:500\">JF SIRENA</h3>\n\tAmazing Multi-Purpose Joomla Material Design Template for outstanding websites.\n\t<br><br>\n\t<a class=\"jf_linkhover weight_500\" href=\"http://www.joomforest.com/\" style=\"font-size:12px\">GET STARTED NOW.</a>\n</div>"
+      css: "#g-footer .jf_canvas_logo {\nmargin: 0 auto -30px auto;\n-webkit-transform: translateY(-30px);\n-moz-transform: translateY(-30px);\n-ms-transform: translateY(-30px);\n-o-transform: translateY(-30px);\ntransform: translateY(-30px);\n}"
+      c_jf_special_id: jf_canvas_logo_id_2
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+  custom-5362:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h6 class=\"g-title\">CONTACT INFO</h6>\n<ul class=\"jf_footer_contact_info\">\n\t<li><i class=\"material-icons\">location_city</i> Your Company</li>\n\t<li><i class=\"material-icons\">pin_drop</i> 123, Wall Street, New York</li>\n\t<li><i class=\"material-icons\">phone</i> + 1 (234) 567-8900</li>\n\t<li><i class=\"material-icons\">access_time</i> 24/7 Service</li>\n\t<li><i class=\"material-icons\">email</i> <a href=\"mailto:info@yourmail.com\">info@yourmail.com</a></li>\n</ul>\n<ul class=\"jf_social_icons hover_anim\">\n\t<li class=\"facebook\"><a class=\"jf_waves_light_40 s\" href=\"http://www.facebook.com/JoomForest\" target=\"_blank\"><i class=\"fa fa-facebook default\"></i><i class=\"fa fa-facebook hover\"></i></a></li>\n\t<li class=\"twitter\"><a class=\"jf_waves_light_40 s\" href=\"http://twitter.com/#!/JoomForest\" target=\"_blank\"><i class=\"fa fa-twitter default\"></i><i class=\"fa fa-twitter hover\"></i></a></li>\n\t<li class=\"google\"><a class=\"jf_waves_light_40 s\" href=\"https://plus.google.com/+JoomForest/\" target=\"_blank\" title=\"+\"><i class=\"fa fa-google-plus default\"></i><i class=\"fa fa-google-plus hover\"></i></a></li>\n\t<li class=\"youtube\"><a class=\"jf_waves_light_40 s\" href=\"#\"><i class=\"fa fa-youtube-play default\"></i><i class=\"fa fa-youtube-play hover\"></i></a></li>\n</ul>"
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.2'
+  position-module-3742:
+    title: 'Module Instance'
+    attributes:
+      module_id: '90'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.4'
+  custom-4368:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h6 class=\"g-title\">Recent Work</h6>\n<ul class=\"jf_footer_recent_work jf_photoswipe\">\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/1.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/1_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/2.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/2_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/3.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/3_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/4.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/4_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/5.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/5_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/6.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/6_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/7.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/7_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/8.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/8_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n\t<li>\n\t\t<a class=\"jf_waves_light_30\" href=\"images/jf/particles/recent_work/9.jpg\" data-size=\"1186x1067\" data-author=\"John Doe\">\n\t\t\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/recent_work/9_thumb.jpg\" height=\"180\" width=\"200\" alt=\"\">\n\t\t</a>\n\t</li>\n</ul>"
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.6'
+  copyright-3966:
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.4'
+  logo-9507:
+    attributes:
+      jf_logo_type: image
+      url: 'https://www.joomforest.com'
+      text: 'Premium Responsive Joomla Templates | JoomForest'
+      image: 'gantry-media://joomforest.png'
+      image_width: 120px
+      image_height: 82px
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.2'
+  position-module-4901:
+    title: 'Module Instance'
+    attributes:
+      module_id: '91'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.4'

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="file" client="site" method="upgrade">
+<name>Русский язык для DJ-Classifieds</name>
+<packagename>DJ-Classifieds ru-RU</packagename>
+<copyright>2016 JooCMS™</copyright>
+<license>http://www.gnu.org/licenses GNU/GPL</license>
+<version>3.5</version>
+<creationDate>28 oct 2016</creationDate>
+<packager>joocms.ru</packager>
+<packagerEmail>admin@joocms.ru</packagerEmail>
+<packagerurl>http://joocms.ru</packagerurl>
+<tag>ru-RU</tag>
+<author>JooCMS™</author>
+<authorEmail>admin@joocms.ru</authorEmail>
+<authorUrl>http://joocms.ru</authorUrl>
+<description><![CDATA[
+  <div align="center">
+    <table border="0" width="90%">
+	    <tr>
+		    <td width="100%" colspan="2">
+			<div align="center"> <a href="http://joocms.ru/" target="_blank"><img border="0" src="http://joocms.ru/images/joocms_logo.png" alt="joocms.ru" /></a>
+		      <div align="center"> 
+				<h3>Русский язык для DJ-Classifieds 3.5</h3>
+		      </div>
+		      <hr />
+		    </td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Язык:</b></u></td>
+		    <td width="80%">Русский</td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Часть сайта:</b></u></td>
+		    <td width="80%">Административная и фронтальная</td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Автор:</b></u></td>
+		    <td width="80%">JooCMS™</td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Сайт:</b></u></td>
+		    <td width="80%"><a href="http://joocms.ru" target="_blank">http://joocms.ru</a></td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Перевод для версии:</b></u></td>
+		    <td width="80%">DJ-Classifieds 3.5</td>
+	    </tr>
+    </table>
+  </div>]]></description>
+	<fileset>
+		<files folder="admin" target="administrator/language/ru-RU">
+			<filename>ru-RU.com_djclassifieds.ini</filename>
+			<filename>ru-RU.com_djclassifieds.sys.ini</filename>
+			<filename>ru-RU.plg_djclassifieds_pagebreak.ini</filename>
+			<filename>ru-RU.plg_djclassifiedspayment_djcfAuthorizeNET.ini</filename>
+			<filename>ru-RU.plg_djclassifiedspayment_djcfBankTransfer.ini</filename>
+			<filename>ru-RU.plg_djclassifiedspayment_djcfPaypal.ini</filename>
+			<filename>ru-RU.plg_djclassifiedspayment_djcfPayU.ini</filename>
+			<filename>ru-RU.plg_djclassifiedspayment_djcfPrzelewy24.ini</filename>
+		</files>
+		<files folder="site" target="language/ru-RU">
+			<filename>ru-RU.com_djclassifieds.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_cattree.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_items.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_maps.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_menu.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_regions.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_search.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_stats.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_user_menu.ini</filename>
+			<filename>ru-RU.mod_djclassifieds_user_points.ini</filename>			
+		</files>
+	</fileset>
+</extension>

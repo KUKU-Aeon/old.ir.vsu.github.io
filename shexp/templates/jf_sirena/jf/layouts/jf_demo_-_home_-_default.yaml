@@ -1,0 +1,956 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home_default.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - position-module-1074
+  /main/:
+    -
+      - position-position-3825
+    -
+      - system-messages-2483
+  /full-width-section-2/:
+    -
+      - jf_p_cta-5713
+    -
+      - jf_p_ft_intro-1243
+    -
+      - jf_p_portfolio-5791
+    -
+      - jf_p_cta-4422
+    -
+      - jf_p_ft_intro-1617
+    -
+      - jf_p_cta-7192
+    -
+      - jf_p_cta-4857
+    -
+      - jf_p_carousel-2847
+    -
+      - jf_p_cta-3679
+    -
+      - jf_p_cta-5909
+    -
+      - jf_p_clients-3102
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: '2'
+      class: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  position-module-1074:
+    title: 'Module Instance'
+    attributes:
+      module_id: '92'
+      key: module-instance
+  position-position-3825:
+    title: Breadcrumbs
+    inherit:
+      outline: default
+      particle: position-position-2694
+      include:
+        - attributes
+        - block
+  system-messages-2483:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - attributes
+        - block
+  jf_p_cta-5713:
+    title: 'JF Particle - CTA - Material Separator'
+    attributes:
+      padding: '0'
+      html_before: "<div class=\"jf_col_fluid no_paddings\" style=\"margin:0\">\n\t<div class=\"col-1-5\" style=\"background:#FF9800;height:6px\"></div>\n\t<div class=\"col-1-5\" style=\"background:#E91E63;height:6px\"></div>\n\t<div class=\"col-1-5\" style=\"background:#9C27B0;height:6px\"></div>\n\t<div class=\"col-1-5\" style=\"background:#03A9F4;height:6px\"></div>\n\t<div class=\"col-1-5\" style=\"background:#009688;height:6px\"></div>\n</div>"
+  jf_p_ft_intro-1243:
+    title: 'JF Particle - Features Intro - Welcome'
+    attributes:
+      padding: '120px 0 0 0'
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\">Welcome to Sirena Template</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Joomla!, Kunena and Community Builder Theme</h5>"
+      style: style_2
+      style_2:
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: image
+          image_icon: 'gantry-media://jf/pages/home_default/gantry_logo_deep_purple.png'
+          html_icon: ''
+          html_header: 'Gantry 5'
+          html_descr: 'Sirena Theme is based on Powerful Gantry Theme Framework.'
+          html_bottom: ''
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.3'
+          name: 'Item 1'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: image
+          image_icon: 'gantry-media://jf/elements/icon_boxes/bunch_flowers.svg'
+          html_icon: ''
+          html_header: 'Material Design'
+          html_descr: 'Based on the elements and principles of Google''s Material Design.'
+          html_bottom: ''
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          name: 'Item 2'
+        -
+          grid: '4'
+          grid_last: '1'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: image
+          image_icon: 'gantry-media://jf/elements/icon_boxes/old_time_camera.svg'
+          html_icon: ''
+          html_header: 'Ultra Responsive'
+          html_descr: 'Coded and designed to look perfect in full range of devices.'
+          html_bottom: ''
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.7'
+          name: 'Item 3'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: image
+          image_icon: 'gantry-media://jf/elements/icon_boxes/captain_america.svg'
+          html_icon: ''
+          html_header: 'Powerful Features'
+          html_descr: 'With lots of unique features, elements & Premium Joomla! modules.'
+          html_bottom: ''
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.9'
+          name: 'Item 4'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: image
+          image_icon: 'gantry-media://jf/elements/icon_boxes/novel.svg'
+          html_icon: '<i class="material-icons">headset_mic</i>'
+          html_header: Multi-Purpose
+          html_descr: 'Dozens of pre-made layouts gives you a freedom to create anything you want.'
+          html_bottom: ''
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.1'
+          name: 'Item 5'
+        -
+          grid: '4'
+          grid_last: '1'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: image
+          image_icon: 'gantry-media://jf/elements/icon_boxes/fantasy.svg'
+          html_icon: ''
+          html_header: 'Easy Install'
+          html_descr: 'Template comes with rich Documentations and Video Tutorials.'
+          html_bottom: ''
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.3'
+          name: 'Item 6'
+      html_after: '<img class="lazyload" src="images/jf/blank.gif" data-src="images/jf/pages/home_default/features_intro_cover2.jpg" alt="JF Sirena - Premium Joomla! Template" title="JF Sirena - Premium Joomla! Template" style="margin:60px 0 0 0" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.2">'
+  jf_p_portfolio-5791:
+    title: 'JF Particle - Portfolio - Demo Pages'
+    attributes:
+      image_lazyload_src: 'gantry-media://jf/particles/switcher/blank_switcher.gif'
+  jf_p_cta-4422:
+    title: 'JF Particle - CTA - Learn More'
+    attributes:
+      contentW: default
+      padding: '50px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#333333'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style_1:
+        -
+          grid: 2-3
+          contentTextAl: left
+          contentTheme: dark
+          html: "<h2 class=\"weight_500\" style=\"margin:10px 0 0 0\">WANT A QUICK START ?</h2>\n<h5>By Installing a QuickStart you will get a clone of our demo site (without 3-rd party premium/paid resources).</h5>"
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.3'
+          name: Left
+        -
+          grid: 1-3
+          contentTextAl: right
+          contentTheme: dark
+          html: '<a class="jf_btn jf_waves_light_40 l raised deep-purple" style="text-transform:capitalize;letter-spacing:1px;margin:40px 0 0 0;float:right" href="http://www.joomforest.com/joomla/templates/jf-sirena" target="_blank"><i class="material-icons">keyboard_arrow_right</i> Learn More</a>'
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          name: Right
+  jf_p_ft_intro-1617:
+    title: 'JF Particle - Features Intro - Style 1 (Default)'
+    attributes:
+      padding: '120px 0'
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style_1:
+        -
+          grid: '3'
+          grid_last: '0'
+          color: deep-purple
+          animate_icon: '1'
+          lined: '0'
+          filled: '0'
+          textAl: center
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">touch_app</i>'
+          html_header: 'Easy Customizable'
+          html_descr: 'Through Gantry 5 Framework it is possible to edit and control any elements & features.'
+          btn_href: 'http://www.joomforest.com/joomla/templates/jf-sirena'
+          btn_class: 'jf_btn raised deep-purple jf_waves_light_40'
+          btn_text: 'Learn More'
+          btn_target: self
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          name: 'Item 1'
+        -
+          grid: '3'
+          grid_last: '0'
+          color: deep-purple
+          animate_icon: '1'
+          lined: '0'
+          filled: '0'
+          textAl: center
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">thumb_up</i>'
+          html_header: 'High Quality'
+          html_descr: 'Unique sidebar positions, smooth CSS animations, parallax backgrounds, various sliders ...'
+          btn_href: 'http://www.joomforest.com/joomla/templates/jf-sirena'
+          btn_class: 'jf_btn raised deep-purple jf_waves_light_40'
+          btn_text: 'Learn More'
+          btn_target: self
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 2'
+        -
+          grid: '3'
+          grid_last: '0'
+          color: deep-purple
+          animate_icon: '1'
+          lined: '0'
+          filled: '0'
+          textAl: center
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">color_lens</i>'
+          html_header: 'Unlimited Colors'
+          html_descr: 'Built-in color pickers gives an ability to change colors for any element of the template.'
+          btn_href: 'http://www.joomforest.com/joomla/templates/jf-sirena'
+          btn_class: 'jf_btn raised deep-purple jf_waves_light_40'
+          btn_text: 'Learn More'
+          btn_target: self
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '1.1'
+          name: 'Item 3'
+        -
+          grid: '3'
+          grid_last: '1'
+          color: deep-purple
+          animate_icon: '1'
+          lined: '0'
+          filled: '0'
+          textAl: center
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons">view_carousel</i>'
+          html_header: 'Layout Manager'
+          html_descr: 'With Drag-n-drop feature it is very easy to create new layouts or modify an existing ones.'
+          btn_href: 'http://www.joomforest.com/joomla/templates/jf-sirena'
+          btn_class: 'jf_btn raised deep-purple jf_waves_light_40'
+          btn_text: 'Learn More'
+          btn_target: self
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '1.4'
+          name: 'Item 4'
+  jf_p_cta-7192:
+    title: 'JF Particle - CTA - Various Portfolio Styles'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#f5f5f5'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: center
+          padding: '7% 0 2% 6%'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_default/portfolio.png'
+          image_alt: ''
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          name: 'Left Column'
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: 50px
+          contentStyle: html
+          contentTheme: light
+          html: "<h1 style=\"font-weight:500;margin:50px 0 20px\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"0.5\">Various Portfolio Styles</h1>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"0.8\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/fantasy.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">Easy Setup</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">With Gantry 5 Particle system you can easily configure portfolio items.</div>\n</div>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"1.1\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/novel.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">Inbuilt Features</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Parallax background/video effects, beautiful Photoswipe and Venobox lightboxes, various hover styles ...</div>\n</div>"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Right Column'
+  jf_p_cta-4857:
+    title: 'JF Particle - CTA - Responsive Layout'
+    attributes:
+      contentW: default
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '2% 0 0 4%'
+          contentStyle: html
+          contentTheme: light
+          html: "<h1 style=\"font-weight:500;margin:70px 0 20px\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"0.5\">Responsive Layout</h1>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"0.8\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/panorama.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">100% Responsive</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Perfect for any device, mobiles, tablets or desktops with pixel-perfect design.</div>\n</div>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"1.1\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/rating.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">JF Mobile Menu Pro</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Premium 'Menu Module' for Joomla! based on Material Design concept.</div>\n</div>"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: Left
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_default/responsive.png'
+          image_alt: ''
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          name: Right
+  jf_p_carousel-2847:
+    title: 'JF Particle - Carousels: Style 2'
+    attributes:
+      padding: '130px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#eeeeee'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '60'
+          scrolling: '0'
+          parallax_src: 'gantry-media://jf/elements/parallax/screen_1.jpg'
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '3'
+      style: style_2
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Various Carousel Styles</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">With Gantry 5 Particles you can easily create beautiful carousels.</h5>"
+      style_2:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          name: 'Item 6'
+  jf_p_cta-3679:
+    title: 'JF Particle - CTA - Download Now'
+    attributes:
+      contentW: default
+      padding: '80px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#673ab7'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style_1:
+        -
+          grid: 2-3
+          contentTextAl: left
+          contentTheme: dark
+          html: '<h2 class="weight_500" style="margin:0">Sirena is your the last Joomla! Template Ever</h2>'
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.3'
+          name: Left
+        -
+          grid: 1-3
+          contentTextAl: right
+          contentTheme: dark
+          html: '<a class="jf_btn jf_waves_dark_20 l raised white" style="text-transform:capitalize;letter-spacing:1px;margin:0;float:right" href="http://www.joomforest.com/joomla/templates/jf-sirena" target="_blank"><i class="material-icons">keyboard_arrow_right</i> Download Now</a>'
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          name: Right
+  jf_p_cta-5909:
+    title: 'JF Particle - CTA - Create Galleries'
+    attributes:
+      contentW: default
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#f5f5f5'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '3% 3% 3% 0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_default/gallery.png'
+          image_alt: ''
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: left
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '3% 2%'
+          contentStyle: html
+          contentTheme: light
+          html: "<h1 style=\"font-weight:500;margin:25px 0 20px 0px\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"0.5\">Create Beautiful Galleries</h1>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"0.8\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/fantasy.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">Easy Setup</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Gantry 5 Particle system allows you to create easilly beautifull galleries.</div>\n</div>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"1.1\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/selfie.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">Amazing Lightboxes</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Beautiful Photoswipe and Venobox lightboxes, which looks shiny on any devices.</div>\n</div>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"1.3\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/iron_man.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">CSS3 Animations</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Easilly Apply CSS3 animations to any elements.</div>\n</div>\n<div class=\"jf_icon_box leftfloat animate_icon\" style=\"padding:10px 0;margin:0\" data-animation=\"zoomIn\" data-animation-type=\"onview\" data-animation-delay=\"1.3\">\n\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/landscape.svg\" alt=\"\"></div>\n\t<h3 class=\"header\">Parallax Effects</h3>\n\t<div class=\"descr\" style=\"font-size:16px\">Adding parallax video or image effects moves your website on the next level.</div>\n</div>"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: right
+  jf_p_clients-3102:
+    title: 'JF Particle - Clients - Style 4 (Hover Slide)'
+    attributes:
+      padding: '120px 0'
+      bg_options:
+        -
+          bg_type: parallax_vid
+          lazyload: '1'
+          maskColor: '#000000'
+          maskOpacity: '40'
+          scrolling: '1'
+          type: default
+          bgColor: '#333333'
+          cover_src: ''
+          parallax_src: ''
+          controls: '0'
+          loop: '1'
+          muted: '1'
+          video_type: self
+          vimeo_id: ''
+          youtube_id: ''
+          url: images/jf/videos/
+          vidname: celebrate
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0;color:#fff\" data-animation=\"fadeInUp\" data-animation-type=\"onview\">Produced by JoomForest</h1>\n<h5 style=\"margin:0 0 70px 0;color:#eee\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Be Unique and Be Iconic in your Industry</h5>"
+      clients:
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          bg: '0'
+          bg_color: '#673ab7'
+          image_def: 'gantry-media://jf/particles/clients/1_light.png'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/1_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/2_light.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/2_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/3_light.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/3_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/4_light.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/4_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/5_light.png'
+          border: '1'
+          border_width: '0 0 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/5_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1'
+          name: 'Item 5'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/6_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/6_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.2'
+          name: 'Item 6'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/7_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/7_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.4'
+          name: 'Item 7'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/8_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/8_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.6'
+          name: 'Item 8'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/9_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/9_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.8'
+          name: 'Item 9'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/10_light.png'
+          border: '1'
+          border_width: '0 0 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '0.7'
+          image_hov: 'gantry-media://jf/particles/clients/10_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '2'
+          name: 'Item 10'

@@ -1,0 +1,158 @@
+/**
+* @version    JF_PDT_090
+* @author   JoomForest http://www.joomforest.com
+* @copyright  Copyright (C) 2011-2016 JoomForest.com
+* @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
+/*
+	background-color: #673AB7;	- deep-purple
+	background-color: #5cb85c;	- green - #0f9d58
+	background-color: #e81d62;	- pink
+	background-color: #9b26af;	- purple
+	background-color: #3e50b4;	- indigo
+	background-color: #f39c12;	- orange
+	background-color: #785447;	- brown
+	background-color: #222222;	- Black
+*/
+/* ===========_______________________________ START - Styles ________________________________________=========== */
+	/* ===========_______________________________ START - Core Styles ________________________________________=========== */
+		/* start - Base Styles ----------------------------------------------------------------- */
+			// Base Background
+				$jf_color_base-background:		#F5F5F5 !default;
+				$jf_color_base_background:		$jf_color_base-background;
+			// Base Text Color
+				$jf_color_base-text-color:		#666666 !default;
+				$jf_color_base_text_color:		$jf_color_base-text-color;
+			// Base HTML Tags Color // h1, h2, h3, h4, h5, h6, <b> ....
+				$jf_color_base-tag-color:		#4d4d4d !default;
+				$jf_color_base_tag_color:		$jf_color_base-tag-color;
+			// Accent Color 1
+				$jf_color_base-accent-1:		#673AB7 !default;
+				$jf_color_base_accent_1:		$jf_color_base-accent-1;
+		/* end   - Base Styles ----------------------------------------------------------------- */
+
+		/* start - Base Menu Styles ----------------------------------------------------------------- */
+			// Toplevel Item - Default
+				$jf_color_menu-toplevel-default:rgba(255, 255, 255, 0.5) !default;
+				$jf_color_menu_toplevel_default:$jf_color_menu-toplevel-default;
+			// Toplevel Item - Active
+				$jf_color_menu-toplevel-active:	#ffffff !default;
+				$jf_color_menu_toplevel_active:	$jf_color_menu-toplevel-active;
+			// Dropdown Background
+				$jf_color_menu-dropdown-bg:		#ffffff !default;
+				$jf_color_menu_dropdown_bg:		$jf_color_menu-dropdown-bg;
+			// Dropdown Item
+				$jf_color_menu-dropdown-item:	#673AB7 !default;
+				$jf_color_menu_dropdown_item:	$jf_color_menu-dropdown-item;
+			// Dropdown Active Item Background
+				$jf_color_menu-dropdown-active:	rgba(0, 0, 0, 0.05) !default;
+				$jf_color_menu_dropdown_active:	$jf_color_menu-dropdown-active;
+			// Dropdown Column Border
+				$jf_color_menu-dropdown-border:	rgba(0, 0, 0, 0.07) !default;
+				$jf_color_menu_dropdown_border:	$jf_color_menu-dropdown-border;
+		/* end   - Base Menu Styles ----------------------------------------------------------------- */
+	/* ===========_______________________________ END   - Core Styles ________________________________________=========== */
+
+	/* ===========_______________________________ START - Section Styles ________________________________________=========== */
+		/* start - Main Colors ----------------------------------------------------------------- */
+			// Background
+				$jf_color_s_main-background:		#F5F5F5 !default;
+				$jf_color_s_main_background:		$jf_color_s_main-background;
+			// Text
+				$jf_color_s_main-text-color:		#666666 !default;
+				$jf_color_s_main_text_color:		$jf_color_s_main-text-color;
+		/* end   - Main Colors ----------------------------------------------------------------- */
+
+		/* start - Header Colors ----------------------------------------------------------------- */
+			// Background
+				$jf_color_s_header-background:		#673AB7 !default;
+				$jf_color_s_header_background:		$jf_color_s_header-background;
+			// Shadow
+				$jf_color_s_header-shadow:			rgba(0, 0, 0, 0.25) !default;
+				$jf_color_s_header_shadow:			$jf_color_s_header-shadow;
+			// Text
+				$jf_color_s_header-text-color:		#FFFFFF !default;
+				$jf_color_s_header_text_color:		$jf_color_s_header-text-color;
+		/* end   - Header Colors ----------------------------------------------------------------- */
+
+		/* start - Footer Colors ----------------------------------------------------------------- */
+			// Background
+				$jf_color_s_footer-background:		#673AB7 !default;
+				$jf_color_s_footer_background:		$jf_color_s_footer-background;
+			// Shadow
+				$jf_color_s_footer-shadow:			rgba(0, 0, 0, 0.25) !default;
+				$jf_color_s_footer_shadow:			$jf_color_s_footer-shadow;
+			// Text
+				$jf_color_s_footer-text-color:		rgba(255, 255, 255, 0.50) !default;
+				$jf_color_s_footer_text_color:		$jf_color_s_footer-text-color;
+			// Link
+				$jf_color_s_footer-link-color:		#ffffff !default;
+				$jf_color_s_footer_link_color:		$jf_color_s_footer-link-color;
+			// Block Borders
+				$jf_color_s_footer-border-color:	rgba(255, 255, 255, 0.15) !default;
+				$jf_color_s_footer_border_color:	$jf_color_s_footer-border-color;
+		/* end   - Footer Colors ----------------------------------------------------------------- */
+
+		/* start - FOOTER Colors ----------------------------------------------------------------- */
+			// Background
+				$jf_color_s_footer_bottom-background:		#673AB7 !default;
+				$jf_color_s_footer_bottom_background:		$jf_color_s_footer_bottom-background;
+			// Text
+				$jf_color_s_footer_bottom-text-color:		rgba(255, 255, 255, 0.50) !default;
+				$jf_color_s_footer_bottom_text_color:		$jf_color_s_footer_bottom-text-color;
+			// Link
+				$jf_color_s_footer_bottom-link-color:		#ffffff !default;
+				$jf_color_s_footer_bottom_link_color:		$jf_color_s_footer_bottom-link-color;
+			// Top Border
+				$jf_color_s_footer_bottom-border-color:		rgba(255, 255, 255, 0.15) !default;
+				$jf_color_s_footer_bottom_border_color:		$jf_color_s_footer_bottom-border-color;
+		/* end   - FOOTER Colors ----------------------------------------------------------------- */
+
+		/* start - SEARCH PANEL Colors ----------------------------------------------------------------- */
+			// Background
+				$jf_color_s_p_search-background:		#673AB7 !default;
+				$jf_color_s_p_search_background:		$jf_color_s_p_search-background;
+			// Text
+				$jf_color_s_p_search-text-color:		#FFFFFF !default;
+				$jf_color_s_p_search_text_color:		$jf_color_s_p_search-text-color;
+		/* end   - SEARCH PANEL Colors ----------------------------------------------------------------- */
+	/* ===========_______________________________ END   - Section Styles ________________________________________=========== */
+/* ===========_______________________________ END   - Styles ________________________________________=========== */
+
+/* ===========_______________________________ START - GLOBAL (Not Changable) ________________________________________=========== */
+	$jf_color_typo_sep:				#e6e6e6;
+	$jf_color_typo_sep_light: 		rgba(255, 255, 255, 0.4);
+/* ===========_______________________________ END   - GLOBAL (Not Changable) ________________________________________=========== */
+
+
+/*
+jf_color_base_background
+jf_color_base_text_color
+	jf/elements/others/hotspots/jf_hotspots.min.scss
+	jf/elements/others/icon_boxes/jf_icon_boxes.min.scss
+	jf/elements/others/testimonials/jf_testimonials.min.scss
+jf_color_base_tag_color
+jf_color_base_accent_1
+	jf/elements/others/bs_buttons/bs_buttons.min.scss
+	jf/elements/others/hotspots/jf_hotspots.min.scss
+	jf/elements/typo/jf_typo.min.scss
+
+jf_color_s_main_background
+jf_color_s_main_text_color
+
+jf_color_s_header_background
+jf_color_s_header_shadow
+jf_color_s_header_text_color
+
+jf_color_s_footer_background
+jf_color_s_footer_shadow
+jf_color_s_footer_text_color
+jf_color_s_footer_link_color
+jf_color_s_footer_border_color
+
+jf_color_s_footer_bottom_background
+jf_color_s_footer_bottom_text_color
+jf_color_s_footer_bottom_link_color
+jf_color_s_footer_bottom_border_color
+
+*/

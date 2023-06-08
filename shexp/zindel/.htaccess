@@ -1,0 +1,149 @@
+Options +FollowSymLinks
+Redirect /test.html http://www.joomla.org	
+#  Установка кодировки сайта по умолчанию. При необходимости, закомментируйте.
+#  Строка решает проблему с "крякозябрами" в редакторе TinyMCE и текста лицензии при установке
+#  на Денвере и некоторых серверах с жестко прописанной кодировкой. Это на 99,9% работающее решение.
+#  После переименования этого файла htaccess.txt в .htaccess проблема решится.
+#  Если проблема осталась - перечитайте предыдущее предложение (возможно неправильно переименовали).
+ 
+AddDefaultCharset utf-8
+ 
+#####################################################
+#  ПРОЧТИТЕ ПОЛНОСТЬЮ, ЕСЛИ БУДЕТЕ ИСПОЛЬЗОВАТЬ ЭТОТ ФАЙЛ
+#
+# Строка ниже этого раздела: 'Options +FollowSymLinks' может вызвать проблему
+# при некоторых конфигурациях сервера. Она необходима для использования модуля
+# Apache mod_rewrite, но может быть уже настроена администратором вашего
+# сервера и изменение этого параметра в .htaccess может быть запрещено.
+# Если эта директива вызывает ошибку сервера, то закомментируйте строку
+# (добавьте символ # в начало строки), перезагрузите в браузере сайт и
+# протестируйте работу SEF-ссылок. Если они работают, то вам не надо ничего
+# менять здесь, т.к. всё уже настроено администратором сервера.
+#
+# Строки, которые можно раскомментирвать (и использовать) имеют только один #.
+# Строки с двумя символами ## раскомментировать не надо. В разделах, которые вы
+# не используете, все строки должны начинаться с символа #
+#
+#####################################################
+ 
+#  Может быть закомментировано, если вызывает ошибку сервера. Смотрите примечания выше.
+Options +FollowSymLinks
+ 
+# Добавляем Cache-Control в заголовок
+<ifModule mod_headers.c>
+Header set Connection keep-alive
+Header unset ETag
+FileETag None
+  <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "max-age=216000, private"
+  </filesMatch>
+  <filesMatch "\.(xml|txt)$">
+    Header set Cache-Control "max-age=216000, public, must-revalidate"
+  </filesMatch>
+  <filesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "max-age=1, private, must-revalidate"
+  </filesMatch>
+</ifModule>
+ 
+# Сжимаем файлы с помощью модуля gzip
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript application/javascript
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4.0[678] no-gzip
+    BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+        <ifModule mod_gzip.c>
+          mod_gzip_on Yes
+          mod_gzip_dechunk Yes
+          mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+          mod_gzip_item_include handler ^cgi-script$
+          mod_gzip_item_include mime ^text/.*
+          mod_gzip_item_include mime ^application/x-javascript.*
+          mod_gzip_item_exclude mime ^image/.*
+          mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+        </ifModule>
+</IfModule>
+ 
+# Кешируем файлы у клиента
+<ifModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType text/html "access plus 1 seconds"
+  ExpiresByType image/gif "access plus 2592000 seconds"
+  ExpiresByType image/jpeg "access plus 2592000 seconds"
+  ExpiresByType image/png "access plus 2592000 seconds"
+  ExpiresByType text/css "access plus 604800 seconds"
+  ExpiresByType text/javascript "access plus 216000 seconds"
+  ExpiresByType application/x-javascript "access plus 216000 seconds"
+</ifModule>
+ 
+ 
+# Включение mod_rewrite
+RewriteEngine On
+ 
+# Редирект с www
+Redirect /joom.html http://joom.ru
+RewriteCond %{HTTP_HOST} ^www.site.ru
+RewriteRule (.*) http://site.ru/$1 [R=301,L]
+ 
+# Вывод sitemap по кратким урл
+RewriteCond %{REQUEST_URI} ^(/sitemap.xml)$
+RewriteRule (.*) index.php?option=com_xmap&view=xml&tmpl=component&id=1 [L]
+RewriteCond %{REQUEST_URI} ^(/sitemap.html)$
+RewriteRule (.*) index.php?option=com_xmap&sitemap=1 [L]
+ 
+# 404 ошибка
+ErrorDocument 404 http://site.ru/404.html
+ 
+# Пример 301 редиректа
+# Redirect 301 /old_url.html http://site.ru/new_url.html
+ 
+########## Начало - Правила обработки запросов для блокировки распространенных эксплоитов
+## Если у вас возникли проблемы с вашим сайтом, используйте ниже описанные операции
+## Они пытаются заблокировать самые распространенные эксплоиты Joomla!
+#
+## Код запрета доступа к xml-файлам расширений (раскомментируйте для активации)
+#<Files ~ "\.xml$">
+#Order allow,deny
+#Deny from all
+#Satisfy all
+#</Files>
+## Конец кода запрета доступа к xml-файлам
+ 
+# Блокировать любой запрос, пытающийся установить значение mosConfig через URL
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+# Блокировать любой запрос, пытающийся испортить base64_encode через URL
+RewriteCond %{QUERY_STRING} base64_encode.*\(.*\) [OR]
+# Блокировать любой запрос, содержащий тег <script> в URL
+RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+# Блокировать любой запрос, пытающийся установить значение глобальных переменных PHP через URL
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Блокировать любой запрос, пытающийся изменить _REQUEST переменную через URL
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Перенаправлять заблокированные запросы на страницу 403 с запрещенными ошибками!
+RewriteRule ^(.*)$ index.php [F,L]
+#
+########## Конец правил обработки для блокировки распространенных эксплоитов
+ 
+#  Раскомментируйте следующую строку, если URL вашего web-сервера
+#  не связаны напрямую с физическими путями файлов.
+#  Обновите ваш каталог Joomla (используйте "/" для обозначения корня сервера)
+ 
+# RewriteBase /
+ 
+ 
+########## Начало раздела SEF ядра Joomla!
+#
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteCond %{REQUEST_URI} (/|\.php|\.html|\.htm|\.feed|\.pdf|\.raw|/[^.]*)$  [NC]
+RewriteRule (.*) index.php
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+#
+########## Конец раздела SEF ядра Joomla!

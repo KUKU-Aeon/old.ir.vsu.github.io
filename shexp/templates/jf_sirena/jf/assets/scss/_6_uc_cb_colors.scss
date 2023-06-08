@@ -1,0 +1,345 @@
+/**
+* @version		JF_CB_DTF_090
+* @author		JoomForest http://www.joomforest.com
+* @copyright	Copyright (C) 2011-2016 JoomForest.com
+* @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
+
+@import "0_css3_mixins";
+
+/*
+	This is a copy of original "3-rd party theme UC" + addons "3-rd party theme" variables
+*/
+
+// @import "../00_css3_mixins";
+// @import "../00_variables";
+
+$jf_cb_UC-accent_1:				#673AB7 !default;
+$jf_cb_UC-menu_bg_color:		#673AB7 !default;
+$jf_cb_UC-menu_text_color:		#ffffff !default;
+$jf_cb_UC-menu_border_color:	#ffffff !default;
+$jf_cb_UC-mobtool_bg:			#673AB7 !default;
+$jf_cb_UC-mobtool_text:			#ffffff !default;
+$jf_cb_UC-mobtool_shadow:		rgba(0, 0, 0, 0.25) !default;
+
+$jf_cb_UC_accent_1:				$jf_cb_UC-accent_1;
+$jf_cb_UC_menu_bg_color:		$jf_cb_UC-menu_bg_color;
+$jf_cb_UC_menu_text_color:		$jf_cb_UC-menu_text_color;
+$jf_cb_UC_menu_border_color:	$jf_cb_UC-menu_border_color;
+$jf_cb_UC_mobtool_bg:			$jf_cb_UC-mobtool_bg;
+$jf_cb_UC_mobtool_text:			$jf_cb_UC-mobtool_text;
+$jf_cb_UC_mobtool_shadow:		$jf_cb_UC-mobtool_shadow;
+
+
+/* ===========_______________________________ START - SCSS ________________________________________=========== */
+body {
+	/* start - $jf_cb_UC_accent_1 ----------------------------------------------------------------- */
+		.jf_cb_ui_dp_skin_md {
+			.ui-widget {
+				background: $jf_cb_UC_accent_1;
+			}
+			td .ui-state-active,
+			td .ui-state-hover {
+				background: $jf_cb_UC_accent_1;
+			}
+		}
+		.select2-container--bootstrap .select2-selection.select2-selection--multiple .select2-selection__choice,
+		.select2-container--bootstrap .select2-dropdown .select2-results .select2-results__option.select2-results__option--highlighted,
+		.select2-container--bootstrap .select2-selection.select2-selection--multiple .select2-selection__choice:hover {
+			background-color: $jf_cb_UC_accent_1;
+		}
+		.list-group-item.active > .select2-container--bootstrap .select2-selection.select2-selection--multiple .select2-selection__choice,
+		.nav-pills > .active > a > .select2-container--bootstrap .select2-selection.select2-selection--multiple .select2-selection__choice {
+			color: $jf_cb_UC_accent_1;
+		}
+		.jf_cb_btn {
+			&.raised {
+				&.accent {
+					background-color: $jf_cb_UC_accent_1;
+					&:hover,
+					&:active {
+						background-color: $jf_cb_UC_accent_1;
+					}
+				}
+			}
+		}
+		.cb_template {
+			a:link, 
+			a:visited, 
+			a:active, 
+			a:focus {
+				color: $jf_cb_UC_accent_1;
+			}
+			input[type="text"], 
+			input[type="title"], 
+			input[type="password"], 
+			input[type="datetime"], 
+			input[type="datetime-local"], 
+			input[type="date"], 
+			input[type="month"], 
+			input[type="time"], 
+			input[type="week"], 
+			input[type="number"], 
+			input[type="email"], 
+			input[type="url"], 
+			input[type="search"], 
+			input[type="tel"], 
+			input[type="color"], 
+			.uneditable-input {
+				&:focus {
+					@include box-shadow(inset 0 -2px 0 $jf_cb_UC_accent_1);
+				}
+			}
+			textarea {
+				&:focus {
+					@include box-shadow(inset 0 -2px 0 $jf_cb_UC_accent_1);
+					&~label {
+						color: $jf_cb_UC_accent_1;
+					}
+				}
+			}
+			.jf_check {
+				input[type="checkbox"]:checked+i {
+					background-color: $jf_cb_UC_accent_1;
+				}
+				@mixin jf_check_radio_colors($color, $class) {
+					input[type="radio"] + i#{$class}:active:before {
+						@include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 2px #{$color} inset, 0 0 0 24px #{rgba($color,.15)}");
+					}
+					&:hover input[type="radio"] + i#{$class}:active:before {
+						border-color: $color;
+						@include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 2px #{$color} inset, 0 0 0 0 #{$color}");
+					}
+					&:hover input[type="radio"] + i#{$class}:before {
+						border-color: rgba(0, 0, 0, 0.5);
+						@include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 #{$color} inset,0 0 0 0 #{$color};");
+					}
+					input[type="radio"]:checked + i#{$class}:before {
+						border-color: $color;
+						@include box-shadow("0 0 0 4px #{$color} inset, 0 0 0 8px #FFF inset, 0 0 0 12px #{$color} inset, 0 0 0 24px rgba(0, 0, 0, 0);");
+					}
+				}
+				@include jf_check_radio_colors($jf_cb_UC_accent_1, "");
+			}
+			.dropdown-menu > li > a:hover,
+			.dropdown-menu > li > a:focus {
+				@include background-gradient($jf_cb_UC_accent_1, $jf_cb_UC_accent_1);
+			}
+			.btn-primary {
+				background-color: $jf_cb_UC_accent_1;
+			}
+			.btn-primary:active:hover,
+			.btn-primary.active:hover,
+			.open > .dropdown-toggle.btn-primary:hover,
+			.btn-primary:active:focus,
+			.btn-primary.active:focus,
+			.open > .dropdown-toggle.btn-primary:focus,
+			.btn-primary:active.focus,
+			.btn-primary.active.focus,
+			.open > .dropdown-toggle.btn-primary.focus {
+				background-color: $jf_cb_UC_accent_1;
+			}
+			.btn-primary.disabled,
+			.btn-primary[disabled],
+			fieldset[disabled] .btn-primary,
+			.btn-primary.disabled:hover,
+			.btn-primary[disabled]:hover,
+			fieldset[disabled] .btn-primary:hover,
+			.btn-primary.disabled:focus,
+			.btn-primary[disabled]:focus,
+			fieldset[disabled] .btn-primary:focus,
+			.btn-primary.disabled.focus,
+			.btn-primary[disabled].focus,
+			fieldset[disabled] .btn-primary.focus,
+			.btn-primary.disabled:active,
+			.btn-primary[disabled]:active,
+			fieldset[disabled] .btn-primary:active,
+			.btn-primary.disabled.active,
+			.btn-primary[disabled].active,
+			fieldset[disabled] .btn-primary.active {
+				background-color: $jf_cb_UC_accent_1;
+			}
+			.btn-primary .badge {
+				color: $jf_cb_UC_accent_1;
+			}
+			.btn-link {
+				color: $jf_cb_UC_accent_1;
+			}
+			.btn-link:hover,
+			.btn-link:focus {
+				color: $jf_cb_UC_accent_1;
+			}
+			.btn-primary:hover,
+			.btn-primary:active:hover,
+			.btn-primary:focus {
+				background-color: $jf_cb_UC_accent_1;
+			}
+			.btn-primary:active {
+				background-color: $jf_cb_UC_accent_1;
+			}
+			.btn-link:hover,
+			.btn-link:focus {
+				color: $jf_cb_UC_accent_1;
+			}
+			.btn-group.open .btn-primary.dropdown-toggle {
+				background-color: $jf_cb_UC_accent_1;
+			}
+			.panel-primary > .panel-heading {
+				background: $jf_cb_UC_accent_1;
+				border-color: $jf_cb_UC_accent_1;
+			}
+			.navbar-nav,
+			.nav-tabs {
+				.active {
+					a {
+						&:before {
+							background: $jf_cb_UC_accent_1;
+						}
+					}
+				}
+			}
+			.dropdown-menu > .active > a, 
+			.dropdown-menu > .active > a:hover, 
+			.dropdown-menu > .active > a:focus {
+				color: $jf_cb_UC_accent_1;
+			}
+		}
+		#uddeim {
+			#uddeim-navbar2 {
+				ul {
+					li {
+						&.uddeim-activemenu {
+							a,
+							span {
+								&:before {
+									background: $jf_cb_UC_accent_1;
+								}
+							}
+						}
+					}
+				}
+			}
+			input[type="text"], 
+			input[type="title"], 
+			input[type="password"], 
+			input[type="datetime"], 
+			input[type="datetime-local"], 
+			input[type="date"], 
+			input[type="month"], 
+			input[type="time"], 
+			input[type="week"], 
+			input[type="number"], 
+			input[type="email"], 
+			input[type="url"], 
+			input[type="search"], 
+			input[type="tel"], 
+			input[type="color"], 
+			.uneditable-input,
+			#uddeim-writeform input {
+				&:focus {
+					@include box-shadow(inset 0 -2px 0 $jf_cb_UC_accent_1);
+				}
+			}
+			textarea {
+				&:focus {
+					@include box-shadow(inset 0 -2px 0 $jf_cb_UC_accent_1);
+					&~label {
+						color: $jf_cb_UC_accent_1;
+					}
+				}
+			}
+			.jf_uddeim_btn,
+			#uddeim-writeform .uddeim-sendbutton input {
+				&.raised {
+					&.accent {
+						background-color: $jf_cb_UC_accent_1;
+						&:hover,
+						&:active {
+							background-color: $jf_cb_UC_accent_1;
+						}
+					}
+				}
+			}
+		}
+	/* end   - $jf_cb_UC_accent_1 ----------------------------------------------------------------- */
+
+	/* start - $jf_cb_UC_menu_bg_color ----------------------------------------------------------------- */
+		.cb_template {
+			.cbMenuNavBar {
+				background: $jf_cb_UC_menu_bg_color;
+				.dropdown-menu > li > a {
+					@include background-gradient($jf_cb_UC_menu_bg_color, $jf_cb_UC_menu_bg_color);
+				}
+			}
+		}
+	/* end   - $jf_cb_UC_menu_bg_color ----------------------------------------------------------------- */
+
+	/* start - $jf_cb_UC_menu_text_color ----------------------------------------------------------------- */
+		.cb_template {
+			.cbMenuNavBar {
+				a {
+					color: $jf_cb_UC_menu_text_color;
+				}
+
+				&.navbar-default .navbar-nav > li > a {
+					color: $jf_cb_UC_menu_text_color;
+				}
+				&.navbar-default .navbar-nav > li.open > a {
+					color: $jf_cb_UC_menu_text_color;
+				}
+				&.navbar-default .navbar-toggle .icon-bar {
+					background-color: $jf_cb_UC_menu_text_color;
+				}
+			}
+			@media (max-width: 767px){
+				.cbMenuNavBar {
+					&.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+						color: $jf_cb_UC_menu_text_color;
+						&:hover {
+							color: $jf_cb_UC_menu_text_color;
+						}
+					}
+				}
+			}
+		}
+	/* end   - $jf_cb_UC_menu_text_color ----------------------------------------------------------------- */
+
+	/* start - $jf_cb_UC_menu_border_color ----------------------------------------------------------------- */
+		.cb_template {
+			.cbMenuNavBar {
+				.navbar-nav > li {
+					> a {
+						&:after {
+							background: $jf_cb_UC_menu_border_color;
+						}
+					}
+				}
+			}
+		}
+	/* end   - $jf_cb_UC_menu_border_color ----------------------------------------------------------------- */
+
+	/* start - $jf_cb_UC_mobtool_bg ----------------------------------------------------------------- */
+		.jf_cb_mobtool_wrap {
+			.jf_cb_mobtool {
+				background: $jf_cb_UC_mobtool_bg;
+			}
+		}
+	/* end   - $jf_cb_UC_mobtool_bg ----------------------------------------------------------------- */
+
+	/* start - $jf_cb_UC_mobtool_text ----------------------------------------------------------------- */
+		.jf_cb_mobtool_wrap {
+			.jf_cb_mobtool {
+				color: $jf_cb_UC_mobtool_text;
+			}
+		}
+	/* end   - $jf_cb_UC_mobtool_text ----------------------------------------------------------------- */
+
+	/* start - $jf_cb_UC_mobtool_shadow ----------------------------------------------------------------- */
+		.jf_cb_mobtool_wrap {
+			.jf_cb_mobtool {
+				@include box-shadow(0 -2px 5px $jf_cb_UC_mobtool_shadow);
+			}
+		}
+	/* end   - $jf_cb_UC_mobtool_shadow ----------------------------------------------------------------- */
+}
+/* ===========_______________________________ END   - SCSS ________________________________________=========== */

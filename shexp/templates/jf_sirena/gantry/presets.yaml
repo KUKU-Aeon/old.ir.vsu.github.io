@@ -1,0 +1,471 @@
+deep-purple:
+  image: 'gantry-admin://images/deep-purple.jpg'
+  description: 'Deep Purple'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#673ab7'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#673ab7'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#673ab7'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#673ab7'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#673ab7'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#673ab7'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#673ab7'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#673AB7'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#dddddd'
+      panel_s_inputcolor: '#6036ab'
+    jf_cb_UC:
+      accent_1: '#673ab7'
+      menu_bg_color: '#673AB7'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#673ab7'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+indigo:
+  image: 'gantry-admin://images/indigo.jpg'
+  description: 'Indigo'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#3e50b4'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#3e50b4'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#3e50b4'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#3e50b4'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#3e50b4'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#3e50b4'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#3e50b4'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#3e50b4'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#dddddd'
+      panel_s_inputcolor: '#4C5CB5'
+    jf_cb_UC:
+      accent_1: '#3e50b4'
+      menu_bg_color: '#3e50b4'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#3e50b4'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+green:
+  image: 'gantry-admin://images/green.jpg'
+  description: 'Green'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#5cb85c'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#5cb85c'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#5cb85c'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#5cb85c'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#5cb85c'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#5cb85c'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#5cb85c'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#5cb85c'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#f5f5f5'
+      panel_s_inputcolor: '#79C579'
+    jf_cb_UC:
+      accent_1: '#5cb85c'
+      menu_bg_color: '#5cb85c'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#5cb85c'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+pink:
+  image: 'gantry-admin://images/pink.jpg'
+  description: 'Pink'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#e81d62'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#e81d62'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#e81d62'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#e81d62'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#e81d62'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#e81d62'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#e81d62'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#e81d62'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#f5f5f5'
+      panel_s_inputcolor: '#F53C7B'
+    jf_cb_UC:
+      accent_1: '#e81d62'
+      menu_bg_color: '#e81d62'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#e81d62'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+purple:
+  image: 'gantry-admin://images/purple.jpg'
+  description: 'Purple'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#9b26af'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#9b26af'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#9b26af'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#9b26af'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#9b26af'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#9b26af'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#9b26af'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#9b26af'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#f5f5f5'
+      panel_s_inputcolor: '#B634CC'
+    jf_cb_UC:
+      accent_1: '#9b26af'
+      menu_bg_color: '#9b26af'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#9b26af'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+orange:
+  image: 'gantry-admin://images/orange.jpg'
+  description: 'Orange'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#f39c12'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#f39c12'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#f39c12'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#f39c12'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#f39c12'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#f39c12'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#f39c12'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#f39c12'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#ffffff'
+      panel_s_inputcolor: '#FFAA23'
+    jf_cb_UC:
+      accent_1: '#f39c12'
+      menu_bg_color: '#f39c12'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#f39c12'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+brown:
+  image: 'gantry-admin://images/brown.jpg'
+  description: 'Brown'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#785447'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#785447'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#785447'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#785447'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#785447'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#785447'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#785447'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#785447'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#dddddd'
+      panel_s_inputcolor: '#886355'
+    jf_cb_UC:
+      accent_1: '#785447'
+      menu_bg_color: '#785447'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#785447'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+
+black:
+  image: 'gantry-admin://images/black.jpg'
+  description: 'Black'
+
+  styles:
+    jf_color_base:
+      background: '#f5f5f5'
+      text-color: '#666666'
+      tag-color: '#4d4d4d'
+      accent-1: '#222222'
+      body-font: 'family=Roboto:300,500,700,400'
+    jf_color_menu:
+      toplevel-default: 'rgba(255, 255, 255, 0.5)'
+      toplevel-active: '#ffffff'
+      dropdown-bg: '#ffffff'
+      dropdown-item: '#222222'
+      dropdown-active: 'rgba(0, 0, 0, 0.05)'
+      dropdown-border: 'rgba(0, 0, 0, 0.07)'
+    jf_color_s_footer:
+      background: '#222222'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_footer_bottom:
+      background: '#222222'
+      text-color: 'rgba(255, 255, 255, 0.50)'
+      link-color: '#ffffff'
+      border-color: 'rgba(255, 255, 255, 0.15)'
+    jf_color_s_header:
+      background: '#222222'
+      shadow: 'rgba(0, 0, 0, 0.25)'
+      text-color: '#ffffff'
+    jf_color_s_main:
+      background: '#f5f5f5'
+      text-color: '#666666'
+    jf_color_s_p_search:
+      background: '#222222'
+      text-color: '#ffffff'
+    jf_ku_UC:
+      accent_1: '#222222'
+      text_color: '#666666'
+      tag_color: '#444444'
+      menu_bg_color: '#222222'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      breadcrumb_color: '#888888'
+      topicProfileBG: '#f5f5f5'
+      panel_s_textcolor: '#dddddd'
+      panel_s_inputcolor: '#333333'
+    jf_cb_UC:
+      accent_1: '#222222'
+      menu_bg_color: '#222222'
+      menu_text_color: '#ffffff'
+      menu_border_color: '#ffffff'
+      mobtool_bg: '#222222'
+      mobtool_text: '#ffffff'
+      mobtool_shadow: 'rgba(0, 0, 0, 0.25)'

@@ -1,0 +1,221 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+	{#<link rel="stylesheet" href="{{ url('gantry-theme://custom/css-compiled/bbbbbbbbbbbb.css') }}" type="text/css" />#}
+{% endblock %}
+
+{% block javascript %}
+	{#<script src="{{ url('gantry-theme://custom/css-compiled/sssssss.js') }}" type="text/javascript"></script>#}
+    {#<script type="text/javascript">alert("BOOM");</script>#}
+	<script type="text/javascript">
+		(function($){$(window).load(function(){
+			$(".jf_op_btn ").one( "click", function() {
+				$(".jf_switcher_panel").each(function(){
+					var jf_carousel 		= $(this);
+					var jf_items 			= jf_carousel.data('items');
+					jf_carousel.addClass("jf_carousel");
+					if (!jf_carousel.data("autoplay") === undefined) {
+						var jf_autoplay		= jf_carousel.data('autoplay');
+					} else {
+						var jf_autoplay		= false;
+					}
+					if (!jf_carousel.data("stopOnHover") === undefined) {
+						var jf_stopOnHover	= jf_carousel.data('stopOnHover');
+					} else {
+						var jf_stopOnHover	= false;
+					}
+					var jf_speed			= jf_carousel.data('speed');
+					if (!jf_carousel.data("navigation") === undefined || !jf_carousel.data("navigation") === false) {
+						var jf_navigation	= jf_carousel.data('navigation');
+					} else {
+						var jf_navigation	= false;
+					}
+					if (!jf_carousel.data("pagination") === undefined || !jf_carousel.data("pagination") === false) {
+						var jf_pagination	= jf_carousel.data('pagination');
+					} else {
+						var jf_pagination	= false;
+					}
+					if (!jf_carousel.data("lazyload") === undefined) {
+						var jf_lazyLoad	= jf_carousel.data('lazyload');
+					} else {
+						var jf_lazyLoad	= true;
+					}
+					if (!jf_carousel.data("autoHeight") === undefined) {
+						var jf_autoHeight	= jf_carousel.data('autoHeight');
+					} else {
+						var jf_autoHeight	= false;
+					}
+					if (!jf_carousel.data("mouseDrag") === undefined) {
+						var jf_mouseDrag	= jf_carousel.data('mouseDrag');
+					} else {
+						var jf_mouseDrag	= true;
+					}
+					if (!jf_carousel.data("touchDrag") === undefined) {
+						var jf_touchDrag	= jf_carousel.data('touchDrag');
+					} else {
+						var jf_touchDrag	= true;
+					}
+					if(jf_items == '1'){
+						jf_carousel.jf_owlCarousel({
+							items: jf_items,
+							singleItem: true,
+							autoPlay: jf_autoplay,
+							stopOnHover: jf_stopOnHover,
+							slideSpeed:	jf_speed,
+							paginationSpeed: jf_speed,
+							rewindSpeed: jf_speed,
+							navigation: jf_navigation,
+							navigationText : ['{{ '<i class="material-icons">arrow_back</i>'|e('js') }}','{{ '<i class="material-icons">arrow_forward</i>'|e('js') }}'],
+							pagination: jf_pagination,
+							lazyLoad: jf_lazyLoad,
+							autoHeight: jf_autoHeight,
+							mouseDrag: jf_mouseDrag,
+							touchDrag: jf_touchDrag
+						});
+					} else {
+						jf_carousel.jf_owlCarousel({
+							items: jf_items,
+							autoPlay: jf_autoplay,
+							stopOnHover: jf_stopOnHover,
+							slideSpeed:	jf_speed,
+							paginationSpeed: jf_speed,
+							rewindSpeed: jf_speed,
+							navigation: jf_navigation,
+							navigationText : ['{{ '<i class="material-icons">arrow_back</i>'|e('js') }}','{{ '<i class="material-icons">arrow_forward</i>'|e('js') }}'],
+							pagination: jf_pagination,
+							lazyLoad: jf_lazyLoad,
+							autoHeight: jf_autoHeight,
+							mouseDrag: jf_mouseDrag,
+							touchDrag: jf_touchDrag
+						});
+					}
+					
+				});
+			});
+		})})(jQuery);
+	</script>
+{% endblock %}
+
+{% block particle %}
+	<div class="clear"></div>
+	{{ particle.html_before|html|raw }}
+	
+	<div class="jf_tab_wrap {{ particle.colorclass|e }}{% if particle.dark %} dark{% endif %}{% if particle.shadow %} shadow{% endif %}">
+		<div class="jf_tab" style="text-align:{{ particle.tabTextAl|e }}">
+			<ul>
+				{% for item in particle.items %}<li><a class="{{ item.customclass|e }}" href="#{{ item.special_id|e }}">{{ item.tab_name|e }}</a></li>{% endfor %}
+			</ul>
+		</div>
+		<div class="content" style="text-align:{{ particle.tabContTextAl|e }}">
+			{% for item in particle.items %}<div id="{{ item.special_id|e }}"{% if item.tab_css %} style="{{ item.tab_css|e }}"{% endif %}>
+				<div class="jf_switcher_panel" 
+					data-items="{{ item.count_items|e }}" 
+					data-autoplay="{{ item.autoplay_delay|e }}"
+					{% if item.stopOnHover %}data-stopOnHover="true" {% else %} data-stopOnHover="false" {% endif %}
+					data-speed="{{ item.speed|e }}" 
+					{% if item.navigation %}data-navigation="true" {% else %} data-navigation="false" {% endif %}
+					{% if item.pagination %}data-pagination="true" {% else %} data-pagination="false" {% endif %}
+					{% if item.lazyload %}data-lazyload="true" {% else %} data-lazyload="false" {% endif %}
+					{% if item.autoHeight %}data-autoHeight="true" {% else %} data-autoHeight="false" {% endif %}
+					{% if item.mouseDrag %}data-mouseDrag="true" {% else %} data-mouseDrag="false" {% endif %}
+					{% if item.touchDrag %}data-touchDrag="true"{% else %} data-touchDrag="false"{% endif %}
+				>
+					{% if item.c_1_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_1_linktype == 'custom' %}{{ item.c_1_url|e }}{% elseif item.c_1_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_1_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_1_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_1_image)|e }}"{% else %}src="{{ url(item.c_1_image)|e }}"{% endif %} alt="{% if item.c_1_descr_title %}{{ item.c_1_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_1_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_1_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_2_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_2_linktype == 'custom' %}{{ item.c_2_url|e }}{% elseif item.c_2_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_2_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_2_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_2_image)|e }}"{% else %}src="{{ url(item.c_2_image)|e }}"{% endif %} alt="{% if item.c_2_descr_title %}{{ item.c_2_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_2_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_2_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_3_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_3_linktype == 'custom' %}{{ item.c_3_url|e }}{% elseif item.c_3_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_3_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_3_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_3_image)|e }}"{% else %}src="{{ url(item.c_3_image)|e }}"{% endif %} alt="{% if item.c_3_descr_title %}{{ item.c_3_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_3_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_3_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_4_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_4_linktype == 'custom' %}{{ item.c_4_url|e }}{% elseif item.c_4_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_4_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_4_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_4_image)|e }}"{% else %}src="{{ url(item.c_4_image)|e }}"{% endif %} alt="{% if item.c_4_descr_title %}{{ item.c_4_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_4_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_4_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_5_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_5_linktype == 'custom' %}{{ item.c_5_url|e }}{% elseif item.c_5_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_5_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_5_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_5_image)|e }}"{% else %}src="{{ url(item.c_5_image)|e }}"{% endif %} alt="{% if item.c_5_descr_title %}{{ item.c_5_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_5_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_5_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_6_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_6_linktype == 'custom' %}{{ item.c_6_url|e }}{% elseif item.c_6_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_6_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_6_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_6_image)|e }}"{% else %}src="{{ url(item.c_6_image)|e }}"{% endif %} alt="{% if item.c_6_descr_title %}{{ item.c_6_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_6_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_6_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_7_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_7_linktype == 'custom' %}{{ item.c_7_url|e }}{% elseif item.c_7_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_7_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_7_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_7_image)|e }}"{% else %}src="{{ url(item.c_7_image)|e }}"{% endif %} alt="{% if item.c_7_descr_title %}{{ item.c_7_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_7_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_7_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_8_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_8_linktype == 'custom' %}{{ item.c_8_url|e }}{% elseif item.c_8_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_8_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_8_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_8_image)|e }}"{% else %}src="{{ url(item.c_8_image)|e }}"{% endif %} alt="{% if item.c_8_descr_title %}{{ item.c_8_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_8_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_8_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_9_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_9_linktype == 'custom' %}{{ item.c_9_url|e }}{% elseif item.c_9_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_9_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_9_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_9_image)|e }}"{% else %}src="{{ url(item.c_9_image)|e }}"{% endif %} alt="{% if item.c_9_descr_title %}{{ item.c_9_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_9_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_9_descr_title|e }}</div>
+					</div>
+					{% endif %}
+					{% if item.c_10_image %}
+					<div class="item">
+						<a class="jf_hovers style_1 jf_style_switcher deep-purple" href="{% if item.c_10_linktype == 'custom' %}{{ item.c_10_url|e }}{% elseif item.c_10_linktype == 'current' %}{{ gantry.jf_g5_theme.joomla_current() }}{{ item.c_10_url|e }}{% else %}{{ gantry.jf_g5_theme.menu_item_url(item.c_10_menu_id|e) }}{% endif %}">
+							<img {% if item.lazyload %}class="lazyOwl" src="{{ url(item.image_lazyload_src)|e }}" data-src="{{ url(item.c_10_image)|e }}"{% else %}src="{{ url(item.c_10_image)|e }}"{% endif %} alt="{% if item.c_10_descr_title %}{{ item.c_10_descr_title|e }}{% endif %}">
+							<div class="jf_caption"><div><span>{{ item.c_10_caption_title|e }}</span></div></div>
+						</a>
+						<div style="padding:0 2em;font-size:1.15rem;margin:0.75rem 0 1.5rem 0;font-weight:300">{{ item.c_10_descr_title|e }}</div>
+					</div>
+					{% endif %}
+				</div>
+				{{ item.html_content|html|raw }}
+			</div>{% endfor %}
+		</div>
+	</div>
+		
+	<div class="clear"></div>
+	{{ particle.html_after|html|raw }}
+{% endblock %}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="file" method="upgrade">
+<name>Русский язык для Droptables</name>
+<packagename>Droptables ru-RU</packagename>
+<version>3.0</version>
+<creationDate>24 августа 2016</creationDate>
+<packager>aleksius.com</packager>
+<packagerEmail>email@aleksius.com</packagerEmail>
+<packagerurl>http://aleksius.com</packagerurl>
+<tag>ru-RU</tag>
+<author>Хорошевский Алексей</author>
+<authorEmail>email@aleksius.com</authorEmail>
+<authorUrl>http://aleksius.com</authorUrl>
+<description><![CDATA[
+  <div align="center">
+    <table border="0" width="90%">
+	    <tr>
+		    <td width="100%" colspan="2">
+			<div align="center"> <a href="http://aleksius.com/" target="_blank"><img border="0" src="http://aleksius.com/templates/aleksius_com.png" alt="aleksius.com" /></a>
+		      <div align="center"> 
+				<h3>Droptables 3.0</h3>
+		      </div>
+		      <hr />
+		    </td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Язык:</b></u></td>
+		    <td width="80%">Русский</td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Часть сайта:</b></u></td>
+		    <td width="80%">Административная</td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Автор:</b></u></td>
+		    <td width="80%">Хорошевский Алексей</td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Сайт:</b></u></td>
+		    <td width="80%"><a href="http://aleksius.com" target="_blank">http://aleksius.com</a></td>
+	    </tr>
+	    <tr>
+		    <td width="18%"><u><b>Перевод для версии:</b></u></td>
+		    <td width="80%">3.0</td>
+	    </tr>
+	    <tr>
+		    <td width="100%" colspan="2">
+		      <p align="center"><b><font color="#008000">Проверьте сайт <a href="http://aleksius.com/joomla/rusifikatory/rusifikator-droptables" target="_blank">Aleksius.com</a>, скачайте новую версию перевода данного расширения. Справка и обзор на русском языке «<a href="http://aleksius.com/joomla/rasshireniya/droptables" target="_blank">Обзор Droptables. Создание прайс листа в Joomla</a>».</font></b></td>
+	    </tr>
+    </table>
+  </div>]]></description>
+<fileset>
+<files folder="admin" target="administrator/components/com_droptables/language/ru-RU">
+		  <filename>ru-RU.com_droptables.ini</filename>
+		  <filename>ru-RU.com_droptables.sys.ini</filename>
+</files>
+<files folder="admin" target="plugins/editors-xtd/droptablesbtn/language/ru-RU">
+		  <filename>ru-RU.plg_editors-xtd_droptablesbtn.ini</filename>	
+		  <filename>ru-RU.plg_editors-xtd_droptablesbtn.sys.ini</filename>
+</files>
+</fileset>
+</extension>

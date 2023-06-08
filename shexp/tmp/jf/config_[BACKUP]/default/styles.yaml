@@ -1,0 +1,63 @@
+preset: deep-purple
+jf_color_base:
+  background: '#f5f5f5'
+  text-color: '#666666'
+  tag-color: '#4d4d4d'
+  accent-1: '#673ab7'
+  body-font: 'family=Roboto:300,500,700,400'
+jf_color_menu:
+  toplevel-default: 'rgba(255, 255, 255, 0.5)'
+  toplevel-active: '#ffffff'
+  dropdown-bg: '#ffffff'
+  dropdown-item: '#673ab7'
+  dropdown-active: 'rgba(0, 0, 0, 0.05)'
+  dropdown-border: 'rgba(0, 0, 0, 0.07)'
+jf_color_s_footer:
+  background: '#673ab7'
+  shadow: 'rgba(0, 0, 0, 0.25)'
+  text-color: 'rgba(255, 255, 255, 0.50)'
+  link-color: '#ffffff'
+  border-color: 'rgba(255, 255, 255, 0.15)'
+jf_color_s_footer_bottom:
+  background: '#673ab7'
+  text-color: 'rgba(255, 255, 255, 0.50)'
+  link-color: '#ffffff'
+  border-color: 'rgba(255, 255, 255, 0.15)'
+jf_color_s_header:
+  background: '#673ab7'
+  shadow: 'rgba(0, 0, 0, 0.25)'
+  text-color: '#ffffff'
+jf_color_s_main:
+  background: '#f5f5f5'
+  text-color: '#666666'
+jf_color_s_p_search:
+  background: '#673ab7'
+  text-color: '#ffffff'
+breakpoints:
+  large-desktop-container: 75rem
+  desktop-container: 60rem
+  tablet-container: 48rem
+  large-mobile-container: 30rem
+  mobile-menu-breakpoint: 48rem
+menu:
+  col-width: 180px
+  animation: g-fade-in-up
+jf_cb_UC:
+  accent_1: '#673ab7'
+  menu_bg_color: '#673ab7'
+  menu_text_color: '#ffffff'
+  menu_border_color: '#ffffff'
+  mobtool_bg: '#673ab7'
+  mobtool_text: '#ffffff'
+  mobtool_shadow: 'rgba(0, 0, 0, 0.25)'
+jf_ku_UC:
+  accent_1: '#673ab7'
+  text_color: '#666666'
+  tag_color: '#444444'
+  menu_bg_color: '#673ab7'
+  menu_text_color: '#ffffff'
+  menu_border_color: '#ffffff'
+  breadcrumb_color: '#888888'
+  topicProfileBG: '#f5f5f5'
+  panel_s_textcolor: '#dddddd'
+  panel_s_inputcolor: '#6036ab'

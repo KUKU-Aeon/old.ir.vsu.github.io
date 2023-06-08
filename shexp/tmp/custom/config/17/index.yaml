@@ -1,0 +1,131 @@
+name: 17
+timestamp: 1474297175
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/blocks.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  position:
+    position-position-5035: Breadcrumbs
+    position-position-4256: Footer
+    position-position-2595: 'Module Position'
+  messages:
+    system-messages-3600: 'System Messages'
+  custom:
+    custom-2880: 'Color Styles'
+    custom-2238: 'Box White'
+    custom-9346: 'Box Primary'
+    custom-3863: 'Box Info'
+    custom-6146: "Box\_Success"
+    custom-7997: 'Box Warning'
+    custom-6599: 'Box Danger'
+    custom-4651: 'Box Red'
+    custom-5776: 'Box Pink'
+    custom-9377: 'Box Purple'
+    custom-4843: 'Box Deep-Purple'
+    custom-7794: 'Box Indigo'
+    custom-2302: 'Box Blue'
+    custom-8124: 'Box Light-Blue'
+    custom-9516: 'Box Cyan'
+    custom-1324: 'Box Teal'
+    custom-1513: 'Box Green'
+    custom-3292: 'Box Light-Green'
+    custom-4660: 'Box Lime'
+    custom-4056: 'Box Yellow'
+    custom-1021: 'Box Amber'
+    custom-8475: 'Box Orange'
+    custom-6716: 'Box Deep-Orange'
+    custom-7432: 'Box Brown'
+    custom-4680: 'Box Grey'
+    custom-5229: 'Box Blue-Grey'
+    custom-3114: Dark-Grey
+    custom-9205: 'No Background'
+    custom-7871: 'Shadow Styles'
+    custom-2945: 'Shadow 1'
+    custom-8315: 'Shadow 2'
+    custom-5963: 'Shadow 3'
+    custom-4469: 'Shadow 4'
+    custom-3895: 'Shadow 5'
+    custom-2032: 'Additional Effects & Classes'
+    custom-6687: 'Text Align Left'
+    custom-1451: 'Text Align Center'
+    custom-2573: 'Text Align Right'
+    custom-4828: 'No Padding'
+    custom-4661: 'No Margin'
+    custom-5296: 'Custom HTML'
+    custom-8784: 'Custom HTML'
+    custom-2891: 'Custom HTML'
+    custom-7779: 'Custom HTML'
+  logo:
+    logo-9999: Logo
+    logo-9568: Logo
+    logo-4409: Logo
+  menu:
+    menu-7876: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-9724: 'JF Panel Buttons'
+  module:
+    position-module-1806: 'Module Instance'
+    position-module-8927: 'Module Instance'
+    position-module-2485: 'Module Instance'
+    position-module-3279: 'Module Instance'
+    position-module-1252: 'Module Instance'
+    position-module-7072: 'Module Instance'
+    position-module-8433: 'Module Instance'
+    position-module-3040: 'Module Instance'
+  jf_switcher:
+    jf_switcher-8859: 'JF Style Switcher'
+  copyright:
+    copyright-2928: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-5035: position-position-2694
+    system-messages-3600: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-5296: custom-3485
+    custom-8784: custom-1392
+    logo-9999: logo-5705
+    menu-7876: menu-2947
+    jf_panel_buttons-9724: jf_panel_buttons-3313
+    position-module-1806: position-module-1605
+    position-module-8927: position-module-6496
+    position-module-2485: position-module-1290
+    position-module-3279: position-module-3392
+    position-module-1252: position-module-7385
+    position-module-7072: position-module-2571
+    position-position-2595: position-position-5361
+    jf_switcher-8859: jf_switcher-6426
+    position-position-4256: position-position-9915
+    logo-9568: logo-2653
+    custom-2891: custom-5362
+    position-module-8433: position-module-3742
+    custom-7779: custom-4368
+    copyright-2928: copyright-3966
+    logo-4409: logo-9507
+    position-module-3040: position-module-4901

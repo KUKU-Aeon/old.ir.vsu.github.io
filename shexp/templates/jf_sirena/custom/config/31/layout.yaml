@@ -1,0 +1,259 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/p_tabs.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_p_tabs-3088
+    -
+      - jf_p_tabs-2928
+    -
+      - jf_p_tabs-6951
+  /main/:
+    -
+      - position-position-4005
+    -
+      - system-messages-8029
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+      class: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_p_tabs-3088:
+    title: 'JF Particle - Container Tabs: Style 1'
+    attributes:
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          type: default
+          bgColor: '#ffffff'
+          cover_src: ''
+          parallax_src: ''
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          video_type: vimeo
+          vimeo_id: ''
+          youtube_id: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\">Container Tabs: Style 1</h1>\n<h5 style=\"margin:0 0 70px 0\">An easy step to build layouts in a variety of combinations.</h5>"
+      items:
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_11
+          tab_css: ''
+          tab_name: 'THEME FEATURES'
+          html_content: "<br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_4\">\n\t<div class=\"jf_icon_box rightfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/iron_man.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Gantry 5</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box rightfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/bunch_flowers.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Material Design</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box rightfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/old_time_camera.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Ultra Responsive</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>\n\n<div class=\"jf_col grid_4\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/iphone_6s.png\" alt=\"\" data-animation=\"fadeInUp\" data-animation-type=\"onview\">\n</div>\n\n<div class=\"jf_col grid_4 last-column\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.8\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/landscape.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Tons of Pages</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\n\t<div class=\"jf_icon_box leftfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"1\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/panorama.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Various Sliders</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\n\t<div class=\"jf_icon_box leftfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"1.2\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/selfie.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Social Networking</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>"
+          name: 'Tab 1'
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_12
+          tab_css: ''
+          tab_name: 'ULTRA RESPONSIVE'
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_3\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/fantasy.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Easy Install</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/novel.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Multi-Purpose</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>\n<div class=\"jf_col grid_3\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/landscape.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Tons of Pages</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/panorama.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Various Sliders</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>\n<div class=\"jf_col grid_6 last-column\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/ipad_pro.png\" alt=\"\">\n</div>"
+          name: 'Tab 2'
+        -
+          customclass: jf_waves_dark_10
+          special_id: tab_13
+          tab_css: ''
+          tab_name: 'MATERIAL DESIGN'
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_8\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/macbook.png\" alt=\"\">\n</div>\n<div class=\"jf_col grid_4 last-column\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/fantasy.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Easy Install</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/novel.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\">Multi-Purpose</h3>\n\t\t<div class=\"descr\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>"
+          name: 'Tab 3'
+  jf_p_tabs-2928:
+    title: 'JF Particle - Container Tabs: Style 2'
+    attributes:
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\">Container Tabs: Style 2</h1>\n<h5 style=\"margin:0 0 70px 0\">An easy step to build layouts in a variety of combinations.</h5>"
+      dark: '1'
+      items:
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_21
+          tab_css: ''
+          tab_name: 'MATERIAL DESIGN'
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_7\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/1.png\" alt=\"\" style=\"margin-top:15px\">\n</div>\n<div class=\"jf_col grid_5 last-column\">\n\t<h1 style=\"font-weight:700;margin:100px 0 10px 0;font-size:52px\">Material Design</h1>\n\t<h5 style=\"margin:0 0 30px 0\">Built on latest trends in web technology</h5>\n\t<button class=\"jf_btn yellow l raised jf_waves_dark_10 waves-effect waves-dark-10\">Learn More</button>\n</div>"
+          name: 'Tab 1'
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_22
+          tab_css: ''
+          tab_name: 'GANTRY 5'
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_7\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/2.png\" alt=\"\">\n</div>\n<div class=\"jf_col grid_5 last-column\">\n\t<h1 style=\"font-weight:700;margin:100px 0 10px 0;font-size:52px\">Gantry 5</h1>\n\t<h5 style=\"margin:0 0 30px 0\">The Next Generation Theme Framework for Joomla!</h5>\n\t<button class=\"jf_btn yellow l raised jf_waves_dark_10 waves-effect waves-dark-10\">Learn More</button>\n</div>"
+          name: 'Tab 2'
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_23
+          tab_css: ''
+          tab_name: MULTI-PURPOSE
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_7\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/3.png\" alt=\"\">\n</div>\n<div class=\"jf_col grid_5 last-column\">\n\t<h1 style=\"font-weight:700;margin:100px 0 10px 0;font-size:52px\">Multi-Purpose</h1>\n\t<h5 style=\"margin:0 0 30px 0\">The Iconic Theme for any kind of website</h5>\n\t<button class=\"jf_btn yellow l raised jf_waves_dark_10 waves-effect waves-dark-10\">Learn More</button>\n</div>"
+          name: 'Tab 3'
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_24
+          tab_css: ''
+          tab_name: POWERFUL
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_8\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/4.png\" alt=\"\">\n</div>\n<div class=\"jf_col grid_4 last-column\">\n\t<h1 style=\"font-weight:700;margin:100px 0 10px 0;font-size:52px\">Powerful Features</h1>\n\t<h5 style=\"margin:0 0 30px 0\">Unique Template with Amazing Effects </h5>\n\t<button class=\"jf_btn yellow l raised jf_waves_dark_10 waves-effect waves-dark-10\">Learn More</button>\n</div>"
+          name: 'Tab 4'
+  jf_p_tabs-6951:
+    title: 'JF Particle - Container Tabs: Style 3'
+    attributes:
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '0'
+          type: default
+          bgColor: '#eeeeee'
+          cover_src: ''
+          parallax_src: 'gantry-media://jf/elements/parallax/screen_3.jpg'
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          video_type: vimeo
+          vimeo_id: ''
+          youtube_id: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\">Container Tabs: Style 3</h1>\n<h5 style=\"margin:0 0 70px 0\">An easy step to build layouts in a variety of combinations.</h5>"
+      dark: '1'
+      items:
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_31
+          tab_css: ''
+          tab_name: 'THEME FEATURES'
+          html_content: "<br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_4\">\n\t<div class=\"jf_icon_box rightfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/iron_man.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Gantry 5</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box rightfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/bunch_flowers.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Material Design</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box rightfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/old_time_camera.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Ultra Responsive</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>\n\n<div class=\"jf_col grid_4\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/iphone_6s.png\" alt=\"\" data-animation=\"fadeInUp\" data-animation-type=\"onview\">\n</div>\n\n<div class=\"jf_col grid_4 last-column\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.8\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/landscape.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Tons of Pages</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\n\t<div class=\"jf_icon_box leftfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"1\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/panorama.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Various Sliders</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\n\t<div class=\"jf_icon_box leftfloat animate_icon\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"1.2\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/selfie.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Social Networking</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>"
+          name: 'Tab 1'
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_32
+          tab_css: ''
+          tab_name: 'ULTRA RESPONSIVE'
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_3\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/fantasy.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Easy Install</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/novel.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Multi-Purpose</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>\n<div class=\"jf_col grid_3\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/landscape.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Tons of Pages</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/panorama.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Various Sliders</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>\n<div class=\"jf_col grid_6 last-column\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/ipad_pro.png\" alt=\"\">\n</div>"
+          name: 'Tab 2'
+        -
+          customclass: jf_waves_light_10
+          special_id: tab_33
+          tab_css: ''
+          tab_name: 'MATERIAL DESIGN'
+          html_content: "<br><br>\n<div class=\"clear\"></div>\n<div class=\"jf_col grid_8\" style=\"text-align:center\">\n\t<img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/particles/ctabs/macbook.png\" alt=\"\">\n</div>\n<div class=\"jf_col grid_4 last-column\">\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/fantasy.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Easy Install</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n\t<div class=\"jf_icon_box leftfloat animate_icon\">\n\t\t<div class=\"icon\"><img class=\"lazyload\" src=\"images/jf/blank.gif\" data-src=\"images/jf/elements/icon_boxes/novel.svg\" alt=\"\"></div>\n\t\t<h3 class=\"header\" style=\"color:#fff\">Multi-Purpose</h3>\n\t\t<div class=\"descr\" style=\"color:#fff\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo est.</div>\n\t</div>\n</div>"
+          name: 'Tab 3'
+  position-position-4005:
+    title: Breadcrumbs
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: position-position-2694
+  system-messages-8029:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: system-messages-1489

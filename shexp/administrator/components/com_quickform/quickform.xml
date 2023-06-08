@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>QuickForm</name>
+	<creationDate>2012-08-22</creationDate>
+	<author>Stylish</author>
+	<authorEmail>cccr-777@yandex.ru</authorEmail>
+	<authorUrl>http://bigemot.ru</authorUrl>
+	<copyright>(C) 2012 bigemot.ru</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.4.9</version>
+	<description>An easy system form</description>
+	<scriptfile>script.php</scriptfile>
+	<install>
+			<sql>
+					<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+			</sql>
+	</install>
+	<uninstall>
+			<sql>
+					<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+			</sql>
+	</uninstall>    
+
+	<updateservers>
+			<server type="extension" priority="1" name="QuickForm Updates">http://juice-lab.ru/downloads/quickform/update.xml</server>
+	</updateservers>
+
+	<modules>
+			<module folder="modules" module="mod_quickform" name="QuickForm" client="site" />
+	</modules>
+	
+	<plugins>
+			<plugin folder="plugins" plugin="quickform" name="Content - QuickForm" group="content" />
+	</plugins>
+	
+	<files folder="site">
+			<filename>index.html</filename>
+			<filename>quickform.php</filename>
+			<folder>helpers</folder>
+			<folder>css</folder>
+			<folder>js</folder>
+	</files>
+	
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_quickform.ini</language>
+		<language tag="ru-RU">language/ru-RU.com_quickform.ini</language>
+	</languages>
+	
+	<administration>
+		<menu>QuickForm</menu>
+		<files folder="admin">
+			<filename>quickform.php</filename>
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+			<folder>sql</folder>
+			<folder>views</folder>
+			<folder>helpers</folder>
+			<folder>help</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>controllers</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_quickform.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_quickform.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_quickform.sys.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_quickform.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

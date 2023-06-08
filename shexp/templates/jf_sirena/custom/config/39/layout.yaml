@@ -1,0 +1,1018 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home_fashion.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - position-module-9855
+  /main/:
+    -
+      - position-position-8591
+    -
+      - system-messages-7392
+  /full-width-section-2/:
+    -
+      - jf_p_carousel-5551
+    -
+      - jf_p_gallery-5506
+    -
+      - jf_p_ft_intro-3209
+    -
+      - jf_p_clients-8589
+    -
+      - position-module-4976
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: '2'
+      class: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  position-module-9855:
+    title: 'Module Instance'
+    attributes:
+      module_id: '114'
+      key: module-instance
+  position-position-8591:
+    title: Breadcrumbs
+    inherit:
+      outline: default
+      particle: position-position-2694
+      include:
+        - attributes
+        - block
+  system-messages-7392:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - attributes
+        - block
+  jf_p_carousel-5551:
+    title: 'JF Particle - Carousels: Style 2'
+    attributes:
+      padding: '130px 0 150px'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '0'
+          type: default
+          parallax_src: 'gantry-media://jf/elements/parallax/screen_1.jpg'
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '3'
+      style: style_2
+      html_before: '<h1 style="font-weight:700;margin:0 0 50px 0" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.2">New Collections 2016</h1>'
+      style_2:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/pages/home_fashion/collection_1.jpg'
+          c_image_alt: ''
+          c_caption: 'Women <span>Collection</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/pages/home_fashion/collection_2.jpg'
+          c_image_alt: ''
+          c_caption: 'Men <span>Collection</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/pages/home_fashion/collection_3.jpg'
+          c_image_alt: ''
+          c_caption: 'Accessories <span>lookbook</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+  jf_p_gallery-5506:
+    title: 'JF Particle - Gallery - Style 2 (Dark)'
+    attributes:
+      padding: '120px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#222222'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '0'
+          type: default
+          parallax_src: 'gantry-media://jf/pages/home_fashion/bg_sale.jpg'
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      html_before: "<h1 style=\"font-weight:500;margin:0 0 10px 0;color:#fff;font-size:42px\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">50% SALE for Collection 2015</h1>\n<h5 style=\"margin:0 0 70px 0;color:#fff\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Sale for all collection 2015 - Limited Time Only!</h5>"
+      style_2:
+        -
+          grid: '4'
+          grid_last: '0'
+          type: anim_1
+          title: 'Women Collection'
+          theme: dark
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          thumb_1: 'gantry-media://jf/pages/home_fashion/1_thumb.jpg'
+          thumb_2: 'gantry-media://jf/pages/home_fashion/2_thumb.jpg'
+          thumb_3: 'gantry-media://jf/pages/home_fashion/3_thumb.jpg'
+          thumb_4: 'gantry-media://jf/pages/home_fashion/4_thumb.jpg'
+          thumb_5: 'gantry-media://jf/pages/home_fashion/5_thumb.jpg'
+          thumb_6: 'gantry-media://jf/pages/home_fashion/6_thumb.jpg'
+          thumb_7: 'gantry-media://jf/pages/home_fashion/7_thumb.jpg'
+          thumb_8: ''
+          thumb_9: ''
+          linktype: photoswipe
+          image_1_url: 'gantry-media://jf/pages/home_fashion/1_thumb.jpg'
+          image_1_photoswipe_image_width: '800'
+          image_1_photoswipe_image_height: '533'
+          image_1_photoswipe_author: 'John Doe'
+          image_1_photoswipe_caption: 'Lorem Ipsum'
+          image_1_venobox_gallery: gallery_1
+          image_1_venobox_author: 'John Doe'
+          image_2_url: 'gantry-media://jf/pages/home_fashion/2_thumb.jpg'
+          image_2_photoswipe_image_width: '800'
+          image_2_photoswipe_image_height: '533'
+          image_2_photoswipe_author: 'Jane Smith'
+          image_2_photoswipe_caption: 'Nunc non'
+          image_2_venobox_gallery: gallery_1
+          image_2_venobox_author: 'Jane Smith'
+          image_3_url: 'gantry-media://jf/pages/home_fashion/3_thumb.jpg'
+          image_3_photoswipe_image_width: '800'
+          image_3_photoswipe_image_height: '533'
+          image_3_photoswipe_author: 'Mark Howard'
+          image_3_photoswipe_caption: 'Adipiscing ultricies'
+          image_3_venobox_gallery: gallery_1
+          image_3_venobox_author: 'Mark Howard'
+          image_4_url: 'gantry-media://jf/pages/home_fashion/4_thumb.jpg'
+          image_4_photoswipe_image_width: '800'
+          image_4_photoswipe_image_height: '533'
+          image_4_photoswipe_author: 'Andy Richards'
+          image_4_photoswipe_caption: 'Non turpis'
+          image_4_venobox_gallery: gallery_1
+          image_4_venobox_author: 'Andy Richards'
+          image_5_url: 'gantry-media://jf/pages/home_fashion/5_thumb.jpg'
+          image_5_photoswipe_image_width: '800'
+          image_5_photoswipe_image_height: '533'
+          image_5_photoswipe_author: 'Tony Down'
+          image_5_photoswipe_caption: 'Vel quis rhoncus'
+          image_5_venobox_gallery: gallery_1
+          image_5_venobox_author: 'Tony Down'
+          image_6_url: 'gantry-media://jf/pages/home_fashion/6_thumb.jpg'
+          image_6_photoswipe_image_width: '800'
+          image_6_photoswipe_image_height: '533'
+          image_6_photoswipe_author: 'Mark Lion'
+          image_6_photoswipe_caption: 'Eros mid dapibus'
+          image_6_venobox_gallery: gallery_1
+          image_6_venobox_author: 'Mark Lion'
+          image_7_url: 'gantry-media://jf/pages/home_fashion/7_thumb.jpg'
+          image_7_photoswipe_image_width: '800'
+          image_7_photoswipe_image_height: '533'
+          image_7_photoswipe_author: 'Tommy Dole'
+          image_7_photoswipe_caption: 'Mus nunc'
+          image_7_venobox_gallery: gallery_1
+          image_7_venobox_author: 'Tommy Dole'
+          image_8_url: 'gantry-media://jf/pages/home_fashion/8_thumb.jpg'
+          image_8_photoswipe_image_width: '800'
+          image_8_photoswipe_image_height: '533'
+          image_8_photoswipe_author: 'Jane Cole'
+          image_8_photoswipe_caption: 'Ultricies proin'
+          image_8_venobox_gallery: gallery_1
+          image_8_venobox_author: 'Jane Cole'
+          image_9_url: 'gantry-media://jf/pages/home_fashion/9_thumb.jpg'
+          image_9_photoswipe_image_width: '800'
+          image_9_photoswipe_image_height: '533'
+          image_9_photoswipe_author: 'Ann Rose'
+          image_9_photoswipe_caption: 'Placerat sed'
+          image_9_venobox_gallery: gallery_1
+          image_9_venobox_author: 'Ann Rose'
+          image_10_url: ''
+          image_10_photoswipe_image_width: '450'
+          image_10_photoswipe_image_height: '450'
+          image_10_photoswipe_author: ''
+          image_10_photoswipe_caption: ''
+          image_10_venobox_gallery: ''
+          image_10_venobox_author: ''
+          image_11_url: ''
+          image_11_photoswipe_image_width: '450'
+          image_11_photoswipe_image_height: '450'
+          image_11_photoswipe_author: ''
+          image_11_photoswipe_caption: ''
+          image_11_venobox_gallery: ''
+          image_11_venobox_author: ''
+          image_12_url: ''
+          image_12_photoswipe_image_width: '450'
+          image_12_photoswipe_image_height: '450'
+          image_12_photoswipe_author: ''
+          image_12_photoswipe_caption: ''
+          image_12_venobox_gallery: ''
+          image_12_venobox_author: ''
+          image_13_url: ''
+          image_13_photoswipe_image_width: '450'
+          image_13_photoswipe_image_height: '450'
+          image_13_photoswipe_author: ''
+          image_13_photoswipe_caption: ''
+          image_13_venobox_gallery: ''
+          image_13_venobox_author: ''
+          image_14_url: ''
+          image_14_photoswipe_image_width: '450'
+          image_14_photoswipe_image_height: '450'
+          image_14_photoswipe_author: ''
+          image_14_photoswipe_caption: ''
+          image_14_venobox_gallery: ''
+          image_14_venobox_author: ''
+          image_15_url: ''
+          image_15_photoswipe_image_width: '450'
+          image_15_photoswipe_image_height: '450'
+          image_15_photoswipe_author: ''
+          image_15_photoswipe_caption: ''
+          image_15_venobox_gallery: ''
+          image_15_venobox_author: ''
+          image_16_url: ''
+          image_16_photoswipe_image_width: '450'
+          image_16_photoswipe_image_height: '450'
+          image_16_photoswipe_author: ''
+          image_16_photoswipe_caption: ''
+          image_16_venobox_gallery: ''
+          image_16_venobox_author: ''
+          image_17_url: ''
+          image_17_photoswipe_image_width: '450'
+          image_17_photoswipe_image_height: '450'
+          image_17_photoswipe_author: ''
+          image_17_photoswipe_caption: ''
+          image_17_venobox_gallery: ''
+          image_17_venobox_author: ''
+          image_18_url: ''
+          image_18_photoswipe_image_width: '450'
+          image_18_photoswipe_image_height: '450'
+          image_18_photoswipe_author: ''
+          image_18_photoswipe_caption: ''
+          image_18_venobox_gallery: ''
+          image_18_venobox_author: ''
+          image_19_url: ''
+          image_19_photoswipe_image_width: '450'
+          image_19_photoswipe_image_height: '450'
+          image_19_photoswipe_author: ''
+          image_19_photoswipe_caption: ''
+          image_19_venobox_gallery: ''
+          image_19_venobox_author: ''
+          image_20_url: ''
+          image_20_photoswipe_image_width: '450'
+          image_20_photoswipe_image_height: '450'
+          image_20_photoswipe_author: ''
+          image_20_photoswipe_caption: ''
+          image_20_venobox_gallery: ''
+          image_20_venobox_author: ''
+          name: 'Set 1'
+        -
+          grid: '4'
+          grid_last: '0'
+          type: anim_2
+          title: 'Men Collection'
+          theme: dark
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          thumb_1: 'gantry-media://jf/pages/home_fashion/1_thumb.jpg'
+          thumb_2: 'gantry-media://jf/pages/home_fashion/3_thumb.jpg'
+          thumb_3: 'gantry-media://jf/pages/home_fashion/4_thumb.jpg'
+          thumb_4: 'gantry-media://jf/pages/home_fashion/5_thumb.jpg'
+          thumb_5: 'gantry-media://jf/pages/home_fashion/2_thumb.jpg'
+          thumb_6: ''
+          thumb_7: ''
+          thumb_8: ''
+          thumb_9: ''
+          linktype: venobox
+          image_1_url: 'gantry-media://jf/pages/home_fashion/1_thumb.jpg'
+          image_1_photoswipe_image_width: '800'
+          image_1_photoswipe_image_height: '533'
+          image_1_photoswipe_author: 'John Doe'
+          image_1_photoswipe_caption: 'Lorem Ipsum'
+          image_1_venobox_gallery: gallery_2
+          image_1_venobox_author: 'John Doe'
+          image_2_url: 'gantry-media://jf/pages/home_fashion/2_thumb.jpg'
+          image_2_photoswipe_image_width: '800'
+          image_2_photoswipe_image_height: '533'
+          image_2_photoswipe_author: 'Jane Smith'
+          image_2_photoswipe_caption: 'Nunc non'
+          image_2_venobox_gallery: gallery_2
+          image_2_venobox_author: 'Jane Smith'
+          image_3_url: 'gantry-media://jf/pages/home_fashion/3_thumb.jpg'
+          image_3_photoswipe_image_width: '800'
+          image_3_photoswipe_image_height: '533'
+          image_3_photoswipe_author: 'Mark Howard'
+          image_3_photoswipe_caption: 'Adipiscing ultricies'
+          image_3_venobox_gallery: gallery_2
+          image_3_venobox_author: 'Mark Howard'
+          image_4_url: 'gantry-media://jf/pages/home_fashion/4_thumb.jpg'
+          image_4_photoswipe_image_width: '800'
+          image_4_photoswipe_image_height: '533'
+          image_4_photoswipe_author: 'Andy Richards'
+          image_4_photoswipe_caption: 'Non turpis'
+          image_4_venobox_gallery: gallery_2
+          image_4_venobox_author: 'Andy Richards'
+          image_5_url: 'gantry-media://jf/pages/home_fashion/5_thumb.jpg'
+          image_5_photoswipe_image_width: '800'
+          image_5_photoswipe_image_height: '533'
+          image_5_photoswipe_author: 'Tony Down'
+          image_5_photoswipe_caption: 'Vel quis rhoncus'
+          image_5_venobox_gallery: gallery_2
+          image_5_venobox_author: 'Tony Down'
+          image_6_url: 'gantry-media://jf/pages/home_fashion/6_thumb.jpg'
+          image_6_photoswipe_image_width: '800'
+          image_6_photoswipe_image_height: '533'
+          image_6_photoswipe_author: 'Mark Lion'
+          image_6_photoswipe_caption: 'Eros mid dapibus'
+          image_6_venobox_gallery: gallery_2
+          image_6_venobox_author: 'Mark Lion'
+          image_7_url: 'gantry-media://jf/pages/home_fashion/7_thumb.jpg'
+          image_7_photoswipe_image_width: '800'
+          image_7_photoswipe_image_height: '533'
+          image_7_photoswipe_author: 'Tommy Dole'
+          image_7_photoswipe_caption: 'Mus nunc'
+          image_7_venobox_gallery: gallery_2
+          image_7_venobox_author: 'Tommy Dole'
+          image_8_url: 'gantry-media://jf/pages/home_fashion/8_thumb.jpg'
+          image_8_photoswipe_image_width: '800'
+          image_8_photoswipe_image_height: '533'
+          image_8_photoswipe_author: 'Jane Cole'
+          image_8_photoswipe_caption: 'Ultricies proin'
+          image_8_venobox_gallery: gallery_2
+          image_8_venobox_author: 'Jane Cole'
+          image_9_url: 'gantry-media://jf/pages/home_fashion/9_thumb.jpg'
+          image_9_photoswipe_image_width: '800'
+          image_9_photoswipe_image_height: '533'
+          image_9_photoswipe_author: 'Ann Rose'
+          image_9_photoswipe_caption: 'Placerat sed'
+          image_9_venobox_gallery: gallery_2
+          image_9_venobox_author: 'Ann Rose'
+          image_10_url: ''
+          image_10_photoswipe_image_width: '450'
+          image_10_photoswipe_image_height: '450'
+          image_10_photoswipe_author: ''
+          image_10_photoswipe_caption: ''
+          image_10_venobox_gallery: ''
+          image_10_venobox_author: ''
+          image_11_url: ''
+          image_11_photoswipe_image_width: '450'
+          image_11_photoswipe_image_height: '450'
+          image_11_photoswipe_author: ''
+          image_11_photoswipe_caption: ''
+          image_11_venobox_gallery: ''
+          image_11_venobox_author: ''
+          image_12_url: ''
+          image_12_photoswipe_image_width: '450'
+          image_12_photoswipe_image_height: '450'
+          image_12_photoswipe_author: ''
+          image_12_photoswipe_caption: ''
+          image_12_venobox_gallery: ''
+          image_12_venobox_author: ''
+          image_13_url: ''
+          image_13_photoswipe_image_width: '450'
+          image_13_photoswipe_image_height: '450'
+          image_13_photoswipe_author: ''
+          image_13_photoswipe_caption: ''
+          image_13_venobox_gallery: ''
+          image_13_venobox_author: ''
+          image_14_url: ''
+          image_14_photoswipe_image_width: '450'
+          image_14_photoswipe_image_height: '450'
+          image_14_photoswipe_author: ''
+          image_14_photoswipe_caption: ''
+          image_14_venobox_gallery: ''
+          image_14_venobox_author: ''
+          image_15_url: ''
+          image_15_photoswipe_image_width: '450'
+          image_15_photoswipe_image_height: '450'
+          image_15_photoswipe_author: ''
+          image_15_photoswipe_caption: ''
+          image_15_venobox_gallery: ''
+          image_15_venobox_author: ''
+          image_16_url: ''
+          image_16_photoswipe_image_width: '450'
+          image_16_photoswipe_image_height: '450'
+          image_16_photoswipe_author: ''
+          image_16_photoswipe_caption: ''
+          image_16_venobox_gallery: ''
+          image_16_venobox_author: ''
+          image_17_url: ''
+          image_17_photoswipe_image_width: '450'
+          image_17_photoswipe_image_height: '450'
+          image_17_photoswipe_author: ''
+          image_17_photoswipe_caption: ''
+          image_17_venobox_gallery: ''
+          image_17_venobox_author: ''
+          image_18_url: ''
+          image_18_photoswipe_image_width: '450'
+          image_18_photoswipe_image_height: '450'
+          image_18_photoswipe_author: ''
+          image_18_photoswipe_caption: ''
+          image_18_venobox_gallery: ''
+          image_18_venobox_author: ''
+          image_19_url: ''
+          image_19_photoswipe_image_width: '450'
+          image_19_photoswipe_image_height: '450'
+          image_19_photoswipe_author: ''
+          image_19_photoswipe_caption: ''
+          image_19_venobox_gallery: ''
+          image_19_venobox_author: ''
+          image_20_url: ''
+          image_20_photoswipe_image_width: '450'
+          image_20_photoswipe_image_height: '450'
+          image_20_photoswipe_author: ''
+          image_20_photoswipe_caption: ''
+          image_20_venobox_gallery: ''
+          image_20_venobox_author: ''
+          name: 'Set 2'
+        -
+          grid: '4'
+          grid_last: '1'
+          type: anim_3
+          title: Accessories
+          theme: dark
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          thumb_1: 'gantry-media://jf/pages/home_fashion/1_thumb.jpg'
+          thumb_2: 'gantry-media://jf/pages/home_fashion/2_thumb.jpg'
+          thumb_3: 'gantry-media://jf/pages/home_fashion/9_thumb.jpg'
+          thumb_4: 'gantry-media://jf/pages/home_fashion/4_thumb.jpg'
+          thumb_5: 'gantry-media://jf/pages/home_fashion/5_thumb.jpg'
+          thumb_6: 'gantry-media://jf/pages/home_fashion/6_thumb.jpg'
+          thumb_7: 'gantry-media://jf/pages/home_fashion/7_thumb.jpg'
+          thumb_8: 'gantry-media://jf/pages/home_fashion/8_thumb.jpg'
+          thumb_9: 'gantry-media://jf/pages/home_fashion/3_thumb.jpg'
+          linktype: photoswipe
+          image_1_url: 'gantry-media://jf/pages/home_fashion/1_thumb.jpg'
+          image_1_photoswipe_image_width: '800'
+          image_1_photoswipe_image_height: '533'
+          image_1_photoswipe_author: 'John Doe'
+          image_1_photoswipe_caption: 'Lorem Ipsum'
+          image_1_venobox_gallery: gallery_3
+          image_1_venobox_author: 'John Doe'
+          image_2_url: 'gantry-media://jf/pages/home_fashion/2_thumb.jpg'
+          image_2_photoswipe_image_width: '800'
+          image_2_photoswipe_image_height: '533'
+          image_2_photoswipe_author: 'Jane Smith'
+          image_2_photoswipe_caption: 'Nunc non'
+          image_2_venobox_gallery: gallery_3
+          image_2_venobox_author: 'Jane Smith'
+          image_3_url: 'gantry-media://jf/pages/home_fashion/3_thumb.jpg'
+          image_3_photoswipe_image_width: '800'
+          image_3_photoswipe_image_height: '533'
+          image_3_photoswipe_author: 'Mark Howard'
+          image_3_photoswipe_caption: 'Adipiscing ultricies'
+          image_3_venobox_gallery: gallery_3
+          image_3_venobox_author: 'Mark Howard'
+          image_4_url: 'gantry-media://jf/pages/home_fashion/4_thumb.jpg'
+          image_4_photoswipe_image_width: '800'
+          image_4_photoswipe_image_height: '533'
+          image_4_photoswipe_author: 'Andy Richards'
+          image_4_photoswipe_caption: 'Non turpis'
+          image_4_venobox_gallery: gallery_3
+          image_4_venobox_author: 'Andy Richards'
+          image_5_url: 'gantry-media://jf/pages/home_fashion/5_thumb.jpg'
+          image_5_photoswipe_image_width: '800'
+          image_5_photoswipe_image_height: '533'
+          image_5_photoswipe_author: 'Tony Down'
+          image_5_photoswipe_caption: 'Vel quis rhoncus'
+          image_5_venobox_gallery: gallery_3
+          image_5_venobox_author: 'Tony Down'
+          image_6_url: 'gantry-media://jf/pages/home_fashion/6_thumb.jpg'
+          image_6_photoswipe_image_width: '800'
+          image_6_photoswipe_image_height: '533'
+          image_6_photoswipe_author: 'Mark Lion'
+          image_6_photoswipe_caption: 'Eros mid dapibus'
+          image_6_venobox_gallery: gallery_1
+          image_6_venobox_author: 'Mark Lion'
+          image_7_url: 'gantry-media://jf/pages/home_fashion/7_thumb.jpg'
+          image_7_photoswipe_image_width: '800'
+          image_7_photoswipe_image_height: '533'
+          image_7_photoswipe_author: 'Tommy Dole'
+          image_7_photoswipe_caption: 'Mus nunc'
+          image_7_venobox_gallery: gallery_3
+          image_7_venobox_author: 'Tommy Dole'
+          image_8_url: 'gantry-media://jf/pages/home_fashion/8_thumb.jpg'
+          image_8_photoswipe_image_width: '800'
+          image_8_photoswipe_image_height: '533'
+          image_8_photoswipe_author: 'Jane Cole'
+          image_8_photoswipe_caption: 'Ultricies proin'
+          image_8_venobox_gallery: gallery_3
+          image_8_venobox_author: 'Jane Cole'
+          image_9_url: 'gantry-media://jf/pages/home_fashion/9_thumb.jpg'
+          image_9_photoswipe_image_width: '800'
+          image_9_photoswipe_image_height: '533'
+          image_9_photoswipe_author: 'Ann Rose'
+          image_9_photoswipe_caption: 'Placerat sed'
+          image_9_venobox_gallery: gallery_3
+          image_9_venobox_author: 'Ann Rose'
+          image_10_url: ''
+          image_10_photoswipe_image_width: '450'
+          image_10_photoswipe_image_height: '450'
+          image_10_photoswipe_author: ''
+          image_10_photoswipe_caption: ''
+          image_10_venobox_gallery: ''
+          image_10_venobox_author: ''
+          image_11_url: ''
+          image_11_photoswipe_image_width: '450'
+          image_11_photoswipe_image_height: '450'
+          image_11_photoswipe_author: ''
+          image_11_photoswipe_caption: ''
+          image_11_venobox_gallery: ''
+          image_11_venobox_author: ''
+          image_12_url: ''
+          image_12_photoswipe_image_width: '450'
+          image_12_photoswipe_image_height: '450'
+          image_12_photoswipe_author: ''
+          image_12_photoswipe_caption: ''
+          image_12_venobox_gallery: ''
+          image_12_venobox_author: ''
+          image_13_url: ''
+          image_13_photoswipe_image_width: '450'
+          image_13_photoswipe_image_height: '450'
+          image_13_photoswipe_author: ''
+          image_13_photoswipe_caption: ''
+          image_13_venobox_gallery: ''
+          image_13_venobox_author: ''
+          image_14_url: ''
+          image_14_photoswipe_image_width: '450'
+          image_14_photoswipe_image_height: '450'
+          image_14_photoswipe_author: ''
+          image_14_photoswipe_caption: ''
+          image_14_venobox_gallery: ''
+          image_14_venobox_author: ''
+          image_15_url: ''
+          image_15_photoswipe_image_width: '450'
+          image_15_photoswipe_image_height: '450'
+          image_15_photoswipe_author: ''
+          image_15_photoswipe_caption: ''
+          image_15_venobox_gallery: ''
+          image_15_venobox_author: ''
+          image_16_url: ''
+          image_16_photoswipe_image_width: '450'
+          image_16_photoswipe_image_height: '450'
+          image_16_photoswipe_author: ''
+          image_16_photoswipe_caption: ''
+          image_16_venobox_gallery: ''
+          image_16_venobox_author: ''
+          image_17_url: ''
+          image_17_photoswipe_image_width: '450'
+          image_17_photoswipe_image_height: '450'
+          image_17_photoswipe_author: ''
+          image_17_photoswipe_caption: ''
+          image_17_venobox_gallery: ''
+          image_17_venobox_author: ''
+          image_18_url: ''
+          image_18_photoswipe_image_width: '450'
+          image_18_photoswipe_image_height: '450'
+          image_18_photoswipe_author: ''
+          image_18_photoswipe_caption: ''
+          image_18_venobox_gallery: ''
+          image_18_venobox_author: ''
+          image_19_url: ''
+          image_19_photoswipe_image_width: '450'
+          image_19_photoswipe_image_height: '450'
+          image_19_photoswipe_author: ''
+          image_19_photoswipe_caption: ''
+          image_19_venobox_gallery: ''
+          image_19_venobox_author: ''
+          image_20_url: ''
+          image_20_photoswipe_image_width: '450'
+          image_20_photoswipe_image_height: '450'
+          image_20_photoswipe_author: ''
+          image_20_photoswipe_caption: ''
+          image_20_venobox_gallery: ''
+          image_20_venobox_author: ''
+          name: 'Set 3'
+  jf_p_ft_intro-3209:
+    title: 'JF Particle - Features Intro - Style 2'
+    attributes:
+      padding: '80px 0 60px'
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons" style="color:#673ab7">flight_takeoff</i>'
+          html_header: '<a href="#">FREE SHIPPING</a>'
+          html_descr: "on all orders (3-5 bussiness days)<br>\nReturn after 30 days."
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          grid: '4'
+          grid_last: '0'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons" style="color:#673ab7">headset_mic</i>'
+          html_header: '<a href="#">24/07 SUPPORT HOUR</a>'
+          html_descr: 'Support Chanel is open 24/07 and ready to offer quality services.'
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          grid: '4'
+          grid_last: '1'
+          animate_icon: '1'
+          floaticon: leftfloat
+          icon_type: html
+          image_icon: ''
+          html_icon: '<i class="material-icons" style="color:#673ab7">stars</i>'
+          html_header: '<a href="#">UNIQUE PRODUCTS</a>'
+          html_descr: 'We bring to you the best products with unique design, trending and the best quality.'
+          html_bottom: ''
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+  jf_p_clients-8589:
+    title: 'JF Particle - Clients - Style 4 (Hover Slide)'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#333333'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '0'
+          type: default
+          parallax_src: 'gantry-media://jf/pages/home_fashion/bg_brands.jpg'
+          url: images/jf/videos/
+          vidname: ''
+          controls: '0'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: '<h1 style="font-weight:700;margin:0 0 30px 0;color:#fff" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.2">The Brands</h1>'
+      clients:
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          bg: '0'
+          bg_color: '#673ab7'
+          image_def: 'gantry-media://jf/particles/clients/1_light.png'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/1_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/2_light.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/2_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/3_light.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/3_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/4_light.png'
+          border: '1'
+          border_width: '0 1px 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/4_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/5_light.png'
+          border: '1'
+          border_width: '0 0 1px 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/5_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1'
+          name: 'Item 5'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/6_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/6_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.2'
+          name: 'Item 6'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/7_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/7_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.4'
+          name: 'Item 7'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/8_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/8_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.6'
+          name: 'Item 8'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/9_light.png'
+          border: '1'
+          border_width: '0 1px 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/9_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '1.8'
+          name: 'Item 9'
+        -
+          grid: 1-5
+          client_name: ''
+          client_url: '#'
+          class: jf_waves_light_30
+          slide: '1'
+          image_def: 'gantry-media://jf/particles/clients/10_light.png'
+          border: '1'
+          border_width: '0 0 0 0'
+          border_color: 'rgba(255, 255, 255, 0.10)'
+          image_defOpacity: '1'
+          image_hov: 'gantry-media://jf/particles/clients/10_light.png'
+          image_hovOpacity: '1'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '2'
+          name: 'Item 10'
+  position-module-4976:
+    title: 'Module Instance'
+    attributes:
+      module_id: '111'
+      key: module-instance
+    block:
+      extra:
+        -
+          data-animation: fadeInUp
+        -
+          data-animation-type: onview
+        -
+          data-animation-delay: '0.2'

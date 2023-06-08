@@ -1,0 +1,251 @@
+#quickform .quickformInner{
+	width: 1000px;
+	text-align: left;
+	background-color: #FDFDFD;
+	padding: 20px;
+	min-height: 500px;
+	position: relative;
+}
+#quickform .inp_block2 input {
+	padding: 1px;	
+}
+#quickform .l_td {
+	text-align: right;
+	padding: 5px 10px;
+	width: 210px;
+	color: #999;
+}
+#quickform .c_td {
+	text-align: left;
+	padding: 5px 20px;
+	width: 580px;
+}
+#quickform .r_td {
+	text-align: left;
+	padding: 5px 10px;
+	color: #5C6943;
+	width: 210px;
+}
+#quickform .r_td a {
+	color: #5C6943;
+}
+#quickform .r_td .radius a{
+	width: auto;
+	display: block;
+	float: left;
+	margin: 1px 4px;
+	background-color: #F8FFF4;
+	padding: 2px 2px;
+}
+#quickform .addprice {
+	background-color: #F8FFF4;
+	padding: 2px 2px;
+	margin-left: 20px;
+}
+#quickform table td {
+	vertical-align: top;
+}
+#quickform .l_td span {
+	padding: 0 5px;
+	color: #999;
+	font-size: 16px;
+	cursor: pointer;
+	margin-right: -15px;
+}
+#quickform .inp_title {
+	padding: 2px 5px;
+	width: 500px;
+}
+#quickform .inp_opt {
+	padding: 2px 5px;
+	width: 200px;
+	margin:5px  10px 5px 10px;
+}
+#quickform .opt_svz {
+	margin:5px  0px 5px 20px;
+	width: 10px;
+	display: inline-block;
+}
+#quickform .inp_svz {
+	padding: 2px 0px;
+	width: 20px;
+	margin:5px  0px 5px  10px;
+}
+#quickform .opt_price {
+	padding: 2px 5px;
+	width: 50px;
+	margin:5px  10px;
+}
+#quickform .opt_price2 {
+	padding: 2px 3px;
+	width: 30px;
+	margin:0 7px 0 0;
+}
+#quickform .inp_cur {
+	padding: 2px 5px;
+	width: 50px;
+}
+#quickform .opt_modifer {
+	padding: 1px 5px;
+	width: 8px;
+	margin: 0 4px 0 10px;
+	font-size: 16px;
+}
+#setlink {
+	position: relative;
+	text-align: center;
+}
+#setlink a {
+/*	display: block;*/
+	/*width: auto;*/
+}
+#setmenu {
+	text-align: left;
+}
+#quickform .inp_sel {
+	padding: 2px 5px;
+	width: 300px;
+	float: left;
+	display: block;
+	font-size: 12px;
+}
+#quickform .block_price {
+	padding: 2px 5px;
+	width: 300px;
+	float: left;
+	display: block;
+	font-size: 12px;
+	color: #096;
+	text-align: center;
+}
+#quickform input.inp_ch {
+	padding: 2px 5px;
+	width: 175px;
+	float: left;
+	display: block;
+	margin-right: 10px;
+}
+#quickform .c_td a span {
+	padding: 0 5px;
+	display: block;
+	border: 1px solid #CCC;
+	margin: 0 20px 0 16px;
+	float: left;
+	height: 20px;
+	color: #C30;
+}
+#quickform .c_td a span.sbut {
+	font-size: 10px;
+	margin: 0 2px;
+	padding-top: 3px;
+	height: 17px;
+	color: #00F;
+}
+#quickform .c_td div div input{
+	color: #AEAEAE;
+	border: 1px solid #E5E5E5;
+}
+#quickform .c_td div div span {
+	font-size: 10px;
+	color: #AEAEAE;
+	cursor: default;
+}
+#quickform .c_td div div span:hover {
+	color: #164324;
+}
+#quickform a.opt_del{
+	padding: 1px 5px;
+	border: 1px solid #CCC;
+	margin: 0 20px;
+	color: #F00;
+	display: inline-block;
+}
+#quickform span.ch_block input{
+	height: 15px;
+}
+#quickform span.ch_block {
+	padding: 1px 20px 1px 10px;
+	float: left;
+	width: 20px;
+}
+#quickform span.inp_block {
+	padding: 1px 30px 1px 30px;
+	float: left;
+}
+.radius{
+	padding: 5px 2px;
+	border-radius: 5px;
+	border: 1px solid #FFA8A8;
+	border-color: #FFA8A8;
+	width: 100px;
+	position: fixed;
+	background-color: #FFF;
+	top: 320px;
+	left: 50%;
+	margin-left: 380px;
+}
+.togl {
+	margin: 0 5px 0 -12px;
+	display: inline-block;
+	color: #AAD5A8;
+}
+#quickform div.venz {
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	height: 8px;
+	margin: 5px 10px 10px;
+}
+#quickform div.venz2 {
+	border: 1px solid #E5E5E5;
+	border-radius: 5px;
+	margin: 5px 10px 10px;
+	padding: 5px 10px;
+	color: #666;
+}
+#quickform div.venz2 select {
+	margin: 0 30px 0 0;
+}
+#qfcss {
+	width: 100px;
+}
+#formuls{
+	border: 1px solid #CCC;
+	padding: 5px;
+}
+ .inp_max{
+	width: 40px;
+	margin-right: 10px;
+}
+.inp_clone{
+	width: 60px;
+	margin-right: 10px;
+}
+.inp_len{
+	width: 60px;
+	margin-right: 63px;
+}
+.inp_block2{
+	float: left;
+}
+.rtbtn{
+	position: absolute;
+	left: 900px;
+	background-color: #FFF;
+}
+#quickform .rtbtn a{
+	font-size: 14px;
+	color: #028ACC;
+	text-decoration: underline;
+}
+#quickform .rtbtn a.activ{
+	color: #028ACC;
+	font-weight: bold;
+	text-decoration: none;
+}
+.inp_sel2{
+	margin: 20px 0;	
+	width: 301px !important;
+}
+#quickform table#mailtbl td{
+	vertical-align: middle;	
+}

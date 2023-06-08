@@ -1,0 +1,25 @@
+.su-table table {
+	width: 100% !important;
+	margin: 0 0 1.5em 0 !important;
+	border-collapse: collapse !important;
+	font-size: 1em !important;
+	border: 1px solid #ccc !important;
+}
+
+.su-table th {
+	text-align: center !important;
+	padding: 1em !important;
+	font-size: 1em !important;
+	font-weight: normal !important;
+	color: #333 !important;
+	border: 1px solid #ccc !important;
+	background: #f0f0f0 !important;
+}
+
+.su-table td {
+	padding: 0.5em 1em !important;
+	border: 1px solid #ccc !important;
+	background: #fff !important;
+}
+
+.su-table .su-even td { background: #f7f7f7 !important }

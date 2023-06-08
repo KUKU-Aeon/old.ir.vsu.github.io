@@ -1,0 +1,15 @@
+name: Search Panel
+description: Search Panel colors for the theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#673AB7"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"

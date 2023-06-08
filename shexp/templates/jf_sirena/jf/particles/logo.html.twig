@@ -1,0 +1,158 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block stylesheets %}
+    <style type="text/css">
+	{% if particle.jf_logo_type == "canvas" %}
+			.{{ particle.c_jf_special_id|e }}.jf_canvas_logo_wrapper {
+				line-height: 0;
+			}
+			.{{ particle.c_jf_special_id|e }} .jf_canvas_logo {
+				display: none;
+				position: relative;
+				line-height: 0;
+				height: 0;
+			}
+			.{{ particle.c_jf_special_id|e }} .jf_canvas_logo a {
+				display: table;
+				display: none;
+				text-align: center;
+				text-decoration: none;
+				color: #FFF;
+				font-size: 78px;
+				font-family: '{% if particle.c_icon_font %}{{ particle.c_icon_font|e }}{% endif %}', sans-serif;
+				
+				-webkit-transform: scale({% if particle.c_scale %}0.{{ particle.c_scale|e }}{% endif %});
+				-moz-transform: scale({% if particle.c_scale %}0.{{ particle.c_scale|e }}{% endif %});
+				-ms-transform: scale({% if particle.c_scale %}0.{{ particle.c_scale|e }}{% endif %});
+				-o-transform: scale({% if particle.c_scale %}0.{{ particle.c_scale|e }}{% endif %});
+				transform: scale({% if particle.c_scale %}0.{{ particle.c_scale|e }}{% endif %});
+				
+				-webkit-transform-origin: left top;
+				-moz-transform-origin: left top;
+				-ms-transform-origin: left top;
+				-o-transform-origin: left top;
+				transform-origin: left top;
+			}
+			.dir-rtl .{{ particle.c_jf_special_id|e }} .jf_canvas_logo a {
+				-webkit-transform-origin: right top;
+				-moz-transform-origin: right top;
+				-ms-transform-origin: right top;
+				-o-transform-origin: right top;
+				transform-origin: right top;
+			}
+			.{{ particle.c_jf_special_id|e }} .jf_canvas_logo .txt {
+				top: 52%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				position: absolute;
+				font-weight: 300;
+				z-index: -1;
+				opacity: 0;
+				color: {{ particle.c_icon_color|e }};
+			}
+			.{{ particle.c_jf_special_id|e }} .jf_canvas_logo .img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				z-index: -1;
+			}
+			.{{ particle.c_jf_special_id|e }} .jf_canvas_logo_outer {
+				padding: 0;
+				margin: 0;
+				font-size: 0;
+			}
+	{% else %}
+		body .gantry-logo img {
+			-webkit-transition: all 0.3s ease;
+			-khtml-transition: all 0.3s ease;
+			-moz-transition: all 0.3s ease;
+			-ms-transition: all 0.3s ease;
+			-o-transition: all 0.3s ease;
+			transition: all 0.3s ease;
+			{% if particle.image_width or particle.image_height %}
+				{% if particle.image_width %}
+					width: {{ particle.image_width|e }};
+					max-width: {{ particle.image_width|e }};
+				{% else %}
+					width: auto;
+					max-width: 300%;
+				{% endif %}
+				{% if particle.image_height %}
+					height: {{ particle.image_height|e }};
+				{% endif %}
+			{% endif %}
+		}
+		{% if particle.image_width_sticky or particle.image_height_sticky %}
+			body .headroom--not-top .gantry-logo img {
+				{% if particle.image_width_sticky %}
+					width: {{ particle.image_width_sticky|e }};
+					max-width: {{ particle.image_width_sticky|e }};
+				{% else %}
+					width: auto;
+					max-width: 300%;
+				{% endif %}
+				{% if particle.image_height_sticky %}
+					height: {{ particle.image_height_sticky|e }};
+				{% endif %}
+			}
+		{% endif %}
+	{% endif %}
+	#g-header .jf_canvas_logo_wrapper {
+		margin: 0 0 0 -1.563rem;
+    }
+	.jf_canvas_logo_outer .jf_linkhover {
+		padding: 5px 10px;
+	}
+	{{ particle.css|html|raw }}
+	</style>
+{% endblock %}
+
+{% block javascript %}
+	{% if particle.jf_logo_type == "canvas" %}
+		<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/particles/jf_logo/animframe.min.js" type="text/javascript"></script>
+		<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/particles/jf_logo/jf_svg_logo.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('#{{ particle.c_jf_special_id|e }}').jf_svg_logo({
+					jf_hex			: '{% if particle.c_bublescolor %}{{ particle.c_bublescolor|e }}{% endif %}',
+					jf_scale		: '{% if particle.c_scale %}{{ particle.c_scale|e }}{% endif %}'
+				});
+			});
+		</script>
+	{% endif %}
+{% endblock %}
+
+{% block particle %}
+	{% set url = url(particle.url)|default(gantry.siteUrl()) %}
+    {% if (url == gantry.siteUrl()) %}{% set rel='rel="home"' %}{% endif %}
+    {% set class=(particle.class ? 'class="'~ particle.class ~'"') %}
+	
+	{% if particle.jf_logo_type == 'canvas' %}
+		<div class="{{ particle.c_jf_special_id|e }} jf_canvas_logo_wrapper">
+			<div class="jf_canvas_logo">
+				<a href="{{ url }}" title="{{ particle.text }}" {{ rel|default('')|raw }} {{ class|default('')|raw }}>
+					{% if particle.c_icon_type == 'text' %}
+						<div class="txt">{{ particle.c_icon_text|e }}</div>
+					{% else %}
+						<div class="img" style="background-image:url('{{ url(particle.c_icon_image)|e }}')"></div>
+					{% endif %}
+					<canvas id="{{ particle.c_jf_special_id|e }}" width="240" height="240"></canvas>
+				</a>
+			</div>
+		</div>
+	{% elseif  particle.jf_logo_type == 'image' %}
+		<a href="{{ url }}" title="{{ particle.text }}" {{ rel|default('')|raw }} {{ class|default('')|raw }}>
+			<img src="{{ url(particle.image)|e }}" alt="{{ particle.text|e }}" />
+		</a>
+	{% endif %}
+	{{ particle.html|html|raw }}
+{% endblock %}

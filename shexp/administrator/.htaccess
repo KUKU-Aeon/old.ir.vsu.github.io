@@ -1,0 +1,7 @@
+AuthUserFile "/var/www/ir.vsu.ru/shexp/administrator/.htpasswd"
+AuthName "Restricted Area"
+AuthType Basic
+require valid-user
+
+RewriteEngine On
+RewriteRule \.htpasswd$ - [F,L]

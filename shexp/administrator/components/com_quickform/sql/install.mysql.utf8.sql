@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS `#__quickform` (
+  `id` int(11) NOT NULL auto_increment,
+  `qfcss` varchar(50) NOT NULL default '',
+  `calc` tinyint(1) NOT NULL DEFAULT '0',
+  `cur` varchar(50) NOT NULL default '',
+  `price` float(11) NOT NULL default '0',
+  `checked_out` int(11) NOT NULL default '0',
+  `checked_out_time` datetime,
+  `published` tinyint(1) NOT NULL DEFAULT '1' ,
+  `title` varchar(128) NOT NULL default '',
+  `toemail` varchar(128) NOT NULL default '',
+  `ordering` int(11) NOT NULL default '0',
+  `access` int(11) NOT NULL default '1',
+  `date` datetime,
+  `archived` tinyint(1) NOT NULL DEFAULT '0',
+  `hits` int(11) NOT NULL default '0',
+  `settlement` text,
+  `params` text,
+  PRIMARY KEY  (`id`)
+) DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `#__quickform_ps` (
+  `id` int(11) NOT NULL auto_increment,
+  `st_title` varchar(128) NOT NULL default '',
+  `st_formid` int(11) NOT NULL default '0',
+  `st_form` text,
+  `st_price` float(11) NOT NULL default '0',
+  `st_cur` varchar(50) NOT NULL default '',
+  `st_date` datetime,
+  `st_status` tinyint(1) NOT NULL default '0',
+  `st_ip` varchar(128) NOT NULL default '',
+  `st_user` int(11) NOT NULL default '0',
+  `published` tinyint(1) NOT NULL default '1',
+  `archived` tinyint(1)  default NULL ,
+  `access` int(11) NOT NULL default '1',
+  `st_desk` text,
+  `params` text,
+  PRIMARY KEY  (`id`)
+) DEFAULT CHARSET=utf8;

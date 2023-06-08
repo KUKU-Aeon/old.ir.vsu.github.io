@@ -1,0 +1,10 @@
+enabled: '1'
+stickyHeader:
+  -
+    enable: '1'
+    slideup: '1'
+    menu_padding: 1.4rem
+    logo_size: 68px
+    logo_scale: '0.28'
+    homepage: 'transparent'
+    name: Options

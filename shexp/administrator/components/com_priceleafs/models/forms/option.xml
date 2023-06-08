@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form 	addrulepath="/administrator/components/com_priceleaf/models/rules">
+	
+<fieldset>
+	<field
+	name="id"
+	type="hidden"
+	/>
+		
+	<field
+	name="valuta"
+	type="text"
+	label="COM_PRICELEAF_VALUTA"
+	description="COM_PRICELEAF_OPTION_VALUTA"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="mail"
+	type="text"
+	label="COM_PRICELEAF_MAIL"
+	description="COM_PRICELEAF_EMAIL_OPISANIE"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="from"
+	type="text"
+	label="COM_PRICELEAF_FROM"
+	description="COM_PRICELEAF_FROM_OPISANIE"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="spoiler"
+	type="list"
+	label="COM_PRICELEAF_SPOILER"
+	description="COM_PRICELEAF_SPOILER_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>
+	
+	<field
+	name="forma"
+	type="list"
+	label="COM_PRICELEAF_FORMA"
+	description="COM_PRICELEAF_FORMA_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>	
+	
+	
+	<field
+	name="percent"
+	type="list"
+	label="COM_PRICELEAF_PERCENT_ON"
+	description="COM_PRICELEAF_PERCENT_ON_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>
+	
+	
+	<field
+	name="percent_number"
+	type="text"
+	label="COM_PRICELEAF_PERCENT_NUMBER"
+	description="COM_PRICELEAF_PERCENT_NUMBER_OPISANIE"
+	size="40"
+	default=""
+	/>
+	
+	
+	<field
+	name="percent_bill"
+	type="text"
+	label="COM_PRICELEAF_PERCENT_BILL"
+	description="COM_PRICELEAF_PERCENT_BILL_OPISANIE"
+	size="40"
+	default=""
+	/>
+	
+	
+	<field
+	name="percent_order"
+	type="text"
+	label="COM_PRICELEAF_PERCENT_ORDER"
+	description="COM_PRICELEAF_PERCENT_ORDER_OPISANIE"
+	size="40"
+	default=""
+	/>
+	
+	
+	<field
+	name="total_sum"
+	type="list"
+	label="COM_PRICELEAF_TOTAL_SUM"
+	description="COM_PRICELEAF_TOTAL_SUM_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="0">COM_PRICELEAF_YES</option>
+	<option value="1">COM_PRICELEAF_NO</option>
+	</field>
+	
+	<field
+	name="stoimost"
+	type="list"
+	label="COM_PRICELEAF_STOIMOST_HIDDEN"
+	description="COM_PRICELEAF_STOIMOST_HIDDEN_OPISANIE"	
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_NO</option>
+	<option value="0">COM_PRICELEAF_SPOILER_YES</option>
+	</field>
+
+	<field
+	name="col"
+	type="list"
+	label="COM_PRICELEAF_COL_HIDDEN"
+	description="COM_PRICELEAF_COL_HIDDEN_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_NO</option>
+	<option value="0">COM_PRICELEAF_SPOILER_YES</option>
+	</field>
+
+	<field name="pechat" type="media" directory=""
+	hide_none="1" 
+	label="COM_PRICELEAF_IMAGES_HIDDEN"
+	description="COM_PRICELEAF_IMAGES_HIDDEN_OPISANIE"
+	size="40" />
+	
+	<field
+	name="pechat_duble"
+	type="list"
+	label="COM_PRICELEAF_PRINT_HIDDEN"
+	description="COM_PRICELEAF_PRINT_HIDDEN_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>	
+	
+	<field
+	name="payment_state"
+	type="list"
+	label="COM_PRICELEAF_PAYMENT_STATUS"
+	description="COM_PRICELEAF_PAYMENT_STATUS_OPISANIE"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>	
+
+	<field
+	name="merchant_id"
+	type="text"
+	label="COM_PRICELEAF_PAYMENT_MERCHANT"
+	description="COM_PRICELEAF_PAYMENT_MERCHANT_OPISANIE"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="currency_id"
+	type="text"
+	label="COM_PRICELEAF_PAYMENT_CURRENCY"
+	description="COM_PRICELEAF_PAYMENT_CURRENCY_OPISANIE"
+	size="40"
+	default=""
+	/>		
+	
+	<field
+	name="description"
+	type="text"
+	label="COM_PRICELEAF_PAYMENT_DESCRIPTION"
+	description="COM_PRICELEAF_PAYMENT_DESCRIPTION_OPISANIE"
+	size="40"
+	default=""
+	/>		
+	
+	<field
+	name="success_url"
+	type="text"
+	label="COM_PRICELEAF_PAYMENT_SUCCESS"
+	description="COM_PRICELEAF_PAYMENT_SUCCESS_OPISANIE"
+	size="40"
+	default=""
+	/>		
+	
+	<field
+	name="fail_url"
+	type="text"
+	label="COM_PRICELEAF_PAYMENT_FAIL"
+	description="COM_PRICELEAF_PAYMENT_FAIL_OPISANIE"
+	size="40"
+	default=""
+	/>	
+
+	<field
+	name="simbol"
+	type="text"
+	label="COM_PRICELEAF_SIMBOL"
+	description="COM_PRICELEAF_SIMBOL_OPISANIE"
+	size="10"
+	default=""
+	/>	
+	
+	<field
+	name="status"
+	type="list"
+	label="COM_PRICELEAF_STATUS"
+	description="COM_PRICELEAF_STATUS_OPISANIE"	
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>
+	
+	<field
+	name="vote"
+	type="list"
+	label="COM_PRICELEAF_VOTE"
+	description="COM_PRICELEAF_VOTE_OPISANIE"	
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>
+	
+	<field
+	name="captcha"
+	type="list"
+	label="COM_PRICELEAF_CAPTCHA"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>
+	
+	<field
+	name="icons"
+	type="list"
+	label="COM_PRICELEAF_OPTION_ICON"
+	description="COM_PRICELEAF_OPTION_ICON_OPISANIE"	
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>
+	
+	<field
+	name="more_options"
+	type="list"
+	label="COM_PRICELEAF_OPTION_MORE_OPTIONS"
+	description="COM_PRICELEAF_OPTION_MORE_OPTIONS_OPISANIE"	
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">COM_PRICELEAF_SPOILER_YES</option>
+	<option value="0">COM_PRICELEAF_SPOILER_NO</option>
+	</field>	
+	
+	</fieldset>
+</form>

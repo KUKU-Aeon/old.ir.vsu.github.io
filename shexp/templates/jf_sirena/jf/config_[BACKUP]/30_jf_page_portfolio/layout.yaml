@@ -1,0 +1,584 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/page_portfolio.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_p_cta-7008
+    -
+      - position-position-9971
+    -
+      - jf_p_portfolio-9883
+  /main/:
+    -
+      - system-messages-7706
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_p_cta-7008:
+    title: 'JF Particle - CTA'
+    attributes:
+      padding: '200px 0px 160px'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#eeeeee'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '30'
+          scrolling: '1'
+          parallax_src: 'gantry-media://jf/elements/parallax/screen_2.jpg'
+          type: cover
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: ''
+      style: style_1
+      style_1:
+        -
+          grid: '1'
+          contentTextAl: center
+          contentTheme: light
+          html: '<h1 style="font-size:50px;margin:0;font-weight:700">Our Portfolio</h1><h5 style="margin:0;font-weight:700">FOR SOME AWESOME CLIENTS</h5>'
+          name: Item
+  position-position-9971:
+    title: Breadcrumbs
+    attributes:
+      key: breadcrumbs
+    block:
+      class: jf_breadcrumbs
+  jf_p_portfolio-9883:
+    title: 'JF Particle - Portfolio - Style 1'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      filterbuttons:
+        -
+          catid: all
+          cattext: All
+          classes: jf_waves_dark_10
+          customcss: ''
+          name: all
+        -
+          catid: wallpaper
+          cattext: Wallpaper
+          classes: jf_waves_dark_10
+          customcss: ''
+          name: wallpaper
+        -
+          catid: graphics
+          cattext: 'Graphic Design'
+          classes: jf_waves_dark_10
+          customcss: ''
+          name: graphics
+        -
+          catid: photography
+          cattext: Photos
+          classes: jf_waves_dark_10
+          customcss: ''
+          name: photography
+        -
+          catid: 3d
+          cattext: '3D Renders'
+          classes: jf_waves_dark_10
+          customcss: ''
+          name: 3d
+      css3_anim_name: zoomIn
+      css3_anim_delay: '0.2'
+      items:
+        -
+          col: col-1-3
+          date: '2015-10-5'
+          group: '"3d"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          style: hovers_2
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/particles/portfolio/1.jpg'
+          photoswipe_image_width: '1186'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Lorem Ipsum'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: 'gantry-media://jf/particles/portfolio/1.jpg'
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: 'Lorem <span>Ipsum</span>'
+          hovers_2_caption_descr: 'When Goliath comes out, you should run.'
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_logoimage: ''
+          hotspot_3_logowidth: '170'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 1'
+        -
+          col: col-1-3
+          date: '2015-10-5'
+          group: '"graphics"'
+          itemname: 'Ridiculus habitasse'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.3'
+          style: hovers_2
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/particles/portfolio/2.jpg'
+          photoswipe_image_width: '1186'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Ridiculus habitasse Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: 'gantry-media://jf/particles/portfolio/2.jpg'
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: 'Ridiculus <span>habitasse</span>'
+          hovers_2_caption_descr: 'When Goliath comes out, you should run.'
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_logoimage: ''
+          hotspot_3_logowidth: '170'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 2'
+        -
+          col: col-1-3
+          date: '2015-09-5'
+          group: '"photography"'
+          itemname: 'Aliquet Magnis'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          style: hovers_2
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/particles/portfolio/3.jpg'
+          photoswipe_image_width: '1186'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Aliquet Magnis'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: 'gantry-media://jf/particles/portfolio/3.jpg'
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: 'Aliquet <span>Magnis</span>'
+          hovers_2_caption_descr: 'When Goliath comes out, you should run.'
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_logoimage: ''
+          hotspot_3_logowidth: '170'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 3'
+        -
+          col: col-1-3
+          date: '2015-09-5'
+          group: '"wallpaper"'
+          itemname: 'Cras Facilisis'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          style: hovers_2
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/particles/portfolio/4.jpg'
+          photoswipe_image_width: '1186'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Cras Facilisis'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: 'gantry-media://jf/particles/portfolio/4.jpg'
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: 'Cras <span>Facilisis</span>'
+          hovers_2_caption_descr: 'When Goliath comes out, you should run.'
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_logoimage: ''
+          hotspot_3_logowidth: '170'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 4'
+        -
+          col: col-1-3
+          date: '2015-08-5'
+          group: '"graphics"'
+          itemname: 'Lundium Tempor'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          style: hovers_2
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/particles/portfolio/5.jpg'
+          photoswipe_image_width: '1186'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Lundium Tempor'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: 'gantry-media://jf/particles/portfolio/5.jpg'
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: 'Lundium <span>Tempor</span>'
+          hovers_2_caption_descr: 'When Goliath comes out, you should run.'
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_logoimage: ''
+          hotspot_3_logowidth: '170'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 5'
+        -
+          col: col-1-3
+          date: '2015-07-5'
+          group: '"wallpaper","3d"'
+          itemname: 'Pulvinar Lacus'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.7'
+          style: hovers_2
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/particles/portfolio/6.jpg'
+          photoswipe_image_width: '1186'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Pulvinar Lacus'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: 'gantry-media://jf/particles/portfolio/6.jpg'
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: 'Pulvinar <span>Lacus</span>'
+          hovers_2_caption_descr: 'When Goliath comes out, you should run.'
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_logoimage: ''
+          hotspot_3_logowidth: '170'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 6'
+  system-messages-7706:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - block
+        - attributes

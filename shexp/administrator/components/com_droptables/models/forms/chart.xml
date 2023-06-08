@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field name="id" type="int" required="true" />
+    <field name="id_table" type="int" required="true" />
+    <field name="datas" type="text" required="true" format="raw" filter="JComponentHelper::filterText" />
+    <field name="type" type="text" format="raw" />
+    <field name="config" type="text" format="raw" />
+    <field name="params" type="text" format="raw" />
+</form>

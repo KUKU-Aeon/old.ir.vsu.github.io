@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form 	addrulepath="/administrator/components/com_priceleaf/models/rules">
+
+<fieldset>
+	<field
+	name="id"
+	type="hidden"
+	/>
+		
+	<field
+	name="name"
+	type="text"
+	label="COM_PRICELEAF_MENU"
+	size="40"
+	default=""
+	/>
+		
+	<field
+	name="state"
+	type="list"
+	label="JSTATUS"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">JPUBLISHED</option>
+	<option value="0">JUNPUBLISHED</option>
+	</field>
+		
+	<field 
+	name="cat_naimenovanie" 
+	type="sql" 
+	default="0" 
+	label="COM_PRICELEAF_CATS" 
+	query="SELECT t1.id, t2.name_cat FROM #__priceleaf_cat AS t1 LEFT JOIN #__priceleaf_cat AS t2 ON t2.id=t1.id" 
+	key_field="id" 
+	value_field="name_cat"
+	/>
+	
+	
+	<field
+	name="opredelenie"
+	type="list"
+	label="COM_PRICELEAF_RADIO"
+	class="inputbox"
+	size="1"
+	description="COM_PRICELEAF_RADIO_OPISANIE"
+	default="0">
+	<option value="0">COM_PRICELEAF_FORMA_ONE</option>
+	<option value="1">COM_PRICELEAF_FORMA_TWO</option>
+	<option value="2">COM_PRICELEAF_FORMA_THREE</option>
+	<option value="3">COM_PRICELEAF_FORMA_FOUR</option>
+	</field>
+	
+	<field
+	name="pereopredelenie"
+	type="list"
+	label="COM_PRICELEAF_PEREOPREDELENIE"
+	description="COM_PRICELEAF_PEREOPREDELENIE_OPISANIE"	
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">JPUBLISHED</option>
+	<option value="0">JUNPUBLISHED</option>
+	</field>	
+
+	<field
+	name="edizm"
+	type="text"
+	label="COM_PRICELEAF_ED"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="total_tovar"
+	type="text"
+	label="COM_PRICELEAF_COL_TOVARA"
+	description="COM_PRICELEAF_COL_TOVARA_OPISANIE"
+	size="40"
+	default=""
+	/>		
+	
+		
+	<field name="opisanie" type="editor" 
+	label="COM_PRICELEAF_OPISANIE" 
+    filter="safehtml"
+	buttons="true" 
+	height="400"
+	width="700"
+	/>
+			
+
+	
+	
+	
+	
+
+
+	<field
+	name="cena"
+	type="text"
+	label="COM_PRICELEAF_CENA"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio1"
+	type="text"
+	label="COM_PRICELEAF_RADIO1"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="cena1"
+	type="text"
+	label="COM_PRICELEAF_CENA1"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio2"
+	type="text"
+	label="COM_PRICELEAF_RADIO2"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="cena2"
+	type="text"
+	label="COM_PRICELEAF_CENA2"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio3"
+	type="text"
+	label="COM_PRICELEAF_RADIO3"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="cena3"
+	type="text"
+	label="COM_PRICELEAF_CENA3"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio4"
+	type="text"
+	label="COM_PRICELEAF_RADIO4"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="cena4"
+	type="text"
+	label="COM_PRICELEAF_CENA4"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio5"
+	type="text"
+	label="COM_PRICELEAF_RADIO5"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="cena5"
+	type="text"
+	label="COM_PRICELEAF_CENA5"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio6"
+	type="text"
+	label="COM_PRICELEAF_RADIO6"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="cena6"
+	type="text"
+	label="COM_PRICELEAF_CENA6"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio7"
+	type="text"
+	label="COM_PRICELEAF_RADIO7"
+	size="40"
+	default=""
+	/>
+	
+	<field
+	name="cena7"
+	type="text"
+	label="COM_PRICELEAF_CENA7"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio8"
+	type="text"
+	label="COM_PRICELEAF_RADIO8"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="cena8"
+	type="text"
+	label="COM_PRICELEAF_CENA8"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio9"
+	type="text"
+	label="COM_PRICELEAF_RADIO9"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="cena9"
+	type="text"
+	label="COM_PRICELEAF_CENA9"
+	size="40"
+	default="0"
+	/>
+	
+	<field
+	name="radio10"
+	type="text"
+	label="COM_PRICELEAF_RADIO10"
+	size="40"
+	default=""
+	/>	
+
+	<field
+	name="old"
+	type="text"
+	label="COM_PRICELEAF_OLD"
+	description="COM_PRICELEAF_OLD_OPISANIE"
+	size="40"
+	default=""
+	/>		
+	
+	
+	
+	<field
+	name="optional_description1"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_ONE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description2"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_TWO"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description3"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_THREE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description4"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_FOUR"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description5"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_FIVE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description6"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_SIX"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description7"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_SEVEN"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description8"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_EIGHT"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description9"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_NINE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_description10"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_TEN"
+	size="40"
+	default=""
+	/>	
+	
+	<field
+	name="optional_field1"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_ONE"
+	size="40"
+	default=""
+	/>		
+	
+	<field
+	name="optional_field2"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_TWO"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field3"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_THREE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field4"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_FOUR"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field5"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_FIVE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field6"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_SIX"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field7"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_SEVEN"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field8"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_EIGHT"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field9"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_NINE"
+	size="40"
+	default=""
+	/>
+
+	<field
+	name="optional_field10"
+	type="text"
+	label="COM_PRICELEAF_DOPOLNITELNIE_POLY_CENA_TEN"
+	size="40"
+	default=""
+	/>	
+	
+	
+	
+
+		</fieldset>
+</form>

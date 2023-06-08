@@ -1,0 +1,403 @@
+/**
+* @version		JF_CB_DTF_090
+* @author		JoomForest http://www.joomforest.com
+* @copyright	Copyright (C) 2011-2016 JoomForest.com
+* @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
+
+@import "0_css3_mixins";
+
+/*
+	This is a copy of original "3-rd party theme UC" + addons "3-rd party theme" variables
+	also made theme variables suitable for Gantry 5 Color system
+*/
+
+// @import "../00_css3_mixins";
+// @import "../00_variables";
+
+$jf_ku_UC-accent_1:				#673AB7 !default;
+$jf_ku_UC-text_color:			#666666 !default;
+$jf_ku_UC-tag_color:			#444444 !default;
+$jf_ku_UC-menu_bg_color:		#673AB7 !default;
+$jf_ku_UC-menu_text_color:		#ffffff !default;
+$jf_ku_UC-menu_border_color:	#ffffff !default;
+$jf_ku_UC-breadcrumb_color:		#888888 !default;
+$jf_ku_UC-topicProfileBG:		#f5f5f5 !default;
+$jf_ku_UC-panel_s_textcolor:	#dddddd !default;
+$jf_ku_UC-panel_s_inputcolor:	#6036ab !default;
+
+$jf_ku_UC_accent_1:				$jf_ku_UC-accent_1;
+$jf_ku_UC_text_color:			$jf_ku_UC-text_color;
+$jf_ku_UC_tag_color:			$jf_ku_UC-tag_color;
+$jf_ku_UC_menu_bg_color:		$jf_ku_UC-menu_bg_color;
+$jf_ku_UC_menu_text_color:		$jf_ku_UC-menu_text_color;
+$jf_ku_UC_menu_border_color:	$jf_ku_UC-menu_border_color;
+$jf_ku_UC_breadcrumb_color:		$jf_ku_UC-breadcrumb_color;
+$jf_ku_UC_topicProfileBG:		$jf_ku_UC-topicProfileBG;
+$jf_ku_UC_panel_s_textcolor:	$jf_ku_UC-panel_s_textcolor;
+$jf_ku_UC_panel_s_inputcolor:	$jf_ku_UC-panel_s_inputcolor;
+
+/* ===========_______________________________ START - SCSS ________________________________________=========== */
+body #Kunena {
+	/* start - $jf_ku_UC_accent_1 ----------------------------------------------------------------- */
+		a:link, 
+		a:visited, 
+		a:active, 
+		a:focus {
+			color: $jf_ku_UC_accent_1 !important;
+		}
+		.kwho-user,
+		a.kwho-user {
+			color: $jf_ku_UC_accent_1 !important;
+		}
+		input[type="text"], 
+		input[type="password"], 
+		input[type="datetime"], 
+		input[type="datetime-local"], 
+		input[type="date"], 
+		input[type="month"], 
+		input[type="time"], 
+		input[type="week"], 
+		input[type="number"], 
+		input[type="email"], 
+		input[type="url"], 
+		input[type="search"], 
+		input[type="tel"], 
+		input[type="color"], 
+		.uneditable-input {
+			&:focus {
+				@include box-shadow(inset 0 -2px 0 $jf_ku_UC_accent_1);
+			}
+		}
+		.jf_input {
+			input[type="text"], 
+			input[type="password"], 
+			input[type="datetime"], 
+			input[type="datetime-local"], 
+			input[type="date"], 
+			input[type="month"], 
+			input[type="time"], 
+			input[type="week"], 
+			input[type="number"], 
+			input[type="email"], 
+			input[type="url"], 
+			input[type="search"], 
+			input[type="tel"], 
+			input[type="color"], 
+			.uneditable-input {
+				&:focus {
+					@include box-shadow(inset 0 -2px 0 $jf_ku_UC_accent_1);
+					&~label {
+						color: $jf_ku_UC_accent_1;
+					}
+				}
+			}
+		}
+		textarea {
+			&:focus {
+				@include box-shadow(inset 0 -2px 0 $jf_ku_UC_accent_1);
+				&~label {
+					color: $jf_ku_UC_accent_1;
+				}
+			}
+		}
+		.jf_textarea {
+			textarea {
+				&:focus {
+					@include box-shadow(inset 0 -2px 0 $jf_ku_UC_accent_1);
+					&~label {
+						color: $jf_ku_UC_accent_1;
+					}
+				}
+			}
+		}
+		.jf_check {
+			input[type="checkbox"]:checked+i {
+				background-color: $jf_ku_UC_accent_1;
+			}
+			@mixin jf_check_radio_colors($color, $class) {
+				input[type="radio"] + i#{$class}:active:before {
+					@include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 2px #{$color} inset, 0 0 0 24px #{rgba($color,.15)}");
+				}
+				&:hover input[type="radio"] + i#{$class}:active:before {
+					border-color: $color;
+					@include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 2px #{$color} inset, 0 0 0 0 #{$color}");
+				}
+				&:hover input[type="radio"] + i#{$class}:before {
+					border-color: rgba(0, 0, 0, 0.5);
+					@include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 #{$color} inset,0 0 0 0 #{$color};");
+				}
+				input[type="radio"]:checked + i#{$class}:before {
+					border-color: $color;
+					@include box-shadow("0 0 0 4px #{$color} inset, 0 0 0 8px #FFF inset, 0 0 0 12px #{$color} inset, 0 0 0 24px rgba(0, 0, 0, 0);");
+				}
+			}
+			@include jf_check_radio_colors($jf_ku_UC_accent_1, "");
+		}
+		.jf_ku_btn {
+			&[name="ksubmit"]{
+				background: $jf_ku_UC_accent_1 !important;
+				&:hover {
+					background-color: $jf_ku_UC_accent_1 !important;
+				}
+				&:active {
+				    background-color: $jf_ku_UC_accent_1 !important;
+				}
+			}
+		}
+		.kblock {
+			div.kheader {
+				h1, h2, h3 {
+					a,
+					.ktitle {
+						&:after {
+							background: $jf_ku_UC_accent_1;
+						}
+					}
+				}
+			}
+		}
+		#kprofilebox {
+			.kbody {
+				.kprofileboxcnt {
+					.input {
+						.kbutton {
+							background: $jf_ku_UC_accent_1;
+						}
+					}
+					.klink-block {
+						a {
+							&:hover {
+								color: $jf_ku_UC_accent_1 !important;
+							}
+						}
+					}
+				}
+				ul.kprofilebox-welcome li input.kbutton {
+					background: $jf_ku_UC_accent_1;
+				}
+				.kprofilebox-link li {
+					a {
+						background: $jf_ku_UC_accent_1 !important;
+					}
+				}
+			}
+		}
+		&.jf_ku_page_announ {
+			.kblock div.kheader h2 a {
+				color: $jf_ku_UC_accent_1 !important;
+			}
+		}
+		ul.kpagination {
+			li {
+				span {
+					border-color: $jf_ku_UC_accent_1;
+					background-color: $jf_ku_UC_accent_1;
+				}
+			}
+		}
+		dl.tabs {
+			dt {
+				&.open {
+					border-bottom: 3px solid $jf_ku_UC_accent_1;
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_accent_1 ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_text_color ----------------------------------------------------------------- */
+		.jf_ku_btn {
+			color: $jf_ku_UC_text_color !important;
+			&:link, 
+			&:visited, 
+			&:active, 
+			&:focus {
+		    	color: $jf_ku_UC_text_color !important;
+			}
+		}
+		tr.ksth,
+		tr.userlist th a {
+			color: $jf_ku_UC_text_color !important;
+		}
+		#kannouncement {
+			div.kactions {
+				a {
+					color: $jf_ku_UC_text_color !important;
+				}
+			}
+		}
+		div.kcc-subcat {
+			a,
+			.ks {
+				color: $jf_ku_UC_text_color !important;
+			}
+		}
+		&.jf_ku_page_topic {
+			.jf_ku_page_topic_msg {
+				.mdl-menu__item {
+					a {
+						color: $jf_ku_UC_text_color !important;
+					}
+				}
+			}
+		}
+		span.kmsgdate {
+			color: $jf_ku_UC_text_color;
+		}
+		.jf_ku_pos_panel {
+			.jf_mm_pro_wrapper li {
+				a {
+					color: $jf_ku_UC_text_color !important;
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_text_color ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_tag_color ----------------------------------------------------------------- */
+		.kblock {
+			div.kheader {
+				color: $jf_ku_UC_tag_color !important;
+				h1, h2, h3 {
+					color: $jf_ku_UC_tag_color !important;
+					a,
+					.ktitle {
+						color: $jf_ku_UC_tag_color !important;
+					}
+				}
+			}
+		}
+		.kcol-category-icon {
+			a {
+				color: $jf_ku_UC_tag_color !important;
+			}
+		}
+		div.kthead-title a {
+			color: $jf_ku_UC_tag_color !important;
+		}
+		.jf_ku_topics_list_head {
+			a {
+				color: $jf_ku_UC_tag_color !important;
+			}
+		}
+		&.jf_ku_page_topic {
+			.jf_ku_page_topic_msg {
+				.jf_ku_post_head {
+					a {
+						color: $jf_ku_UC_tag_color !important;
+					}
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_tag_color ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_menu_bg_color ----------------------------------------------------------------- */
+		#ktop {
+			background-color: $jf_ku_UC_menu_bg_color;
+		}
+		.jf_ku_pos_panel {
+			.jf_ku_pos_panel_title {
+				background-color: $jf_ku_UC_menu_bg_color;
+			}
+		}
+		.jf_ku_pos_panel {
+			&.search {
+				.jf_ku_pos_panel_backface {
+					background: $jf_ku_UC_menu_bg_color;
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_menu_bg_color ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_menu_text_color ----------------------------------------------------------------- */
+		#ktop {
+			ul.menu {
+				li {
+					a {
+						span {
+							color: $jf_ku_UC_menu_text_color;
+						}
+					}
+				}
+			}
+		}
+		.jf_ku_pos_panel {
+			.jf_ku_pos_panel_title {
+				color: $jf_ku_UC_menu_text_color;
+			}
+		}
+		.jf_ku_pos_panelBtn {
+			color: $jf_ku_UC_menu_text_color;
+			i {
+				color: $jf_ku_UC_menu_text_color;
+			}
+		}
+	/* end   - $jf_ku_UC_menu_text_color ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_menu_border_color ----------------------------------------------------------------- */
+		#ktop {
+			ul.menu {
+				li {
+					a {
+						&:after {
+							background: $jf_ku_UC_menu_border_color;
+						}
+					}
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_menu_border_color ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_breadcrumb_color ----------------------------------------------------------------- */
+		.kpathway {
+			.kforum-pathway, 
+			.kforum-pathway-bottom {
+				color: $jf_ku_UC_breadcrumb_color;
+				a {
+					color: $jf_ku_UC_breadcrumb_color !important;
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_breadcrumb_color ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_topicProfileBG ----------------------------------------------------------------- */
+		&.jf_ku_page_topic {
+			.jf_ku_post_profile {
+				background: $jf_ku_UC_topicProfileBG;
+			}
+		}
+	/* end   - $jf_ku_UC_topicProfileBG ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_panel_s_textcolor ----------------------------------------------------------------- */
+		.jf_ku_pos_panel.search {
+			.ksearch {
+				color: $jf_ku_UC_panel_s_textcolor;
+				#ksearch-keywords {
+					&:focus {
+						color: $jf_ku_UC_panel_s_textcolor;
+					}
+				}
+			}
+		}
+		.jf_ku_pos_panel.search {
+			.klatest-items {
+				.klatest-item {
+					color: $jf_ku_UC_panel_s_textcolor;
+					a {
+						color: $jf_ku_UC_panel_s_textcolor !important;
+					}
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_panel_s_textcolor ----------------------------------------------------------------- */
+
+	/* start - $jf_ku_UC_panel_s_inputcolor ----------------------------------------------------------------- */
+		.jf_ku_pos_panel.search {
+			.ksearch {
+				#ksearch-keywords {
+					background-color: $jf_ku_UC_panel_s_inputcolor;
+				}
+			}
+		}
+	/* end   - $jf_ku_UC_panel_s_inputcolor ----------------------------------------------------------------- */
+}
+/* ===========_______________________________ END   - SCSS ________________________________________=========== */

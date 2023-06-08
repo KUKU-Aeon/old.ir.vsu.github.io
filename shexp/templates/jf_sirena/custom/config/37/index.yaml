@@ -1,0 +1,102 @@
+name: 37
+timestamp: 1474297175
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/home_fitness.jpg'
+  name: default
+  timestamp: 1439651398
+positions:
+  breadcrumbs: Breadcrumbs
+  right-panel: 'Module Position'
+  footer: Footer
+sections:
+  top-panel: 'Top Panel'
+  search-panel: 'Search Panel'
+  left-panel: 'Left Panel'
+  right-panel: 'Right Panel'
+  overlay-panel: 'Overlay Panel'
+  full-width-section-1: 'Full Width Section 1'
+  full-width-section-2: 'Full Width Section 2'
+  top-footer: 'Top Footer'
+  bottom-footer: 'Bottom Footer'
+  full-width-section-3: 'Full Width Section 3'
+  header: Header
+  main: Main
+  footer: Footer
+particles:
+  module:
+    position-module-1964: 'Module Instance'
+    position-module-2450: 'Module Instance'
+    position-module-1476: 'Module Instance'
+    position-module-8208: 'Module Instance'
+    position-module-9557: 'Module Instance'
+    position-module-7318: 'Module Instance'
+    position-module-6155: 'Module Instance'
+    position-module-6294: 'Module Instance'
+    position-module-6640: 'Module Instance'
+  position:
+    position-position-9645: Breadcrumbs
+    position-position-8040: 'Module Position'
+    position-position-4856: Footer
+  messages:
+    system-messages-9754: 'System Messages'
+  jf_p_carousel:
+    jf_p_carousel-3797: 'JF Particle - Carousels: Style 1'
+  jf_p_cta:
+    jf_p_cta-8100: 'JF Particle - CTA'
+  jf_p_teams:
+    jf_p_teams-3112: 'JF Particle - Teams - Style 2 (Flat)'
+  jf_p_portfolio:
+    jf_p_portfolio-9553: 'JF Particle - Portfolio - Style 2'
+  jf_p_pricing:
+    jf_p_pricing-2282: 'JF Particle - Pricing Tables: Style 2'
+  custom:
+    custom-7968: 'Custom HTML'
+    custom-8533: 'Custom HTML'
+    custom-3214: 'Custom HTML'
+    custom-8283: 'Custom HTML'
+  logo:
+    logo-2474: Logo
+    logo-3855: Logo
+    logo-4698: Logo
+  menu:
+    menu-6250: Menu
+  jf_panel_buttons:
+    jf_panel_buttons-2478: 'JF Panel Buttons'
+  jf_switcher:
+    jf_switcher-9797: 'JF Style Switcher'
+  copyright:
+    copyright-4421: Copyright
+inherit:
+  default:
+    top-panel: top-panel
+    header: header
+    search-panel: search-panel
+    left-panel: left-panel
+    right-panel: right-panel
+    overlay-panel: overlay-panel
+    position-position-9645: position-position-2694
+    system-messages-9754: system-messages-1489
+    footer: footer
+    bottom-footer: bottom-footer
+    custom-7968: custom-3485
+    custom-8533: custom-1392
+    logo-2474: logo-5705
+    menu-6250: menu-2947
+    jf_panel_buttons-2478: jf_panel_buttons-3313
+    position-module-2450: position-module-1605
+    position-module-1476: position-module-6496
+    position-module-8208: position-module-1290
+    position-module-9557: position-module-3392
+    position-module-7318: position-module-7385
+    position-module-6155: position-module-2571
+    position-position-8040: position-position-5361
+    jf_switcher-9797: jf_switcher-6426
+    position-position-4856: position-position-9915
+    logo-3855: logo-2653
+    custom-3214: custom-5362
+    position-module-6294: position-module-3742
+    custom-8283: custom-4368
+    copyright-4421: copyright-3966
+    logo-4698: logo-9507
+    position-module-6640: position-module-4901

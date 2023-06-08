@@ -1,0 +1,95 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block javascript %}
+	<script type="text/javascript" src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_panel/jf_{{ particle.jf_p_type }}.min.js"></script>
+{% endblock %}
+
+{% block particle %}
+	<ul class="jf_panel_tools">
+		{% for item_btns in particle.btns %}
+			<li>
+				{% if item_btns.jf_btn_type != "overlay_panel" %}
+					<div {% if item_btns.jf_btn_type == "dropdown" %}id="jf_panel_tools_list" {% endif %} class="jf_panel_btn jf_{{ item_btns.jf_btn_type }}_btn">
+						<div class="din">{{ item_btns.jf_p_html_open|html|raw }}</div>
+						<div class="open">{{ item_btns.jf_p_html_open|html|raw }}</div>
+						<div class="close">{{ item_btns.jf_p_html_close|html|raw }}</div>
+					</div>
+				{% else %}
+					<div class="jf_op_btn">
+						<div class="on">{{ item_btns.jf_p_html_open|html|raw }}</div>
+						<div class="off">{{ item_btns.jf_p_html_close|html|raw }}</div>
+					</div>
+				{% endif %}
+				
+				{% if item_btns.jf_btn_type == "dropdown" %}
+					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu" data-mdl-for="jf_panel_tools_list">
+						{% if item_btns.dr_list_1_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_1_link_url %}<a href="{{ item_btns.dr_list_1_link_url|e }}" target="_{{ item_btns.dr_list_1_link_target }}">{% endif %}
+									{{ item_btns.dr_list_1_text|raw }}
+								{% if item_btns.dr_list_1_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_2_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_2_link_url %}<a href="{{ item_btns.dr_list_2_link_url|e }}" target="_{{ item_btns.dr_list_2_link_target }}">{% endif %}
+									{{ item_btns.dr_list_2_text|raw }}
+								{% if item_btns.dr_list_2_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_3_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_3_link_url %}<a href="{{ item_btns.dr_list_3_link_url|e }}" target="_{{ item_btns.dr_list_3_link_target }}">{% endif %}
+									{{ item_btns.dr_list_3_text|raw }}
+								{% if item_btns.dr_list_3_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_4_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_4_link_url %}<a href="{{ item_btns.dr_list_4_link_url|e }}" target="_{{ item_btns.dr_list_4_link_target }}">{% endif %}
+									{{ item_btns.dr_list_4_text|raw }}
+								{% if item_btns.dr_list_4_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_5_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_5_link_url %}<a href="{{ item_btns.dr_list_5_link_url|e }}" target="_{{ item_btns.dr_list_5_link_target }}">{% endif %}
+									{{ item_btns.dr_list_5_text|raw }}
+								{% if item_btns.dr_list_5_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_6_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_6_link_url %}<a href="{{ item_btns.dr_list_6_link_url|e }}" target="_{{ item_btns.dr_list_6_link_target }}">{% endif %}
+									{{ item_btns.dr_list_6_text|raw }}
+								{% if item_btns.dr_list_6_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_7_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_7_link_url %}<a href="{{ item_btns.dr_list_7_link_url|e }}" target="_{{ item_btns.dr_list_7_link_target }}">{% endif %}
+									{{ item_btns.dr_list_7_text|raw }}
+								{% if item_btns.dr_list_7_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_8_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_8_link_url %}<a href="{{ item_btns.dr_list_8_link_url|e }}" target="_{{ item_btns.dr_list_8_link_target }}">{% endif %}
+									{{ item_btns.dr_list_8_text|raw }}
+								{% if item_btns.dr_list_8_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+						{% if item_btns.dr_list_9_text %}
+							<li class="mdl-menu__item jf_waves_dark_20">
+								{% if item_btns.dr_list_9_link_url %}<a href="{{ item_btns.dr_list_9_link_url|e }}" target="_{{ item_btns.dr_list_9_link_target }}">{% endif %}
+									{{ item_btns.dr_list_9_text|raw }}
+								{% if item_btns.dr_list_9_link_url %}</a>{% endif %}
+							</li>
+						{% endif %}
+					</ul>
+				{% endif %}
+				
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

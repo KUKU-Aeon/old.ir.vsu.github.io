@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PRICELEAF_RAZDEL">
+		<message>COM_PRICELEAF_RAZDEL</message>
+	</layout>
+	
+<fields name="params">
+<fieldset name="basic" label="JGLOBAL_CATEGORY_OPTIONS">
+	<field 
+	name="id"  
+	type="text" 
+	label="COM_PRICELEAF_RAZDEL_OPTION" 
+	description="COM_PRICELEAF_RAZDEL_OPTION_OPISANIE" />
+</fieldset>	
+</fields>
+
+	
+</metadata>

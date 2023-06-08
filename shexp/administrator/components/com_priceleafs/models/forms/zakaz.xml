@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form 	addrulepath="/administrator/components/com_priceleaf/models/rules">
+
+<fieldset>
+	<field
+	name="id"
+	type="hidden"
+	/>
+		
+	<field
+	name="state"
+	type="list"
+	label="JSTATUS"
+	class="inputbox"
+	size="1"
+	default="1">
+	<option value="1">JPUBLISHED</option>
+	<option value="0">JUNPUBLISHED</option>
+	</field>
+
+	<field name="zapisvbd" type="editor" 
+	label="COM_PRICELEAF_ZAKAZOPISANIE" 
+    filter="safehtml"
+	buttons="true" 
+	height="400"
+	width="700"
+	/>
+		</fieldset>
+</form>

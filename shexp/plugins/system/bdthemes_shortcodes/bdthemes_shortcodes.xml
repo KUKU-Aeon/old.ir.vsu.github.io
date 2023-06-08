@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>Shortcodes Ultimate</name>
+	<creationDate>14th March 2016</creationDate>
+	<author>BdThemes Ltd</author>
+	<authorEmail>info@bdthemes.com</authorEmail>
+	<authorUrl>http://www.bdtheme.com</authorUrl>
+	<copyright>(C) 2015 BDThemes Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyright/gpl.html GNU/GPL</license>
+	<version>3.0.1</version>
+	<description>PLG_SYSTEM_BDTHEMES_SHORTCODES_SHORTCODE_ULTIMATE_DESC</description>
+	
+	<files>
+		<filename plugin="bdthemes_shortcodes">bdthemes_shortcodes.php</filename>
+		<folder>config</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+ 		<folder>helper</folder>
+        <folder>images</folder>
+		<folder>js</folder>
+		<folder>other</folder>
+		<folder>shortcodes</folder>
+		<filename>README.md</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_bdthemes_shortcodes.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_bdthemes_shortcodes.ini</language>
+		<language tag="ja-JP">ja-JP/ja-JP.plg_system_bdthemes_shortcodes.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.plg_system_bdthemes_shortcodes.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/system/bdthemes_shortcodes/config/fields">
+				<field type="spacer" label="&lt;strong&gt;Site Settings&lt;&#47;strong&gt; &lt;hr &#47;&gt;" />
+				<field name="font-awesome" type="radio" default="local" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME_DESC" class="btn-group" >
+				    <option value="0">PLG_SYSTEM_BDTHEMES_SHORTCODES_DO_NOT_LOAD</option>
+				    <option value="local">PLG_SYSTEM_BDTHEMES_SHORTCODES_BUILT_IN</option>
+				    <option value="cdn">PLG_SYSTEM_BDTHEMES_SHORTCODES_LOAD_CDN</option>
+				</field>
+				<field name="tmpl_shortcode" type="templatelist" default="protostar" description="Grab extra shortcode from template which you select" label="Extra Shortcode" />
+
+				<!-- <field name="runmode" type="radio" default="0" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_RUNMODE" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_RUNMODE_DESC" class="btn-group" >
+				    <option value="0">PLG_SYSTEM_BDTHEMES_SHORTCODES_RUN_ON_PREPARE_CONTENT</option>
+				    <option value="1">PLG_SYSTEM_BDTHEMES_SHORTCODES_RUN_AUTOMATIC</option>
+				</field> -->
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field type="spacer" label="&lt;strong&gt;Admin Settings&lt;&#47;strong&gt; &lt;hr &#47;&gt;" />
+				<field name="font-awesome-admin" type="radio" default="local" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FONT_AWESOME_DESC" class="btn-group" >
+				    <option value="0">PLG_SYSTEM_BDTHEMES_SHORTCODES_DO_NOT_LOAD</option>
+				    <option value="local">PLG_SYSTEM_BDTHEMES_SHORTCODES_BUILT_IN</option>
+				    <option value="cdn">PLG_SYSTEM_BDTHEMES_SHORTCODES_LOAD_CDN</option>
+				</field>	
+				<field  name="shortcode_pre" type="text" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_PRE_TITLE" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_PRE_DESC" default=""/>
+				
+				<field type="spacer" label="&lt;strong&gt;Social Settings&lt;&#47;strong&gt; &lt;hr &#47;&gt;" />
+				<field name="facebook_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FB_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FB_ID_DESC" />
+				<field name="facebook_token" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_FACEBOOK_TOKEN" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_FACEBOOK_TOKEN_DESC" />
+				<field type="spacer" label="Here is the whole proccess of retrieving access token: &lt;a class=&quot;external&quot; href=&quot;https://smashballoon.com/custom-facebook-feed/access-token/&quot; target=&quot;_blank&quot;&gt;https://smashballoon.com/custom-facebook-feed/access-token/&lt;/a&gt;" />
+				
+				<!-- <field name="gplus_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_GPLUS_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_GPLUS_ID_DESC" /> -->
+				
+				<field name="twitter_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_TWITTER_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_TWITTER_ID_DESC" />
+				<field name="twitter_consumer_key" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_KEY" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_KEY_DESC" />
+				<field name="twitter_consumer_secret" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_SECRET" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_CONSUMER_SECRET_DESC" />
+				<field name="twitter_access_token" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_TOKEN" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_TOKEN_DESC" />
+				<field name="twitter_access_secret" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_SECRET" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_ACCESS_SECRET_DESC" />
+				<field type="spacer" label="Here is the whole proccess of retrieving twitter keys/token: &lt;a class=&quot;external&quot; href=&quot;http://docs.bdthemes.com/YL66q&quot; target=&quot;_blank&quot;&gt;http://docs.bdthemes.com/YL66q&lt;/a&gt;" />
+				
+				<field name="instagram_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_ID_DESC" />
+				<field name="instagram_client_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_CLIENT_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_INSTAGRAM_CLIENT_ID_DESC" />
+				
+				<field name="pinterest_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_PINTEREST_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_PINTEREST_ID_DESC" />
+
+				<field name="vkontakte_id" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_VK_ID" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_VK_ID_DESC" />
+
+				<field name="owa_key" type="text" default="" label="PLG_SYSTEM_BDTHEMES_SHORTCODES_OWAK" description="PLG_SYSTEM_BDTHEMES_SHORTCODES_OWAK_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

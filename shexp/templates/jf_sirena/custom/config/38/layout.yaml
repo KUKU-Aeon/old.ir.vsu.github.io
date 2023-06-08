@@ -1,0 +1,979 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home_tvshow.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - position-module-2131
+  /main/:
+    -
+      - position-position-3871
+    -
+      - system-messages-8585
+  /full-width-section-2/:
+    -
+      - jf_p_portfolio-8218
+    -
+      - jf_p_carousel-7283
+    -
+      - jf_p_carousel-8166
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: '2'
+      class: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  position-module-2131:
+    title: 'Module Instance'
+    attributes:
+      module_id: '112'
+      key: module-instance
+  position-position-3871:
+    title: Breadcrumbs
+    inherit:
+      outline: default
+      particle: position-position-2694
+      include:
+        - attributes
+        - block
+  system-messages-8585:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - block
+        - attributes
+  jf_p_portfolio-8218:
+    title: 'JF Particle - Portfolio - Style 8'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#000000'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '20'
+          scrolling: '0'
+          parallax_src: 'gantry-media://jf/pages/home_tv/tv_shows.jpg'
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      filterbuttons:
+        -
+          catid: all
+          cattext: All
+          classes: 'raised deep-purple jf_waves_light_30 active'
+          customcss: ''
+          name: all
+        -
+          catid: films
+          cattext: Films
+          classes: 'raised deep-purple jf_waves_light_30'
+          customcss: ''
+          name: films
+        -
+          catid: entertainment
+          cattext: Entertainment
+          classes: 'raised deep-purple jf_waves_light_30'
+          customcss: ''
+          name: entertainment
+        -
+          catid: music
+          cattext: Music
+          classes: 'raised deep-purple jf_waves_light_30'
+          customcss: ''
+          name: music
+        -
+          catid: news
+          cattext: News
+          classes: 'raised deep-purple jf_waves_light_30'
+          customcss: ''
+          name: news
+      css3_anim_name: zoomIn
+      css3_anim_delay: '0.2'
+      html_before: '<h1 style="font-weight:700;margin:0 0 40px 0">TV Shows</h1>'
+      image_lazyload_src: 'gantry-media://jf/blank_[144x46].gif'
+      items:
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"news"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/1_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 1'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"films"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.3'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/2_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 2'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"entertainment"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/3_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 3'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"music"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.5'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/4_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 4'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"entertainment"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/5_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 5'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"films"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.7'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/6_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 6'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"news"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/7_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 7'
+        -
+          col: col-1-4
+          shadow: '0'
+          date: '2015-10-5'
+          group: '"entertainment"'
+          itemname: 'Lorem Ipsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.9'
+          style: hotspot_3
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          html: ''
+          hovers_1_image: ''
+          hovers_1_image_alt: ''
+          hovers_1_caption: ''
+          hovers_2_image: ''
+          hovers_2_image_alt: ''
+          hovers_2_caption_title: ''
+          hovers_2_caption_descr: ''
+          hovers_3_image: ''
+          hovers_3_image_alt: ''
+          hovers_3_caption_icon: ''
+          hovers_3_caption_title: ''
+          hovers_4_image: ''
+          hovers_4_image_alt: ''
+          hovers_4_caption_title: ''
+          hovers_4_caption_descr: ''
+          hovers_4_caption_author: ''
+          hovers_5_image: ''
+          hovers_5_image_alt: ''
+          hovers_5_caption_title: ''
+          hovers_5_caption_descr: ''
+          hotspot_1_padding: 'padding:0 10px'
+          hotspot_1_direc: left
+          hotspot_1_image: ''
+          hotspot_1_caption_title: ''
+          hotspot_1_caption_descr: ''
+          hotspot_1_caption_cat: ''
+          hotspot_2_padding: 'padding:0 10px'
+          hotspot_2_image: ''
+          hotspot_2_caption_date: ''
+          hotspot_2_caption_title: ''
+          hotspot_2_caption_cat: ''
+          hotspot_3_image: ''
+          hotspot_3_bgcolor: 'rgba(102, 57, 182, 0.7)'
+          hotspot_3_logoimage: 'gantry-media://jf/pages/home_tv/8_light.png'
+          hotspot_3_logowidth: '144'
+          hotspot_4_image: ''
+          hotspot_4_cat: ''
+          hotspot_4_date: ''
+          hotspot_4_title: ''
+          hotspot_4_author: ''
+          name: 'item 8'
+  jf_p_carousel-7283:
+    title: 'JF Particle - Carousels'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#222222'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '0'
+          type: default
+          parallax_src: ''
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_3
+      html_before: '<h1 style="font-weight:700;margin:0 0 50px 0;color:#fff" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.2"><i class="material-icons" style="font-size:38px;vertical-align:-6px;margin:0 5px 0 0">play_circle_filled</i>Watch Live</h1>'
+      style_3:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: venobox
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: youtube
+          venobox_video_url: 'http://youtu.be/1omPNEVOIaM'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/pages/home_tv/watch_1.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">play_circle_filled</i>'
+          c_caption_title: 'Dapibus Tristique'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: venobox
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: youtube
+          venobox_video_url: 'http://youtu.be/1omPNEVOIaM'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/home_tv/watch_2.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">play_circle_filled</i>'
+          c_caption_title: 'Tristique Sociis'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: venobox
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: youtube
+          venobox_video_url: 'http://youtu.be/1omPNEVOIaM'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/home_tv/watch_3.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">play_circle_filled</i>'
+          c_caption_title: 'Nunc Augue'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: venobox
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: youtube
+          venobox_video_url: 'http://youtu.be/1omPNEVOIaM'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/home_tv/watch_4.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">play_circle_filled</i>'
+          c_caption_title: 'Tincidunt Penatibus'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: venobox
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: youtube
+          venobox_video_url: 'http://youtu.be/1omPNEVOIaM'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/home_tv/watch_5.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">play_circle_filled</i>'
+          c_caption_title: 'Augue Odio'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: venobox
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: youtube
+          venobox_video_url: 'http://youtu.be/1omPNEVOIaM'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/pages/home_tv/watch_6.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">play_circle_filled</i>'
+          c_caption_title: 'Cursus Ultricies'
+          name: 'Item 6'
+  jf_p_carousel-8166:
+    title: 'JF Particle - Carousels: Style 7'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#3b3b3b'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '30'
+          scrolling: '0'
+          parallax_src: 'gantry-media://jf/pages/home_tv/latest_news.jpg'
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '3'
+      style: style_7
+      html_before: '<h1 style="font-weight:700;margin:0 0 50px 0;text-shadow:0px 1px 8px rgba(0, 0, 0, 0.5)" data-animation="fadeInUp" data-animation-type="onview" data-animation-delay="0.2">Latest News</h1>'
+      style_7:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/n_1.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/n_4.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/n_3.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/s_3.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          name: 'Item 4'

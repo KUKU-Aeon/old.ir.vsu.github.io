@@ -1,0 +1,7 @@
+preset: preset1
+footer:
+  background: 'rgba(103, 58, 183, 0.00)'
+  text-color: 'rgba(255, 255, 255, 0.80)'
+footer-bottom:
+  background: 'rgba(103, 58, 183, 0.00)'
+  text-color: 'rgba(255, 255, 255, 0.80)'

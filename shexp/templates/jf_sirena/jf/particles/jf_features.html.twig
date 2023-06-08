@@ -1,0 +1,503 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{#
+
+	# 1 - ESCAPE HTML IN JS via TWIG
+		{% set html = '<div class="loader"></div>'|e('js') %}
+		{% block javascript %}
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('body').append('{{ html }}');
+			});
+		</script>
+		{% endblock %}
+
+#}
+
+{% block stylesheets %}
+	{% if particle.jf_iewarning %}
+											<style type="text/css">
+												#jf_iewarning {
+													z-index: 99999;
+													position: fixed;
+													top: 0;
+													left: 0;
+													right: 0;
+													bottom: 0;
+													background: #f5f5f5;
+													text-align: center;
+													padding: 10% 0;
+												}
+												#jf_iewarning h4 {margin:10px 0 35px}
+											</style>
+	{% endif %}
+	{% for item_syntax in particle.jf_syntax %}
+		{% if item_syntax.prism %}			<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_syntax/prism.min.css" type="text/css" />{% endif %}
+	{% endfor %}
+	{% for item_stickyHeader in particle.stickyHeader %}
+		{% if item_stickyHeader.enable %}
+											<style type="text/css">
+												body #g-header {
+													position: fixed;
+													right: 0;
+													left: 0;
+													top: 0;
+													z-index: 992;
+													-webkit-transition: all 0.3s ease;
+													-khtml-transition: all 0.3s ease;
+													-moz-transition: all 0.3s ease;
+													-ms-transition: all 0.3s ease;
+													-o-transition: all 0.3s ease;
+													transition: all 0.3s ease;
+													-webkit-transform: translate3d(0,0,0);
+													-khtml-transform: translate3d(0,0,0);
+													-moz-transform: translate3d(0,0,0);
+													-ms-transform: translate3d(0,0,0);
+													-o-transform: translate3d(0,0,0);
+													transform: translate3d(0,0,0);
+												}
+												#g-header.slideUp {
+													-webkit-transform: translate3d(0,-102%,0) !important;
+													-khtml-transform: translate3d(0,-102%,0) !important;
+													-moz-transform: translate3d(0,-102%,0) !important;
+													-ms-transform: translate3d(0,-102%,0) !important;
+													-o-transform: translate3d(0,-102%,0) !important;
+													transform: translate3d(0,-102%,0) !important;
+												}
+												{% if item_stickyHeader.slideup == false %}
+													#g-header.headroom--not-top.slideUp {
+														-webkit-transform: translate3d(0,0,0);
+														-khtml-transform: translate3d(0,0,0);
+														-moz-transform: translate3d(0,0,0);
+														-ms-transform: translate3d(0,0,0);
+														-o-transform: translate3d(0,0,0);
+														transform: translate3d(0,0,0);
+													}
+												{% endif %}
+
+												#g-header.headroom--not-top .g-main-nav .g-toplevel > li > .g-menu-item-container,
+												#g-header.headroom--not-top .jf_panel_tools li .jf_panel_btn {
+													padding: {{ item_stickyHeader.menu_padding|raw }} 1rem;
+												}
+												#g-header.headroom--not-top .jf_canvas_logo {
+													height: {{ item_stickyHeader.logo_size|raw }} !important;
+												}
+												#g-header.headroom--not-top .jf_canvas_logo a {
+													-webkit-transform: scale({{ item_stickyHeader.logo_scale|raw }}) !important;
+													-moz-transform: scale({{ item_stickyHeader.logo_scale|raw }}) !important;
+													-ms-transform: scale({{ item_stickyHeader.logo_scale|raw }}) !important;
+													-o-transform: scale({{ item_stickyHeader.logo_scale|raw }}) !important;
+													transform: scale({{ item_stickyHeader.logo_scale|raw }}) !important;
+												}
+												#g-header .g-main-nav .g-toplevel > li > .g-menu-item-container,
+												#g-header .jf_panel_tools li .jf_panel_btn,
+												#g-header .jf_canvas_logo,
+												#g-header .jf_canvas_logo a {
+													-webkit-transition: padding, height, width, 0.3s ease;
+													-khtml-transition: padding, height, width, 0.3s ease;
+													-moz-transition: padding, height, width, 0.3s ease;
+													-ms-transition: padding, height, width, 0.3s ease;
+													-o-transition: padding, height, width, 0.3s ease;
+													transition: padding, height, width, 0.3s ease;
+												}
+												
+												@media only screen and (max-width: 414px){
+												  #g-header .jf_canvas_logo_wrapper {
+													margin: 0 !important;
+												  }
+												  .jf_canvas_logo {
+													width: 100% !important;
+												  }
+												  .jf_canvas_logo a {
+													transform-origin: center top !important;
+													margin: 0 auto;
+												  }
+												  #g-header.headroom--not-top .jf_canvas_logo {
+													height: {{ item_stickyHeader.logo_size|raw }} !important;
+												  }
+												  .jf_canvas_logo_outer {
+													display: none;
+												  }
+												}
+												@media only screen and (min-width:415px) and (max-width: 768px){
+												  #g-header .jf_canvas_logo_wrapper {
+													margin: 0 0 0 15px !important;
+												  }
+												  #g-header .jf_canvas_logo_outer {
+													height: 0 !important;
+												  }
+												}
+												@media only screen and (min-width:415px) and (max-width: 480px){
+												  #g-header .jf_canvas_logo_wrapper {
+													margin: 0 10px !important;
+												  }
+												  #g-header.headroom--not-top .jf_canvas_logo_wrapper {
+													margin: 0 20px !important;
+												  }
+												}
+												{% if item_stickyHeader.homepage == 'transparent' %}
+													#g-header.headroom--top {
+														background-color: rgba(0, 0, 0, 0);
+														-webkit-box-shadow: none;
+														-khtml-box-shadow: none;
+														-moz-box-shadow: none;
+														-ms-box-shadow: none;
+														-o-box-shadow: none;
+														box-shadow: none;
+														z-index: 991;
+													}
+													.jf_head_set {
+														height: 0 !important;
+													}
+												{% elseif item_stickyHeader.homepage == 'gradient' %}
+													#g-header.headroom--top {
+														background-color: rgba(0, 0, 0, 0);
+														-webkit-box-shadow: none;
+														-khtml-box-shadow: none;
+														-moz-box-shadow: none;
+														-ms-box-shadow: none;
+														-o-box-shadow: none;
+														box-shadow: none;
+														z-index: 991;
+													}
+													#g-header.headroom--top:after {
+														content: '';
+														position: absolute;
+														top: -5px;
+														left: 0;
+														width: 100%;
+														height: 120%;
+														opacity: 0.7;
+														background: -webkit-linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+														background: -moz-linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+														background: -ms-linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+														background: -o-linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+														background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0) 100%);
+														z-index: -1;
+													}
+													.jf_head_set {
+														height: 0 !important;
+													}
+													#g-header.headroom--top .g-main-nav .g-toplevel > li > .g-menu-item-container,
+													#g-header.headroom--top .jf_panel_tools > li .jf_panel_btn {
+														color: #fff;
+													}
+												{% endif %}
+											</style>
+		{% endif %}
+	{% endfor %}
+	
+	{% for item_jf_preloader in particle.jf_preloader %}
+		{% if item_jf_preloader.enable %}	
+											{#<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_preloader/jf_animsition.css" type="text/css" />#}
+											<link rel="stylesheet" href="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_preloader/jf_pace.min.css" type="text/css" />
+											<style>
+												#g-page-surround{opacity:0}
+												body .pace .pace-progress{background:{{ item_jf_preloader.progressColor|e }}}
+												body .pace .pace-progress-inner{
+													-webkit-box-shadow:0 0 10px {{ item_jf_preloader.progressColor|e }},0 0 5px {{ item_jf_preloader.progressColor|e }};
+													-moz-box-shadow:0 0 10px {{ item_jf_preloader.progressColor|e }},0 0 5px {{ item_jf_preloader.progressColor|e }};
+													box-shadow:0 0 10px {{ item_jf_preloader.progressColor|e }},0 0 5px {{ item_jf_preloader.progressColor|e }};
+												}
+											</style>
+		{% endif %}
+	{% endfor %}
+	
+	{% for item_jf_scrollTop in particle.jf_scrollTop %}
+		{% if item_jf_scrollTop.enable %}
+											<style type="text/css">
+												#jf_scrollTop {
+													z-index: 99;
+													position: fixed;
+													bottom: -50px;
+													right: 30px;
+													display: block;
+													text-align: center;
+													color: {{ item_jf_scrollTop.iconColor|e }};
+													width: 60px;
+													height: 60px;
+													background-color: {{ item_jf_scrollTop.bgColor|e }};
+													cursor: pointer;
+													-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+													-khtml-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+													-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+													-ms-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+													-o-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+													box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+													-webkit-border-radius: 50%;
+													-khtml-border-radius: 50%;
+													-moz-border-radius: 50%;
+													-ms-border-radius: 50%;
+													-o-border-radius: 50%;
+													border-radius: 50%;
+													/*opacity: 0;*/
+													-webkit-transition: all .2s ease-out,bottom .3s linear;
+													-moz-transition: all .2s ease-out,bottom .3s linear;
+													transition: all .2s ease-out,bottom .3s linear;
+													-webkit-transform: scale(0);
+													-moz-transform: scale(0);
+													-ms-transform: scale(0);
+													transform: scale(0);
+												}
+												#jf_scrollTop.jf_show {
+												    /*opacity: 1;*/
+													bottom: 30px;
+													-webkit-transition: all .2s ease-out,bottom .3s cubic-bezier(0.1,.6,.27,1.26);
+													-moz-transition: all .2s ease-out,bottom .3s cubic-bezier(0.1,.6,.27,1.26);
+													transition: all .2s ease-out,bottom .3s cubic-bezier(0.1,.6,.27,1.26);
+													-webkit-transform: scale(1);
+													-moz-transform: scale(1);
+													-ms-transform: scale(1);
+													transform: scale(1);
+												}
+												#jf_scrollTop i {
+													-webkit-transform: rotate(-90deg);
+													-khtml-transform: rotate(-90deg);
+													-moz-transform: rotate(-90deg);
+													-ms-transform: rotate(-90deg);
+													-o-transform: rotate(-90deg);
+													transform: rotate(-90deg);
+													font-size: 32px;
+													line-height: 60px;
+												}
+											</style>
+		{% endif %}
+	{% endfor %}
+	
+	
+{% endblock %}
+
+
+
+
+{% block javascript %}
+	{% if particle.modernizr %}				
+		{% assets in 'head' with { priority: 1 } %}
+			<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/modernizr/3/modernizr-custom.js" type="text/javascript"></script>
+			{#
+			<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/modernizr/3/modernizr-custom.js" type="text/javascript"></script>
+			<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/modernizr/modernizr.custom.min.js" type="text/javascript"></script>
+			#}
+		{% endassets -%}
+	{% endif %}
+	{% if particle.jQueryEasing %}			<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jqueryeasing/jquery.easing.min.js" type="text/javascript"></script>{% endif %}
+	{% if particle.jf_iewarning %}			<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_iewarning/jquery.browser.min.js" type="text/javascript"></script>{% endif %}
+	{% if particle.jf_smoothScroll %}		<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_smoothscroll/smoothscroll.min.js" type="text/javascript"></script>{% endif %}
+	{% if particle.jf_lazyload %}			
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_lazyload/jf_lazysizes.min.js" type="text/javascript"></script>
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_lazyload/jf_ls.unveilhooks.min.js" type="text/javascript"></script>
+											<script type="text/javascript">
+												window.lazySizesConfig = window.lazySizesConfig || {};
+												lazySizesConfig.jf_jury_root = '{{ gantry.jf_g5_theme.joomla_root_true() }}/';
+												jQuery(document).ready(function($){
+													$(".jf_search_panel_btn").one( "click", function() {
+														$("#g-search-panel .jf_sp_newsflash img").addClass("lazyload");
+													});
+												});
+											</script>
+	{% endif %}
+	{% for item_syntax in particle.jf_syntax %}
+		{% if item_syntax.prism %}			
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_syntax/prism.min.js" type="text/javascript"></script>
+		{% endif %}
+		{% if item_syntax.typo_preview %}	<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_syntax/jf_typo_code.min.js" type="text/javascript"></script>{% endif %}
+	{% endfor %}
+
+	{% for item_stickyHeader in particle.stickyHeader %}
+		{% if item_stickyHeader.enable %}
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_stickyheader/headroom.min.js" type="text/javascript"></script>
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_stickyheader/jQuery.headroom.min.js" type="text/javascript"></script>
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_stickyheader/jf_stickyheader.min.js" type="text/javascript"></script>
+											{% if item_stickyHeader.homepage != false %}
+												<script type="text/javascript">
+													jQuery(document).ready(function($){
+														$('#g-header').addClass('jf_sticky_transparent');
+													});
+												</script>
+											{% endif %}
+		{% endif %}
+	{% endfor %}
+	
+	{% for item_jf_preloader in particle.jf_preloader %}
+		{% if item_jf_preloader.enable %}
+											{#
+											<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_preloader/animsition.min.js" type="text/javascript"></script>
+											<script type="text/javascript">
+												jQuery(document).ready(function($){
+													var jf_preloader_wrapper	= '<div id="jf_preloader" class="jf_animsition_overlay_slide"><div class="status"><div class="mdl-spinner mdl-js-spinner is-active is-upgraded" data-upgraded=",MaterialSpinner"></div></div></div>',
+														
+														jf_preloader_layer_1 	= '<div class="mdl-spinner__layer mdl-spinner__layer-1"></div>',
+														jf_preloader_layer_2 	= '<div class="mdl-spinner__layer mdl-spinner__layer-2"></div>',
+														jf_preloader_layer_3 	= '<div class="mdl-spinner__layer mdl-spinner__layer-3"></div>',
+														jf_preloader_layer_4 	= '<div class="mdl-spinner__layer mdl-spinner__layer-4"></div>',
+														
+														jf_preloader_spinner_l	= '<div class="mdl-spinner__circle-clipper mdl-spinner__left"><div class="mdl-spinner__circle"></div></div>',
+														jf_preloader_spinner_p	= '<div class="mdl-spinner__gap-patch"><div class="mdl-spinner__circle"></div></div>',
+														jf_preloader_spinner_r	= '<div class="mdl-spinner__circle-clipper mdl-spinner__right"><div class="mdl-spinner__circle"></div></div>';
+										
+													// CREATE DOM - somewhow it dont works with big/arge html, so we have to append it ste-by-step
+														$("body").prepend(jf_preloader_wrapper);
+														$("#jf_preloader .mdl-spinner").append(jf_preloader_layer_1).append(jf_preloader_layer_2).append(jf_preloader_layer_3).append(jf_preloader_layer_4);
+														$("#jf_preloader .mdl-spinner__layer-1").append(jf_preloader_spinner_l).append(jf_preloader_spinner_p).append(jf_preloader_spinner_r);
+														$("#jf_preloader .mdl-spinner__layer-2").append(jf_preloader_spinner_l).append(jf_preloader_spinner_p).append(jf_preloader_spinner_r);
+														$("#jf_preloader .mdl-spinner__layer-3").append(jf_preloader_spinner_l).append(jf_preloader_spinner_p).append(jf_preloader_spinner_r);
+														$("#jf_preloader .mdl-spinner__layer-4").append(jf_preloader_spinner_l).append(jf_preloader_spinner_p).append(jf_preloader_spinner_r);
+													//<div id="jf_preloader" class="jf_animsition_overlay_slide"><div class="status"><div class="mdl-spinner mdl-js-spinner is-active is-upgraded" data-upgraded=",MaterialSpinner"><div class="mdl-spinner__layer mdl-spinner__layer-1"><div class="mdl-spinner__circle-clipper mdl-spinner__left"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__gap-patch"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__circle-clipper mdl-spinner__right"><div class="mdl-spinner__circle"></div></div></div><div class="mdl-spinner__layer mdl-spinner__layer-2"><div class="mdl-spinner__circle-clipper mdl-spinner__left"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__gap-patch"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__circle-clipper mdl-spinner__right"><div class="mdl-spinner__circle"></div></div></div><div class="mdl-spinner__layer mdl-spinner__layer-3"><div class="mdl-spinner__circle-clipper mdl-spinner__left"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__gap-patch"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__circle-clipper mdl-spinner__right"><div class="mdl-spinner__circle"></div></div></div><div class="mdl-spinner__layer mdl-spinner__layer-4"><div class="mdl-spinner__circle-clipper mdl-spinner__left"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__gap-patch"><div class="mdl-spinner__circle"></div></div><div class="mdl-spinner__circle-clipper mdl-spinner__right"><div class="mdl-spinner__circle"></div></div></div></div></div></div>
+													var jf_animsition_wrapper 	= $('#g-page-surround'),
+														jf_animsition_link		= 'a:not([target="_blank"]):not([href^=#]):not([data-size]):not(".jf_venobox,.chzn-single")';
+													jf_animsition_wrapper.animsition({
+														inClass: 'jf_overlay_slide_in_top',
+														outClass: 'jf_overlay_slide_out_top',
+														overlay : true,
+														overlayClass : 'jf_animsition_overlay_slide',
+														overlayParentElement : 'body',
+														inDuration :1000,
+														outDuration: 1000,
+														linkElement: jf_animsition_link
+													}).one('animsition.inStart',function(){
+														jf_animsition_wrapper.addClass('jf_animsition_moveUpWrapper');
+														setTimeout(function() {
+															jf_animsition_wrapper.removeClass('jf_animsition_moveUpWrapper');
+														}, 2000);
+														// console.log('event -> inStart');
+													});
+													$(jf_animsition_link).click(function(){
+														jf_animsition_wrapper.addClass('jf_animsition_moveDownWrapper');
+													});
+												});
+											</script>
+											#}
+											{% assets in 'head' with { priority: 1 } %}
+												<script src="{{ gantry.jf_g5_theme.tmpl_root() }}jf/features/jf_preloader/jf_pace.min.js" type="text/javascript"></script>
+											{% endassets -%}
+											
+											<script type="text/javascript">
+												jQuery(document).ready(function($){
+													var jf_preloader_tags	= $("#g-page-surround");
+														
+													Pace.on("hide", function(){
+														// alert("done");
+														jf_preloader_tags.addClass("jf_pace_moveUpWrapper").animate({opacity:1});
+															$(".pace-progress").hide(0);
+														setTimeout(function() {
+															$(".pace").addClass("jf_pace_loaded");
+															jf_preloader_tags.removeClass("jf_pace_moveUpWrapper");
+														}, 500);
+													});
+													$(window).bind('beforeunload', function(){
+														jf_preloader_tags.animate({opacity:0});
+														$(".pace").addClass("jf_pace_leave").removeClass("pace-inactive");
+														// alert("leaving");
+													});
+													{#// click event for links which has no href="javascript" and href="#"
+														function redirectPage(){
+															window.location = linkLocation;
+														}
+														jf_preloader_notlink		= "[href^=javascript:void(0)],[href^=javascript:void(0);],[href^=#],[target^=_blank],[onclick^=window.open],[data-size],.jf_venobox,.chzn-single,[href*=javascript: void( 0 )],[href*=.jpg]";
+
+														$('a[href]').click(function(event){
+															if(!$(this).is(jf_preloader_notlink) && $(this).is('[href*="#"]')){
+																"use strict";
+																var url 		= document.location.href;
+																var pathname 	= $(this).attr('href').split('#')[0];
+																var hash 		= $(this).attr('href').split('#')[1];
+																// alert(url);
+																// alert(pathname);
+																// alert(hash);
+																
+																// if element href is equal to current url - hash scroll on current page
+																if (url.indexOf(pathname) > -1) {
+																	// if has tag exists in dom
+																	if (!$('[data-scrolltag="' + hash + '"]').length > 0) {
+																		event.preventDefault();
+																		linkLocation = this.href;
+																		redirectPage();
+																		// do this after click
+																			jf_preloader_tags.animate({opacity:0});
+																			$(".pace").addClass("jf_pace_leave").removeClass("pace-inactive");
+																		// alert("leaving");
+																	}
+																} else {
+																	// if hash exists but not in current dom
+																		event.preventDefault();
+																		linkLocation = this.href;
+																		redirectPage();
+																		// do this after click
+																			jf_preloader_tags.animate({opacity:0});
+																			$(".pace").addClass("jf_pace_leave").removeClass("pace-inactive");
+																		// alert("leaving");
+																}
+															} else if ($(this).is('[href*="#"]')) {
+																
+															} else {
+																	// if hash exists but not in current dom
+																		event.preventDefault();
+																		linkLocation = this.href;
+																		redirectPage();
+																		// do this after click
+																			jf_preloader_tags.animate({opacity:0});
+																			$(".pace").addClass("jf_pace_leave").removeClass("pace-inactive");
+																		// alert("leaving");
+															}
+														});#}
+												});
+												(function($){$(window).load(function(){
+													//alert('window loaded :)');
+													//setTimeout(function() {
+														Pace.stop();
+													//}, 1000);
+												})})(jQuery);
+											</script>
+		{% endif %}
+	{% endfor %}
+	
+	{% for item_jf_scrollTop in particle.jf_scrollTop %}
+		{% if item_jf_scrollTop.enable %}
+											<script type="text/javascript">
+												jQuery(document).ready(function($){
+													$("body").prepend("{{ '<div id=\"jf_scrollTop\" class=\"'|e('js') }}{{ item_jf_scrollTop.class|e }}{{ '\"><i class=\"material-icons\">arrow_forward</i></div>'|e('js') }}");
+													var lastScrollTop = 0;
+													$(window).scroll(function() {
+														var jf_scrollBtn = $("#jf_scrollTop"),
+															scrollTop = $(this).scrollTop();
+															if(350 > scrollTop){
+																jf_scrollBtn.removeClass("jf_show");
+															} else if(scrollTop > lastScrollTop) {
+																jf_scrollBtn.removeClass("jf_show");
+															} else {
+																jf_scrollBtn.addClass("jf_show");
+															}
+															lastScrollTop = scrollTop;
+													});
+													$("#jf_scrollTop").click(function(){
+														$("html,body").animate({scrollTop:0},500);
+														// $("html,body").animate({ scrollTop: 0 },500);
+														return false;
+													});
+												});
+											</script>
+		{% endif %}
+	{% endfor %}
+	
+	{# ECHOS ##############################################
+	
+	{% if particle.modernizr %}				<script type="text/javascript">console.log("jf_features - particle.modernizr");</script>{% endif %}
+	{% if particle.jQueryEasing %}			<script type="text/javascript">console.log("jf_features - particle.jQueryEasing");</script>{% endif %}
+	{% if particle.jf_smoothScroll %}		<script type="text/javascript">console.log("jf_features - particle.jf_smoothScroll");</script>{% endif %}
+	{% for item_stickyHeader in particle.stickyHeader %}
+		{% if item_stickyHeader.enable %}	<script type="text/javascript">console.log("jf_features - particle.stickyHeader");</script>{% endif %}
+	{% endfor %}
+	
+	{% for item_jf_preloader in particle.jf_preloader %}
+		{% if item_jf_preloader.enable %}	<script type="text/javascript">console.log("jf_features - particle.jf_preloader");</script>{% endif %}
+	{% endfor %}
+	{% for item_jf_scrollTop in particle.jf_scrollTop %}
+		{% if item_jf_scrollTop.enable %}	<script type="text/javascript">console.log("jf_features - particle.jf_scrollTop");</script>{% endif %}
+	{% endfor %}
+	{% if particle.jf_iewarning %}			<script type="text/javascript">console.log("jf_features - particle.jf_iewarning");</script>{% endif %}
+	
+	{% for item_syntax in particle.jf_syntax %}
+		{% if item_syntax.prism %}			<script type="text/javascript">console.log("jf_features - particle.jf_syntax.prism");</script>{% endif %}
+		{% if item_syntax.typo_preview %}	<script type="text/javascript">console.log("jf_features - particle.jf_syntax.typo_preview");</script>{% endif %}
+	{% endfor %}#}
+{% endblock %}

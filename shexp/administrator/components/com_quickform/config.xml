@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<fields addfieldpath="/administrator/components/com_quickform/models/fields">
+	<fieldset
+		name="show"
+		label="QuickForm"
+		description="">
+		<field
+			name="display"
+			type="radio"
+			default="0"
+			label="Reference to the author"
+			description="">
+			<option
+				value="0">Simple</option>
+			<option
+				value="1">Invisible</option>
+			<option
+				value="2">Remove</option>
+		</field>
+		<field type="donation" />
+			<field name="cod"
+				type="text"
+				label="enter the code"
+				description="Obtain and enter the code to remove copyright studio"
+				class="inputbox"
+				size="30"
+			/>
+	</fieldset>
+	</fields>
+</config>

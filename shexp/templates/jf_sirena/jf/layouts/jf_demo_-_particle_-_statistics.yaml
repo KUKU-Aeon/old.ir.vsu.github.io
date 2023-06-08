@@ -1,0 +1,800 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/p_stats.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_p_stat-8439
+    -
+      - jf_p_stat-5395
+    -
+      - jf_p_stat-1555
+    -
+      - jf_p_stat-3172
+    -
+      - jf_p_stat-3615
+  /main/:
+    -
+      - position-position-4109
+    -
+      - system-messages-6074
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_p_stat-8439:
+    title: 'JF Particle - Statistics - Style 1 (Counter)'
+    attributes:
+      textAl: center
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#eeeeee'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '50'
+          scrolling: '0'
+          parallax_src: 'gantry-media://jf/pages/faq/faq.jpg'
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Statistics -  Style 1 (Counter)</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style_1:
+        -
+          grid: '3'
+          grid_last: '0'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#d92cda'
+          counter_fontsize: 54px
+          counter_num: '1273'
+          counter_sep: '1'
+          counter_sep_color: '#d92cda'
+          html_descr: '<h5>CLIENTS SERVED</h5>'
+          html_color: '#666666'
+          name: 'Item 1'
+        -
+          grid: '3'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          grid_last: '0'
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#f34235'
+          counter_fontsize: 54px
+          counter_num: '4373'
+          counter_sep: '1'
+          counter_sep_color: '#f34235'
+          html_descr: '<h5>LINES OF CODE</h5>'
+          name: 'Item 2'
+        -
+          grid: '3'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          grid_last: '0'
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#2095f2'
+          counter_fontsize: 54px
+          counter_num: '9595'
+          counter_sep: '1'
+          counter_sep_color: '#2095f2'
+          html_descr: '<h5>TOTAL DOWNLOADS</h5>'
+          name: 'Item 3'
+        -
+          grid: '3'
+          grid_last: '1'
+          icon_type: '0'
+          image_icon: ''
+          html_icon: ''
+          counter_type: default
+          counter_weight: '300'
+          counter_color: '#91ff91'
+          counter_fontsize: 54px
+          counter_num: '7690'
+          counter_sep: '1'
+          counter_sep_color: '#91ff91'
+          html_descr: '<h5>CUPS OF COFFEE</h5>'
+          html_color: '#666666'
+          name: 'Item 4'
+  jf_p_stat-5395:
+    title: 'JF Particle - Statistics - Style 2 (Progress Bar)'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Statistics -  Style 2 (Progress Bar)</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_2
+      style_2:
+        -
+          grid: '6'
+          grid_last: '0'
+          textAl: left
+          css_style: ''
+          html_title: '<h5>Gantry 5</h5>'
+          html_color: '#666666'
+          bar_size: x4
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '85'
+          bar_loadspeed: '1100'
+          name: 'Item 1'
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          html_title: '<h5>CSS3</h5>'
+          bar_size: x4
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '60'
+          bar_loadspeed: '1100'
+          name: 'Item 2'
+        -
+          grid: '6'
+          grid_last: '0'
+          textAl: left
+          html_title: '<h5>HTML5</h5>'
+          bar_size: x4
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '50'
+          bar_loadspeed: '1100'
+          name: 'Item 3'
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: left
+          html_title: '<h5>jQuery</h5>'
+          bar_size: x4
+          bar_color: '#6639b6'
+          bar_load_from: '0'
+          bar_load_to: '80'
+          bar_loadspeed: '1100'
+          name: 'Item 4'
+  jf_p_stat-1555:
+    title: 'JF Particle - Statistics - Style 3 (Pies)'
+    attributes:
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#f6f6f6'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '0'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Statistics -  Style 3 (Pies)</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_3
+      style_3:
+        -
+          grid: '3'
+          grid_last: '0'
+          textAl: center
+          bar_color: '#6639b6'
+          circle_size: '150'
+          circle_percent: '90'
+          circle_bar_width: '4'
+          bar_fillspeed: '2000'
+          content_type: html
+          html_content: '<i class="material-icons" style="font-size:36px">favorite_border</i>'
+          counter_fontsize: 20px
+          name: 'Item 1'
+        -
+          grid: '3'
+          grid_last: '0'
+          textAl: center
+          bar_color: '#4bae4f'
+          circle_size: '150'
+          circle_percent: '85'
+          circle_bar_width: '4'
+          bar_fillspeed: '3000'
+          content_type: html
+          html_content: '<i class="fa fa-thumbs-o-up" style="font-size:32px"></i>'
+          counter_fontsize: 20px
+          name: 'Item 2'
+        -
+          grid: '3'
+          grid_last: '0'
+          textAl: center
+          bar_color: '#1589d6'
+          circle_size: '150'
+          circle_percent: '70'
+          circle_bar_width: '4'
+          bar_fillspeed: '2500'
+          content_type: html
+          html_content: 'Sample Text'
+          counter_fontsize: 20px
+          name: 'Item 3'
+        -
+          grid: '3'
+          grid_last: '1'
+          textAl: center
+          bar_color: '#fe5621'
+          circle_size: '150'
+          circle_percent: '85'
+          circle_bar_width: '4'
+          bar_fillspeed: '6000'
+          content_type: counter
+          html_content: ''
+          counter_fontsize: 20px
+          name: 'Item 4'
+  jf_p_stat-3172:
+    title: 'JF Particle - Statistics - Style 4 (Charts)'
+    attributes:
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Statistics -  Style 4 (Charts)</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_4
+      style_4:
+        -
+          chart_type: piedonut
+          grid: '6'
+          grid_last: '0'
+          textAl: center
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          piedonut_type: pie
+          chart_id: my-chart-1
+          chart_height: 200px
+          chart_css: ''
+          chart_legend: '1'
+          chart_strokewidth: '2'
+          piedonut_set_1_value: '2'
+          piedonut_set_1_label: Canvas
+          piedonut_set_1_color: '#f44336'
+          piedonut_set_2_value: '3'
+          piedonut_set_2_label: CSS3
+          piedonut_set_2_color: '#03a9f4'
+          piedonut_set_3_value: '4'
+          piedonut_set_3_label: HTML5
+          piedonut_set_3_color: '#8bc34a'
+          piedonut_set_4_value: '5'
+          piedonut_set_4_label: jQuery
+          piedonut_set_4_color: '#ffeb3b'
+          piedonut_set_5_value: '5'
+          piedonut_set_5_label: PHP
+          piedonut_set_5_color: '#009688'
+          piedonut_set_6_value: ''
+          piedonut_set_6_label: ''
+          piedonut_set_6_color: '#6639b6'
+          piedonut_set_7_value: ''
+          piedonut_set_7_label: ''
+          piedonut_set_7_color: '#6639b6'
+          piedonut_set_8_value: ''
+          piedonut_set_8_label: ''
+          piedonut_set_8_color: '#6639b6'
+          piedonut_set_9_value: ''
+          piedonut_set_9_label: ''
+          piedonut_set_9_color: '#6639b6'
+          bar_grid: '1'
+          bar_grid_color: '#eeeeee'
+          bar_xaxis: '1'
+          bar_xaxis_tickcolor: '#ffffff'
+          bar_xaxis_fontcolor: '#9f9f9f'
+          bar_yaxis: '1'
+          bar_yaxis_tickcolor: '#eeeeee'
+          bar_yaxis_fontcolor: '#9f9f9f'
+          bar_set_1_value: ''
+          bar_set_1_label: ''
+          bar_set_1_width: '0.08'
+          bar_set_1_color: '#6639b6'
+          bar_set_2_value: ''
+          bar_set_2_label: ''
+          bar_set_2_width: '0.08'
+          bar_set_2_color: '#6639b6'
+          bar_set_3_value: ''
+          bar_set_3_label: ''
+          bar_set_3_width: '0.08'
+          bar_set_3_color: '#6639b6'
+          bar_set_4_value: ''
+          bar_set_4_label: ''
+          bar_set_4_width: '0.08'
+          bar_set_4_color: '#6639b6'
+          bar_set_5_value: ''
+          bar_set_5_label: ''
+          bar_set_5_width: '0.08'
+          bar_set_5_color: '#6639b6'
+          bar_set_6_value: ''
+          bar_set_6_label: ''
+          bar_set_6_width: '0.08'
+          bar_set_6_color: '#6639b6'
+          bar_set_7_value: ''
+          bar_set_7_label: ''
+          bar_set_7_width: '0.08'
+          bar_set_7_color: '#6639b6'
+          bar_set_8_value: ''
+          bar_set_8_label: ''
+          bar_set_8_width: '0.08'
+          bar_set_8_color: '#6639b6'
+          bar_set_9_value: ''
+          bar_set_9_label: ''
+          bar_set_9_width: '0.08'
+          bar_set_9_color: '#6639b6'
+          name: Pie
+        -
+          chart_type: piedonut
+          grid: '6'
+          grid_last: '1'
+          textAl: center
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          piedonut_type: donut
+          chart_id: my-chart-2
+          chart_height: 200px
+          chart_css: ''
+          chart_legend: '1'
+          chart_strokewidth: '2'
+          piedonut_set_1_value: '2'
+          piedonut_set_1_label: Canvas
+          piedonut_set_1_color: '#f44336'
+          piedonut_set_2_value: '3'
+          piedonut_set_2_label: CSS3
+          piedonut_set_2_color: '#03a9f4'
+          piedonut_set_3_value: '4'
+          piedonut_set_3_label: HTML5
+          piedonut_set_3_color: '#8bc34a'
+          piedonut_set_4_value: '5'
+          piedonut_set_4_label: jQuery
+          piedonut_set_4_color: '#ffeb3b'
+          piedonut_set_5_value: '5'
+          piedonut_set_5_label: PHP
+          piedonut_set_5_color: '#009688'
+          piedonut_set_6_value: ''
+          piedonut_set_6_label: ''
+          piedonut_set_6_color: '#6639b6'
+          piedonut_set_7_value: ''
+          piedonut_set_7_label: ''
+          piedonut_set_7_color: '#6639b6'
+          piedonut_set_8_value: ''
+          piedonut_set_8_label: ''
+          piedonut_set_8_color: '#6639b6'
+          piedonut_set_9_value: ''
+          piedonut_set_9_label: ''
+          piedonut_set_9_color: '#6639b6'
+          bar_grid: '1'
+          bar_grid_color: '#eeeeee'
+          bar_xaxis: '1'
+          bar_xaxis_tickcolor: '#ffffff'
+          bar_xaxis_fontcolor: '#9f9f9f'
+          bar_yaxis: '1'
+          bar_yaxis_tickcolor: '#eeeeee'
+          bar_yaxis_fontcolor: '#9f9f9f'
+          bar_set_1_value: ''
+          bar_set_1_label: ''
+          bar_set_1_width: '0.08'
+          bar_set_1_color: '#6639b6'
+          bar_set_2_value: ''
+          bar_set_2_label: ''
+          bar_set_2_width: '0.08'
+          bar_set_2_color: '#6639b6'
+          bar_set_3_value: ''
+          bar_set_3_label: ''
+          bar_set_3_width: '0.08'
+          bar_set_3_color: '#6639b6'
+          bar_set_4_value: ''
+          bar_set_4_label: ''
+          bar_set_4_width: '0.08'
+          bar_set_4_color: '#6639b6'
+          bar_set_5_value: ''
+          bar_set_5_label: ''
+          bar_set_5_width: '0.08'
+          bar_set_5_color: '#6639b6'
+          bar_set_6_value: ''
+          bar_set_6_label: ''
+          bar_set_6_width: '0.08'
+          bar_set_6_color: '#6639b6'
+          bar_set_7_value: ''
+          bar_set_7_label: ''
+          bar_set_7_width: '0.08'
+          bar_set_7_color: '#6639b6'
+          bar_set_8_value: ''
+          bar_set_8_label: ''
+          bar_set_8_width: '0.08'
+          bar_set_8_color: '#6639b6'
+          bar_set_9_value: ''
+          bar_set_9_label: ''
+          bar_set_9_width: '0.08'
+          bar_set_9_color: '#6639b6'
+          name: Donut
+        -
+          chart_type: bar
+          grid: '12'
+          grid_last: '1'
+          textAl: center
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          piedonut_type: pie
+          chart_id: my-chart-3
+          chart_height: 250px
+          chart_css: 'margin:50px 0  0 0'
+          chart_legend: '1'
+          chart_strokewidth: '1'
+          piedonut_set_1_value: ''
+          piedonut_set_1_label: ''
+          piedonut_set_1_color: '#6639b6'
+          piedonut_set_2_value: ''
+          piedonut_set_2_label: ''
+          piedonut_set_2_color: '#6639b6'
+          piedonut_set_3_value: ''
+          piedonut_set_3_label: ''
+          piedonut_set_3_color: '#6639b6'
+          piedonut_set_4_value: ''
+          piedonut_set_4_label: ''
+          piedonut_set_4_color: '#6639b6'
+          piedonut_set_5_value: ''
+          piedonut_set_5_label: ''
+          piedonut_set_5_color: '#6639b6'
+          piedonut_set_6_value: ''
+          piedonut_set_6_label: ''
+          piedonut_set_6_color: '#6639b6'
+          piedonut_set_7_value: ''
+          piedonut_set_7_label: ''
+          piedonut_set_7_color: '#6639b6'
+          piedonut_set_8_value: ''
+          piedonut_set_8_label: ''
+          piedonut_set_8_color: '#6639b6'
+          piedonut_set_9_value: ''
+          piedonut_set_9_label: ''
+          piedonut_set_9_color: '#6639b6'
+          bar_grid: '1'
+          bar_grid_color: '#eeeeee'
+          bar_xaxis: '1'
+          bar_xaxis_tickcolor: '#ffffff'
+          bar_xaxis_fontcolor: '#9f9f9f'
+          bar_yaxis: '1'
+          bar_yaxis_tickcolor: '#eeeeee'
+          bar_yaxis_fontcolor: '#9f9f9f'
+          bar_set_1_value: '[1,50], [2,80], [3,20], [4,90], [5,20], [6,50], [7,75]'
+          bar_set_1_label: London
+          bar_set_1_width: '0.08'
+          bar_set_1_color: '#8bc34a'
+          bar_set_2_value: '[1,10], [2,40], [3,70], [4,70], [5,40], [6,100], [7,40]'
+          bar_set_2_label: Monaco
+          bar_set_2_width: '0.08'
+          bar_set_2_color: '#00bcd4'
+          bar_set_3_value: '[1,70], [2,50], [3,20], [4,30], [5,100], [6,40], [7,70]'
+          bar_set_3_label: Milan
+          bar_set_3_width: '0.08'
+          bar_set_3_color: '#ff9800'
+          bar_set_4_value: ''
+          bar_set_4_label: ''
+          bar_set_4_width: '0.08'
+          bar_set_4_color: '#6639b6'
+          bar_set_5_value: ''
+          bar_set_5_label: ''
+          bar_set_5_width: '0.08'
+          bar_set_5_color: '#6639b6'
+          bar_set_6_value: ''
+          bar_set_6_label: ''
+          bar_set_6_width: '0.08'
+          bar_set_6_color: '#6639b6'
+          bar_set_7_value: ''
+          bar_set_7_label: ''
+          bar_set_7_width: '0.08'
+          bar_set_7_color: '#6639b6'
+          bar_set_8_value: ''
+          bar_set_8_label: ''
+          bar_set_8_width: '0.08'
+          bar_set_8_color: '#6639b6'
+          bar_set_9_value: ''
+          bar_set_9_label: ''
+          bar_set_9_width: '0.08'
+          bar_set_9_color: '#6639b6'
+          name: Bar
+  jf_p_stat-3615:
+    title: 'JF Particle - Statistics - Style 5 (Graphs)'
+    attributes:
+      textAl: center
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Statistics -  Style 5 (Graphs)</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_5
+      style_5:
+        -
+          grid: '6'
+          grid_last: '0'
+          textAl: center
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          graph_id: my-graph-1
+          graph_height: 200px
+          graph_css: ''
+          graph_legend: '0'
+          graph_curved: '0'
+          graph_grid: '0'
+          graph_grid_color: '#eeeeee'
+          graph_xaxis: '0'
+          graph_xaxis_max: '7'
+          graph_xaxis_tickcolor: '#eeeeee'
+          graph_xaxis_fontcolor: '#9f9f9f'
+          graph_yaxis: '0'
+          graph_yaxis_max: '100'
+          graph_yaxis_tickcolor: '#eeeeee'
+          graph_yaxis_fontcolor: '#9f9f9f'
+          graph_set_1_value: '[0,70], [1,70], [2,20], [3,40], [4,75], [5,80], [6,60], [7,50]'
+          graph_set_1_label: 'Product 1'
+          graph_set_1_opacity: '0.98'
+          graph_set_1_color: '#e3e3e3'
+          graph_set_2_value: '[0,40], [1,60], [2,30], [3,70], [4,10], [5,50], [6,40], [7,85]'
+          graph_set_2_label: 'Product 2'
+          graph_set_2_opacity: '0.98'
+          graph_set_2_color: '#f1dd2c'
+          graph_set_3_value: ''
+          graph_set_3_label: ''
+          graph_set_3_opacity: '0.98'
+          graph_set_3_color: '#e3e3e3'
+          graph_set_4_value: ''
+          graph_set_4_label: ''
+          graph_set_4_opacity: '0.98'
+          graph_set_4_color: '#e3e3e3'
+          graph_set_5_value: ''
+          graph_set_5_label: ''
+          graph_set_5_opacity: '0.98'
+          graph_set_5_color: '#e3e3e3'
+          name: Default
+        -
+          grid: '6'
+          grid_last: '1'
+          textAl: center
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          graph_id: my-graph-2
+          graph_height: 200px
+          graph_css: ''
+          graph_legend: '0'
+          graph_curved: '1'
+          graph_grid: '0'
+          graph_grid_color: '#eeeeee'
+          graph_xaxis: '0'
+          graph_xaxis_max: '7'
+          graph_xaxis_tickcolor: '#eeeeee'
+          graph_xaxis_fontcolor: '#9f9f9f'
+          graph_yaxis: '0'
+          graph_yaxis_max: '100'
+          graph_yaxis_tickcolor: '#eeeeee'
+          graph_yaxis_fontcolor: '#9f9f9f'
+          graph_set_1_value: '[0,40], [1,10], [2,30], [3,50], [4,100], [5,10], [6,90], [7,85]'
+          graph_set_1_label: 'Product 1'
+          graph_set_1_opacity: '0.98'
+          graph_set_1_color: '#e3e3e3'
+          graph_set_2_value: '[0,40], [1,50], [2,20], [3,60], [4,90], [5,80], [6,10], [7,5]'
+          graph_set_2_label: 'Product 2'
+          graph_set_2_opacity: '0.98'
+          graph_set_2_color: '#f1dd2c'
+          graph_set_3_value: ''
+          graph_set_3_label: ''
+          graph_set_3_opacity: '0.98'
+          graph_set_3_color: '#e3e3e3'
+          graph_set_4_value: ''
+          graph_set_4_label: ''
+          graph_set_4_opacity: '0.98'
+          graph_set_4_color: '#e3e3e3'
+          graph_set_5_value: ''
+          graph_set_5_label: ''
+          graph_set_5_opacity: '0.98'
+          graph_set_5_color: '#e3e3e3'
+          name: 'Curved Edges'
+        -
+          grid: '12'
+          grid_last: '1'
+          textAl: center
+          css3_anim_name: fadeInUp
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          graph_id: my-graph-3
+          graph_height: 300px
+          graph_css: 'margin:80px 0 0 0'
+          graph_legend: '1'
+          graph_curved: '1'
+          graph_grid: '1'
+          graph_grid_color: '#eeeeee'
+          graph_xaxis: '1'
+          graph_xaxis_max: '7'
+          graph_xaxis_tickcolor: '#eeeeee'
+          graph_xaxis_fontcolor: '#9f9f9f'
+          graph_yaxis: '1'
+          graph_yaxis_max: '100'
+          graph_yaxis_tickcolor: '#eeeeee'
+          graph_yaxis_fontcolor: '#9f9f9f'
+          graph_set_1_value: '[0,40], [1,40], [2,70], [3,50], [4,100], [5,10], [6,90], [7,85]'
+          graph_set_1_label: 'Product 1'
+          graph_set_1_opacity: '0.98'
+          graph_set_1_color: '#e3e3e3'
+          graph_set_2_value: '[0,80], [1,30], [2,80], [3,40], [4,80], [5,60], [6,10], [7,50]'
+          graph_set_2_label: 'Product 2'
+          graph_set_2_opacity: '0.98'
+          graph_set_2_color: '#f1dd2c'
+          graph_set_3_value: ''
+          graph_set_3_label: ''
+          graph_set_3_opacity: '0.98'
+          graph_set_3_color: '#e3e3e3'
+          graph_set_4_value: ''
+          graph_set_4_label: ''
+          graph_set_4_opacity: '0.98'
+          graph_set_4_color: '#e3e3e3'
+          graph_set_5_value: ''
+          graph_set_5_label: ''
+          graph_set_5_opacity: '0.98'
+          graph_set_5_color: '#e3e3e3'
+          name: 'Enabled All Options'
+  position-position-4109:
+    title: Breadcrumbs
+    inherit:
+      outline: default
+      particle: position-position-2694
+      include:
+        - attributes
+        - block
+  system-messages-6074:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - attributes
+        - block

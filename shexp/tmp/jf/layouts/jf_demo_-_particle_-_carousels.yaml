@@ -1,0 +1,1128 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/p_carousels.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - jf_p_carousel-1750
+    -
+      - jf_p_carousel-1244
+    -
+      - jf_p_carousel-9004
+    -
+      - jf_p_carousel-6356
+    -
+      - jf_p_carousel-2103
+    -
+      - jf_p_carousel-9951
+    -
+      - jf_p_carousel-4285
+    -
+      - jf_p_carousel-6159
+  /main/:
+    -
+      - position-position-5883
+    -
+      - system-messages-9077
+  /full-width-section-2/: {  }
+  /top-footer/: {  }
+  footer: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  jf_p_carousel-1750:
+    title: 'JF Particle - Carousels: Style 1'
+    attributes:
+      contentW: full
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_1
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 1</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style_1:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          c_caption_descr: 'When Goliath comes out, you should run.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          c_caption_descr: 'When Goliath comes out, you should run.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          c_caption_descr: 'When Goliath comes out, you should run.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          c_caption_descr: 'When Goliath comes out, you should run.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          c_caption_descr: 'When Goliath comes out, you should run.'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          c_caption_descr: 'When Goliath comes out, you should run.'
+          name: 'Item 6'
+  jf_p_carousel-1244:
+    title: 'JF Particle - Carousels: Style 2'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#eeeeee'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '60'
+          scrolling: '0'
+          parallax_src: 'gantry-media://jf/elements/parallax/screen_1.jpg'
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '3'
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 2</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_2
+      style_2:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          c_image_alt: ''
+          c_caption: 'Dreamy <span>Honey</span> <i>Now</i>'
+          name: 'Item 6'
+  jf_p_carousel-9004:
+    title: 'JF Particle - Carousels: Style 3'
+    attributes:
+      contentW: full
+      padding: '100px 0'
+      style: style_3
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 3</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style_3:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">search</i>'
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">search</i>'
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">search</i>'
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">search</i>'
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.8'
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">search</i>'
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          c_image_alt: ''
+          c_caption_icon: '<i class="material-icons">search</i>'
+          c_caption_title: 'Thoughtful <span>Goliath</span>'
+          name: 'Item 6'
+  jf_p_carousel-6356:
+    title: 'JF Particle - Carousels: Style 4'
+    attributes:
+      contentW: full
+      padding: '100px 0'
+      textAl: left
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#222222'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '3'
+      html_before: "<h1 style=\"font-weight:700;margin:0 10% 10px 10%;color:#fff\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 4</h1>\n<h5 style=\"margin:0 10% 70px 10%;color:#fff\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_4
+      style_4:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful<br>elementum Goliath'
+          c_caption_descr: 'Sagittis placerat integer'
+          c_caption_author: '@LoremIpsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful<br>elementum Goliath'
+          c_caption_descr: 'Sagittis placerat integer'
+          c_caption_author: '@LoremIpsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful<br>elementum Goliath'
+          c_caption_descr: 'Sagittis placerat integer'
+          c_caption_author: '@LoremIpsum'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful<br>elementum Goliath'
+          c_caption_descr: 'Sagittis placerat integer'
+          c_caption_author: '@LoremIpsum'
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful<br>elementum Goliath'
+          c_caption_descr: 'Sagittis placerat integer'
+          c_caption_author: '@LoremIpsum'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          c_image_alt: ''
+          c_caption_title: 'Thoughtful<br>elementum Goliath'
+          c_caption_descr: 'Sagittis placerat integer'
+          c_caption_author: '@LoremIpsum'
+          name: 'Item 6'
+  jf_p_carousel-2103:
+    title: 'JF Particle - Carousels: Style 5'
+    attributes:
+      contentW: full
+      padding: '100px 0'
+      textAl: right
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '2'
+      html_before: "<h1 style=\"font-weight:700;margin:0 10% 10px 10%\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 5</h1>\n<h5 style=\"margin:0 10% 70px 10%\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_5
+      style_5:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: self
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/1.jpg'
+          c_image_alt: ''
+          c_caption_title: TRAVEL
+          c_caption_descr: 'Thoughtful elementum<br>Goliath.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/2.jpg'
+          c_image_alt: ''
+          c_caption_title: TRAVEL
+          c_caption_descr: 'Thoughtful elementum<br>Goliath.'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/3.jpg'
+          c_image_alt: ''
+          c_caption_title: TRAVEL
+          c_caption_descr: 'Thoughtful elementum<br>Goliath.'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0'
+          c_image: 'gantry-media://jf/elements/lightboxes/4.jpg'
+          c_image_alt: ''
+          c_caption_title: TRAVEL
+          c_caption_descr: 'Thoughtful elementum<br>Goliath.'
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Item 4'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/5.jpg'
+          c_image_alt: ''
+          c_caption_title: TRAVEL
+          c_caption_descr: 'Thoughtful elementum<br>Goliath.'
+          name: 'Item 5'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: photoswipe
+          simple_link_url: ''
+          simple_link_target: blank
+          photoswipe_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          photoswipe_image_width: '1600'
+          photoswipe_image_height: '1067'
+          photoswipe_author: 'John Doe'
+          photoswipe_caption: 'Dreamy Honey Now'
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_image: 'gantry-media://jf/elements/lightboxes/6.jpg'
+          c_image_alt: ''
+          c_caption_title: TRAVEL
+          c_caption_descr: 'Thoughtful elementum<br>Goliath.'
+          name: 'Item 6'
+  jf_p_carousel-9951:
+    title: 'JF Particle - Carousels: Style 6'
+    attributes:
+      contentW: full
+      padding: '100px 0'
+      count_items: '3'
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 6</h1>\n<h5 style=\"margin:0 0 70px 0\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_6
+      style_6:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/n_1.jpg'
+          c_caption_title: 'Cras Feugiat'
+          c_caption_descr: 'Sagittis placerat integer elementum nec cras et et rhoncus.'
+          c_caption_cat: '<i class="material-icons">favorite_border</i>News'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/f_1.jpg'
+          c_caption_title: 'Cras Feugiat'
+          c_caption_descr: 'Sagittis placerat integer elementum nec cras et et rhoncus.'
+          c_caption_cat: '<i class="material-icons">favorite_border</i>News'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/s_2.jpg'
+          c_caption_title: 'Cras Feugiat'
+          c_caption_descr: 'Sagittis placerat integer elementum nec cras et et rhoncus.'
+          c_caption_cat: '<i class="material-icons">favorite_border</i>News'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/s_3.jpg'
+          c_caption_title: 'Cras Feugiat'
+          c_caption_descr: 'Sagittis placerat integer elementum nec cras et et rhoncus.'
+          c_caption_cat: '<i class="material-icons">favorite_border</i>News'
+          name: 'Item 4'
+  jf_p_carousel-4285:
+    title: 'JF Particle - Carousels: Style 7'
+    attributes:
+      padding: '100px 0'
+      bg_options:
+        -
+          bg_type: parallax_img
+          lazyload: '1'
+          bgColor: '#3b3b3b'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '30'
+          scrolling: '0'
+          parallax_src: 'gantry-media://jf/elements/parallax/screen_2.jpg'
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '3'
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0;text-shadow:0px 1px 8px rgba(0, 0, 0, 0.5)\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 7</h1>\n<h5 style=\"margin:0 0 70px 0;text-shadow:0px 1px 8px rgba(0, 0, 0, 0.9);font-weight:500\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_7
+      style_7:
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/n_1.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Item 1'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venotype: image
+          venobox_video_url: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_image: 'gantry-media://jf/blog/n_4.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Item 2'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/n_3.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          css3_anim_name: zoomIn
+          css3_anim_type: onview
+          css3_anim_delay: '0.6'
+          name: 'Item 3'
+        -
+          customclass: 'deep-purple jf_waves_light_40'
+          linktype: simple_link
+          simple_link_url: '#'
+          simple_link_target: self
+          photoswipe_image: ''
+          photoswipe_image_width: ''
+          photoswipe_image_height: ''
+          photoswipe_author: ''
+          photoswipe_caption: ''
+          venobox_image: ''
+          venobox_gallery: ''
+          venobox_author: ''
+          c_padding: 'padding:0 10px'
+          c_direc: left
+          c_image: 'gantry-media://jf/blog/s_3.jpg'
+          c_caption_date: '<i class="material-icons">access_time</i>14 Oct 2015'
+          c_caption_title: 'Sagittis placerat integer elementum nec cras et'
+          c_caption_cat: '<li>Blog</li><li>News</li>'
+          name: 'Item 4'
+  jf_p_carousel-6159:
+    title: 'JF Particle - Carousels: Style 8'
+    attributes:
+      contentW: full
+      padding: '100px 0 0 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#feea3a'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      count_items: '1'
+      html_before: "<h1 style=\"font-weight:700;margin:0 0 10px 0;color:#333\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Carousel - Style 8</h1>\n<h5 style=\"margin:0 0 100px 0;color:#333;font-weight:500\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">An easy step to build layouts in a variety of combinations.</h5>"
+      style: style_8
+      style_8:
+        -
+          c_height: 700px
+          c_bgColor: '#9e9e9e'
+          c_image: 'gantry-media://jf/particles/carousels/1.png'
+          c_layer: "<h1 style=\"font-weight:700;margin:0 0 10px 0;color:#fff;font-size:52px\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Material Design</h1>\n<h5 style=\"margin:0 0 30px 0;color:#fff\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Built on latest trends in web technology</h5>\n<button class=\"jf_btn deep-purple l raised jf_waves_dark_10\" data-animation=\"fadeInUp\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">Learn More</button>"
+          c_layer_pos: 'top:30%;right:14%'
+          name: 'Item 1'
+        -
+          c_height: 700px
+          c_bgColor: '#607d8b'
+          c_image: 'gantry-media://jf/particles/carousels/2.png'
+          c_layer: "<h1 style=\"font-weight:700;margin:0 0 10px 0;color:#fff;font-size:52px\">Gantry 5</h1>\n<h5 style=\"margin:0 0 30px 0;color:#fff\">The Next Generation Theme Framework for Joomla!</h5>\n<button class=\"jf_btn yellow l raised jf_waves_dark_10\">Learn More</button>"
+          c_layer_pos: 'top:30%;left:15%'
+          name: 'Item 2'
+        -
+          c_height: 700px
+          c_bgColor: '#795548'
+          c_image: 'gantry-media://jf/particles/carousels/3.png'
+          c_layer: "<h1 style=\"font-weight:700;margin:0 0 10px 0;color:#fff;font-size:52px\">Multi-Purpose</h1>\n<h5 style=\"margin:0 0 30px 0;color:#fff\">The Iconic Theme for any kind of website</h5>\n<button class=\"jf_btn yellow l raised jf_waves_dark_10\">Learn More</button>"
+          c_layer_pos: 'top:30%;right:14%'
+          name: 'Item 3'
+        -
+          c_height: 700px
+          c_bgColor: '#9e9e9e'
+          c_image: 'gantry-media://jf/particles/carousels/4.png'
+          c_layer: "<h1 style=\"font-weight:700;margin:0 0 10px 0;color:#fff;font-size:52px\">Powerful Features</h1>\n<h5 style=\"margin:0 0 30px 0;color:#fff\">Unique Template with Amazing Effects </h5>\n<button class=\"jf_btn yellow l raised jf_waves_dark_10\">Learn More</button>"
+          c_layer_pos: 'top:30%;right:11%'
+          name: 'Item 4'
+  position-position-5883:
+    title: 'Module Position'
+    inherit:
+      outline: default
+      particle: position-position-2694
+      include:
+        - attributes
+        - block
+  system-messages-9077:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - attributes
+        - block

@@ -1,0 +1,269 @@
+/**
+* @version    JF_PDT_090
+* @author   JoomForest http://www.joomforest.com
+* @copyright  Copyright (C) 2011-2016 JoomForest.com
+* @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+*/
+
+/* ===========_______________________________ START - BS BUTTONS ________________________________________=========== */
+  html {
+    body {
+      .btn-primary {
+        background-color: $jf_color_base_accent_1;
+      }
+      .btn-primary:active:hover,
+      .btn-primary.active:hover,
+      .open > .dropdown-toggle.btn-primary:hover,
+      .btn-primary:active:focus,
+      .btn-primary.active:focus,
+      .open > .dropdown-toggle.btn-primary:focus,
+      .btn-primary:active.focus,
+      .btn-primary.active.focus,
+      .open > .dropdown-toggle.btn-primary.focus {
+        background-color: $jf_color_base_accent_1;
+      }
+      .btn-primary.disabled,
+      .btn-primary[disabled],
+      fieldset[disabled] .btn-primary,
+      .btn-primary.disabled:hover,
+      .btn-primary[disabled]:hover,
+      fieldset[disabled] .btn-primary:hover,
+      .btn-primary.disabled:focus,
+      .btn-primary[disabled]:focus,
+      fieldset[disabled] .btn-primary:focus,
+      .btn-primary.disabled.focus,
+      .btn-primary[disabled].focus,
+      fieldset[disabled] .btn-primary.focus,
+      .btn-primary.disabled:active,
+      .btn-primary[disabled]:active,
+      fieldset[disabled] .btn-primary:active,
+      .btn-primary.disabled.active,
+      .btn-primary[disabled].active,
+      fieldset[disabled] .btn-primary.active {
+        background-color: $jf_color_base_accent_1;
+      }
+      .btn-primary .badge {
+        color: $jf_color_base_accent_1;
+      }
+      .btn-link {
+        color: $jf_color_base_accent_1;
+      }
+      .btn-link:hover,
+      .btn-link:focus {
+        color: $jf_color_base_accent_1;
+      }
+      .btn-primary:hover,
+      .btn-primary:active:hover,
+      .btn-primary:focus {
+        background-color: $jf_color_base_accent_1;
+      }
+      .btn-primary:active {
+        background-color: $jf_color_base_accent_1;
+      }
+      .btn-link:hover,
+      .btn-link:focus {
+        color: $jf_color_base_accent_1;
+      }
+      .btn-group.open .btn-primary.dropdown-toggle {
+        background-color: $jf_color_base_accent_1;
+      }
+    }
+  }
+/* ===========_______________________________ END   - BS BUTTONS ________________________________________=========== */
+
+/* ===========_______________________________ START - HOTSPOTS ________________________________________=========== */
+  body {
+    .jf_hotspots {
+      &.style_1 {
+        @mixin jf_hotspot_style1_color($textColor,$bgColor) {
+          color: $textColor;
+          .content {
+            .text {
+              h1, h2, h3, h4, h5, h6 {
+                color: $textColor;
+              }
+            }
+            .mask {
+              background-color: $bgColor;
+              border-color: $bgColor;
+            }
+          }
+        }
+        &.yellow      {@include jf_hotspot_style1_color($jf_color_base_text_color,#feea3a);}
+        &.white       {@include jf_hotspot_style1_color($jf_color_base_text_color,#fff);}
+      }
+      &.style_2 {
+        .descr {
+          h1, h2, h3, h4, h5, h6 {
+            color: $jf_color_base_text_color;
+          }
+        }
+        @mixin jf_hotspot_style2_color($textColor,$bgColor) {
+          &:hover {
+            color: $textColor;
+            .descr {
+              background: $bgColor;
+              h1, h2, h3, h4, h5, h6 {
+                color: $textColor;
+              }
+              .category li {
+                color: $textColor;
+              }
+            }
+          }
+        }
+        &.yellow      {@include jf_hotspot_style2_color($jf_color_base_text_color,#feea3a);}
+      }
+      &.style_4 {
+        .meta {
+          .category {
+            color: $jf_color_base_accent_1;
+          }
+        }
+      }
+    }
+    [data-foreground="dark"]{
+      .jf_hotspots {
+        &.style_4 {
+          h1, h2, h3, h4, h5, h6 {
+            color: $jf_color_base_text_color;
+          }
+        }
+      }
+    }
+  }
+/* ===========_______________________________ END   - HOTSPOTS ________________________________________=========== */
+
+/* ===========_______________________________ START - ICON BOXES ________________________________________=========== */
+  body {
+    .jf_icon_box {
+      .descr {
+        color: $jf_color_base_text_color;
+      }
+    }
+    [data-foreground="dark"]{
+      &.lined,
+      &.filled {
+        color: $jf_color_base_text_color;
+        .icon,
+        h1.header, h2.header, h3.header, h4.header, h5.header, h6.header,
+        .descr {
+          color: $jf_color_base_text_color;
+        }
+      }
+    }
+  }
+/* ===========_______________________________ END   - ICON BOXES ________________________________________=========== */
+
+/* ===========_______________________________ START - TESTIMONIALS ________________________________________=========== */
+  body {
+    [data-foreground="dark"]{
+      .jf_testimonials {
+        &.style_2 {
+          .quote {
+            color: $jf_color_base_text_color;
+          }
+        }
+      }
+    }
+  }
+/* ===========_______________________________ END   - TESTIMONIALS ________________________________________=========== */
+
+/* ===========_______________________________ START - TYPO ________________________________________=========== */
+  html {
+    body {
+      input[type="text"], 
+      input[type="password"], 
+      input[type="datetime"], 
+      input[type="datetime-local"], 
+      input[type="date"], 
+      input[type="month"], 
+      input[type="time"], 
+      input[type="week"], 
+      input[type="number"], 
+      input[type="email"], 
+      input[type="url"], 
+      input[type="search"], 
+      input[type="tel"], 
+      input[type="color"], 
+      .uneditable-input {
+        &:focus {
+          @include box-shadow(inset 0 -2px 0 $jf_color_base_accent_1);
+        }
+      }
+    }
+    body {
+      .jf_input {
+        input[type="text"], 
+        input[type="password"], 
+        input[type="datetime"], 
+        input[type="datetime-local"], 
+        input[type="date"], 
+        input[type="month"], 
+        input[type="time"], 
+        input[type="week"], 
+        input[type="number"], 
+        input[type="email"], 
+        input[type="url"], 
+        input[type="search"], 
+        input[type="tel"], 
+        input[type="color"], 
+        .uneditable-input {
+          &:focus {
+            @include box-shadow(inset 0 -2px 0 $jf_color_base_accent_1);
+            &~label {
+              color: $jf_color_base_accent_1;
+            }
+          }
+        }
+      }
+    }
+    body {
+      textarea {
+        &:focus {
+          @include box-shadow(inset 0 -2px 0 $jf_color_base_accent_1);
+          &~label {
+            color: $jf_color_base_accent_1;
+          }
+        }
+      }
+    }
+    body {
+      .jf_textarea {
+        textarea {
+          &:focus {
+            @include box-shadow(inset 0 -2px 0 $jf_color_base_accent_1);
+            &~label {
+              color: $jf_color_base_accent_1;
+            }
+          }
+        }
+      }
+    }
+    body {
+      .jf_check {
+        input[type="checkbox"]:checked+i {
+          background-color: $jf_color_base_accent_1;
+        }
+        @mixin jf_check_radio_colors($color, $class) {
+          input[type="radio"] + i#{$class}:active:before {
+            @include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 2px #{$color} inset, 0 0 0 24px #{rgba($color,.15)}");
+          }
+          &:hover input[type="radio"] + i#{$class}:active:before {
+            border-color: $color;
+            @include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 2px #{$color} inset, 0 0 0 0 #{$color}");
+          }
+          &:hover input[type="radio"] + i#{$class}:before {
+            border-color: rgba(0, 0, 0, 0.5);
+            @include box-shadow("0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 0 #{$color} inset,0 0 0 0 #{$color};");
+          }
+          input[type="radio"]:checked + i#{$class}:before {
+            border-color: $color;
+            @include box-shadow("0 0 0 4px #{$color} inset, 0 0 0 8px #FFF inset, 0 0 0 12px #{$color} inset, 0 0 0 24px rgba(0, 0, 0, 0);");
+          }
+        }
+        @include jf_check_radio_colors($jf_color_base_accent_1, "");
+      }
+    }
+  }
+/* ===========_______________________________ END   - TYPO ________________________________________=========== */

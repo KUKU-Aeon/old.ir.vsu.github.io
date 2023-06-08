@@ -1,0 +1,169 @@
+/**
+ * @package     perfectdashboard
+ * @version     1.2.0
+ *
+ * @copyright   Copyright (C) 2017 Perfect Dashboard. All rights reserved. https://perfectdashboard.com
+ * @license     GNU General Public Licence http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+.perfectdashboard {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 32px 0;
+}
+
+.perfectdashboard h1 {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: -10px;
+}
+
+.perfectdashboard h1 > span {
+    color: #468847;
+    font-weight: 700;
+}
+
+.perfectdashboard h2 {
+    font-size: 32px;
+    margin: 24px 0 0 0;
+}
+
+.perfectdashboard h2 a {
+    text-decoration: underline;
+}
+
+.perfectdashboard iframe {
+    width: 100%;
+}
+
+.perfectdashboard .span6 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0!important;
+    padding: 0 32px 0 0!important;
+    width: 50%!important;
+}
+
+.perfectdashboard .span6 + .span6 {
+    padding: 0 0 0 32px!important;
+}
+
+.perfectdashboard-list-features {
+    font-size: 20px;
+    margin: 32px 0;
+}
+
+.perfectdashboard-list-features li {
+    padding: 8px 0;
+}
+
+.perfectdashboard-list-features i {
+    padding-right: 8px;
+}
+
+.perfectdashboard-big-btn {
+    font-size: 20px!important;
+    font-weight: bold;
+    line-height: 1.2!important;
+    padding: 24px!important;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.perfectdashboard-list-presale {
+    color: #666;
+    font-size: 14px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.perfectdashboard-list-presale li {
+    padding: 2px 0;
+}
+
+.perfectdashboard-success-view {
+    float: none;
+    margin: 0 auto!important;
+    max-width: 1240px;
+}
+
+.perfectdashboard-success-view h1 {
+    font-size: 40px;
+}
+
+.perfectdashboard-computer {
+    position: relative;
+}
+
+.perfectdashboard-computer-img {
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
+
+.perfectdashboard-computer-video {
+    bottom: 6%;
+    height: 60%;
+    left: 14%;
+    position: absolute;
+    right: 14%;
+    top: 8%;
+    width: 71.5%;
+}
+
+@media (max-width: 1400px) {
+    .perfectdashboard h1 {
+        font-size: 56px;
+    }
+
+    .perfectdashboard-success-view h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .perfectdashboard h1 {
+        font-size: 48px;
+    }
+
+    .perfectdashboard-success-view h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .perfectdashboard h1 {
+        font-size: 40px;
+    }
+
+    .perfectdashboard-list-features li {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+
+    .perfectdashboard-big-btn {
+        font-size: 16px!important;
+        padding: 16px!important;
+    }
+}
+
+@media (max-width: 840px) {
+    .perfectdashboard .span6,
+    .perfectdashboard .span6 + .span6 {
+        padding: 0 0 32px 0 !important;
+        width: 100%!important;
+    }
+
+    .perfectdashboard-success-view h1 {
+        font-size: 24px;
+    }
+
+    .perfectdashboard-success-view h2 {
+        font-size: 16px;
+    }
+}

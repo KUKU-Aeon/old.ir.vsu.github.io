@@ -1,0 +1,425 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/home_business.jpg'
+  name: default
+  timestamp: 1439651398
+layout:
+  top-panel: {  }
+  header: {  }
+  search-panel: {  }
+  left-panel: {  }
+  right-panel: {  }
+  overlay-panel: {  }
+  /full-width-section-1/:
+    -
+      - position-module-8010
+  /main/:
+    -
+      - position-position-6593
+    -
+      - system-messages-9055
+  /full-width-section-2/:
+    -
+      - jf_p_cta-8290
+    -
+      - jf_p_cta-9620
+    -
+      - jf_p_cta-8787
+    -
+      - jf_p_cta-4538
+    -
+      - jf_p_cta-8682
+    -
+      - jf_p_cta-2985
+  /top-footer/: {  }
+  /footer/: {  }
+  bottom-footer: {  }
+  /full-width-section-3/: {  }
+structure:
+  top-panel:
+    type: section
+    title: 'Top Panel'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  search-panel:
+    type: section
+    title: 'Search Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  left-panel:
+    type: section
+    title: 'Left Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  right-panel:
+    type: section
+    title: 'Right Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  overlay-panel:
+    type: section
+    title: 'Overlay Panel'
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  full-width-section-1:
+    type: section
+    title: 'Full Width Section 1'
+    attributes:
+      boxed: '2'
+      class: ''
+  main:
+    attributes:
+      boxed: ''
+  full-width-section-2:
+    type: section
+    title: 'Full Width Section 2'
+    attributes:
+      boxed: '2'
+      class: ''
+  top-footer:
+    type: section
+    title: 'Top Footer'
+    attributes:
+      boxed: ''
+      class: ''
+  footer:
+    attributes:
+      boxed: ''
+      class: bg-image
+      extra:
+        -
+          style: 'padding:90px 0 60px 0'
+    inherit:
+      outline: default
+      include:
+        - children
+  bottom-footer:
+    type: section
+    title: 'Bottom Footer'
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  full-width-section-3:
+    type: section
+    title: 'Full Width Section 3'
+    attributes:
+      boxed: ''
+content:
+  position-module-8010:
+    title: 'Module Instance'
+    attributes:
+      module_id: '107'
+      key: module-instance
+  position-position-6593:
+    title: Breadcrumbs
+    inherit:
+      outline: default
+      particle: position-position-2694
+      include:
+        - attributes
+        - block
+  system-messages-9055:
+    inherit:
+      outline: default
+      particle: system-messages-1489
+      include:
+        - block
+        - attributes
+  jf_p_cta-8290:
+    title: 'JF Particle - CTA: Style 1 (Background Color)'
+    attributes:
+      contentW: default
+      padding: '50px 0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#673ab7'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      css: 'margin:0 0.625rem;padding:0 0.938rem'
+      style_1:
+        -
+          grid: '1'
+          contentTextAl: left
+          contentTheme: dark
+          html: "<p style=\"font-size:17px;float:left\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.3\">WE CREATE HIGH QUALITY PRODUCTS THAT ARE USED AND LOVED BY THOUSANDS OF CUSTOMERS</p>\n<button class=\"jf_btn jf_waves_dark_20 l raised yellow waves-effect\" style=\"text-transform:capitalize;letter-spacing:1px;margin:20px 10px 0 0;float:right\" data-animation=\"fadeInRightShort\" data-animation-type=\"onview\" data-animation-delay=\"0.5\">SIGN UP</button>"
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: Item
+  jf_p_cta-9620:
+    title: "JF Particle - CTA:\_Style 2 (Left-Side Content With Right-Side Image)"
+    attributes:
+      padding: '0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: 50px
+          contentStyle: html
+          contentTheme: light
+          html: "<h3 style=\"font-weight:500;margin:80px 0 0;text-transform:uppercase\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Penatibus parturient odio placerat</h3>\n<p data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.4\">Magna pulvinar enim mid vel? Egestas aliquam cras augue turpis et! Ultricies diam elit. Magna nunc.</p>\n<button class=\"jf_btn jf_waves_light_40 l raised deep-purple\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">Read More</button>\n"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Left Column'
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_business/cta_1.jpg'
+          image_alt: ''
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Right Column'
+  jf_p_cta-8787:
+    title: "JF Particle - CTA:\_Style 2 (Left-Side Image With Right-Side\_Content)"
+    attributes:
+      padding: '0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#6639b6'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_business/cta_2.jpg'
+          image_alt: ''
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.4'
+          name: 'Left Column'
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '100px 50px 50px'
+          contentStyle: html
+          contentTheme: dark
+          html: "<h5 class=\"weight_500\">MARKETING</h5>\n<div class=\"jf_progress x8 yellow\" data-percent=\"80\" style=\"background-color:rgba(0, 0, 0, 0.3)\">\n\t<div class=\"fill\">\n\t\t<div class=\"percent\">\n\t\t\t<div class=\"counter\"><span data-from=\"0\" data-to=\"80\" data-speed=\"1100\">0</span>%</div>\n\t\t</div>\n\t</div>\n</div>\n<h5 class=\"weight_500\">ADVERTISING</h5>\n<div class=\"jf_progress x8 yellow\" data-percent=\"60\" style=\"background-color:rgba(0, 0, 0, 0.3)\">\n\t<div class=\"fill\">\n\t\t<div class=\"percent\">\n\t\t\t<div class=\"counter\"><span data-from=\"0\" data-to=\"60\" data-speed=\"1100\">0</span>%</div>\n\t\t</div>\n\t</div>\n</div>\n<h5 class=\"weight_500\">INVESTMENTS</h5>\n<div class=\"jf_progress x8 yellow\" data-percent=\"90\" style=\"background-color:rgba(0, 0, 0, 0.3)\">\n\t<div class=\"fill\">\n\t\t<div class=\"percent\">\n\t\t\t<div class=\"counter\"><span data-from=\"0\" data-to=\"90\" data-speed=\"1100\">0</span>%</div>\n\t\t</div>\n\t</div>\n</div>"
+          image_src: ''
+          image_alt: ''
+          name: 'Right Column'
+  jf_p_cta-4538:
+    title: "JF Particle - CTA:\_Style 2 (Left-Side Content With Right-Side Image)"
+    attributes:
+      padding: '0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: 50px
+          contentStyle: html
+          contentTheme: light
+          html: "<h3 style=\"text-transform:uppercase;font-weight:500;margin:50px 0 40px\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Auctor, elit risus sagittis</h3>\n<div id=\"my-graph-2\" class=\"jf_graph_lines flot-chart\" style=\"height:200px\" data-legend=\"false\" data-curved=\"true\" data-grid=\"true\" data-grid-color=\"#eee\" data-yaxis=\"true\" data-yaxis-max=\"100\" data-yaxis-tickcolor=\"#eeeeee\" data-yaxis-fontcolor=\"#9f9f9f\" data-xaxis=\"true\" data-xaxis-max=\"7\" data-xaxis-tickcolor=\"#eeeeee\" data-xaxis-fontcolor=\"#9f9f9f\" data-set1-label=\"Product 1\" data-set1-xy=\"[[0,40], [1,10], [2,30], [3,50], [4,100], [5,10], [6,90], [7,85]]\" data-set1-opacity=\"0.98\" data-set1-color=\"#e3e3e3\" data-set2-label=\"Product 2\" data-set2-xy=\"[[0,40], [1,50], [2,20], [3,60], [4,90], [5,80], [6,10], [7,5]]\" data-set2-opacity=\"0.98\" data-set2-color=\"#f1dd2c\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.4\"></div>"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Left Column'
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_business/cta_3.jpg'
+          image_alt: ''
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Right Column'
+  jf_p_cta-8682:
+    title: "JF Particle - CTA:\_Style 2 (Left-Side Image With Right-Side\_Content)"
+    attributes:
+      padding: '0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#6639b6'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_business/cta_4.jpg'
+          image_alt: ''
+          css3_anim_name: fadeInLeftShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Left Column'
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: 50px
+          contentStyle: html
+          contentTheme: dark
+          html: "<h1 style=\"font-weight:500;font-size:72px;margin:20px 0 0 0\" data-animation=\"fadeInRightShort\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">3800</h1>\n<div class=\"jf_sep line narrow\" style=\"margin:-10px 0 15px;width:100px;overflow:hidden;height:2px\" data-animation=\"fadeInRightShort\" data-animation-type=\"onview\" data-animation-delay=\"0.4\"></div>\n<h4 style=\"font-weight:500;text-transform:uppercase\" data-animation=\"fadeInRightShort\" data-animation-type=\"onview\" data-animation-delay=\"0.6\">Penatibus parturient odio placerat</h4>\n<p data-animation=\"fadeInRightShort\" data-animation-type=\"onview\" data-animation-delay=\"0.8\">Magna pulvinar enim mid vel? Egestas aliquam cras augue turpis et! Ultricies diam elit. Magna nunc.</p>\n<button class=\"jf_btn jf_waves_dark_20 l raised white\" data-animation=\"fadeInRightShort\" data-animation-type=\"onview\" data-animation-delay=\"1\">Read More</button>"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Right Column'
+  jf_p_cta-2985:
+    title: "JF Particle - CTA:\_Style 2 (Left-Side Content With Right-Side Image)"
+    attributes:
+      padding: '0'
+      bg_options:
+        -
+          bg_type: color
+          lazyload: '1'
+          bgColor: '#ffffff'
+          cover_src: ''
+          maskColor: '#000000'
+          maskOpacity: '10'
+          scrolling: '1'
+          parallax_src: ''
+          type: default
+          url: images/jf/videos/
+          vidname: dreamscapes
+          controls: '1'
+          loop: '1'
+          muted: '1'
+          name: Options
+      style: style_2
+      style_2:
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: 50px
+          contentStyle: html
+          contentTheme: light
+          html: "<h3 style=\"text-transform:uppercase;font-weight:500;margin:50px 0 40px\" data-animation=\"fadeInLeftShort\" data-animation-type=\"onview\" data-animation-delay=\"0.2\">Placerat placerat amet sit</h3>\n<div class=\"jf_inf_pie\" style=\"margin:0 50px 50px 0\" data-color=\"#f1dd2c\" data-size=\"150\" data-percent=\"55\" data-width=\"8\" data-animate=\"3000\"><i class=\"material-icons\" style=\"font-size:52px\">trending_up</i></div>\n<div class=\"jf_inf_pie\" style=\"margin:0 50px 50px 0\" data-color=\"#f1dd2c\" data-size=\"150\" data-percent=\"80\" data-width=\"8\" data-animate=\"3000\"><i class=\"material-icons\" style=\"font-size:52px\">equalizer</i></div>\n<div class=\"jf_inf_pie\" style=\"margin:0 50px 50px 0\" data-color=\"#f1dd2c\" data-size=\"150\" data-percent=\"65\" data-width=\"8\" data-animate=\"3000\"><i class=\"material-icons\" style=\"font-size:52px\">exposure_plus_2</i></div>"
+          image_src: ''
+          image_alt: ''
+          css3_anim_name: ''
+          css3_anim_type: onview
+          css3_anim_delay: ''
+          name: 'Left Column'
+        -
+          grid: 1-2
+          contentTextAl: left
+          padding: '0'
+          contentStyle: image
+          contentTheme: light
+          html: ''
+          image_src: 'gantry-media://jf/pages/home_business/cta_5.jpg'
+          image_alt: ''
+          css3_anim_name: fadeInRightShort
+          css3_anim_type: onview
+          css3_anim_delay: '0.2'
+          name: 'Right Column'
